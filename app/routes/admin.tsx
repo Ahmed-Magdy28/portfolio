@@ -1,7 +1,21 @@
-import { Form, useActionData, useLoaderData, useNavigation } from 'react-router';
-import { redirect } from 'react-router';
-import { getAdminRoutePath, isAuthenticatedAdmin, loginAdmin, logoutAdmin } from '../lib/admin-auth.server';
-import { readSiteContent, writeSiteContent, type SiteContent } from '../lib/content.server';
+import {
+  Form,
+  useActionData,
+  useLoaderData,
+  useNavigation,
+} from "react-router";
+import { redirect } from "react-router";
+import {
+  getAdminRoutePath,
+  isAuthenticatedAdmin,
+  loginAdmin,
+  logoutAdmin,
+} from "../lib/admin-auth.server";
+import {
+  readSiteContent,
+  writeSiteContent,
+  type SiteContent,
+} from "../lib/content.server";
 
 type ActionData = {
   error?: string;
@@ -26,28 +40,28 @@ export async function loader({ request }: { request: Request }) {
 
 export async function action({ request }: { request: Request }) {
   const formData = await request.formData();
-  const intent = formData.get('intent');
+  const intent = formData.get("intent");
 
-  if (intent === 'logout') {
+  if (intent === "logout") {
     return redirect(`/${getAdminRoutePath()}`, {
       headers: {
-        'Set-Cookie': await logoutAdmin(request),
+        "Set-Cookie": await logoutAdmin(request),
       },
     });
   }
 
-  if (intent === 'login') {
-    const username = String(formData.get('username') ?? '');
-    const password = String(formData.get('password') ?? '');
+  if (intent === "login") {
+    const username = String(formData.get("username") ?? "");
+    const password = String(formData.get("password") ?? "");
     const cookie = await loginAdmin(request, username, password);
 
     if (!cookie) {
-      return { error: 'Invalid username or password.' } satisfies ActionData;
+      return { error: "Invalid username or password." } satisfies ActionData;
     }
 
     return redirect(`/${getAdminRoutePath()}`, {
       headers: {
-        'Set-Cookie': cookie,
+        "Set-Cookie": cookie,
       },
     });
   }
@@ -55,12 +69,12 @@ export async function action({ request }: { request: Request }) {
   const authenticated = await isAuthenticatedAdmin(request);
 
   if (!authenticated) {
-    return { error: 'Please sign in first.' } satisfies ActionData;
+    return { error: "Please sign in first." } satisfies ActionData;
   }
 
-  if (intent === 'save') {
+  if (intent === "save") {
     try {
-      const payload = String(formData.get('payload') ?? '');
+      const payload = String(formData.get("payload") ?? "");
       const parsed = JSON.parse(payload);
       const currentContent = await readSiteContent();
 
@@ -73,20 +87,25 @@ export async function action({ request }: { request: Request }) {
         frameworks: Array.isArray(parsed.frameworks) ? parsed.frameworks : [],
       });
 
-      return { success: 'Website data saved successfully.' } satisfies ActionData;
+      return {
+        success: "Website data saved successfully.",
+      } satisfies ActionData;
     } catch {
-      return { error: 'The JSON payload is invalid. Please fix it and try again.' } satisfies ActionData;
+      return {
+        error: "The JSON payload is invalid. Please fix it and try again.",
+      } satisfies ActionData;
     }
   }
 
-  return { error: 'Unknown action.' } satisfies ActionData;
+  return { error: "Unknown action." } satisfies ActionData;
 }
 
 export default function AdminRoute() {
-  const { adminRoutePath, authenticated, siteContent } = useLoaderData() as LoaderData;
+  const { adminRoutePath, authenticated, siteContent } =
+    useLoaderData() as LoaderData;
   const actionData = useActionData() as ActionData | undefined;
   const navigation = useNavigation();
-  const isSubmitting = navigation.state === 'submitting';
+  const isSubmitting = navigation.state === "submitting";
 
   if (!authenticated || !siteContent) {
     return (
@@ -139,7 +158,7 @@ export default function AdminRoute() {
               disabled={isSubmitting}
               className="w-full rounded-xl bg-blue-600 px-4 py-3 font-medium text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
             >
-              {isSubmitting ? 'Signing in...' : 'Sign in'}
+              {isSubmitting ? "Signing in..." : "Sign in"}
             </button>
           </Form>
         </div>
@@ -156,8 +175,8 @@ export default function AdminRoute() {
           </div>
           <h1 className="mt-3 text-3xl font-semibold">Admin Dashboard</h1>
           <p className="mt-3 max-w-3xl text-gray-600 dark:text-gray-400">
-            Edit the JSON below to manage projects, languages, frameworks, insights, and interview
-            questions used throughout the website.
+            Edit the JSON below to manage projects, languages, frameworks,
+            insights, and interview questions used throughout the website.
           </p>
         </div>
 
@@ -186,16 +205,28 @@ export default function AdminRoute() {
 
       <div className="mb-6 grid gap-4 md:grid-cols-3">
         <div className="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-900">
-          <div className="text-sm text-gray-500 dark:text-gray-400">Projects</div>
-          <div className="mt-2 text-3xl font-semibold">{siteContent.projects.length}</div>
+          <div className="text-sm text-gray-500 dark:text-gray-400">
+            Projects
+          </div>
+          <div className="mt-2 text-3xl font-semibold">
+            {siteContent.projects.length}
+          </div>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-900">
-          <div className="text-sm text-gray-500 dark:text-gray-400">Languages</div>
-          <div className="mt-2 text-3xl font-semibold">{siteContent.languages.length}</div>
+          <div className="text-sm text-gray-500 dark:text-gray-400">
+            Languages
+          </div>
+          <div className="mt-2 text-3xl font-semibold">
+            {siteContent.languages.length}
+          </div>
         </div>
         <div className="rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-900">
-          <div className="text-sm text-gray-500 dark:text-gray-400">Frameworks</div>
-          <div className="mt-2 text-3xl font-semibold">{siteContent.frameworks.length}</div>
+          <div className="text-sm text-gray-500 dark:text-gray-400">
+            Frameworks
+          </div>
+          <div className="mt-2 text-3xl font-semibold">
+            {siteContent.frameworks.length}
+          </div>
         </div>
       </div>
 
@@ -204,10 +235,11 @@ export default function AdminRoute() {
         <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-900">
           <div className="mb-3 text-lg font-semibold">Website data JSON</div>
           <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">
-            This JSON controls the content across your projects, language pages, framework pages,
-            and their detail sections.
+            This JSON controls the content across your projects, language pages,
+            framework pages, and their detail sections.
           </p>
           <textarea
+            title="writing area"
             name="payload"
             defaultValue={JSON.stringify(siteContent, null, 2)}
             spellCheck={false}
@@ -220,7 +252,7 @@ export default function AdminRoute() {
           disabled={isSubmitting}
           className="rounded-xl bg-blue-600 px-5 py-3 font-medium text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-70"
         >
-          {isSubmitting ? 'Saving...' : 'Save website data'}
+          {isSubmitting ? "Saving..." : "Save website data"}
         </button>
       </Form>
     </div>
