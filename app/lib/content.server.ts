@@ -1,5 +1,8 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
+import enContentJson from "../content/site-data.en.json";
+import arContentJson from "../content/site-data.ar.json";
+import legacyContentJson from "../content/site-data.json";
 import type {
   AccordionItem,
   ContentBlock,
@@ -94,6 +97,14 @@ const defaultSiteContent: SiteContent = {
   languages: [],
   frameworks: [],
 };
+
+const bundledContentByLocale: Record<ContentLocale, Partial<SiteContent>> = {
+  en: enContentJson as unknown as Partial<SiteContent>,
+  ar: arContentJson as unknown as Partial<SiteContent>,
+};
+
+const bundledLegacyContent =
+  legacyContentJson as unknown as Partial<SiteContent>;
 
 export const getContentFilePath = (locale: ContentLocale = "en") =>
   contentFileByLocale(locale);
@@ -205,12 +216,21 @@ async function readRawSiteContent(
     return JSON.parse(raw) as Partial<SiteContent>;
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+      const bundled = bundledContentByLocale[locale];
+      if (bundled && Object.keys(bundled).length > 0) {
+        return bundled;
+      }
+
       if (locale === "en") {
         try {
           const raw = await readFile(legacyContentFile, "utf-8");
           return JSON.parse(raw) as Partial<SiteContent>;
         } catch (legacyError) {
           if ((legacyError as NodeJS.ErrnoException).code === "ENOENT") {
+            if (Object.keys(bundledLegacyContent).length > 0) {
+              return bundledLegacyContent;
+            }
+
             return defaultSiteContent;
           }
 

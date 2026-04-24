@@ -243,7 +243,7 @@ export default function AdminRoute() {
             name="payload"
             defaultValue={JSON.stringify(siteContent, null, 2)}
             spellCheck={false}
-            className="min-h-[36rem] w-full rounded-2xl border border-gray-300 bg-gray-950 p-4 font-mono text-sm text-gray-100 outline-none transition focus:border-blue-500 dark:border-gray-700"
+            className="min-h-144 w-full rounded-2xl border border-gray-300 bg-gray-950 p-4 font-mono text-sm text-gray-100 outline-none transition focus:border-blue-500 dark:border-gray-700"
           />
         </div>
 
