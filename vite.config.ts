@@ -7,4 +7,15 @@ export default defineConfig({
   resolve: {
     tsconfigPaths: true,
   },
+  ssr: {
+    noExternal: [
+      "react-helmet-async",
+      "react-syntax-highlighter",
+      "react-slick",
+      "react-dnd",
+      "react-dnd-html5-backend",
+      "react-popper",
+      "@popperjs/core",
+    ],
+  },
 });
