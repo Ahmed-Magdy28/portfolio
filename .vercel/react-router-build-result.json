@@ -1,0 +1,412 @@
+{
+  "buildManifest": {
+    "serverBundles": {
+      "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0": {
+        "id": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+        "file": "build/server/nodejs_eyJydW50aW1lIjoibm9kZWpzIn0/index.js",
+        "config": {
+          "runtime": "nodejs"
+        }
+      }
+    },
+    "routeIdToServerBundleId": {
+      "root": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/home": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/about": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/projects": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/project-detail": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/languages": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/language-about": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/language-insights": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/language-interview": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/frameworks": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/framework-about": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/framework-insights": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/framework-interview": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/contact": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/admin": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/admin-save": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/not-found": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0"
+    },
+    "routes": {
+      "root": {
+        "id": "root",
+        "file": "app/root.tsx",
+        "path": "",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/root-layout": {
+        "id": "routes/root-layout",
+        "parentId": "root",
+        "file": "app/routes/root-layout.tsx",
+        "config": {}
+      },
+      "routes/home": {
+        "id": "routes/home",
+        "parentId": "routes/root-layout",
+        "file": "app/routes/home.tsx",
+        "index": true,
+        "config": {}
+      },
+      "routes/about": {
+        "id": "routes/about",
+        "parentId": "routes/root-layout",
+        "file": "app/routes/about.tsx",
+        "path": "about",
+        "config": {}
+      },
+      "routes/projects": {
+        "id": "routes/projects",
+        "parentId": "routes/root-layout",
+        "file": "app/routes/projects.tsx",
+        "path": "projects",
+        "config": {}
+      },
+      "routes/project-detail": {
+        "id": "routes/project-detail",
+        "parentId": "routes/root-layout",
+        "file": "app/routes/project-detail.tsx",
+        "path": "projects/:id",
+        "config": {}
+      },
+      "routes/languages": {
+        "id": "routes/languages",
+        "parentId": "routes/root-layout",
+        "file": "app/routes/languages.tsx",
+        "path": "languages",
+        "config": {}
+      },
+      "routes/language-detail": {
+        "id": "routes/language-detail",
+        "parentId": "routes/root-layout",
+        "file": "app/routes/language-detail.tsx",
+        "path": "languages/:slug",
+        "config": {}
+      },
+      "routes/language-about": {
+        "id": "routes/language-about",
+        "parentId": "routes/language-detail",
+        "file": "app/routes/language-about.tsx",
+        "index": true,
+        "config": {}
+      },
+      "routes/language-insights": {
+        "id": "routes/language-insights",
+        "parentId": "routes/language-detail",
+        "file": "app/routes/language-insights.tsx",
+        "path": "insights",
+        "config": {}
+      },
+      "routes/language-interview": {
+        "id": "routes/language-interview",
+        "parentId": "routes/language-detail",
+        "file": "app/routes/language-interview.tsx",
+        "path": "interview",
+        "config": {}
+      },
+      "routes/frameworks": {
+        "id": "routes/frameworks",
+        "parentId": "routes/root-layout",
+        "file": "app/routes/frameworks.tsx",
+        "path": "frameworks",
+        "config": {}
+      },
+      "routes/framework-detail": {
+        "id": "routes/framework-detail",
+        "parentId": "routes/root-layout",
+        "file": "app/routes/framework-detail.tsx",
+        "path": "frameworks/:slug",
+        "config": {}
+      },
+      "routes/framework-about": {
+        "id": "routes/framework-about",
+        "parentId": "routes/framework-detail",
+        "file": "app/routes/framework-about.tsx",
+        "index": true,
+        "config": {}
+      },
+      "routes/framework-insights": {
+        "id": "routes/framework-insights",
+        "parentId": "routes/framework-detail",
+        "file": "app/routes/framework-insights.tsx",
+        "path": "insights",
+        "config": {}
+      },
+      "routes/framework-interview": {
+        "id": "routes/framework-interview",
+        "parentId": "routes/framework-detail",
+        "file": "app/routes/framework-interview.tsx",
+        "path": "interview",
+        "config": {}
+      },
+      "routes/contact": {
+        "id": "routes/contact",
+        "parentId": "routes/root-layout",
+        "file": "app/routes/contact.tsx",
+        "path": "contact",
+        "config": {}
+      },
+      "routes/admin": {
+        "id": "routes/admin",
+        "parentId": "routes/root-layout",
+        "file": "app/routes/admin.tsx",
+        "path": "vault-7f3a-admin",
+        "config": {}
+      },
+      "routes/admin-save": {
+        "id": "routes/admin-save",
+        "parentId": "routes/root-layout",
+        "file": "app/routes/admin-save.tsx",
+        "path": "__admin/save",
+        "config": {}
+      },
+      "routes/not-found": {
+        "id": "routes/not-found",
+        "parentId": "routes/root-layout",
+        "file": "app/routes/not-found.tsx",
+        "path": "*",
+        "config": {}
+      }
+    }
+  },
+  "reactRouterConfig": {
+    "appDirectory": "/home/ahmed/projects/Portfolio/app",
+    "basename": "/",
+    "buildDirectory": "/home/ahmed/projects/Portfolio/build",
+    "future": {
+      "unstable_optimizeDeps": false,
+      "unstable_passThroughRequests": false,
+      "unstable_subResourceIntegrity": false,
+      "unstable_trailingSlashAwareDataRequests": false,
+      "unstable_previewServerPrerendering": false,
+      "v8_middleware": false,
+      "v8_splitRouteModules": false,
+      "v8_viteEnvironmentApi": false
+    },
+    "routes": {
+      "root": {
+        "id": "root",
+        "file": "root.tsx",
+        "path": ""
+      },
+      "routes/root-layout": {
+        "id": "routes/root-layout",
+        "parentId": "root",
+        "file": "routes/root-layout.tsx"
+      },
+      "routes/home": {
+        "id": "routes/home",
+        "parentId": "routes/root-layout",
+        "file": "routes/home.tsx",
+        "index": true
+      },
+      "routes/about": {
+        "id": "routes/about",
+        "parentId": "routes/root-layout",
+        "file": "routes/about.tsx",
+        "path": "about"
+      },
+      "routes/projects": {
+        "id": "routes/projects",
+        "parentId": "routes/root-layout",
+        "file": "routes/projects.tsx",
+        "path": "projects"
+      },
+      "routes/project-detail": {
+        "id": "routes/project-detail",
+        "parentId": "routes/root-layout",
+        "file": "routes/project-detail.tsx",
+        "path": "projects/:id"
+      },
+      "routes/languages": {
+        "id": "routes/languages",
+        "parentId": "routes/root-layout",
+        "file": "routes/languages.tsx",
+        "path": "languages"
+      },
+      "routes/language-detail": {
+        "id": "routes/language-detail",
+        "parentId": "routes/root-layout",
+        "file": "routes/language-detail.tsx",
+        "path": "languages/:slug"
+      },
+      "routes/language-about": {
+        "id": "routes/language-about",
+        "parentId": "routes/language-detail",
+        "file": "routes/language-about.tsx",
+        "index": true
+      },
+      "routes/language-insights": {
+        "id": "routes/language-insights",
+        "parentId": "routes/language-detail",
+        "file": "routes/language-insights.tsx",
+        "path": "insights"
+      },
+      "routes/language-interview": {
+        "id": "routes/language-interview",
+        "parentId": "routes/language-detail",
+        "file": "routes/language-interview.tsx",
+        "path": "interview"
+      },
+      "routes/frameworks": {
+        "id": "routes/frameworks",
+        "parentId": "routes/root-layout",
+        "file": "routes/frameworks.tsx",
+        "path": "frameworks"
+      },
+      "routes/framework-detail": {
+        "id": "routes/framework-detail",
+        "parentId": "routes/root-layout",
+        "file": "routes/framework-detail.tsx",
+        "path": "frameworks/:slug"
+      },
+      "routes/framework-about": {
+        "id": "routes/framework-about",
+        "parentId": "routes/framework-detail",
+        "file": "routes/framework-about.tsx",
+        "index": true
+      },
+      "routes/framework-insights": {
+        "id": "routes/framework-insights",
+        "parentId": "routes/framework-detail",
+        "file": "routes/framework-insights.tsx",
+        "path": "insights"
+      },
+      "routes/framework-interview": {
+        "id": "routes/framework-interview",
+        "parentId": "routes/framework-detail",
+        "file": "routes/framework-interview.tsx",
+        "path": "interview"
+      },
+      "routes/contact": {
+        "id": "routes/contact",
+        "parentId": "routes/root-layout",
+        "file": "routes/contact.tsx",
+        "path": "contact"
+      },
+      "routes/admin": {
+        "id": "routes/admin",
+        "parentId": "routes/root-layout",
+        "file": "routes/admin.tsx",
+        "path": "vault-7f3a-admin"
+      },
+      "routes/admin-save": {
+        "id": "routes/admin-save",
+        "parentId": "routes/root-layout",
+        "file": "routes/admin-save.tsx",
+        "path": "__admin/save"
+      },
+      "routes/not-found": {
+        "id": "routes/not-found",
+        "parentId": "routes/root-layout",
+        "file": "routes/not-found.tsx",
+        "path": "*"
+      }
+    },
+    "routeDiscovery": {
+      "mode": "lazy",
+      "manifestPath": "/__manifest"
+    },
+    "serverBuildFile": "index.js",
+    "serverModuleFormat": "esm",
+    "ssr": true,
+    "allowedActionOrigins": false,
+    "unstable_routeConfig": [
+      {
+        "id": "root",
+        "path": "",
+        "file": "root.tsx",
+        "children": [
+          {
+            "file": "routes/root-layout.tsx",
+            "children": [
+              {
+                "file": "routes/home.tsx",
+                "index": true
+              },
+              {
+                "file": "routes/about.tsx",
+                "path": "about"
+              },
+              {
+                "file": "routes/projects.tsx",
+                "path": "projects"
+              },
+              {
+                "file": "routes/project-detail.tsx",
+                "path": "projects/:id"
+              },
+              {
+                "file": "routes/languages.tsx",
+                "path": "languages"
+              },
+              {
+                "file": "routes/language-detail.tsx",
+                "children": [
+                  {
+                    "file": "routes/language-about.tsx",
+                    "index": true
+                  },
+                  {
+                    "file": "routes/language-insights.tsx",
+                    "path": "insights"
+                  },
+                  {
+                    "file": "routes/language-interview.tsx",
+                    "path": "interview"
+                  }
+                ],
+                "path": "languages/:slug"
+              },
+              {
+                "file": "routes/frameworks.tsx",
+                "path": "frameworks"
+              },
+              {
+                "file": "routes/framework-detail.tsx",
+                "children": [
+                  {
+                    "file": "routes/framework-about.tsx",
+                    "index": true
+                  },
+                  {
+                    "file": "routes/framework-insights.tsx",
+                    "path": "insights"
+                  },
+                  {
+                    "file": "routes/framework-interview.tsx",
+                    "path": "interview"
+                  }
+                ],
+                "path": "frameworks/:slug"
+              },
+              {
+                "file": "routes/contact.tsx",
+                "path": "contact"
+              },
+              {
+                "file": "routes/admin.tsx",
+                "path": "vault-7f3a-admin"
+              },
+              {
+                "file": "routes/admin-save.tsx",
+                "path": "__admin/save"
+              },
+              {
+                "file": "routes/not-found.tsx",
+                "path": "*"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "viteConfig": {
+    "build": {
+      "assetsDir": "assets"
+    }
+  }
+}
