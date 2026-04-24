@@ -1,7 +1,6 @@
 import { motion } from "motion/react";
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { Button } from "../components/Button";
-import { PageAdminEditor } from "../components/admin/PageAdminEditor";
 import { Section } from "../components/Section";
 import { useAdminSession } from "../hooks/useAdminSession";
 import { useSiteContent } from "../hooks/useSiteContent";
@@ -10,6 +9,12 @@ import { useTranslation } from "../i18n/useTranslation";
 import type { loader as rootLoader } from "../root";
 import { useFetcher } from "react-router";
 import { Helmet } from "react-helmet-async";
+
+const LazyPageAdminEditor = lazy(() =>
+  import("../components/admin/PageAdminEditor").then((module) => ({
+    default: module.PageAdminEditor,
+  })),
+);
 
 const avatarSizeClasses: Record<number, string> = {
   96: "w-24 h-24",
@@ -128,16 +133,8 @@ export const Home = () => {
 
       <Section className="min-h-[calc(100vh-4rem)] flex items-center">
         <div className="w-full">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+          <div className="text-center max-w-4xl mx-auto">
+            <div
               className={`mx-auto mb-8 rounded-full bg-linear-to-br from-blue-500 to-purple-600 flex items-center justify-center overflow-hidden text-white ${avatarContainerSizeClass}`}
             >
               {isImageLike(home.avatar) ? (
@@ -153,41 +150,21 @@ export const Home = () => {
                   {home.avatar}
                 </span>
               )}
-            </motion.div>
+            </div>
 
-            <motion.h1
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="text-5xl md:text-6xl lg:text-7xl mb-4"
-            >
+            <h1 className="text-5xl md:text-6xl lg:text-7xl mb-4">
               {home.name}
-            </motion.h1>
+            </h1>
 
-            <motion.h2
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="text-2xl md:text-3xl lg:text-4xl mb-6 text-gray-600 dark:text-gray-400"
-            >
+            <h2 className="text-2xl md:text-3xl lg:text-4xl mb-6 text-gray-600 dark:text-gray-400">
               {t.home.title}
-            </motion.h2>
+            </h2>
 
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto"
-            >
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
               {t.home.intro}
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="flex flex-wrap items-center justify-center gap-4"
-            >
+            <div className="flex flex-wrap items-center justify-center gap-4">
               <Button to="/projects" variant="primary" size="lg">
                 {t.home.viewProjects}
               </Button>
@@ -210,8 +187,8 @@ export const Home = () => {
                 </svg>
                 {t.home.downloadCV}
               </Button>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -325,27 +302,29 @@ export const Home = () => {
                 </div>
               </fetcher.Form>
 
-              <PageAdminEditor
-                title="Home page content"
-                description="Edit the name, avatar, CV link, and feature cards shown on the home page."
-                payload={JSON.stringify(home, null, 2)}
-                intent="save-content-section"
-                section="home"
-              />
-              <PageAdminEditor
-                title="Home translations"
-                description="Edit the translation keys used on the home page for both English and Arabic."
-                payload={JSON.stringify(
-                  {
-                    en: rootData.translations.en.home,
-                    ar: rootData.translations.ar.home,
-                  },
-                  null,
-                  2,
-                )}
-                intent="save-translation-section"
-                section="home"
-              />
+              <Suspense fallback={null}>
+                <LazyPageAdminEditor
+                  title="Home page content"
+                  description="Edit the name, avatar, CV link, and feature cards shown on the home page."
+                  payload={JSON.stringify(home, null, 2)}
+                  intent="save-content-section"
+                  section="home"
+                />
+                <LazyPageAdminEditor
+                  title="Home translations"
+                  description="Edit the translation keys used on the home page for both English and Arabic."
+                  payload={JSON.stringify(
+                    {
+                      en: rootData.translations.en.home,
+                      ar: rootData.translations.ar.home,
+                    },
+                    null,
+                    2,
+                  )}
+                  intent="save-translation-section"
+                  section="home"
+                />
+              </Suspense>
             </div>
           ) : null}
         </div>
