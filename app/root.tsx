@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 import { Provider } from "react-redux";
+import { HelmetProvider } from "react-helmet-async";
 import { store } from "./store";
 import {
   getAdminRoutePath,
@@ -24,7 +25,7 @@ export async function loader({ request }: { request: Request }) {
 
 export function Layout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" dir="ltr" data-gramm="false" data-gramm_editor="false">
+    <html lang="en" dir="ltr">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -45,8 +46,10 @@ export function Layout({ children }: { children: ReactNode }) {
 
 export default function Root() {
   return (
-    <Provider store={store}>
-      <Outlet />
-    </Provider>
+    <HelmetProvider>
+      <Provider store={store}>
+        <Outlet />
+      </Provider>
+    </HelmetProvider>
   );
 }
