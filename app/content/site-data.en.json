@@ -1,0 +1,726 @@
+{
+  "home": {
+    "name": "Ahmed Magdy",
+    "avatar": "/me.jpeg",
+    "avatarSize": 240,
+    "cvUrl": "https://drive.usercontent.google.com/download?id=1aqEvGWxLCRlbLhH7TRnXHoK8rZZwHkg4&export=download&authuser=1&confirm=t&uuid=3491208b-7b74-4d07-84b6-162608feb2ab&at=ALBwUgkYBI0lTgboskkVQzSWqumX:1776707742570",
+    "features": [
+      {
+        "icon": "⚡",
+        "title": "High Performance",
+        "description": "Optimized, fast-loading applications using modern frontend best practices"
+      },
+      {
+        "icon": "🧠",
+        "title": "Scalable & Smart",
+        "description": "Built with React, Next.js, Redux Toolkit, and TanStack Query for scalable architecture"
+      },
+      {
+        "icon": "🌐",
+        "title": "Full-Stack & Cross-Platform",
+        "description": "Experience with WordPress, Flask/Django, and Flutter for web and mobile solutions"
+      }
+    ]
+  },
+  "about": {
+    "video": "",
+    "paragraphs": [
+      "I am a passionate Software Engineer with a strong focus on front-end development using React and Next.js. I have hands-on experience building modern, scalable, and responsive web applications, as well as delivering real-world projects including e-commerce platforms and business websites using WordPress.",
+      "I specialize in JavaScript and TypeScript, and I work with modern tools like Redux Toolkit and TanStack Query for efficient state and server state management, along with i18n for multilingual applications. I also have backend experience with Python using Flask and Django, in addition to building cross-platform mobile applications using Flutter and Dart. I focus on writing clean, maintainable code while continuously improving my skills."
+    ],
+    "skills": [
+      {
+        "category": "Frontend",
+        "items": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "JavaScript",
+          "Tailwind CSS",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "category": "State Management & Data",
+        "items": [
+          "Redux Toolkit",
+          "TanStack Query",
+          "REST APIs",
+          "i18n"
+        ]
+      },
+      {
+        "category": "Backend",
+        "items": [
+          "Python",
+          "Flask",
+          "Django",
+          "MySQL"
+        ]
+      },
+      {
+        "category": "Mobile Development",
+        "items": [
+          "Flutter",
+          "Dart",
+          "Cross-platform Development"
+        ]
+      },
+      {
+        "category": "WordPress",
+        "items": [
+          "WordPress",
+          "Elementor",
+          "Astra Theme",
+          "Website Customization",
+          "Performance Optimization"
+        ]
+      },
+      {
+        "category": "Tools",
+        "items": [
+          "Git",
+          "GitHub",
+          "Vite",
+          "Postman"
+        ]
+      }
+    ],
+    "ctaTitle": "Let's Work Together",
+    "ctaText": "I'm always open to working on modern web and mobile applications, scalable frontend systems, and impactful digital products.",
+    "ctaLinkLabel": "Get In Touch",
+    "ctaLinkUrl": "/contact"
+  },
+  "contact": {
+    "intro": "Have a project in mind? Let's talk about it!",
+    "connectTitle": "Connect With Me",
+    "connectText": "Feel free to reach out through any of these platforms:",
+    "links": [
+      {
+        "label": "GitHub",
+        "value": "Ahmed-Magdy28",
+        "url": "https://github.com/Ahmed-Magdy28",
+        "icon": "github"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "ahmedmagdy2849",
+        "url": "https://linkedin.com/in/ahmedmagdy2849",
+        "icon": "linkedin"
+      },
+      {
+        "label": "Email",
+        "value": "ahmedmagdy2849@gmail.com",
+        "url": "mailto:ahmedmagdy2849@gmail.com",
+        "icon": "email"
+      },
+      {
+        "label": "WhatsApp",
+        "value": "+20 106 921 9119",
+        "url": "https://wa.me/201069219119",
+        "icon": "whatsapp"
+      },
+      {
+        "label": "Call",
+        "value": "+20 106 921 9119",
+        "url": "tel:+201069219119",
+        "icon": "phone"
+      },
+      {
+        "label": "Facebook",
+        "value": "AhMeDMaGDY284",
+        "url": "https://www.facebook.com/AhMeDMaGDY284/",
+        "icon": "facebook"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "management-platform",
+      "title": "WorkForce Ultimate",
+      "featured": true,
+      "description": "A full-featured workforce management system that streamlines project tracking, employee performance, and team collaboration through role-based dashboards and a scalable frontend architecture.",
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Redux Toolkit",
+        "TanStack React Query",
+        "React Hook Form",
+        "Zod",
+        "Charts",
+        "Drag & Drop",
+        "Toast Notifications",
+        "Role-Based Access Control (RBAC)",
+        "Date & Time Handling",
+        "Centralized Error Handling"
+      ],
+      "liveUrl": "https://workforce-ultimate.vercel.app/",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/workforce-ultimate",
+      "fullDescription": "WorkForce Ultimate is a modern workforce and project management platform inspired by tools like Jira and ClickUp. It is designed to help organizations efficiently manage employees, projects, tasks, schedules, and performance through a structured role-based system. The application is built with React and TypeScript, following a scalable and modular frontend architecture that separates global state, server state, and local UI state for better maintainability and performance. It implements a robust Role-Based Access Control (RBAC) system with multiple roles such as Employee, Manager, Senior Manager, Regional Manager, and HR, each with customized dashboards and permissions. The platform includes dynamic dashboards for tracking tasks, project progress, team performance, and productivity analytics. It also supports features like drag-and-drop task organization, notifications, form validation, file handling, and workflow-based approvals. Built using modern frontend best practices, it leverages Redux Toolkit for global state, TanStack React Query for server state management, React Hook Form with Zod for validation, and a clean UI system for a smooth and responsive user experience.",
+      "challenges": [
+        "Designing a scalable architecture capable of handling complex role-based access control across routes, components, and features.",
+        "Separating server state, global state, and local UI state without causing data inconsistency or unnecessary re-renders.",
+        "Implementing RBAC logic in a way that remains maintainable as roles and permissions grow.",
+        "Managing complex UI interactions such as drag-and-drop task organization while maintaining performance.",
+        "Coordinating multiple advanced features like analytics dashboards, notifications, and workflow systems in a single frontend codebase."
+      ],
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "task-management",
+      "title": "The Wild Oasis",
+      "featured": true,
+      "description": "A hotel operations dashboard for managing cabins, bookings, guests, check-ins, and daily business activity from one place.",
+      "techStack": [
+        "React 19",
+        "TypeScript",
+        "Vite",
+        "TanStack React Query",
+        "Supabase",
+        "styled-components",
+        "React Hook Form",
+        "React Router",
+        "Recharts",
+        "StyledComponents"
+      ],
+      "liveUrl": "https://the-wild-oasis-seven-lime.vercel.app/",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/the-wild-oasis",
+      "fullDescription": "The Wild Oasis is a hotel operations dashboard designed for staff to manage daily business activities efficiently from a single interface. It provides a centralized system for handling cabins, bookings, guests, check-ins, check-outs, and account settings. The application is built with React 19, TypeScript, and Vite, using Supabase as the backend service for authentication and data management. It features secure authentication with protected routes, a dashboard with business metrics and charts, and full CRUD functionality for cabins and bookings. The system also includes guest management workflows, real-time booking operations, and customizable account settings with dark mode support. The project is structured using a feature-based architecture, separating domain logic, UI components, services, hooks, and context providers to ensure scalability and maintainability.",
+      "challenges": [
+        "Designing a feature-based architecture that keeps complex domains like bookings, cabins, and guests isolated yet reusable.",
+        "Managing authentication and route protection securely using Supabase while maintaining a smooth user experience.",
+        "Handling synchronized state between React Query cache and Supabase backend without data inconsistencies.",
+        "Building a clean and scalable UI system for dashboards, tables, and forms with reusable components.",
+        "Implementing real-time-like updates for bookings and check-in/check-out workflows while preserving performance."
+      ]
+    },
+    {
+      "id": "noto-cafe",
+      "title": "Noto Cafe",
+      "featured": true,
+      "description": "A premium restaurant website built with WordPress, delivering a modern UI and seamless customer experience.",
+      "techStack": [
+        "WordPress",
+        "Elementor Pro",
+        "Astra Theme"
+      ],
+      "liveUrl": "https://noto-ksa.com/",
+      "fullDescription": "Noto Cafe is a modern restaurant website built using WordPress, Elementor Pro, and Astra theme. The project focuses on delivering a clean, premium user experience that reflects the brand identity of a high-end restaurant. The UI/UX design was translated into a responsive and pixel-accurate layout, ensuring consistency across all devices. The website is optimized for performance, fast loading, and smooth navigation, providing customers with an intuitive browsing experience.",
+      "challenges": [
+        "Translating high-end UI/UX designs into pixel-perfect Elementor layouts.",
+        "Maintaining performance while using visual builders like Elementor.",
+        "Ensuring responsive behavior across a wide range of devices and screen sizes.",
+        "Balancing design flexibility with WordPress theme constraints."
+      ]
+    },
+    {
+      "id": "manko-restaurant",
+      "title": "Manko Restaurant",
+      "featured": true,
+      "description": "A high-end restaurant website with responsive design and production-ready performance built using WordPress.",
+      "techStack": [
+        "WordPress",
+        "Elementor Pro"
+      ],
+      "liveUrl": "https://manko-ksa.com/home-2025/",
+      "fullDescription": "Manko Restaurant is a high-end restaurant website built using WordPress and Elementor Pro. The project involved converting detailed UI/UX designs into fully responsive, pixel-perfect layouts. The website was optimized for performance, mobile responsiveness, and cross-browser compatibility to ensure a seamless user experience. It is a production-ready platform actively serving customers in KSA.",
+      "challenges": [
+        "Implementing pixel-accurate UI from design files using Elementor.",
+        "Optimizing performance for a visually rich restaurant website.",
+        "Ensuring consistent behavior across browsers and devices.",
+        "Delivering a production-ready website under real-world constraints."
+      ]
+    },
+    {
+      "id": "cafe-la-prousa",
+      "title": "Café La Prousa",
+      "featured": true,
+      "description": "A customer-facing restaurant website focused on performance, responsiveness, and smooth user experience.",
+      "techStack": [
+        "WordPress",
+        "Elementor Pro"
+      ],
+      "liveUrl": "https://cafelaperouse-ksa.com/",
+      "fullDescription": "Café La Prousa is a customer-facing restaurant website built using WordPress and Elementor Pro. The project focuses on delivering a smooth and fast user experience with clean UI and responsive design. The website ensures fast load times and consistent behavior across modern browsers, providing users with an intuitive and reliable browsing experience.",
+      "challenges": [
+        "Achieving fast load times with Elementor-based layouts.",
+        "Ensuring cross-browser compatibility and consistency.",
+        "Maintaining responsive design across all screen sizes.",
+        "Deploying and maintaining a stable production website."
+      ]
+    },
+    {
+      "id": "fast-react-pizza",
+      "title": "Fast React Pizza",
+      "description": "A React-based pizza ordering application demonstrating routing, state management, and dynamic UI interactions.",
+      "techStack": [
+        "React",
+        "TypeScript",
+        "React Router",
+        "Redux"
+      ],
+      "liveUrl": "https://fast-react-pizza-orcin-kappa.vercel.app/",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/fast-react-pizza",
+      "fullDescription": "Fast React Pizza is a frontend application built while learning React, focusing on core concepts such as routing, global state management, and component-based architecture. The app allows users to browse a menu, add items to a cart, and place orders through a smooth and interactive UI. It uses React Router for navigation and Redux for managing global state like the shopping cart and order data. The project emphasizes clean component structure, predictable state flow, and reusable UI patterns, making it a strong foundation for building scalable React applications.",
+      "challenges": [
+        "Understanding and implementing global state management using Redux.",
+        "Structuring components for scalability and reusability.",
+        "Managing navigation and dynamic routes using React Router.",
+        "Handling user interactions like cart updates and order flow smoothly."
+      ]
+    },
+    {
+      "id": "qr-code-app",
+      "title": "QR Code Generator",
+      "description": "A customizable QR code generator with advanced styling options, built as a cross-platform web application.",
+      "techStack": [
+        "React 19",
+        "TypeScript",
+        "React Router",
+        "Tailwind CSS",
+        "Radix UI",
+        "React Hook Form",
+        "QR Code Styling",
+        "Recharts",
+        "Sonner"
+      ],
+      "liveUrl": "https://qrcode-react-delta.vercel.app/",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/qrcode-react",
+      "fullDescription": "QR Code Generator is a modern web application that allows users to create fully customizable QR codes with advanced styling and configuration options. Users can modify colors, shapes, patterns, and embedded elements to generate visually unique QR codes tailored to their needs. The application is built using React 19 and TypeScript, with a strong focus on UI/UX and component reusability. It leverages Tailwind CSS and Radix UI for building accessible and flexible interfaces, and React Hook Form for handling complex form interactions. The app is designed to run seamlessly across web platforms including Windows and Linux, providing a consistent cross-platform experience. Additional UI enhancements such as charts, notifications, and responsive layouts ensure a smooth and interactive user journey.",
+      "challenges": [
+        "Building a highly dynamic form system to support multiple QR customization options.",
+        "Managing complex UI states while keeping the interface responsive and intuitive.",
+        "Integrating QR generation libraries with custom styling controls.",
+        "Ensuring cross-platform compatibility across different operating systems and browsers.",
+        "Maintaining clean and scalable component structure with many interactive UI elements."
+      ]
+    },
+    {
+      "id": "popcorn-movies",
+      "title": "Popcorn Movies",
+      "description": "A movie search and watchlist application with API integration, rating system, and local storage persistence.",
+      "techStack": [
+        "React",
+        "React Router",
+        "OMDb API",
+        "LocalStorage"
+      ],
+      "liveUrl": "https://popcorn-chi-six.vercel.app/",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/popcorn",
+      "fullDescription": "Popcorn Movies is a React-based application built to practice API integration, state management, and data persistence. The app allows users to search for movies and series using the OMDb API, view details, and manage a personalized watchlist. Users can mark items as watched, rate them, and store their selections using localStorage, ensuring data persists across sessions. The project focuses on building interactive UI components, handling asynchronous API requests, and managing user-driven data flows in a clean and structured way.",
+      "challenges": [
+        "Handling asynchronous API requests and managing loading and error states.",
+        "Designing a smooth user experience for searching and selecting movies.",
+        "Persisting user data using localStorage without breaking state consistency.",
+        "Managing component state for ratings, watched list, and selections.",
+        "Ensuring responsive UI updates when interacting with external API data."
+      ]
+    },
+    {
+      "id": "ashtray-meny",
+      "title": "Ashtray Meny",
+      "description": "A fullstack e-commerce platform with a Django REST API and Flutter mobile app, featuring JWT authentication, role-based access control, and CI/CD workflows.",
+      "techStack": [
+        "Django",
+        "Django REST Framework",
+        "PostgreSQL",
+        "JWT Authentication",
+        "Flutter",
+        "Dart",
+        "Provider",
+        "Dio",
+        "Shared Preferences",
+        "Docker",
+        "GitHub Actions",
+        "drf-spectacular"
+      ],
+      "liveUrl": "https://www.linkedin.com/posts/ahmedmagdy2849_django-flutter-docker-activity-7256912023278501888-eL9n",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/ashtray-meny",
+      "fullDescription": "Ashtray Meny is a fullstack e-commerce platform combining a Django REST Framework backend with a Flutter mobile application. The backend provides a scalable API for managing users, products, shops, categories, orders, and reviews, while the Flutter frontend delivers a responsive and smooth mobile experience. The system uses JWT-based authentication and role-based access control to support multiple user roles including admins, shop owners, and customers. On the mobile side, Provider is used for state management, Dio for API communication, and Shared Preferences for local persistence. The platform supports product browsing, filtering, order management, wishlist functionality, and a review system. It also includes Swagger API documentation using drf-spectacular. The project is containerized using Docker and integrates GitHub Actions for automated workflows, reflecting a production-oriented and DevOps-aware architecture.",
+      "challenges": [
+        "Designing a fullstack architecture integrating Django backend with Flutter mobile frontend.",
+        "Implementing secure JWT authentication across backend and mobile client.",
+        "Managing state in Flutter using Provider while keeping UI responsive.",
+        "Handling API communication and error states efficiently using Dio.",
+        "Maintaining data consistency between mobile app and backend APIs.",
+        "Structuring scalable backend services while supporting multiple user roles.",
+        "Containerizing the system using Docker for consistent environments.",
+        "Setting up CI/CD workflows using GitHub Actions for automation and reliability."
+      ]
+    },
+    {
+      "id": "recipe-app-api",
+      "title": "Recipe App API",
+      "description": "A RESTful API for managing recipes, built with Django and Django REST Framework to practice backend development fundamentals.",
+      "techStack": [
+        "Django",
+        "Django REST Framework",
+        "PostgreSQL",
+        "Python"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/recipe-app-api",
+      "fullDescription": "Recipe App API is a backend project built while learning Django and Django REST Framework, focusing on core backend development concepts. The API provides endpoints for managing recipes, including creating, updating, retrieving, and deleting data. It demonstrates the implementation of RESTful principles, database modeling, and API structure using Django. PostgreSQL is used as the database, and the project emphasizes clean code organization, serializers, and view logic. This project serves as a foundation for understanding how to build scalable backend services and APIs.",
+      "challenges": [
+        "Understanding Django project structure and application separation.",
+        "Designing database models and relationships for recipe data.",
+        "Implementing RESTful endpoints using Django REST Framework.",
+        "Handling serialization and validation of incoming data.",
+        "Connecting the backend with PostgreSQL and managing migrations."
+      ]
+    },
+    {
+      "id": "securechat",
+      "title": "SecureChat",
+      "description": "A real-time chat application built with Flutter and Firebase, featuring authentication and persistent messaging.",
+      "techStack": [
+        "Flutter",
+        "Dart",
+        "Firebase Authentication",
+        "Cloud Firestore",
+        "Provider",
+        "Shared Preferences"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/securechat",
+      "fullDescription": "SecureChat is a real-time chat application built using Flutter and Firebase services. It enables users to register, authenticate, and exchange messages instantly through a responsive mobile interface. The app uses Firebase Authentication for secure user login and Cloud Firestore for real-time data synchronization, allowing messages to be sent and received instantly. Provider is used for state management, while Shared Preferences is utilized for local data persistence. The project focuses on building a smooth messaging experience with clean UI design, efficient state handling, and scalable real-time communication architecture.",
+      "challenges": [
+        "Implementing real-time messaging using Cloud Firestore.",
+        "Managing authentication flows securely with Firebase Authentication.",
+        "Handling state management efficiently using Provider.",
+        "Ensuring message synchronization across users without delays.",
+        "Maintaining performance and responsiveness in a real-time chat environment."
+      ]
+    },
+    {
+      "id": "funfacts",
+      "title": "FunFacts",
+      "description": "A Flutter application that displays random fun facts, built to practice API handling, state management, and UI development.",
+      "techStack": [
+        "Flutter",
+        "Dart",
+        "Dio",
+        "Provider",
+        "Shared Preferences",
+        "Logger"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/funfacts",
+      "fullDescription": "FunFacts is a Flutter learning project designed to practice core mobile development concepts including API integration, state management, and persistent storage. The application fetches random facts from an external API and displays them in a simple and responsive UI. It uses Dio for handling HTTP requests, Provider for state management, and Shared Preferences for storing user preferences locally. The project focuses on understanding Flutter architecture, managing asynchronous data flow, and building clean UI components.",
+      "challenges": [
+        "Handling asynchronous API requests and managing loading states.",
+        "Structuring Flutter state management using Provider.",
+        "Ensuring smooth UI updates when fetching remote data.",
+        "Persisting user preferences using Shared Preferences.",
+        "Building a clean and simple UI while learning Flutter fundamentals."
+      ]
+    },
+    {
+      "id": "bucketlist",
+      "title": "BucketList",
+      "description": "A Flutter application for managing personal goals and bucket list items, built to practice CRUD operations and API handling.",
+      "techStack": [
+        "Flutter",
+        "Dart",
+        "Dio",
+        "Logger"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/bucketlist",
+      "fullDescription": "BucketList is a Flutter learning project designed to practice core mobile development concepts such as CRUD operations, API communication, and basic state handling. The application allows users to create, view, update, and delete bucket list items, helping reinforce understanding of data flow in Flutter applications. Dio is used for handling HTTP requests, and the project focuses on building clean UI components and managing application state effectively while keeping the architecture simple and maintainable.",
+      "challenges": [
+        "Implementing full CRUD operations in a Flutter application.",
+        "Handling API requests and managing asynchronous data flow.",
+        "Maintaining UI state consistency during create, update, and delete actions.",
+        "Structuring a simple but scalable Flutter project architecture.",
+        "Improving understanding of client-server communication basics."
+      ]
+    },
+    {
+      "id": "todoapp-flutter",
+      "title": "Todo App Flutter",
+      "description": "A Flutter-based task management application with persistent storage and utility integrations.",
+      "techStack": [
+        "Flutter",
+        "Dart",
+        "Shared Preferences",
+        "URL Launcher",
+        "Material Design Icons"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/todoapp_flutter",
+      "fullDescription": "Todo App Flutter is a simple task management application built to practice Flutter fundamentals including state management, local persistence, and UI development. The app allows users to create, update, and delete tasks while storing data locally using Shared Preferences. It also integrates URL Launcher for external actions and uses Material Design Icons for enhanced UI experience. The project focuses on building a clean and responsive interface while reinforcing core Flutter development concepts such as widget composition, state handling, and local data storage.",
+      "challenges": [
+        "Implementing persistent local storage using Shared Preferences.",
+        "Managing application state for task creation, updates, and deletion.",
+        "Ensuring UI consistency between saved and active task states.",
+        "Integrating external actions using URL Launcher.",
+        "Building a clean and intuitive UI with reusable Flutter widgets."
+      ]
+    },
+    {
+      "id": "billionaireapp",
+      "title": "Billionaire App",
+      "description": "A Flutter learning application built to practice UI development and local state handling.",
+      "techStack": [
+        "Flutter",
+        "Dart",
+        "Shared Preferences"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/billionaireapp",
+      "fullDescription": "Billionaire App is a Flutter learning project created to practice core mobile development concepts such as UI building, state management, and local persistence. The application focuses on building interactive screens and managing simple user data using Shared Preferences. It helps reinforce Flutter fundamentals including widget composition, layout design, and basic state handling in a clean and structured way.",
+      "challenges": [
+        "Building responsive UI layouts using Flutter widgets.",
+        "Managing simple application state across screens.",
+        "Persisting user data locally using Shared Preferences.",
+        "Improving understanding of Flutter widget lifecycle and structure.",
+        "Practicing clean separation of UI and logic in a small project."
+      ]
+    },
+    {
+      "id": "hello-flutter",
+      "title": "Hello Flutter",
+      "description": "A beginner Flutter project created to learn basic widget structure and app setup.",
+      "techStack": [
+        "Flutter",
+        "Dart"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/hello_flutter",
+      "fullDescription": "Hello Flutter is an introductory project built while learning Flutter fundamentals. It focuses on understanding the basic project structure, widget tree, and how a Flutter application is initialized and rendered. The project serves as a starting point for exploring Flutter development and building more complex applications.",
+      "challenges": [
+        "Understanding Flutter project structure and setup.",
+        "Learning how widgets build the UI tree.",
+        "Running and debugging a Flutter application.",
+        "Getting familiar with Dart syntax and Flutter basics."
+      ]
+    },
+    {
+      "id": "airbnb-clone-v4",
+      "title": "AirBnB Clone v4",
+      "description": "A front-end clone of the AirBnB platform built using HTML, CSS, and JavaScript to practice UI development and DOM manipulation.",
+      "techStack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/AirBnB_clone_v4",
+      "fullDescription": "AirBnB Clone v4 is a front-end project built while learning HTML, CSS, and JavaScript. It replicates key UI components of the AirBnB platform to practice responsive design, layout structuring, and DOM manipulation. The project focuses on building interactive user interfaces, handling dynamic content with JavaScript, and improving understanding of how real-world web applications structure their front-end architecture.",
+      "challenges": [
+        "Recreating complex UI layouts using only HTML and CSS.",
+        "Handling dynamic UI updates using vanilla JavaScript.",
+        "Structuring components for a scalable front-end layout.",
+        "Ensuring responsive design across different screen sizes.",
+        "Simulating real-world application behavior without frameworks."
+      ]
+    },
+    {
+      "id": "simple-shell",
+      "title": "Simple Shell",
+      "description": "A basic UNIX-like shell implemented in C, supporting fundamental command execution such as cd and ls.",
+      "techStack": [
+        "C",
+        "Unix System Calls",
+        "Linux",
+        "Shell Scripting Concepts"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/simple_shell",
+      "fullDescription": "Simple Shell is a low-level systems programming project written in C that simulates basic behavior of a UNIX shell. It supports executing fundamental commands such as cd and ls by interacting directly with the operating system through system calls. The project was developed as a collaborative effort with a teammate, focusing on learning core concepts of process creation, command parsing, and terminal interaction. It provides hands-on experience with how shells work internally at a system level.",
+      "challenges": [
+        "Understanding UNIX process creation and execution using system calls.",
+        "Parsing user input and handling command arguments correctly.",
+        "Managing child processes and command execution flow.",
+        "Handling built-in commands like cd differently from external commands.",
+        "Collaborating effectively in a team environment on a systems-level project."
+      ]
+    },
+    {
+      "id": "sorting-algorithms",
+      "title": "Sorting Algorithms (C)",
+      "description": "A C implementation of fundamental sorting algorithms built to understand algorithm design and time complexity analysis.",
+      "techStack": [
+        "C",
+        "Algorithms",
+        "Data Structures",
+        "Linux",
+        "Big-O Analysis"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/sorting_algorithms",
+      "fullDescription": "Sorting Algorithms is a low-level computer science project written in C to implement and study classic sorting techniques. The project focuses on understanding how different sorting algorithms work internally, including their logic, efficiency, and time complexity behavior. It serves as a hands-on exploration of algorithmic thinking, memory management, and performance analysis in C. This project helped strengthen foundational knowledge in data structures and algorithms while improving problem-solving skills in a systems-level language.",
+      "challenges": [
+        "Understanding and implementing multiple sorting algorithms from scratch in C.",
+        "Analyzing and comparing time complexity (Big-O) of different approaches.",
+        "Managing memory and array manipulation at a low level.",
+        "Translating theoretical algorithms into working C implementations.",
+        "Improving algorithmic thinking and problem decomposition skills."
+      ]
+    },
+    {
+      "id": "binary-trees",
+      "title": "Binary Trees (C)",
+      "description": "A C implementation of binary tree data structures and fundamental operations such as traversal, insertion, and analysis.",
+      "techStack": [
+        "C",
+        "Data Structures",
+        "Algorithms",
+        "Binary Trees",
+        "Linux"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/binary_trees",
+      "fullDescription": "Binary Trees is a low-level data structures project written in C focused on implementing and understanding binary tree concepts. It includes building and manipulating binary tree nodes, performing different traversal methods (pre-order, in-order, post-order), and implementing core tree operations such as height calculation, size computation, and node relationships. The project strengthens understanding of recursive problem solving, memory management, and fundamental computer science data structures.",
+      "challenges": [
+        "Implementing recursive tree traversal algorithms in C.",
+        "Managing dynamic memory allocation and pointer structures safely.",
+        "Understanding tree properties such as height, depth, and size.",
+        "Building reusable and modular data structure functions.",
+        "Translating theoretical binary tree concepts into working C code."
+      ]
+    },
+    {
+      "id": "printf-clone",
+      "title": "Custom Printf (C)",
+      "description": "A reimplementation of the C printf function built in collaboration with a teammate to understand variadic functions and formatted output in C.",
+      "techStack": [
+        "C",
+        "Unix System Calls",
+        "Variadic Functions",
+        "Memory Management",
+        "Linux"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/printf",
+      "fullDescription": "Custom Printf is a low-level systems programming project written in C that replicates the behavior of the standard printf function. The project was developed collaboratively with a teammate to deepen understanding of variadic functions, formatted string parsing, and output handling in C. It focuses on how format specifiers are processed internally and how arguments are dynamically handled at runtime. This project provides strong insight into how core C standard library functions are implemented under the hood.",
+      "challenges": [
+        "Understanding and implementing variadic functions using stdarg.h.",
+        "Parsing format strings and handling multiple specifiers correctly.",
+        "Managing different data types and their formatting output.",
+        "Ensuring correct output behavior without using standard printf.",
+        "Collaborating with a teammate on low-level C system design."
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "slug": "javascript",
+      "title": "JavaScript",
+      "description": "Core language for building dynamic, interactive, and high-performance web applications using modern ES6+ features.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "JavaScript is a high-level, dynamic, single-threaded programming language used to build interactive and scalable web applications. It runs in the browser and on the server (via Node.js), making it a full-stack language.\n⚡ Core Strengths\nEvent-driven architecture → ideal for UI interactions\nAsynchronous programming → handles APIs, real-time updates\nPrototype-based OOP → flexible object modeling\nMassive ecosystem → frameworks, tools, and libraries"
+    },
+    {
+      "slug": "python",
+      "title": "Python",
+      "description": "Versatile language used for backend development, automation, and building scalable web applications.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Python for web development and data science"
+    },
+    {
+      "slug": "typescript",
+      "title": "TypeScript",
+      "description": "Strongly typed superset of JavaScript that improves scalability, maintainability, and developer productivity.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Type-safe JavaScript development"
+    },
+    {
+      "slug": "language-1776633114635",
+      "title": "Dart",
+      "description": "Modern language optimized for building fast, cross-platform applications with Flutter.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Add a short description"
+    },
+    {
+      "slug": "language-1776633522012",
+      "title": "C",
+      "description": "Low-level programming language that provides deep understanding of memory management and system-level concepts.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Add a short description"
+    }
+  ],
+  "frameworks": [
+    {
+      "slug": "react",
+      "title": "React",
+      "description": "A JavaScript library for building user interfaces",
+      "icon": "⚛️",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "A JavaScript library for building user interfaces"
+    },
+    {
+      "slug": "nextjs",
+      "title": "Next.js",
+      "description": "The React Framework for Production",
+      "icon": "▲",
+      "insights": [
+        {
+          "id": "next-1",
+          "title": "Server Components vs Client Components",
+          "content": "Next.js 13+ introduces Server Components by default. Use \"use client\" directive only when you need interactivity, browser APIs, or React hooks.",
+          "code": "// Server Component (default)\nasync function Page() {\n  const data = await fetch('https://api.example.com/data');\n  return <div>{data}</div>;\n}\n\n// Client Component\n'use client';\nimport { useState } from 'react';\n\nexport function Counter() {\n  const [count, setCount] = useState(0);\n  return <button onClick={() => setCount(count + 1)}>{count}</button>;\n}",
+          "language": "typescript",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "blocks": [
+            {
+              "id": "next-1-1",
+              "type": "text",
+              "text": "Next.js 13+ introduces Server Components by default. Use \"use client\" directive only when you need interactivity, browser APIs, or React hooks."
+            },
+            {
+              "id": "next-1-2",
+              "type": "code",
+              "code": "// Server Component (default)\nasync function Page() {\n  const data = await fetch('https://api.example.com/data');\n  return <div>{data}</div>;\n}\n\n// Client Component\n'use client';\nimport { useState } from 'react';\n\nexport function Counter() {\n  const [count, setCount] = useState(0);\n  return <button onClick={() => setCount(count + 1)}>{count}</button>;\n}",
+              "language": "typescript"
+            },
+            {
+              "id": "next-1-3",
+              "type": "video",
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            }
+          ]
+        }
+      ],
+      "interviewQuestions": [
+        {
+          "id": "next-q1",
+          "title": "What are the different rendering methods in Next.js?",
+          "content": "Next.js supports Static Site Generation (SSG), Server-Side Rendering (SSR), Incremental Static Regeneration (ISR), and Client-Side Rendering (CSR). Choose based on your data freshness and performance requirements.",
+          "difficulty": "hard",
+          "blocks": [
+            {
+              "id": "next-q1-1",
+              "type": "text",
+              "text": "Next.js supports Static Site Generation (SSG), Server-Side Rendering (SSR), Incremental Static Regeneration (ISR), and Client-Side Rendering (CSR). Choose based on your data freshness and performance requirements."
+            }
+          ]
+        }
+      ],
+      "aboutDescription": "The React Framework for Production"
+    },
+    {
+      "slug": "django",
+      "title": "Django",
+      "description": "High-level Python web framework",
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTioAoZJxF6BI-nOen5eh82SDOuK_S3mnqJgwL74oTwgj5VRJy72LiEuEs&s",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "High-level Python web framework"
+    }
+  ]
+}

@@ -1,87 +1,71 @@
-# Welcome to React Router!
+# Portfolio
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A personal portfolio built with React Router 7, React 19, TypeScript, Redux Toolkit, Tailwind CSS, and Motion. The app includes project, language, and framework detail pages, plus theme and language toggles persisted in the browser.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## Stack
 
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- React Router 7 framework mode with SSR enabled
+- React 19 and TypeScript
+- Redux Toolkit for theme and language state
+- Tailwind CSS v4 for styling
+- Motion for page and UI animations
+- Bun for local development
 
 ## Getting Started
 
-### Installation
-
-Install the dependencies:
+Install dependencies:
 
 ```bash
-npm install
+bun install
 ```
 
-### Development
-
-Start the development server with HMR:
+Start the dev server:
 
 ```bash
-npm run dev
+bun run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+The app runs on `http://localhost:5173` by default.
 
-## Building for Production
-
-Create a production build:
+## Available Scripts
 
 ```bash
-npm run build
+bun run dev
+bun run build
+bun run start
+bun run typecheck
 ```
 
-## Deployment
+## Project Structure
 
-### Docker Deployment
+```text
+app/
+  components/   Reusable UI building blocks
+  data/         Portfolio content and typed data models
+  i18n/         Translation dictionaries and translation hook
+  layouts/      Shared page chrome
+  pages/        Reusable page components
+  routes/       React Router route modules
+  store/        Redux store and slices
+styles/         Global CSS, fonts, and theme styles
+public/         Static assets
+```
 
-To build and run using Docker:
+## Notes
+
+- Theme and language preferences are applied only in the browser, which keeps the SSR/dev server safe from `window` and `localStorage` errors.
+- Route definitions live in [app/routes.ts](/home/ahmed/projects/Portfolio/app/routes.ts) and point to route modules in [app/routes](/home/ahmed/projects/Portfolio/app/routes.ts).
+
+## Production
+
+Build the app:
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+bun run build
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+Serve the production build:
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
+```bash
+bun run start
 ```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.

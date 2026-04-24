@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "languages": "Languages",
+    "frameworks": "Frameworks",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Front-End Developer",
+    "intro": "Building scalable web applications with modern technologies",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "downloadCV": "Download CV"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Passionate Software Engineer with expertise in modern web technologies"
+  },
+  "projects": {
+    "title": "My Projects",
+    "viewDetails": "View Details",
+    "techStack": "Tech Stack",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code",
+    "challenges": "Challenges & Solutions",
+    "video": "Project Demo"
+  },
+  "languages": {
+    "title": "Programming Languages",
+    "about": "About",
+    "insights": "Insights",
+    "interview": "Interview Questions"
+  },
+  "frameworks": {
+    "title": "Frameworks & Tools",
+    "about": "About",
+    "insights": "Insights",
+    "interview": "Interview Questions"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message"
+  },
+  "common": {
+    "loading": "Loading...",
+    "notFound": "Page Not Found",
+    "backHome": "Back to Home",
+    "difficulty": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard"
+    }
+  }
+}

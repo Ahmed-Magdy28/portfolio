@@ -1,0 +1,726 @@
+{
+  "home": {
+    "name": "أحمد مجدي",
+    "avatar": "/me.jpeg",
+    "avatarSize": 240,
+    "cvUrl": "https://drive.usercontent.google.com/download?id=1aqEvGWxLCRlbLhH7TRnXHoK8rZZwHkg4&export=download&authuser=1&confirm=t&uuid=3491208b-7b74-4d07-84b6-162608feb2ab&at=ALBwUgkYBI0lTgboskkVQzSWqumX:1776707742570",
+    "features": [
+      {
+        "icon": "⚡",
+        "title": "أداء عالي",
+        "description": "تطبيقات محسّنة وسريعة التحميل باستخدام أفضل ممارسات الواجهة الأمامية الحديثة"
+      },
+      {
+        "icon": "🧠",
+        "title": "قابل للتوسع وذكي",
+        "description": "مبني باستخدام React و Next.js و Redux Toolkit و TanStack Query لهندسة قابلة للتوسع"
+      },
+      {
+        "icon": "🌐",
+        "title": "تطوير متكامل ومتعدد المنصات",
+        "description": "خبرة في WordPress و Flask/Django و Flutter لتطوير حلول الويب والموبايل"
+      }
+    ]
+  },
+  "about": {
+    "video": "",
+    "paragraphs": [
+      "أنا مهندس برمجيات شغوف مع تركيز قوي على تطوير الواجهات الأمامية باستخدام React و Next.js. أمتلك خبرة عملية في بناء تطبيقات ويب حديثة وقابلة للتوسع ومتجاوبة، بالإضافة إلى تنفيذ مشاريع واقعية مثل منصات التجارة الإلكترونية ومواقع الشركات باستخدام WordPress.",
+      "أتخصص في JavaScript و TypeScript، وأعمل باستخدام أدوات حديثة مثل Redux Toolkit و TanStack Query لإدارة الحالة وحالة البيانات من الخادم بكفاءة، بالإضافة إلى i18n لدعم التطبيقات متعددة اللغات. كما أمتلك خبرة في تطوير الباك إند باستخدام Python عبر Flask و Django، إلى جانب بناء تطبيقات موبايل متعددة المنصات باستخدام Flutter و Dart. أركز على كتابة كود نظيف وقابل للصيانة مع الاستمرار في تطوير مهاراتي."
+    ],
+    "skills": [
+      {
+        "category": "الواجهة الأمامية",
+        "items": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "JavaScript",
+          "Tailwind CSS",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "category": "إدارة الحالة والبيانات",
+        "items": [
+          "Redux Toolkit",
+          "TanStack Query",
+          "REST APIs",
+          "i18n"
+        ]
+      },
+      {
+        "category": "الباك إند",
+        "items": [
+          "Python",
+          "Flask",
+          "Django",
+          "MySQL"
+        ]
+      },
+      {
+        "category": "تطوير الموبايل",
+        "items": [
+          "Flutter",
+          "Dart",
+          "تطوير متعدد المنصات"
+        ]
+      },
+      {
+        "category": "ووردبريس",
+        "items": [
+          "WordPress",
+          "Elementor",
+          "Astra Theme",
+          "تخصيص المواقع",
+          "تحسين الأداء"
+        ]
+      },
+      {
+        "category": "الأدوات",
+        "items": [
+          "Git",
+          "GitHub",
+          "Vite",
+          "Postman"
+        ]
+      }
+    ],
+    "ctaTitle": "لنبدأ العمل معًا",
+    "ctaText": "أنا دائمًا منفتح للعمل على تطبيقات ويب وموبايل حديثة، أنظمة واجهات أمامية قابلة للتوسع، ومنتجات رقمية مؤثرة.",
+    "ctaLinkLabel": "تواصل معي",
+    "ctaLinkUrl": "/contact"
+  },
+  "contact": {
+    "intro": "Have a project in mind? Let's talk about it!",
+    "connectTitle": "Connect With Me",
+    "connectText": "Feel free to reach out through any of these platforms:",
+    "links": [
+      {
+        "label": "GitHub",
+        "value": "Ahmed-Magdy28",
+        "url": "https://github.com/Ahmed-Magdy28",
+        "icon": "github"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "ahmedmagdy2849",
+        "url": "https://linkedin.com/in/ahmedmagdy2849",
+        "icon": "linkedin"
+      },
+      {
+        "label": "Email",
+        "value": "ahmedmagdy2849@gmail.com",
+        "url": "mailto:ahmedmagdy2849@gmail.com",
+        "icon": "email"
+      },
+      {
+        "label": "WhatsApp",
+        "value": "+20 106 921 9119",
+        "url": "https://wa.me/201069219119",
+        "icon": "whatsapp"
+      },
+      {
+        "label": "Call",
+        "value": "+20 106 921 9119",
+        "url": "tel:+201069219119",
+        "icon": "phone"
+      },
+      {
+        "label": "Facebook",
+        "value": "AhMeDMaGDY284",
+        "url": "https://www.facebook.com/AhMeDMaGDY284/",
+        "icon": "facebook"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "management-platform",
+      "title": "WorkForce Ultimate",
+      "featured": true,
+      "description": "نظام متكامل لإدارة القوى العاملة يسهّل تتبع المشاريع، أداء الموظفين، والتعاون بين الفرق من خلال لوحات تحكم تعتمد على الأدوار وبنية واجهة أمامية قابلة للتوسع.",
+      "techStack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Redux Toolkit",
+        "TanStack React Query",
+        "React Hook Form",
+        "Zod",
+        "Charts",
+        "Drag & Drop",
+        "Toast Notifications",
+        "التحكم في الوصول حسب الدور (RBAC)",
+        "إدارة التاريخ والوقت",
+        "معالجة الأخطاء بشكل مركزي"
+      ],
+      "liveUrl": "https://workforce-ultimate.vercel.app/",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/workforce-ultimate",
+      "fullDescription": "WorkForce Ultimate هو منصة حديثة لإدارة الموظفين والمشاريع مستوحاة من أدوات مثل Jira و ClickUp. تم تصميمها لمساعدة المؤسسات على إدارة الموظفين والمشاريع والمهام والجداول الزمنية والأداء بكفاءة من خلال نظام منظم يعتمد على الأدوار. تم بناء التطبيق باستخدام React و TypeScript مع بنية واجهة أمامية قابلة للتوسع وتقسيم واضح بين الحالة العامة (Global State)، حالة الخادم (Server State)، وحالة واجهة المستخدم المحلية (Local UI State) مما يحسن من قابلية الصيانة والأداء. يعتمد النظام على RBAC قوي يدعم أدوارًا متعددة مثل الموظف، المدير، المدير الأول، المدير الإقليمي، والموارد البشرية، حيث يمتلك كل دور لوحة تحكم وصلاحيات مخصصة. توفر المنصة لوحات ديناميكية لتتبع المهام وتقدم المشاريع وأداء الفرق وتحليلات الإنتاجية، بالإضافة إلى ميزات مثل تنظيم المهام بالسحب والإفلات، الإشعارات، التحقق من النماذج، إدارة الملفات، وأنظمة الموافقات المبنية على سير العمل. تم تطوير المشروع باستخدام أفضل ممارسات الواجهة الحديثة مع استخدام Redux Toolkit لإدارة الحالة العامة، وTanStack React Query لإدارة حالة الخادم، وReact Hook Form مع Zod للتحقق من البيانات، مع واجهة نظيفة توفر تجربة مستخدم سلسة ومتجاوبة.",
+      "challenges": [
+        "تصميم بنية قابلة للتوسع قادرة على التعامل مع نظام صلاحيات معقد عبر المسارات والمكونات والميزات.",
+        "فصل حالة الخادم والحالة العامة وحالة واجهة المستخدم دون التسبب في تعارض البيانات أو إعادة التصيير غير الضرورية.",
+        "تنفيذ منطق RBAC بطريقة قابلة للصيانة مع نمو عدد الأدوار والصلاحيات.",
+        "إدارة تفاعلات واجهة معقدة مثل السحب والإفلات مع الحفاظ على الأداء.",
+        "تنسيق عدة ميزات متقدمة مثل لوحات التحليلات والإشعارات وأنظمة سير العمل داخل كود واجهة واحد."
+      ],
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": "task-management",
+      "title": "The Wild Oasis",
+      "featured": true,
+      "description": "لوحة تحكم لإدارة عمليات فندق تتيح إدارة الكبائن والحجوزات والعملاء وعمليات تسجيل الدخول والخروج والأنشطة اليومية من مكان واحد.",
+      "techStack": [
+        "React 19",
+        "TypeScript",
+        "Vite",
+        "TanStack React Query",
+        "Supabase",
+        "styled-components",
+        "React Hook Form",
+        "React Router",
+        "Recharts",
+        "StyledComponents"
+      ],
+      "liveUrl": "https://the-wild-oasis-seven-lime.vercel.app/",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/the-wild-oasis",
+      "fullDescription": "The Wild Oasis هو نظام لإدارة عمليات فندق تم تصميمه لمساعدة الموظفين على إدارة الأنشطة اليومية بكفاءة من خلال واجهة واحدة. يوفر نظامًا مركزيًا لإدارة الكبائن والحجوزات والعملاء وعمليات تسجيل الدخول والخروج وإعدادات الحساب. تم بناء التطبيق باستخدام React 19 و TypeScript و Vite، مع استخدام Supabase كخدمة باك إند للمصادقة وإدارة البيانات. يتضمن النظام مصادقة آمنة مع مسارات محمية، ولوحة تحكم تحتوي على مؤشرات أداء ورسوم بيانية، بالإضافة إلى دعم كامل لعمليات CRUD لإدارة الكبائن والحجوزات. كما يشمل النظام سير عمل لإدارة العملاء، وعمليات حجز شبه فورية، وإعدادات حساب قابلة للتخصيص مع دعم الوضع الليلي. يعتمد المشروع على بنية قائمة على الميزات (Feature-Based Architecture)، حيث يتم فصل منطق الدومين، ومكونات الواجهة، والخدمات، والـ hooks، ومزودي السياق لضمان قابلية التوسع وسهولة الصيانة.",
+      "challenges": [
+        "تصميم بنية قائمة على الميزات تفصل بين مجالات معقدة مثل الحجوزات والكبائن والعملاء مع الحفاظ على إمكانية إعادة الاستخدام.",
+        "إدارة المصادقة وحماية المسارات بشكل آمن باستخدام Supabase مع الحفاظ على تجربة مستخدم سلسة.",
+        "مزامنة الحالة بين React Query و Supabase دون حدوث تعارض في البيانات.",
+        "بناء نظام واجهة نظيف وقابل للتوسع للوحات التحكم والجداول والنماذج باستخدام مكونات قابلة لإعادة الاستخدام.",
+        "تنفيذ تحديثات شبه فورية لعمليات الحجز وتسجيل الدخول والخروج مع الحفاظ على الأداء."
+      ]
+    },
+    {
+      "id": "noto-cafe",
+      "title": "Noto Cafe",
+      "featured": true,
+      "description": "موقع مطعم فاخر مبني باستخدام WordPress يقدم واجهة مستخدم حديثة وتجربة سلسة للعملاء.",
+      "techStack": [
+        "WordPress",
+        "Elementor Pro",
+        "Astra Theme"
+      ],
+      "liveUrl": "https://noto-ksa.com/",
+      "fullDescription": "Noto Cafe هو موقع مطعم حديث تم بناؤه باستخدام WordPress و Elementor Pro وقالب Astra. يركز المشروع على تقديم تجربة مستخدم نظيفة ومميزة تعكس هوية علامة تجارية لمطعم فاخر. تم تحويل تصميم UI/UX إلى واجهة متجاوبة ودقيقة على مستوى البكسل لضمان الاتساق عبر جميع الأجهزة. كما تم تحسين الموقع من حيث الأداء وسرعة التحميل وسهولة التنقل، مما يوفر تجربة تصفح سلسة وبديهية للعملاء.",
+      "challenges": [
+        "تحويل تصميمات UI/UX عالية المستوى إلى صفحات دقيقة باستخدام Elementor.",
+        "الحفاظ على الأداء أثناء استخدام أدوات البناء المرئية مثل Elementor.",
+        "ضمان التوافق والاستجابة عبر مختلف الأجهزة وأحجام الشاشات.",
+        "الموازنة بين مرونة التصميم وقيود قوالب WordPress."
+      ]
+    },
+    {
+      "id": "manko-restaurant",
+      "title": "Manko Restaurant",
+      "featured": true,
+      "description": "موقع مطعم فاخر بتصميم متجاوب وأداء جاهز للإنتاج تم تطويره باستخدام WordPress.",
+      "techStack": [
+        "WordPress",
+        "Elementor Pro"
+      ],
+      "liveUrl": "https://manko-ksa.com/home-2025/",
+      "fullDescription": "Manko Restaurant هو موقع مطعم فاخر تم تطويره باستخدام WordPress و Elementor Pro. تضمن المشروع تحويل تصميمات UI/UX التفصيلية إلى واجهات متجاوبة ودقيقة على مستوى البكسل. تم تحسين الموقع من حيث الأداء وسرعة التحميل والتوافق مع الأجهزة المحمولة والمتصفحات المختلفة لضمان تجربة مستخدم سلسة. الموقع جاهز للإنتاج ويُستخدم فعليًا لخدمة العملاء في المملكة العربية السعودية.",
+      "challenges": [
+        "تنفيذ واجهات دقيقة على مستوى البكسل اعتمادًا على تصميمات جاهزة باستخدام Elementor.",
+        "تحسين الأداء لموقع غني بالعناصر البصرية.",
+        "ضمان التوافق الكامل عبر مختلف المتصفحات والأجهزة.",
+        "تسليم موقع جاهز للإنتاج ضمن قيود ومتطلبات واقعية."
+      ]
+    },
+    {
+      "id": "cafe-la-prousa",
+      "title": "Café La Prousa",
+      "featured": true,
+      "description": "موقع مطعم موجه للعملاء يركز على الأداء، الاستجابة، وتجربة مستخدم سلسة.",
+      "techStack": [
+        "WordPress",
+        "Elementor Pro"
+      ],
+      "liveUrl": "https://cafelaperouse-ksa.com/",
+      "fullDescription": "Café La Prousa هو موقع مطعم موجه للعملاء تم تطويره باستخدام WordPress و Elementor Pro. يركز المشروع على تقديم تجربة مستخدم سريعة وسلسة من خلال واجهة نظيفة وتصميم متجاوب. يضمن الموقع سرعة تحميل عالية وأداء مستقر عبر المتصفحات الحديثة، مما يوفر تجربة تصفح بديهية وموثوقة للمستخدمين.",
+      "challenges": [
+        "تحقيق سرعة تحميل عالية باستخدام تصميمات مبنية على Elementor.",
+        "ضمان التوافق والثبات عبر مختلف المتصفحات.",
+        "الحفاظ على تصميم متجاوب عبر جميع أحجام الشاشات.",
+        "نشر وصيانة موقع مستقر وجاهز للإنتاج."
+      ]
+    },
+    {
+      "id": "fast-react-pizza",
+      "title": "Fast React Pizza",
+      "description": "تطبيق طلب بيتزا مبني باستخدام React يوضح مفاهيم التوجيه (Routing)، إدارة الحالة، والتفاعلات الديناميكية لواجهة المستخدم.",
+      "techStack": [
+        "React",
+        "TypeScript",
+        "React Router",
+        "Redux"
+      ],
+      "liveUrl": "https://fast-react-pizza-orcin-kappa.vercel.app/",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/fast-react-pizza",
+      "fullDescription": "Fast React Pizza هو تطبيق واجهة أمامية تم تطويره أثناء تعلم React، مع التركيز على المفاهيم الأساسية مثل التوجيه (Routing)، إدارة الحالة العامة (Global State Management)، وبنية المكونات (Component-based Architecture). يتيح التطبيق للمستخدمين تصفح قائمة الطعام، إضافة العناصر إلى سلة المشتريات، وإتمام الطلب من خلال واجهة سلسة وتفاعلية. يستخدم React Router للتنقل بين الصفحات، وRedux لإدارة الحالة العامة مثل سلة المشتريات وبيانات الطلبات. يركز المشروع على كتابة مكونات منظمة وقابلة لإعادة الاستخدام مع تدفق بيانات واضح وقابل للتوقع، مما يجعله أساسًا قويًا لبناء تطبيقات React قابلة للتوسع.",
+      "challenges": [
+        "فهم وتنفيذ إدارة الحالة العامة باستخدام Redux.",
+        "تنظيم المكونات بطريقة قابلة للتوسع وإعادة الاستخدام.",
+        "إدارة التنقل والمسارات الديناميكية باستخدام React Router.",
+        "التعامل مع تفاعلات المستخدم مثل تحديث سلة المشتريات وسير عملية الطلب بسلاسة."
+      ]
+    },
+    {
+      "id": "qr-code-app",
+      "title": "مولّد رموز QR",
+      "description": "مولّد رموز QR قابل للتخصيص مع خيارات تصميم متقدمة، تم تطويره كتطبيق ويب يعمل عبر منصات متعددة.",
+      "techStack": [
+        "React 19",
+        "TypeScript",
+        "React Router",
+        "Tailwind CSS",
+        "Radix UI",
+        "React Hook Form",
+        "QR Code Styling",
+        "Recharts",
+        "Sonner"
+      ],
+      "liveUrl": "https://qrcode-react-delta.vercel.app/",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/qrcode-react",
+      "fullDescription": "QR Code Generator هو تطبيق ويب حديث يتيح للمستخدمين إنشاء رموز QR قابلة للتخصيص بالكامل مع خيارات متقدمة للتصميم والإعدادات. يمكن للمستخدم تعديل الألوان والأشكال والأنماط والعناصر المدمجة لإنشاء رموز QR فريدة تناسب احتياجاته. تم بناء التطبيق باستخدام React 19 و TypeScript مع تركيز قوي على تجربة المستخدم وإعادة استخدام المكونات. يعتمد على Tailwind CSS و Radix UI لإنشاء واجهات مرنة وسهلة الوصول، بالإضافة إلى React Hook Form للتعامل مع النماذج المعقدة. تم تصميم التطبيق ليعمل بسلاسة على مختلف المنصات مثل Windows و Linux، مع توفير تجربة متسقة عبر الأنظمة. كما تم إضافة تحسينات واجهة مثل الرسوم البيانية والإشعارات والتصميم المتجاوب لتقديم تجربة استخدام سلسة وتفاعلية.",
+      "challenges": [
+        "بناء نظام نماذج ديناميكي لدعم خيارات تخصيص متعددة لرموز QR.",
+        "إدارة حالات واجهة معقدة مع الحفاظ على تجربة مستخدم سلسة وسريعة الاستجابة.",
+        "دمج مكتبات توليد QR مع نظام تخصيص تصميم مرن.",
+        "ضمان التوافق بين مختلف أنظمة التشغيل والمتصفحات.",
+        "الحفاظ على بنية مكونات نظيفة وقابلة للتوسع مع واجهات تفاعلية متعددة."
+      ]
+    },
+    {
+      "id": "popcorn-movies",
+      "title": "أفلام Popcorn",
+      "description": "تطبيق للبحث عن الأفلام وإنشاء قائمة مشاهدة مع تكامل API، نظام تقييم، وحفظ البيانات محليًا.",
+      "techStack": [
+        "React",
+        "React Router",
+        "OMDb API",
+        "LocalStorage"
+      ],
+      "liveUrl": "https://popcorn-chi-six.vercel.app/",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/popcorn",
+      "fullDescription": "Popcorn Movies هو تطبيق مبني باستخدام React يهدف إلى تدريب مهارات تكامل الـ API، إدارة الحالة، وتخزين البيانات محليًا. يتيح التطبيق للمستخدمين البحث عن الأفلام والمسلسلات باستخدام OMDb API، عرض التفاصيل، وإدارة قائمة مشاهدة شخصية. يمكن للمستخدم تحديد العناصر التي تمت مشاهدتها، تقييمها، وحفظها باستخدام localStorage لضمان استمرار البيانات بين الجلسات. يركز المشروع على بناء واجهات تفاعلية، التعامل مع الطلبات غير المتزامنة، وإدارة تدفق البيانات الخاصة بالمستخدم بطريقة منظمة وواضحة.",
+      "challenges": [
+        "التعامل مع طلبات API غير المتزامنة وإدارة حالات التحميل والأخطاء.",
+        "تصميم تجربة مستخدم سلسة للبحث عن الأفلام واختيارها.",
+        "حفظ بيانات المستخدم باستخدام localStorage مع الحفاظ على اتساق الحالة.",
+        "إدارة حالة المكونات مثل التقييمات وقائمة المشاهدة والعناصر المختارة.",
+        "ضمان تحديث الواجهة بشكل سلس عند التفاعل مع بيانات API الخارجية."
+      ]
+    },
+    {
+      "id": "ashtray-meny",
+      "title": "Ashtray Meny",
+      "description": "منصة تجارة إلكترونية متكاملة (Fullstack) تتكون من API باستخدام Django وتطبيق موبايل Flutter، مع دعم المصادقة JWT، التحكم في الصلاحيات، وعمليات CI/CD.",
+      "techStack": [
+        "Django",
+        "Django REST Framework",
+        "PostgreSQL",
+        "JWT Authentication",
+        "Flutter",
+        "Dart",
+        "Provider",
+        "Dio",
+        "Shared Preferences",
+        "Docker",
+        "GitHub Actions",
+        "drf-spectacular"
+      ],
+      "liveUrl": "https://www.linkedin.com/posts/ahmedmagdy2849_django-flutter-docker-activity-7256912023278501888-eL9n",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/ashtray-meny",
+      "fullDescription": "Ashtray Meny هو مشروع تجارة إلكترونية متكامل يجمع بين باك إند مبني باستخدام Django REST Framework وتطبيق موبايل مبني باستخدام Flutter. يوفر الباك إند API قابل للتوسع لإدارة المستخدمين، المنتجات، المتاجر، التصنيفات، الطلبات، والمراجعات، بينما يقدم تطبيق Flutter تجربة استخدام سلسة ومتجاوبة على الموبايل. يعتمد النظام على JWT Authentication مع نظام تحكم في الصلاحيات لدعم أدوار متعددة مثل الأدمن، أصحاب المتاجر، والعملاء. في جانب الموبايل، يتم استخدام Provider لإدارة الحالة، وDio للتعامل مع الـ API، وShared Preferences لتخزين البيانات محليًا. يدعم المشروع تصفح المنتجات، الفلترة، إدارة الطلبات، قائمة المفضلة، ونظام التقييمات. كما يحتوي على توثيق API باستخدام drf-spectacular. تم حاوية المشروع باستخدام Docker مع تكامل GitHub Actions لأتمتة العمليات، مما يعكس بنية احترافية جاهزة للإنتاج.",
+      "challenges": [
+        "تصميم بنية Fullstack تربط بين Django backend وتطبيق Flutter.",
+        "تنفيذ مصادقة آمنة باستخدام JWT عبر الباك إند والموبايل.",
+        "إدارة الحالة في Flutter باستخدام Provider مع الحفاظ على استجابة الواجهة.",
+        "التعامل مع الـ API ومعالجة الأخطاء باستخدام Dio بشكل فعال.",
+        "ضمان اتساق البيانات بين تطبيق الموبايل والباك إند.",
+        "تصميم باك إند قابل للتوسع يدعم عدة أدوار للمستخدمين.",
+        "استخدام Docker لتوحيد بيئات التشغيل.",
+        "إعداد CI/CD باستخدام GitHub Actions لأتمتة العمليات."
+      ]
+    },
+    {
+      "id": "recipe-app-api",
+      "title": "واجهة Recipes API",
+      "description": "واجهة برمجية RESTful لإدارة الوصفات تم بناؤها باستخدام Django و Django REST Framework بهدف تعلم أساسيات تطوير الباك إند.",
+      "techStack": [
+        "Django",
+        "Django REST Framework",
+        "PostgreSQL",
+        "Python"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/recipe-app-api",
+      "fullDescription": "Recipe App API هو مشروع باك إند تم تطويره أثناء تعلم Django و Django REST Framework مع التركيز على مفاهيم تطوير الخلفية الأساسية. يوفر الـ API نقاط نهاية (Endpoints) لإدارة الوصفات مثل إنشاء، تعديل، عرض، وحذف البيانات. يوضح المشروع تطبيق مبادئ RESTful، تصميم قواعد البيانات، وبنية الـ API باستخدام Django. يتم استخدام PostgreSQL كقاعدة بيانات، مع التركيز على تنظيم الكود، serializers، ومنطق الـ views. هذا المشروع يمثل أساسًا لفهم كيفية بناء خدمات API قابلة للتوسع.",
+      "challenges": [
+        "فهم هيكل مشروع Django وتقسيم التطبيقات بشكل صحيح.",
+        "تصميم نماذج قاعدة البيانات والعلاقات الخاصة بالوصفات.",
+        "تنفيذ RESTful endpoints باستخدام Django REST Framework.",
+        "التعامل مع الـ serialization والتحقق من صحة البيانات.",
+        "ربط الباك إند مع PostgreSQL وإدارة migrations."
+      ]
+    },
+    {
+      "id": "securechat",
+      "title": "SecureChat",
+      "description": "تطبيق دردشة فورية مبني باستخدام Flutter و Firebase مع دعم المصادقة وتخزين الرسائل بشكل مستمر.",
+      "techStack": [
+        "Flutter",
+        "Dart",
+        "Firebase Authentication",
+        "Cloud Firestore",
+        "Provider",
+        "Shared Preferences"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/securechat",
+      "fullDescription": "SecureChat هو تطبيق دردشة فورية تم تطويره باستخدام Flutter وخدمات Firebase. يتيح للمستخدمين التسجيل، تسجيل الدخول، وتبادل الرسائل بشكل فوري عبر واجهة موبايل سلسة. يستخدم التطبيق Firebase Authentication لتأمين عملية تسجيل الدخول، وCloud Firestore لمزامنة الرسائل بشكل لحظي بين المستخدمين. يتم استخدام Provider لإدارة الحالة، بينما يتم استخدام Shared Preferences لتخزين البيانات محليًا. يركز المشروع على بناء تجربة مراسلة سلسة مع واجهة نظيفة، إدارة فعالة للحالة، وبنية قابلة للتوسع للتواصل الفوري.",
+      "challenges": [
+        "تنفيذ نظام رسائل فورية باستخدام Cloud Firestore.",
+        "إدارة عمليات المصادقة بشكل آمن باستخدام Firebase Authentication.",
+        "التعامل مع إدارة الحالة بكفاءة باستخدام Provider.",
+        "ضمان مزامنة الرسائل بين المستخدمين بدون تأخير.",
+        "الحفاظ على الأداء وسلاسة الاستخدام في بيئة دردشة فورية."
+      ]
+    },
+    {
+      "id": "funfacts",
+      "title": "FunFacts",
+      "description": "تطبيق Flutter يعرض حقائق عشوائية ممتعة، تم تطويره للتدريب على التعامل مع الـ APIs، إدارة الحالة، وبناء واجهات المستخدم.",
+      "techStack": [
+        "Flutter",
+        "Dart",
+        "Dio",
+        "Provider",
+        "Shared Preferences",
+        "Logger"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/funfacts",
+      "fullDescription": "FunFacts هو مشروع تعليمي باستخدام Flutter يهدف إلى تطبيق مفاهيم تطوير الموبايل الأساسية مثل التكامل مع APIs، إدارة الحالة، والتخزين المحلي. يقوم التطبيق بجلب حقائق عشوائية من API خارجي وعرضها في واجهة بسيطة وسلسة. يستخدم Dio للتعامل مع طلبات HTTP، وProvider لإدارة الحالة، وShared Preferences لحفظ تفضيلات المستخدم محليًا. يركز المشروع على فهم بنية Flutter، إدارة البيانات غير المتزامنة، وبناء مكونات UI نظيفة.",
+      "challenges": [
+        "التعامل مع طلبات API غير المتزامنة وإدارة حالات التحميل.",
+        "تنظيم إدارة الحالة في Flutter باستخدام Provider.",
+        "ضمان تحديث الواجهة بشكل سلس عند جلب البيانات.",
+        "تخزين تفضيلات المستخدم باستخدام Shared Preferences.",
+        "بناء واجهة بسيطة ونظيفة أثناء تعلم أساسيات Flutter."
+      ]
+    },
+    {
+      "id": "bucketlist",
+      "title": "قائمة الأهداف (BucketList)",
+      "description": "تطبيق Flutter لإدارة الأهداف الشخصية وعناصر قائمة المهام المستقبلية، تم تطويره للتدرب على عمليات CRUD والتعامل مع الـ API.",
+      "techStack": [
+        "Flutter",
+        "Dart",
+        "Dio",
+        "Logger"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/bucketlist",
+      "fullDescription": "BucketList هو مشروع تعليمي باستخدام Flutter يهدف إلى ممارسة مفاهيم تطوير الموبايل الأساسية مثل عمليات CRUD، التواصل مع الـ API، وإدارة الحالة البسيطة. يتيح التطبيق للمستخدمين إنشاء، عرض، تعديل، وحذف عناصر قائمة الأهداف، مما يساعد على فهم تدفق البيانات داخل تطبيقات Flutter. يتم استخدام Dio للتعامل مع طلبات HTTP، ويركز المشروع على بناء واجهات نظيفة وإدارة حالة التطبيق بشكل فعال مع الحفاظ على بنية بسيطة وقابلة للصيانة.",
+      "challenges": [
+        "تنفيذ عمليات CRUD كاملة داخل تطبيق Flutter.",
+        "التعامل مع طلبات API وإدارة التدفق غير المتزامن للبيانات.",
+        "الحفاظ على اتساق واجهة المستخدم أثناء عمليات الإضافة والتعديل والحذف.",
+        "تنظيم بنية مشروع Flutter بشكل بسيط وقابل للتوسع.",
+        "تحسين فهم أساسيات التواصل بين العميل والخادم."
+      ]
+    },
+    {
+      "id": "todoapp-flutter",
+      "title": "تطبيق المهام (Todo App Flutter)",
+      "description": "تطبيق إدارة مهام مبني باستخدام Flutter مع دعم التخزين المحلي والتكامل مع أدوات خارجية.",
+      "techStack": [
+        "Flutter",
+        "Dart",
+        "Shared Preferences",
+        "URL Launcher",
+        "Material Design Icons"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/todoapp_flutter",
+      "fullDescription": "Todo App Flutter هو تطبيق بسيط لإدارة المهام تم تطويره بهدف ممارسة أساسيات Flutter مثل إدارة الحالة، التخزين المحلي، وبناء واجهات المستخدم. يتيح التطبيق للمستخدم إنشاء المهام وتعديلها وحذفها مع حفظ البيانات محليًا باستخدام Shared Preferences. كما يتكامل مع URL Launcher لتنفيذ عمليات خارجية، ويستخدم Material Design Icons لتحسين تجربة الواجهة. يركز المشروع على بناء واجهة نظيفة ومتجاوبة مع تعزيز مفاهيم Flutter الأساسية مثل تركيب الـ widgets، إدارة الحالة، والتخزين المحلي.",
+      "challenges": [
+        "تنفيذ التخزين المحلي الدائم باستخدام Shared Preferences.",
+        "إدارة حالة التطبيق لعمليات إنشاء وتعديل وحذف المهام.",
+        "الحفاظ على اتساق واجهة المستخدم بين المهام المحفوظة والنشطة.",
+        "دمج عمليات خارجية باستخدام URL Launcher.",
+        "بناء واجهة نظيفة وسهلة الاستخدام باستخدام Widgets قابلة لإعادة الاستخدام."
+      ]
+    },
+    {
+      "id": "billionaireapp",
+      "title": "تطبيق Billionaire",
+      "description": "تطبيق تعليمي باستخدام Flutter يهدف إلى التدريب على بناء واجهات المستخدم وإدارة الحالة المحلية.",
+      "techStack": [
+        "Flutter",
+        "Dart",
+        "Shared Preferences"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/billionaireapp",
+      "fullDescription": "Billionaire App هو مشروع تعليمي باستخدام Flutter تم إنشاؤه للتدرب على مفاهيم تطوير الموبايل الأساسية مثل بناء واجهات المستخدم، إدارة الحالة، والتخزين المحلي. يركز التطبيق على إنشاء شاشات تفاعلية وإدارة بيانات مستخدم بسيطة باستخدام Shared Preferences. يساعد المشروع على تعزيز أساسيات Flutter مثل تركيب الـ widgets، تصميم التخطيطات (layouts)، وإدارة الحالة البسيطة بطريقة منظمة وواضحة.",
+      "challenges": [
+        "بناء واجهات مستخدم متجاوبة باستخدام Widgets في Flutter.",
+        "إدارة حالة بسيطة عبر عدة شاشات.",
+        "تخزين بيانات المستخدم محليًا باستخدام Shared Preferences.",
+        "فهم دورة حياة الـ widgets في Flutter بشكل أفضل.",
+        "تطبيق فصل واضح بين منطق التطبيق وواجهة المستخدم."
+      ]
+    },
+    {
+      "id": "hello-flutter",
+      "title": "مرحبًا Flutter",
+      "description": "مشروع Flutter للمبتدئين تم إنشاؤه لتعلم هيكل الـ widgets الأساسي وإعداد التطبيق.",
+      "techStack": [
+        "Flutter",
+        "Dart"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/hello_flutter",
+      "fullDescription": "Hello Flutter هو مشروع تمهيدي تم تطويره أثناء تعلم أساسيات Flutter. يركز على فهم هيكل المشروع الأساسي، شجرة الـ widgets، وكيف يتم تهيئة تطبيق Flutter وعرضه. يعتبر المشروع نقطة بداية لاستكشاف تطوير Flutter وبناء تطبيقات أكثر تعقيدًا لاحقًا.",
+      "challenges": [
+        "فهم هيكل مشروع Flutter وطريقة الإعداد.",
+        "تعلم كيفية بناء واجهة المستخدم باستخدام شجرة الـ widgets.",
+        "تشغيل التطبيق وتصحيح الأخطاء (Debugging).",
+        "التعرف على أساسيات لغة Dart وFlutter."
+      ]
+    },
+    {
+      "id": "airbnb-clone-v4",
+      "title": "نسخة AirBnB (النسخة 4)",
+      "description": "نسخة واجهة أمامية من منصة AirBnB تم تطويرها باستخدام HTML و CSS و JavaScript بهدف التدريب على بناء واجهات المستخدم والتعامل مع DOM.",
+      "techStack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/AirBnB_clone_v4",
+      "fullDescription": "AirBnB Clone v4 هو مشروع واجهة أمامية تم تطويره أثناء تعلم HTML و CSS و JavaScript. يقوم بمحاكاة مكونات واجهة مستخدم رئيسية لمنصة AirBnB بهدف التدريب على تصميم الواجهات المتجاوبة، وتنظيم التخطيطات، والتعامل مع DOM. يركز المشروع على بناء واجهات تفاعلية، معالجة المحتوى الديناميكي باستخدام JavaScript، وفهم كيفية تنظيم تطبيقات الويب الحقيقية لطبقة الواجهة الأمامية.",
+      "challenges": [
+        "إعادة بناء واجهات معقدة باستخدام HTML و CSS فقط.",
+        "التعامل مع تحديثات الواجهة الديناميكية باستخدام JavaScript النقي.",
+        "تنظيم المكونات لبناء واجهة قابلة للتوسع.",
+        "ضمان تصميم متجاوب عبر مختلف أحجام الشاشات.",
+        "محاكاة سلوك تطبيقات حقيقية بدون استخدام أطر عمل."
+      ]
+    },
+    {
+      "id": "simple-shell",
+      "title": "Simple Shell",
+      "description": "محاكاة بسيطة لواجهة سطر أوامر شبيهة بـ UNIX تم تطويرها بلغة C، تدعم تنفيذ الأوامر الأساسية مثل cd و ls.",
+      "techStack": [
+        "C",
+        "Unix System Calls",
+        "Linux",
+        "Shell Scripting Concepts"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/simple_shell",
+      "fullDescription": "Simple Shell هو مشروع برمجة أنظمة منخفضة المستوى مكتوب بلغة C يحاكي السلوك الأساسي لواجهة سطر أوامر UNIX. يدعم تنفيذ الأوامر الأساسية مثل cd و ls من خلال التفاعل المباشر مع نظام التشغيل باستخدام system calls. تم تطوير المشروع بشكل تعاوني مع زميل، مع التركيز على تعلم المفاهيم الأساسية مثل إنشاء العمليات (process creation)، تحليل الأوامر (command parsing)، والتفاعل مع الطرفية (terminal interaction). يوفر المشروع خبرة عملية لفهم كيفية عمل أنظمة الشيل داخليًا على مستوى النظام.",
+      "challenges": [
+        "فهم إنشاء العمليات في UNIX وتنفيذها باستخدام system calls.",
+        "تحليل مدخلات المستخدم والتعامل مع وسائط الأوامر بشكل صحيح.",
+        "إدارة العمليات الفرعية وتسلسل تنفيذ الأوامر.",
+        "التعامل مع الأوامر المدمجة مثل cd بشكل مختلف عن الأوامر الخارجية.",
+        "التعاون بفعالية ضمن فريق في مشروع أنظمة منخفض المستوى."
+      ]
+    },
+    {
+      "id": "sorting-algorithms",
+      "title": "خوارزميات الفرز (C)",
+      "description": "تنفيذ بلغة C لخوارزميات الفرز الأساسية بهدف فهم تصميم الخوارزميات وتحليل التعقيد الزمني.",
+      "techStack": [
+        "C",
+        "Algorithms",
+        "Data Structures",
+        "Linux",
+        "Big-O Analysis"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/sorting_algorithms",
+      "fullDescription": "Sorting Algorithms هو مشروع علوم حاسب منخفض المستوى مكتوب بلغة C يهدف إلى تنفيذ ودراسة خوارزميات الفرز الكلاسيكية. يركز المشروع على فهم كيفية عمل هذه الخوارزميات داخليًا، بما في ذلك المنطق، الكفاءة، وسلوك التعقيد الزمني. يمثل المشروع تجربة عملية في التفكير الخوارزمي، إدارة الذاكرة، وتحليل الأداء في لغة C. ساعد هذا المشروع على تعزيز الأساسيات في هياكل البيانات والخوارزميات وتحسين مهارات حل المشكلات على مستوى الأنظمة.",
+      "challenges": [
+        "فهم وتنفيذ عدة خوارزميات فرز من الصفر باستخدام C.",
+        "تحليل ومقارنة التعقيد الزمني (Big-O) بين الطرق المختلفة.",
+        "إدارة الذاكرة والتعامل مع المصفوفات على مستوى منخفض.",
+        "تحويل الخوارزميات النظرية إلى تطبيقات عملية بلغة C.",
+        "تحسين التفكير الخوارزمي وتقسيم المشكلات بشكل فعال."
+      ]
+    },
+    {
+      "id": "binary-trees",
+      "title": "الأشجار الثنائية (C)",
+      "description": "تنفيذ بلغة C لهياكل البيانات الخاصة بالأشجار الثنائية والعمليات الأساسية مثل التصفح (Traversal) والإدراج والتحليل.",
+      "techStack": [
+        "C",
+        "Data Structures",
+        "Algorithms",
+        "Binary Trees",
+        "Linux"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/binary_trees",
+      "fullDescription": "Binary Trees هو مشروع هياكل بيانات منخفض المستوى مكتوب بلغة C يركز على تنفيذ وفهم مفهوم الأشجار الثنائية. يتضمن بناء وتعديل عقد الأشجار الثنائية، وتنفيذ طرق التصفح المختلفة مثل pre-order و in-order و post-order، بالإضافة إلى تنفيذ عمليات أساسية مثل حساب الارتفاع، الحجم، والعلاقات بين العقد. يعزز المشروع فهم حل المشكلات باستخدام recursion، وإدارة الذاكرة، وهياكل البيانات الأساسية في علوم الحاسب.",
+      "challenges": [
+        "تنفيذ خوارزميات التصفح التكراري (recursion) للأشجار الثنائية بلغة C.",
+        "إدارة تخصيص الذاكرة والدوال المؤشرية بشكل آمن.",
+        "فهم خصائص الأشجار مثل الارتفاع والعمق والحجم.",
+        "بناء دوال قابلة لإعادة الاستخدام ومنظمة لهياكل البيانات.",
+        "تحويل المفاهيم النظرية للأشجار الثنائية إلى كود عملي."
+      ]
+    },
+    {
+      "id": "printf-clone",
+      "title": "دالة Printf مخصصة (C)",
+      "description": "إعادة تنفيذ دالة printf في لغة C بهدف فهم الدوال المتغيرة (Variadic Functions) وطباعة النصوص المنسقة.",
+      "techStack": [
+        "C",
+        "Unix System Calls",
+        "Variadic Functions",
+        "Memory Management",
+        "Linux"
+      ],
+      "liveUrl": "",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/printf",
+      "fullDescription": "Custom Printf هو مشروع برمجة أنظمة منخفض المستوى مكتوب بلغة C يقوم بإعادة تنفيذ سلوك الدالة القياسية printf. تم تطوير المشروع بشكل تعاوني مع زميل بهدف فهم أعمق للدوال المتغيرة (variadic functions)، وتحليل سلاسل التنسيق (format strings)، وآلية التعامل مع الإخراج في C. يركز المشروع على كيفية معالجة محددات التنسيق (format specifiers) داخليًا وكيفية تمرير ومعالجة المعاملات أثناء التشغيل. يوفر هذا المشروع فهمًا قويًا لكيفية بناء وظائف المكتبة القياسية في C من الداخل.",
+      "challenges": [
+        "فهم وتنفيذ الدوال المتغيرة باستخدام stdarg.h.",
+        "تحليل سلاسل التنسيق والتعامل مع عدة محددات بشكل صحيح.",
+        "إدارة أنواع البيانات المختلفة وطريقة تنسيقها في الإخراج.",
+        "ضمان سلوك طباعة صحيح بدون استخدام printf الجاهزة.",
+        "التعاون مع زميل في تصميم نظام منخفض المستوى بلغة C."
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "slug": "javascript",
+      "title": "JavaScript",
+      "description": "Core language for building dynamic, interactive, and high-performance web applications using modern ES6+ features.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "JavaScript is a high-level, dynamic, single-threaded programming language used to build interactive and scalable web applications. It runs in the browser and on the server (via Node.js), making it a full-stack language.\n⚡ Core Strengths\nEvent-driven architecture → ideal for UI interactions\nAsynchronous programming → handles APIs, real-time updates\nPrototype-based OOP → flexible object modeling\nMassive ecosystem → frameworks, tools, and libraries"
+    },
+    {
+      "slug": "python",
+      "title": "Python",
+      "description": "Versatile language used for backend development, automation, and building scalable web applications.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Python for web development and data science"
+    },
+    {
+      "slug": "typescript",
+      "title": "TypeScript",
+      "description": "Strongly typed superset of JavaScript that improves scalability, maintainability, and developer productivity.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Type-safe JavaScript development"
+    },
+    {
+      "slug": "language-1776633114635",
+      "title": "Dart",
+      "description": "Modern language optimized for building fast, cross-platform applications with Flutter.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Add a short description"
+    },
+    {
+      "slug": "language-1776633522012",
+      "title": "C",
+      "description": "Low-level programming language that provides deep understanding of memory management and system-level concepts.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Add a short description"
+    }
+  ],
+  "frameworks": [
+    {
+      "slug": "react",
+      "title": "React",
+      "description": "A JavaScript library for building user interfaces",
+      "icon": "⚛️",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "A JavaScript library for building user interfaces"
+    },
+    {
+      "slug": "nextjs",
+      "title": "Next.js",
+      "description": "The React Framework for Production",
+      "icon": "▲",
+      "insights": [
+        {
+          "id": "next-1",
+          "title": "Server Components vs Client Components",
+          "content": "Next.js 13+ introduces Server Components by default. Use \"use client\" directive only when you need interactivity, browser APIs, or React hooks.",
+          "code": "// Server Component (default)\nasync function Page() {\n  const data = await fetch('https://api.example.com/data');\n  return <div>{data}</div>;\n}\n\n// Client Component\n'use client';\nimport { useState } from 'react';\n\nexport function Counter() {\n  const [count, setCount] = useState(0);\n  return <button onClick={() => setCount(count + 1)}>{count}</button>;\n}",
+          "language": "typescript",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "blocks": [
+            {
+              "id": "next-1-1",
+              "type": "text",
+              "text": "Next.js 13+ introduces Server Components by default. Use \"use client\" directive only when you need interactivity, browser APIs, or React hooks."
+            },
+            {
+              "id": "next-1-2",
+              "type": "code",
+              "code": "// Server Component (default)\nasync function Page() {\n  const data = await fetch('https://api.example.com/data');\n  return <div>{data}</div>;\n}\n\n// Client Component\n'use client';\nimport { useState } from 'react';\n\nexport function Counter() {\n  const [count, setCount] = useState(0);\n  return <button onClick={() => setCount(count + 1)}>{count}</button>;\n}",
+              "language": "typescript"
+            },
+            {
+              "id": "next-1-3",
+              "type": "video",
+              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            }
+          ]
+        }
+      ],
+      "interviewQuestions": [
+        {
+          "id": "next-q1",
+          "title": "What are the different rendering methods in Next.js?",
+          "content": "Next.js supports Static Site Generation (SSG), Server-Side Rendering (SSR), Incremental Static Regeneration (ISR), and Client-Side Rendering (CSR). Choose based on your data freshness and performance requirements.",
+          "difficulty": "hard",
+          "blocks": [
+            {
+              "id": "next-q1-1",
+              "type": "text",
+              "text": "Next.js supports Static Site Generation (SSG), Server-Side Rendering (SSR), Incremental Static Regeneration (ISR), and Client-Side Rendering (CSR). Choose based on your data freshness and performance requirements."
+            }
+          ]
+        }
+      ],
+      "aboutDescription": "The React Framework for Production"
+    },
+    {
+      "slug": "django",
+      "title": "Django",
+      "description": "High-level Python web framework",
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTioAoZJxF6BI-nOen5eh82SDOuK_S3mnqJgwL74oTwgj5VRJy72LiEuEs&s",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "High-level Python web framework"
+    }
+  ]
+}
