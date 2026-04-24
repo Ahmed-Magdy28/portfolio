@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 import { Provider } from "react-redux";
-import { HelmetProvider } from "react-helmet-async";
 import { store } from "./store";
 import {
   getAdminRoutePath,
@@ -46,10 +45,8 @@ export function Layout({ children }: { children: ReactNode }) {
 
 export default function Root() {
   return (
-    <HelmetProvider>
-      <Provider store={store}>
-        <Outlet />
-      </Provider>
-    </HelmetProvider>
+    <Provider store={store}>
+      <Outlet />
+    </Provider>
   );
 }

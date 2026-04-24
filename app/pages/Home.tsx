@@ -9,7 +9,6 @@ import { useRouteLoaderData } from "react-router";
 import { useTranslation } from "../i18n/useTranslation";
 import type { loader as rootLoader } from "../root";
 import { useFetcher } from "react-router";
-import { Helmet } from "react-helmet-async";
 
 const avatarSizeClasses: Record<number, string> = {
   96: "w-24 h-24",
@@ -65,19 +64,14 @@ export const Home = () => {
     throw new Error("Root data is not available.");
   }
 
-  const seoTitle = `${home.name} | Frontend Web Developer in Egypt`;
-  const seoDescription =
-    "Ahmed Magdy is a Frontend Web Developer and Software Engineer in Egypt building modern, high-performance web applications with React, TypeScript, and Next.js.";
-  const canonicalUrl = `${rootData.siteUrl}/`;
-  const seoKeywords =
-    "Ahmed Magdy, frontend web developer in Egypt, software engineer in Egypt, React developer Egypt, TypeScript developer, web developer portfolio";
   const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: home.name,
     jobTitle: "Frontend Web Developer",
-    description: seoDescription,
-    url: canonicalUrl,
+    description:
+      "Ahmed Magdy is a Frontend Web Developer and Software Engineer in Egypt building modern, high-performance web applications with React, TypeScript, and Next.js.",
+    url: `${rootData.siteUrl}/`,
     sameAs: [
       "https://github.com/Ahmed-Magdy28",
       "https://linkedin.com/in/ahmedmagdy2849",
@@ -97,34 +91,7 @@ export const Home = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{seoTitle}</title>
-        <meta name="description" content={seoDescription} />
-        <meta name="keywords" content={seoKeywords} />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={canonicalUrl} />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={seoTitle} />
-        <meta property="og:description" content={seoDescription} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta
-          property="og:image"
-          content={`${rootData.siteUrl}/main-logo.svg`}
-        />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seoTitle} />
-        <meta name="twitter:description" content={seoDescription} />
-        <meta
-          name="twitter:image"
-          content={`${rootData.siteUrl}/main-logo.svg`}
-        />
-
-        <script type="application/ld+json">
-          {JSON.stringify(personJsonLd)}
-        </script>
-      </Helmet>
+      <script type="application/ld+json">{JSON.stringify(personJsonLd)}</script>
 
       <Section className="min-h-[calc(100vh-4rem)] flex items-center">
         <div className="w-full">
