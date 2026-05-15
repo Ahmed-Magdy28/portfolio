@@ -10,10 +10,13 @@ import { useAdminSession } from '../hooks/useAdminSession';
 import { useSiteContent } from '../hooks/useSiteContent';
 import { useTranslation } from '../i18n/useTranslation';
 import type { loader as rootLoader } from '../root';
+import { PageSEO } from '../components/PageSEO';
+import { AdminSectionWrapper } from '../components/admin/AdminSectionWrapper';
+import { ArrowLeft, ExternalLink, Github, Code2, Rocket, Zap, Monitor, Video } from 'lucide-react';
 
 export const ProjectDetail = () => {
   const { id } = useParams();
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
   const { projects } = useSiteContent();
   const { isAdminAuthenticated } = useAdminSession();
   const rootData = useRouteLoaderData<typeof rootLoader>('root');
@@ -25,128 +28,211 @@ export const ProjectDetail = () => {
 
   if (!project) {
     return (
-      <Section>
+      <Section className="min-h-[60vh] flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl mb-4">{t.common.notFound}</h1>
-          <Button to="/projects">{t.common.backHome}</Button>
+          <h1 className="text-4xl font-bold mb-6">{t.common.notFound}</h1>
+          <Button to="/projects" variant="primary">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            {t.common.backHome}
+          </Button>
         </div>
       </Section>
     );
   }
 
+  const seoTitle = `${project.title} | Project by Ahmed Magdy`;
+  const seoDescription = project.description;
+
   return (
-    <Section>
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+    <Section className="pt-24 pb-40 relative overflow-hidden bg-gray-50/30 dark:bg-black/20">
+      <PageSEO
+        title={seoTitle}
+        description={seoDescription}
+        url={`${rootData.siteUrl}/projects/${id}`}
+      />
+
+      {/* Decorative Canvas */}
+      <div className="absolute top-0 left-0 w-full h-[600px] bg-linear-to-b from-blue-500/5 to-transparent -z-10" />
+
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="max-w-6xl mx-auto px-6">
         <Link
           to="/projects"
-          className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline mb-8"
+          className="inline-flex items-center gap-3 text-muted-foreground hover:text-blue-600 transition-all mb-16 group"
         >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-          Back to Projects
+          <div className="w-10 h-10 rounded-full bg-white dark:bg-gray-950 border border-gray-100 dark:border-gray-800 flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
+            <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1 rtl:group-hover:translate-x-1" />
+          </div>
+          <span className="text-[10px] font-black uppercase tracking-[0.2em]">{t.projects.backToList}</span>
         </Link>
 
-        <h1 className="text-4xl md:text-5xl mb-4">{project.title}</h1>
-        <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">{project.description}</p>
-
-        <div className="flex flex-wrap gap-3 mb-8">
-          {project.liveUrl && (
-            <Button href={project.liveUrl} external variant="primary">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                />
-              </svg>
-              {t.projects.liveDemo}
-            </Button>
-          )}
-          {project.sourceUrl && (
-            <Button href={project.sourceUrl} external variant="outline">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <path
-                  fillRule="evenodd"
-                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              {t.projects.sourceCode}
-            </Button>
-          )}
+        {/* Hero Narrative */}
+        <div className="mb-20">
+            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12">
+                <div className="max-w-3xl">
+                    <div className="flex items-center gap-3 mb-6">
+                        <div className="w-2 h-2 rounded-full bg-blue-600" />
+                        <div className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-600 dark:text-blue-400">Project Profile</div>
+                    </div>
+                    <h1 className="text-4xl md:text-7xl font-black tracking-tight text-foreground leading-[0.9] mb-8 italic">
+                        {project.title}
+                    </h1>
+                    <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-medium">
+                        {project.description}
+                    </p>
+                </div>
+                
+                <div className="flex flex-wrap gap-4 lg:mb-2">
+                    {project.liveUrl && (
+                        <Button href={project.liveUrl} external variant="primary" className="h-14 px-10 rounded-2xl font-black uppercase tracking-widest text-[11px] shadow-2xl shadow-blue-600/20">
+                            {t.projects.liveDemo}
+                        </Button>
+                    )}
+                    {project.sourceUrl && (
+                        <Button href={project.sourceUrl} external variant="outline" className="h-14 px-10 rounded-2xl font-black uppercase tracking-widest text-[11px] border-2">
+                            {t.projects.sourceCode}
+                        </Button>
+                    )}
+                </div>
+            </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2 space-y-8">
-            <div>
-              <h2 className="text-2xl font-semibold mb-4">Overview</h2>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                {project.fullDescription}
-              </p>
-            </div>
+        {/* Metadata Strip */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-10 border-y border-gray-100 dark:border-gray-800 mb-20">
+             <div>
+                <div className="text-[9px] font-black uppercase tracking-widest text-gray-400 mb-2">Primary Role</div>
+                <div className="text-sm font-bold">Engineering Lead</div>
+             </div>
+             <div>
+                <div className="text-[9px] font-black uppercase tracking-widest text-gray-400 mb-2">Core Tech</div>
+                <div className="text-sm font-bold">{project.techStack[0]}</div>
+             </div>
+             <div>
+                <div className="text-[9px] font-black uppercase tracking-widest text-gray-400 mb-2">Category</div>
+                <div className="text-sm font-bold">Full-Stack Solution</div>
+             </div>
+             <div>
+                <div className="text-[9px] font-black uppercase tracking-widest text-gray-400 mb-2">Timeline</div>
+                <div className="text-sm font-bold">Q2 2026</div>
+             </div>
+        </div>
 
-            <div>
-              <h2 className="text-2xl font-semibold mb-4">{t.projects.challenges}</h2>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{project.challenges}</p>
-            </div>
-
-            {project.video && (
-              <div>
-                <h2 className="text-2xl font-semibold mb-4">{t.projects.video}</h2>
-                <VideoPlayer url={project.video} title={project.title} />
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20">
+          <div className="lg:col-span-8 space-y-24">
+            {project.image && (
+                <div className="relative group">
+                    <div className="absolute inset-0 bg-blue-600/10 blur-3xl rounded-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-1000 -z-10" />
+                    <div className="relative aspect-video rounded-[3rem] overflow-hidden border border-gray-100 dark:border-gray-800 shadow-2xl transition-transform duration-1000 group-hover:scale-[1.01]">
+                        <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                        <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent opacity-60" />
+                    </div>
+                </div>
             )}
+
+            <div className="space-y-32">
+                <div className="max-w-3xl">
+                    <h2 className="text-2xl font-black tracking-tight mb-8 flex items-center gap-4">
+                        <Monitor className="w-5 h-5 text-blue-500" /> {lang === 'en' ? 'Project Objectives' : 'أهداف المشروع'}
+                    </h2>
+                    <div className="prose prose-xl dark:prose-invert max-w-none">
+                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-medium">
+                            {project.fullDescription}
+                        </p>
+                    </div>
+                </div>
+
+                <div className="relative">
+                    <div className="absolute -top-12 -left-12 text-[10vw] font-black text-gray-100 dark:text-gray-900 pointer-events-none select-none -z-10 uppercase">STRATEGY</div>
+                    <h2 className="text-2xl font-black tracking-tight mb-10 flex items-center gap-4">
+                        <Zap className="w-5 h-5 text-amber-500" /> {t.projects.challenges}
+                    </h2>
+                    <div className="p-12 rounded-[3.5rem] bg-white/80 dark:bg-gray-950/80 backdrop-blur-xl border border-gray-100 dark:border-gray-800 shadow-2xl relative overflow-hidden group/card">
+                        <Zap className="absolute top-0 right-0 p-12 opacity-5 w-40 h-44 text-amber-500 transition-transform duration-700 group-hover/card:scale-110" />
+                        <p className="text-xl md:text-2xl text-foreground/90 leading-relaxed italic relative z-10 font-medium">
+                            "{project.challenges}"
+                        </p>
+                    </div>
+                </div>
+
+                {project.video && (
+                <div>
+                    <h2 className="text-2xl font-black tracking-tight mb-10 flex items-center gap-4">
+                        <Video className="w-5 h-5 text-red-500" /> Live Prototype
+                    </h2>
+                    <div className="rounded-[3rem] overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800">
+                        <VideoPlayer url={project.video} title={project.title} />
+                    </div>
+                </div>
+                )}
+            </div>
           </div>
 
-          <div>
-            <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 sticky top-24">
-              <h3 className="text-xl font-semibold mb-4">{t.projects.techStack}</h3>
-              <div className="flex flex-wrap gap-2">
-                {project.techStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-3 py-1.5 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-lg text-sm font-medium"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
+          <div className="lg:col-span-4">
+            <div className="lg:sticky lg:top-32 space-y-12">
+                <div>
+                    <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-blue-600 mb-8 border-l-2 border-blue-600 pl-4">
+                        {t.projects.techStack}
+                    </h3>
+                    <div className="flex flex-wrap gap-3">
+                        {project.techStack.map((tech) => (
+                        <span
+                            key={tech}
+                            className="px-5 py-2.5 bg-white dark:bg-gray-950 text-foreground dark:text-gray-200 rounded-2xl text-[10px] font-black uppercase tracking-widest border border-gray-100 dark:border-gray-800 hover:border-blue-500/50 transition-all cursor-default shadow-sm"
+                        >
+                            {tech}
+                        </span>
+                        ))}
+                    </div>
+                </div>
+                
+                <div className="p-10 rounded-[3rem] bg-gray-950 text-white shadow-2xl relative overflow-hidden group">
+                    <div className="absolute inset-0 bg-blue-600/10 blur-[100px] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+                    <h3 className="font-black text-2xl mb-4 relative z-10">Collaboration</h3>
+                    <p className="text-gray-400 text-sm mb-10 leading-relaxed font-medium relative z-10">
+                        Interested in building something similar? Let's discuss your next engineering challenge.
+                    </p>
+                    <Link to="/contact" className="relative z-10 inline-flex h-14 items-center justify-center px-10 rounded-2xl bg-blue-600 text-white text-[10px] font-black uppercase tracking-[0.2em] hover:bg-blue-500 transition-all w-full shadow-lg">
+                        Start Conversation
+                    </Link>
+                </div>
             </div>
           </div>
         </div>
 
-        {isAdminAuthenticated ? (
-          <div className="mt-12 space-y-4">
-            <AdminSimpleEntityForm
-              title="Project details"
-              description="Edit this project's text, links, tech stack, and video from simple fields."
-              collection="projects"
-              itemId={project.id}
-              entity={project}
-            />
-            <PageAdminEditor
-              title="Advanced project JSON"
-              description="Fallback advanced editor if you want the entire project object."
-              payload={JSON.stringify(project, null, 2)}
-              intent="save-entity"
-              collection="projects"
-              itemId={project.id}
-            />
-            <PageAdminEditor
-              title="Project translations"
-              description="Edit the translation keys used on project detail pages."
-              payload={JSON.stringify(
-                { en: rootData.translations.en.projects, ar: rootData.translations.ar.projects },
-                null,
-                2,
-              )}
-              intent="save-translation-section"
-              section="projects"
-            />
-          </div>
-        ) : null}
+        {isAdminAuthenticated && (
+          <AdminSectionWrapper title={`Project Editor: ${project.title}`}>
+            <div className="space-y-8">
+                <AdminSimpleEntityForm
+                    title="Metadata Editor"
+                    description="Update the visual identity, links, and high-level summaries."
+                    collection="projects"
+                    itemId={project.id}
+                    entity={project}
+                />
+                
+                <div className="grid gap-6 md:grid-cols-2">
+                    <PageAdminEditor
+                        title="Direct JSON Access"
+                        description="Modify the full project schema directly."
+                        payload={JSON.stringify(project, null, 2)}
+                        intent="save-entity"
+                        collection="projects"
+                        itemId={project.id}
+                    />
+                    <PageAdminEditor
+                        title="Detail Translations"
+                        description="Modify localized strings for project pages."
+                        payload={JSON.stringify(
+                            { en: rootData.translations.en.projects, ar: rootData.translations.ar.projects },
+                            null,
+                            2,
+                        )}
+                        intent="save-translation-section"
+                        section="projects"
+                    />
+                </div>
+            </div>
+          </AdminSectionWrapper>
+        )}
       </motion.div>
     </Section>
   );

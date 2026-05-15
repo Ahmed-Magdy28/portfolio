@@ -9,6 +9,7 @@ import {
 } from "./lib/admin-auth.server";
 import { readAllSiteContentLocales } from "./lib/content.server";
 import { readAllLocales } from "./lib/translations.server";
+import { Toaster } from "./components/ui/sonner";
 import "../styles/index.css";
 
 export async function loader({ request }: { request: Request }) {
@@ -29,7 +30,25 @@ export function Layout({ children }: { children: ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Ahmed Magdy</title>
+        <title>Ahmed Magdy | Frontend Web Developer & Software Engineer</title>
+        <meta name="description" content="Ahmed Magdy is a professional Frontend Web Developer specializing in React, Next.js, and TypeScript, building high-performance and scalable web applications." />
+        <meta name="keywords" content="Ahmed Magdy, Frontend Developer, React Developer, Next.js, TypeScript, Software Engineer, Portfolio, Egypt" />
+        <meta name="author" content="Ahmed Magdy" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ahmedmagdy.dev/" />
+        <meta property="og:title" content="Ahmed Magdy | Frontend Web Developer" />
+        <meta property="og:description" content="Explore the portfolio of Ahmed Magdy, a Frontend Web Developer building modern web solutions with React and Next.js." />
+        <meta property="og:image" content="/main-logo.svg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://ahmedmagdy.dev/" />
+        <meta name="twitter:title" content="Ahmed Magdy | Frontend Web Developer" />
+        <meta name="twitter:description" content="Explore the portfolio of Ahmed Magdy, a Frontend Web Developer building modern web solutions with React and Next.js." />
+        <meta name="twitter:image" content="/main-logo.svg" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -59,6 +78,7 @@ export default function Root() {
     <HelmetProvider>
       <Provider store={store}>
         <Outlet />
+        <Toaster />
       </Provider>
     </HelmetProvider>
   );

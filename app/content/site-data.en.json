@@ -6,19 +6,24 @@
     "cvUrl": "https://drive.usercontent.google.com/download?id=1aqEvGWxLCRlbLhH7TRnXHoK8rZZwHkg4&export=download&authuser=1&confirm=t&uuid=3491208b-7b74-4d07-84b6-162608feb2ab&at=ALBwUgkYBI0lTgboskkVQzSWqumX:1776707742570",
     "features": [
       {
-        "icon": "⚡",
-        "title": "High Performance",
-        "description": "Optimized, fast-loading applications using modern frontend best practices"
+        "icon": "Zap",
+        "title": "High-Performance Architecture",
+        "description": "Engineered for speed and SEO, utilizing React Router 7's SSR capabilities for sub-second page loads."
       },
       {
-        "icon": "🧠",
-        "title": "Scalable & Smart",
-        "description": "Built with React, Next.js, Redux Toolkit, and TanStack Query for scalable architecture"
+        "icon": "Shield",
+        "title": "Scalable State Management",
+        "description": "Handling complex application states and real-time data with Redux Toolkit and TanStack Query."
       },
       {
-        "icon": "🌐",
-        "title": "Full-Stack & Cross-Platform",
-        "description": "Experience with WordPress, Flask/Django, and Flutter for web and mobile solutions"
+        "icon": "Sparkles",
+        "title": "Advanced UI Animations",
+        "description": "Creating immersive user experiences with fluid transitions and interactive components using Motion."
+      },
+      {
+        "icon": "Globe",
+        "title": "Global Ready i18n",
+        "description": "Full RTL support and seamless multi-language integration for international audiences."
       }
     ]
   },
@@ -156,17 +161,12 @@
         "Date & Time Handling",
         "Centralized Error Handling"
       ],
-      "liveUrl": "https://workforce-ultimate.vercel.app/",
       "sourceUrl": "https://github.com/Ahmed-Magdy28/workforce-ultimate",
       "fullDescription": "WorkForce Ultimate is a modern workforce and project management platform inspired by tools like Jira and ClickUp. It is designed to help organizations efficiently manage employees, projects, tasks, schedules, and performance through a structured role-based system. The application is built with React and TypeScript, following a scalable and modular frontend architecture that separates global state, server state, and local UI state for better maintainability and performance. It implements a robust Role-Based Access Control (RBAC) system with multiple roles such as Employee, Manager, Senior Manager, Regional Manager, and HR, each with customized dashboards and permissions. The platform includes dynamic dashboards for tracking tasks, project progress, team performance, and productivity analytics. It also supports features like drag-and-drop task organization, notifications, form validation, file handling, and workflow-based approvals. Built using modern frontend best practices, it leverages Redux Toolkit for global state, TanStack React Query for server state management, React Hook Form with Zod for validation, and a clean UI system for a smooth and responsive user experience.",
-      "challenges": [
-        "Designing a scalable architecture capable of handling complex role-based access control across routes, components, and features.",
-        "Separating server state, global state, and local UI state without causing data inconsistency or unnecessary re-renders.",
-        "Implementing RBAC logic in a way that remains maintainable as roles and permissions grow.",
-        "Managing complex UI interactions such as drag-and-drop task organization while maintaining performance.",
-        "Coordinating multiple advanced features like analytics dashboards, notifications, and workflow systems in a single frontend codebase."
-      ],
-      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      "challenges": "Designing a scalable architecture capable of handling complex role-based access control across routes, components, and features.,Separating server state, global state, and local UI state without causing data inconsistency or unnecessary re-renders.,Implementing RBAC logic in a way that remains maintainable as roles and permissions grow.,Managing complex UI interactions such as drag-and-drop task organization while maintaining performance.,Coordinating multiple advanced features like analytics dashboards, notifications, and workflow systems in a single frontend codebase. ",
+      "liveUrl": "https://workforce-ultimate-blwecsu0j-ahmed-magdys-projects-b12677cc.vercel.app/",
+      "icon": "/uploads/f9c77da512d892f4c6836bf8bf501a00.png",
+      "image": "/uploads/49579fa619e80f8f8182bab018ec61d8.png"
     },
     {
       "id": "task-management",
@@ -194,7 +194,9 @@
         "Handling synchronized state between React Query cache and Supabase backend without data inconsistencies.",
         "Building a clean and scalable UI system for dashboards, tables, and forms with reusable components.",
         "Implementing real-time-like updates for bookings and check-in/check-out workflows while preserving performance."
-      ]
+      ],
+      "image": "/uploads/08eb160b89cb3638b3b17b5a0b9f33da.png",
+      "icon": "/uploads/124735e44f47c07547683d76b11d8d91.png"
     },
     {
       "id": "noto-cafe",
@@ -213,7 +215,9 @@
         "Maintaining performance while using visual builders like Elementor.",
         "Ensuring responsive behavior across a wide range of devices and screen sizes.",
         "Balancing design flexibility with WordPress theme constraints."
-      ]
+      ],
+      "icon": "https://noto-ksa.com/wp-content/uploads/2024/10/cropped-Logo-192x192.png",
+      "image": "/uploads/b608a24a42ed4c3bb0f28dbe49a3de6b.png"
     },
     {
       "id": "manko-restaurant",
@@ -231,7 +235,9 @@
         "Optimizing performance for a visually rich restaurant website.",
         "Ensuring consistent behavior across browsers and devices.",
         "Delivering a production-ready website under real-world constraints."
-      ]
+      ],
+      "icon": "https://manko-ksa.com/wp-content/uploads/2025/06/logo.png",
+      "image": "/uploads/0d4f47e97666a3d078a978d472508209.png"
     },
     {
       "id": "cafe-la-prousa",
@@ -249,7 +255,9 @@
         "Ensuring cross-browser compatibility and consistency.",
         "Maintaining responsive design across all screen sizes.",
         "Deploying and maintaining a stable production website."
-      ]
+      ],
+      "image": "/uploads/916d65af1ab68ae139619e6524f66b77.png",
+      "icon": "https://cafelaperouse-ksa.com/wp-content/uploads/2024/10/cropped-apple-touch-icon-192x192.png"
     },
     {
       "id": "fast-react-pizza",
@@ -295,7 +303,8 @@
         "Integrating QR generation libraries with custom styling controls.",
         "Ensuring cross-platform compatibility across different operating systems and browsers.",
         "Maintaining clean and scalable component structure with many interactive UI elements."
-      ]
+      ],
+      "image": "/uploads/264a2ac5df9e39610f86fb18ba622ee8.png"
     },
     {
       "id": "popcorn-movies",
@@ -614,16 +623,9 @@
       "icon": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "JavaScript is a high-level, dynamic, single-threaded programming language used to build interactive and scalable web applications. It runs in the browser and on the server (via Node.js), making it a full-stack language.\n⚡ Core Strengths\nEvent-driven architecture → ideal for UI interactions\nAsynchronous programming → handles APIs, real-time updates\nPrototype-based OOP → flexible object modeling\nMassive ecosystem → frameworks, tools, and libraries"
-    },
-    {
-      "slug": "python",
-      "title": "Python",
-      "description": "Versatile language used for backend development, automation, and building scalable web applications.",
-      "icon": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
-      "insights": [],
-      "interviewQuestions": [],
-      "aboutDescription": "Python for web development and data science"
+      "aboutDescription": "JavaScript is a high-level, dynamic, single-threaded programming language used to build interactive and scalable web applications.",
+      "roadmap": [],
+      "versions": []
     },
     {
       "slug": "typescript",
@@ -632,95 +634,204 @@
       "icon": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "Type-safe JavaScript development"
+      "roadmapUrl": "https://roadmap.sh/typescript",
+      "versions": [
+        {
+          "id": "ts-5-4",
+          "version": "5.4",
+          "releaseDate": "2024-03-06",
+          "title": "Preserved Narrowing in Closures",
+          "changes": [
+            "Preserved narrowing in closures following last assignments",
+            "The NoInfer utility type",
+            "Object.groupBy and Map.groupBy",
+            "Support for require() calls in --module preserve"
+          ],
+          "type": "minor"
+        }
+      ],
+      "aboutDescription": "Type-safe JavaScript development for modern web apps.",
+      "roadmap": []
     },
     {
-      "slug": "language-1776633114635",
+      "slug": "python",
+      "title": "Python",
+      "description": "Versatile language used for backend development, automation, and building scalable web applications.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Python for web development, automation, and backend services.",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "dart",
       "title": "Dart",
       "description": "Modern language optimized for building fast, cross-platform applications with Flutter.",
       "icon": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "Add a short description"
+      "aboutDescription": "Optimized for client-side development for web and mobile.",
+      "roadmap": [],
+      "versions": []
     },
     {
-      "slug": "language-1776633522012",
+      "slug": "c-lang",
       "title": "C",
       "description": "Low-level programming language that provides deep understanding of memory management and system-level concepts.",
       "icon": "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "Add a short description"
+      "aboutDescription": "The foundation of modern computing and systems programming.",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "html",
+      "title": "HTML",
+      "description": "The standard markup language for creating web pages and applications.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Defining the structure of web content.",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "css",
+      "title": "CSS",
+      "description": "Style sheet language used for describing the presentation of a document written in markup language.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Designing beautiful and responsive user interfaces.",
+      "roadmap": [],
+      "versions": []
     }
   ],
   "frameworks": [
     {
       "slug": "react",
       "title": "React",
-      "description": "A JavaScript library for building user interfaces",
-      "icon": "⚛️",
+      "description": "A JavaScript library for building component-based user interfaces with a focus on efficiency and scalability.",
+      "icon": "https://e7.pngegg.com/pngimages/452/495/png-clipart-react-javascript-angularjs-ionic-github-text-logo-thumbnail.png",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "A JavaScript library for building user interfaces"
+      "roadmapUrl": "https://roadmap.sh/react",
+      "versions": [
+        {
+          "id": "react-19",
+          "version": "19.0",
+          "releaseDate": "2024-12-05",
+          "title": "React 19 RC",
+          "changes": [
+            "Actions: Support for async functions in transitions",
+            "New hook: useActionState for form handling",
+            "New hook: useOptimistic for optimistic updates",
+            "New API: use for reading resources in render",
+            "Server Components and Server Actions"
+          ],
+          "type": "major"
+        },
+        {
+          "id": "react-18-2",
+          "version": "18.2",
+          "releaseDate": "2022-06-14",
+          "title": "React 18.2.0",
+          "changes": [
+            "Performance improvements",
+            "Bug fixes for Concurrent React",
+            "Stable release of many 18.0 features"
+          ],
+          "type": "minor"
+        }
+      ],
+      "aboutDescription": "A JavaScript library for building user interfaces",
+      "roadmap": []
     },
     {
       "slug": "nextjs",
       "title": "Next.js",
-      "description": "The React Framework for Production",
-      "icon": "▲",
-      "insights": [
+      "description": "The React Framework for Production, offering SSR, SSG, and optimized developer experience.",
+      "icon": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "The React Framework for Production",
+      "roadmap": [
         {
-          "id": "next-1",
-          "title": "Server Components vs Client Components",
-          "content": "Next.js 13+ introduces Server Components by default. Use \"use client\" directive only when you need interactivity, browser APIs, or React hooks.",
-          "code": "// Server Component (default)\nasync function Page() {\n  const data = await fetch('https://api.example.com/data');\n  return <div>{data}</div>;\n}\n\n// Client Component\n'use client';\nimport { useState } from 'react';\n\nexport function Counter() {\n  const [count, setCount] = useState(0);\n  return <button onClick={() => setCount(count + 1)}>{count}</button>;\n}",
-          "language": "typescript",
-          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-          "blocks": [
-            {
-              "id": "next-1-1",
-              "type": "text",
-              "text": "Next.js 13+ introduces Server Components by default. Use \"use client\" directive only when you need interactivity, browser APIs, or React hooks."
-            },
-            {
-              "id": "next-1-2",
-              "type": "code",
-              "code": "// Server Component (default)\nasync function Page() {\n  const data = await fetch('https://api.example.com/data');\n  return <div>{data}</div>;\n}\n\n// Client Component\n'use client';\nimport { useState } from 'react';\n\nexport function Counter() {\n  const [count, setCount] = useState(0);\n  return <button onClick={() => setCount(count + 1)}>{count}</button>;\n}",
-              "language": "typescript"
-            },
-            {
-              "id": "next-1-3",
-              "type": "video",
-              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            }
-          ]
+          "id": "item-1778363683978",
+          "title": "",
+          "description": "",
+          "status": "planned"
         }
       ],
-      "interviewQuestions": [
-        {
-          "id": "next-q1",
-          "title": "What are the different rendering methods in Next.js?",
-          "content": "Next.js supports Static Site Generation (SSG), Server-Side Rendering (SSR), Incremental Static Regeneration (ISR), and Client-Side Rendering (CSR). Choose based on your data freshness and performance requirements.",
-          "difficulty": "hard",
-          "blocks": [
-            {
-              "id": "next-q1-1",
-              "type": "text",
-              "text": "Next.js supports Static Site Generation (SSG), Server-Side Rendering (SSR), Incremental Static Regeneration (ISR), and Client-Side Rendering (CSR). Choose based on your data freshness and performance requirements."
-            }
-          ]
-        }
-      ],
-      "aboutDescription": "The React Framework for Production"
+      "versions": []
     },
     {
       "slug": "django",
       "title": "Django",
-      "description": "High-level Python web framework",
+      "description": "A high-level Python web framework that encourages rapid development and clean, pragmatic design.",
       "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTioAoZJxF6BI-nOen5eh82SDOuK_S3mnqJgwL74oTwgj5VRJy72LiEuEs&s",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "High-level Python web framework"
+      "aboutDescription": "High-level Python web framework",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "flutter",
+      "title": "Flutter",
+      "description": "Google's UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.",
+      "icon": "https://flutter.dev/assets/lockup_flutter_horizontal.549a1b7dd82615e8e9c95c1ade8cee42.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Build beautiful cross-platform apps from one codebase.",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "wordpress",
+      "title": "WordPress",
+      "description": "The world's most popular content management system, used to build everything from simple blogs to complex e-commerce sites.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Powerful CMS for flexible web development.",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "tailwindcss",
+      "title": "Tailwind CSS",
+      "description": "A utility-first CSS framework for rapidly building custom user interfaces directly in your markup.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Modern utility-first CSS for fast UI development.",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "react-router",
+      "title": "React Router",
+      "description": "A standard library for routing in React, enabling the creation of dynamic, single-page applications with seamless navigation.",
+      "icon": "https://reactrouter.com/_brand/react-router-brand-assets/lockup/Light.png",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Declarative routing for React applications.",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "redux-toolkit",
+      "title": "Redux Toolkit",
+      "description": "The official, opinionated, batteries-included toolset for efficient Redux development, simplifying state management.",
+      "icon": "https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Efficient and predictable state management for React.",
+      "roadmap": [],
+      "versions": []
     }
   ]
 }

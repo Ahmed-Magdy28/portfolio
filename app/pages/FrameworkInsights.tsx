@@ -1,28 +1,20 @@
 import { useOutletContext } from 'react-router';
-import { Accordion } from '../components/Accordion';
-import { AdminArrayItemsEditor } from '../components/admin/AdminArrayItemsEditor';
+import { TechAccordionPage } from '../components/tech/TechAccordionPage';
 import type { Framework } from '../data/types';
-import { useAdminSession } from '../hooks/useAdminSession';
+import { useTechPageCopy } from '../hooks/useTechPageCopy';
 
 export const FrameworkInsights = () => {
   const { data } = useOutletContext<{ data: Framework }>();
-  const { isAdminAuthenticated } = useAdminSession();
+  const copy = useTechPageCopy('frameworks');
 
   return (
-    <div className="space-y-6">
-      <Accordion items={data.insights} />
-
-      {isAdminAuthenticated ? (
-        <AdminArrayItemsEditor
-          title="Insights manager"
-          description="Edit and reorder only the insights for this framework here."
-          items={data.insights}
-          entity={data}
-          entityField="insights"
-          collection="frameworks"
-          itemId={data.slug}
-        />
-      ) : null}
-    </div>
+    <TechAccordionPage
+      copy={copy}
+      data={data}
+      description={copy.insightsAdminDescription}
+      entityField="insights"
+      items={data.insights}
+      title="Insights Manager"
+    />
   );
 };

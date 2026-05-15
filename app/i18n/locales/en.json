@@ -25,19 +25,32 @@
     "liveDemo": "Live Demo",
     "sourceCode": "Source Code",
     "challenges": "Challenges & Solutions",
-    "video": "Project Demo"
+    "video": "Project Demo",
+    "backToList": "Back to Gallery",
+    "description": "A curated showcase of professional engineering work and experimental side projects.",
+    "categories": {
+      "frontend": "Frontend Web (React)",
+      "mobile": "Mobile (Flutter)",
+      "backend": "Backend (Django)",
+      "systems": "Systems (C shell)",
+      "wordpress": "WordPress"
+    }
   },
   "languages": {
     "title": "Programming Languages",
     "about": "About",
     "insights": "Insights",
-    "interview": "Interview Questions"
+    "interview": "Interview Questions",
+    "roadmap": "Roadmap",
+    "versions": "Versions"
   },
   "frameworks": {
     "title": "Frameworks & Tools",
     "about": "About",
     "insights": "Insights",
-    "interview": "Interview Questions"
+    "interview": "Interview Questions",
+    "roadmap": "Roadmap",
+    "versions": "Versions"
   },
   "contact": {
     "title": "Get In Touch",

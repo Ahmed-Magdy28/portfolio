@@ -48,7 +48,7 @@ export const Navbar = () => {
           <div className="flex items-center gap-3">
             {isAdminAuthenticated ? (
               <Link
-                to={`/${adminRoutePath}`}
+                to={`/${adminRoutePath}/`}
                 className="hidden rounded-lg bg-amber-400 px-3 py-2 text-sm font-medium text-black transition hover:bg-amber-300 md:inline-flex"
               >
                 Admin

@@ -5,19 +5,24 @@
     "cvUrl": "https://drive.usercontent.google.com/download?id=1aqEvGWxLCRlbLhH7TRnXHoK8rZZwHkg4&export=download&authuser=1&confirm=t&uuid=3491208b-7b74-4d07-84b6-162608feb2ab&at=ALBwUgkYBI0lTgboskkVQzSWqumX:1776707742570",
     "features": [
       {
-        "icon": "⚡",
-        "title": "High Performance",
-        "description": "Optimized, fast-loading applications using modern frontend best practices"
+        "icon": "Zap",
+        "title": "High-Performance Architecture",
+        "description": "Engineered for speed and SEO, utilizing React Router 7's SSR capabilities for sub-second page loads."
       },
       {
-        "icon": "🧠",
-        "title": "Scalable & Smart",
-        "description": "Built with React, Next.js, Redux Toolkit, and TanStack Query for scalable architecture"
+        "icon": "Shield",
+        "title": "Scalable State Management",
+        "description": "Handling complex application states and real-time data with Redux Toolkit and TanStack Query."
       },
       {
-        "icon": "🌐",
-        "title": "Full-Stack & Cross-Platform",
-        "description": "Experience with WordPress, Flask/Django, and Flutter for web and mobile solutions"
+        "icon": "Sparkles",
+        "title": "Advanced UI Animations",
+        "description": "Creating immersive user experiences with fluid transitions and interactive components using Motion."
+      },
+      {
+        "icon": "Globe",
+        "title": "Global Ready i18n",
+        "description": "Full RTL support and seamless multi-language integration for international audiences."
       }
     ]
   },
@@ -630,6 +635,22 @@
       "icon": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg",
       "insights": [],
       "interviewQuestions": [],
+      "roadmapUrl": "https://roadmap.sh/typescript",
+      "versions": [
+        {
+          "id": "ts-5-4",
+          "version": "5.4",
+          "releaseDate": "2024-03-06",
+          "title": "Preserved Narrowing in Closures",
+          "type": "minor",
+          "changes": [
+            "Preserved narrowing in closures following last assignments",
+            "The NoInfer utility type",
+            "Object.groupBy and Map.groupBy",
+            "Support for require() calls in --module preserve"
+          ]
+        }
+      ],
       "aboutDescription": "Type-safe JavaScript development"
     },
     {
@@ -659,6 +680,23 @@
       "icon": "⚛️",
       "insights": [],
       "interviewQuestions": [],
+      "roadmapUrl": "https://roadmap.sh/react",
+      "versions": [
+        {
+          "id": "react-19",
+          "version": "19.0",
+          "releaseDate": "2024-12-05",
+          "title": "React 19 RC",
+          "type": "major",
+          "changes": [
+            "Actions: Support for async functions in transitions",
+            "New hook: useActionState for form handling",
+            "New hook: useOptimistic for optimistic updates",
+            "New API: use for reading resources in render",
+            "Server Components and Server Actions"
+          ]
+        }
+      ],
       "aboutDescription": "A JavaScript library for building user interfaces"
     },
     {

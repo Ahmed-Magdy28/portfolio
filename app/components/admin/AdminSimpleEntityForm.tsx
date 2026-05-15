@@ -1,7 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useFetcher, useRevalidator } from "react-router";
 import { useTranslation } from "../../i18n/useTranslation";
 import type { Framework, Language, Project } from "../../data/types";
+import { IconValue } from "../IconValue";
+import { Save, ChevronDown, ChevronUp, Layout, Type, Globe, Github, Video, Info, Sparkles, CheckCircle2 } from "lucide-react";
+import { AdminCard } from "./ui/AdminCard";
+import { AdminButton } from "./ui/AdminButton";
+import { AdminImageUpload } from "./AdminImageUpload";
+import { cn } from "../ui/utils";
+import { toast } from "sonner";
 
 type EditableEntity = Language | Framework | Project;
 
@@ -26,97 +33,148 @@ export const AdminSimpleEntityForm = ({
   const revalidator = useRevalidator();
   const [draft, setDraft] = useState(entity);
   const [open, setOpen] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const lastSubmissionRef = useRef<string | null>(null);
 
   useEffect(() => {
     setDraft(entity);
-  }, [entity]);
+  }, [itemId]);
 
   useEffect(() => {
-    if (fetcher.data?.success) {
-      revalidator.revalidate();
+    const isIdle = fetcher.state === "idle";
+    const data = fetcher.data;
+
+    if (isIdle && data) {
+      const dataStr = JSON.stringify(data);
+      if (lastSubmissionRef.current !== dataStr) {
+        lastSubmissionRef.current = dataStr;
+        if (data.success) {
+          toast.success(data.success);
+          setShowSuccessMessage(true);
+          revalidator.revalidate();
+          const timer = setTimeout(() => setShowSuccessMessage(false), 5000);
+          return () => clearTimeout(timer);
+        } else if (data.error) {
+          toast.error(data.error);
+        }
+      }
     }
-  }, [fetcher.data?.success, revalidator]);
+  }, [fetcher.state, fetcher.data, revalidator]);
 
   const updateField = (field: string, value: unknown) => {
     setDraft((current) => ({ ...current, [field]: value }));
   };
 
-  return (
-    <fetcher.Form
-      method="post"
-      action="/__admin/save"
-      className="rounded-2xl border border-sky-300/70 bg-sky-50/70 p-5 dark:border-sky-900 dark:bg-sky-950/20"
-    >
-      <input type="hidden" name="intent" value="save-entity" />
-      <input type="hidden" name="locale" value={lang} />
-      <input type="hidden" name="collection" value={collection} />
-      <input type="hidden" name="itemId" value={itemId} />
-      <input type="hidden" name="payload" value={JSON.stringify(draft)} />
+  const isSubmitting = fetcher.state !== "idle";
 
-      <div className="mb-4 flex items-start justify-between gap-4">
-        <div>
-          <div className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-700 dark:text-sky-300">
-            Admin Editor
+  return (
+    <AdminCard
+      title={title}
+      description={description}
+      icon={<Sparkles className="w-6 h-6 text-sky-600" />}
+      className="border-t-4 border-t-sky-500 bg-sky-50/10 dark:bg-sky-950/5"
+      headerActions={
+        <div className="flex items-center gap-3">
+          <div className="hidden sm:flex rounded-full bg-sky-100 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-sky-700 dark:bg-sky-900/40 dark:text-sky-300">
+            {activeLocale} Mode
           </div>
-          <h3 className="mt-1 text-lg font-semibold">{title}</h3>
-          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            {description}
-          </p>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="rounded-full border border-sky-400/70 bg-white/70 px-3 py-1 text-xs font-semibold text-sky-900 dark:border-sky-700 dark:bg-sky-900/40 dark:text-sky-100">
-            Editing {activeLocale}
-          </div>
-          <button
+          <AdminButton
             type="button"
             onClick={() => setOpen((current) => !current)}
-            className="rounded-full bg-sky-200 px-3 py-1 text-md font-medium text-sky-900 transition hover:bg-sky-300 dark:bg-sky-800 dark:text-sky-100 dark:hover:bg-sky-700"
+            variant="outline"
+            size="sm"
+            rightIcon={open ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
           >
-            {open ? "Collapse" : "Edit"}
-          </button>
+            {open ? "Collapse" : "Edit Metadata"}
+          </AdminButton>
         </div>
-      </div>
+      }
+    >
+      <fetcher.Form
+        method="post"
+        action="/__admin/save"
+        className={cn("space-y-8", !open && "hidden")}
+      >
+        <input type="hidden" name="intent" value="save-entity" />
+        <input type="hidden" name="locale" value={lang} />
+        <input type="hidden" name="collection" value={collection} />
+        <input type="hidden" name="itemId" value={itemId} />
+        <input type="hidden" name="payload" value={JSON.stringify(draft)} />
 
-      {open ? (
-        <>
-          <div className="grid gap-4 md:grid-cols-2">
-            {"icon" in draft ? (
-              <label className="block">
-                <div className="mb-2 text-sm font-medium">Icon</div>
-                <input
-                  value={draft.icon}
-                  onChange={(event) => updateField("icon", event.target.value)}
-                  className="w-full rounded-xl border border-gray-300 px-4 py-3 dark:border-gray-700 dark:bg-gray-800"
-                />
-              </label>
-            ) : null}
-
+        <div className="grid gap-8 md:grid-cols-2">
+          <div className="space-y-6">
             <label className="block">
-              <div className="mb-2 text-sm font-medium">Title</div>
+              <div className="flex items-center gap-2 mb-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                <Type className="w-3 h-3" /> Identity / Title
+              </div>
               <input
                 value={draft.title}
                 onChange={(event) => updateField("title", event.target.value)}
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 dark:border-gray-700 dark:bg-gray-800"
+                className="w-full rounded-xl border border-gray-100 bg-white px-4 py-3 text-sm font-bold dark:border-gray-800 dark:bg-gray-950/50 outline-none focus:border-sky-500 focus:ring-4 focus:ring-sky-500/5 transition-all"
               />
             </label>
+
+            {(collection === "projects" || "icon" in draft) && (
+              <AdminImageUpload
+                label="Identity Icon / SVG"
+                value={("icon" in draft ? draft.icon : "") || ""}
+                onChange={(url) => updateField("icon", url)}
+              />
+            )}
+
+            {(collection === "projects" || "image" in draft) && (
+              <AdminImageUpload
+                label="Showcase Thumbnail"
+                value={("image" in draft ? (draft as any).image : "") || ""}
+                onChange={(url) => updateField("image", url)}
+              />
+            )}
           </div>
 
-          <label className="mt-4 block">
-            <div className="mb-2 text-sm font-medium">Description</div>
+          <div className="space-y-4">
+             <div className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Visual Preview</div>
+             <div className="relative group overflow-hidden rounded-[2rem] border border-gray-100 bg-gray-50/50 p-8 dark:border-gray-800 dark:bg-gray-950/30 flex flex-col items-center justify-center gap-6 transition-all hover:bg-white dark:hover:bg-gray-950/50 hover:shadow-xl hover:shadow-sky-500/5">
+                <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                
+                <div className="flex gap-4 items-end">
+                   <div className="w-20 h-20 flex items-center justify-center rounded-[1.5rem] bg-white dark:bg-gray-900 shadow-2xl shadow-black/5 border border-gray-50 dark:border-gray-800 group-hover:scale-110 transition-transform duration-500">
+                      <IconValue value={("icon" in draft ? draft.icon : "")} alt="Preview" className="text-4xl" imageClassName="h-12 w-12 object-contain" />
+                   </div>
+                   {"image" in draft && (draft as any).image && (
+                     <div className="w-32 h-20 flex items-center justify-center rounded-[1.5rem] bg-white dark:bg-gray-900 shadow-2xl shadow-black/5 border border-gray-50 dark:border-gray-800 overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                       <img src={(draft as any).image} alt="Project" className="h-full w-full object-cover" />
+                     </div>
+                   )}
+                </div>
+                
+                <div className="text-center relative z-10">
+                   <div className="text-lg font-black tracking-tight mb-1">{draft.title || "Untitled Entity"}</div>
+                   <div className="text-[10px] font-black uppercase tracking-[0.3em] text-sky-600/60 dark:text-sky-400/60">Live Snapshot</div>
+                </div>
+             </div>
+          </div>
+        </div>
+
+        <div className="space-y-6">
+          <label className="block">
+            <div className="flex items-center gap-2 mb-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
+              <Layout className="w-3 h-3" /> Card Abstract
+            </div>
             <textarea
               value={draft.description}
               onChange={(event) =>
                 updateField("description", event.target.value)
               }
               rows={3}
-              className="w-full rounded-xl border border-gray-300 px-4 py-3 dark:border-gray-700 dark:bg-gray-800"
+              className="w-full rounded-2xl border border-gray-100 bg-white px-5 py-4 text-sm leading-relaxed dark:border-gray-800 dark:bg-gray-950/50 outline-none focus:border-sky-500 transition-all resize-none dark:text-gray-300"
+              placeholder="A short, catchy description for listing pages..."
             />
           </label>
 
-          {"aboutDescription" in draft ? (
-            <label className="mt-4 block">
-              <div className="mb-2 text-sm font-medium">
-                About page description
+          {"aboutDescription" in draft && (
+            <label className="block">
+              <div className="flex items-center gap-2 mb-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                <Info className="w-3 h-3" /> Detailed Narrative
               </div>
               <textarea
                 value={draft.aboutDescription ?? ""}
@@ -124,15 +182,21 @@ export const AdminSimpleEntityForm = ({
                   updateField("aboutDescription", event.target.value)
                 }
                 rows={5}
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 dark:border-gray-700 dark:bg-gray-800"
+                className="w-full rounded-2xl border border-gray-100 bg-white px-5 py-4 text-sm leading-relaxed dark:border-gray-800 dark:bg-gray-950/50 outline-none focus:border-sky-500 transition-all dark:text-gray-300"
+                placeholder="Write the comprehensive story for the detail page..."
               />
             </label>
-          ) : null}
+          )}
 
           {"techStack" in draft ? (
-            <>
-              <label className="mt-4 block">
-                <div className="mb-2 text-sm font-medium">Tech stack</div>
+            <div className="space-y-8 pt-8 border-t border-gray-100 dark:border-gray-800">
+              <label className="block">
+                <div className="flex items-center justify-between mb-2">
+                   <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                    Infrastructure / Tech Stack
+                  </div>
+                  <div className="text-[9px] font-bold text-sky-600 uppercase">Comma Separated</div>
+                </div>
                 <input
                   value={draft.techStack.join(", ")}
                   onChange={(event) =>
@@ -144,78 +208,119 @@ export const AdminSimpleEntityForm = ({
                         .filter(Boolean),
                     )
                   }
-                  className="w-full rounded-xl border border-gray-300 px-4 py-3 dark:border-gray-700 dark:bg-gray-800"
+                  className="w-full rounded-xl border border-gray-100 bg-white px-4 py-3 text-sm font-medium dark:border-gray-800 dark:bg-gray-950/50 outline-none focus:border-sky-500 transition-all dark:text-gray-200"
                 />
               </label>
 
-              <div className="mt-4 grid gap-4 md:grid-cols-2">
+              <div className="grid gap-8 md:grid-cols-2">
                 <label className="block">
-                  <div className="mb-2 text-sm font-medium">Live URL</div>
+                  <div className="flex items-center gap-2 mb-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                    <Globe className="w-3 h-3" /> Live Production URL
+                  </div>
                   <input
                     value={draft.liveUrl ?? ""}
                     onChange={(event) =>
                       updateField("liveUrl", event.target.value || undefined)
                     }
-                    className="w-full rounded-xl border border-gray-300 px-4 py-3 dark:border-gray-700 dark:bg-gray-800"
+                    className="w-full rounded-xl border border-gray-100 bg-white px-4 py-3 text-sm dark:border-gray-800 dark:bg-gray-950/50 outline-none focus:border-sky-500 transition-all"
+                    placeholder="https://..."
                   />
                 </label>
                 <label className="block">
-                  <div className="mb-2 text-sm font-medium">Source URL</div>
+                  <div className="flex items-center gap-2 mb-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                    <Github className="w-3 h-3" /> Source Code / Repository
+                  </div>
                   <input
                     value={draft.sourceUrl ?? ""}
                     onChange={(event) =>
                       updateField("sourceUrl", event.target.value || undefined)
                     }
-                    className="w-full rounded-xl border border-gray-300 px-4 py-3 dark:border-gray-700 dark:bg-gray-800"
+                    className="w-full rounded-xl border border-gray-100 bg-white px-4 py-3 text-sm dark:border-gray-800 dark:bg-gray-950/50 outline-none focus:border-sky-500 transition-all"
+                    placeholder="https://github.com/..."
                   />
                 </label>
               </div>
 
-              <label className="mt-4 block">
-                <div className="mb-2 text-sm font-medium">Full description</div>
+              <label className="block">
+                <div className="flex items-center gap-2 mb-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                  Full Project Brief (Markdown)
+                </div>
                 <textarea
                   value={draft.fullDescription}
                   onChange={(event) =>
                     updateField("fullDescription", event.target.value)
                   }
-                  rows={5}
-                  className="w-full rounded-xl border border-gray-300 px-4 py-3 dark:border-gray-700 dark:bg-gray-800"
+                  rows={6}
+                  className="w-full rounded-2xl border border-gray-100 bg-white px-5 py-4 text-sm leading-relaxed dark:border-gray-800 dark:bg-gray-950/50 outline-none focus:border-sky-500 transition-all dark:text-gray-300"
                 />
               </label>
 
-              <label className="mt-4 block">
-                <div className="mb-2 text-sm font-medium">Challenges</div>
+              <label className="block">
+                <div className="flex items-center gap-2 mb-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                  Technical Challenges & Solutions
+                </div>
                 <textarea
                   value={draft.challenges}
                   onChange={(event) =>
                     updateField("challenges", event.target.value)
                   }
                   rows={4}
-                  className="w-full rounded-xl border border-gray-300 px-4 py-3 dark:border-gray-700 dark:bg-gray-800"
+                  className="w-full rounded-2xl border border-gray-100 bg-white px-5 py-4 text-sm leading-relaxed dark:border-gray-800 dark:bg-gray-950/50 outline-none focus:border-sky-500 transition-all dark:text-gray-300"
                 />
               </label>
 
-              <label className="mt-4 block">
-                <div className="mb-2 text-sm font-medium">Video URL</div>
+              <label className="block">
+                <div className="flex items-center gap-2 mb-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                  <Video className="w-3 h-3" /> Multimedia Showcase (Video URL)
+                </div>
                 <input
                   value={draft.video ?? ""}
                   onChange={(event) =>
                     updateField("video", event.target.value || undefined)
                   }
-                  className="w-full rounded-xl border border-gray-300 px-4 py-3 dark:border-gray-700 dark:bg-gray-800"
+                  className="w-full rounded-xl border border-gray-100 bg-white px-4 py-3 text-sm dark:border-gray-800 dark:bg-gray-950/50 outline-none focus:border-sky-500 transition-all"
+                  placeholder="YouTube/Vimeo link"
                 />
               </label>
-            </>
+            </div>
           ) : null}
 
-          <button
-            type="submit"
-            className="mt-4 rounded-xl bg-sky-500 px-4 py-2 text-sm font-medium text-black transition hover:bg-sky-400"
-          >
-            Save details
-          </button>
-        </>
-      ) : null}
-    </fetcher.Form>
+          <div className="flex items-center justify-end gap-4 pt-6 border-t border-gray-100 dark:border-gray-800">
+             {showSuccessMessage && (
+               <div className="flex items-center gap-2 text-xs font-bold text-green-600 dark:text-green-400 animate-in fade-in slide-in-from-right-2">
+                 <CheckCircle2 className="w-4 h-4" />
+                 Update published successfully
+               </div>
+             )}
+             <AdminButton
+              type="submit"
+              isLoading={isSubmitting}
+              variant="sky"
+              size="lg"
+              leftIcon={<Save className="w-4 h-4" />}
+            >
+              Commit Metadata
+            </AdminButton>
+          </div>
+        </div>
+      </fetcher.Form>
+
+      {!open && (
+         <div className="flex items-center justify-between mt-4 p-4 rounded-2xl bg-gray-50/50 dark:bg-gray-800/20 border border-gray-100 dark:border-gray-800">
+            <div className="flex items-center gap-4">
+               <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800">
+                  <IconValue value={("icon" in draft ? draft.icon : "")} alt="Preview" className="text-xl" imageClassName="h-6 w-6 object-contain" />
+               </div>
+               <div>
+                  <div className="text-sm font-bold">{draft.title || "Untitled"}</div>
+                  <div className="text-[10px] font-black uppercase tracking-widest opacity-40">Static View</div>
+               </div>
+            </div>
+            <AdminButton variant="ghost" size="sm" onClick={() => setOpen(true)} rightIcon={<ChevronDown className="w-4 h-4" />}>
+               Expand
+            </AdminButton>
+         </div>
+      )}
+    </AdminCard>
   );
 };

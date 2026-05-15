@@ -6,6 +6,8 @@ import type {
   Framework,
   Language,
   Project,
+  RoadmapStep,
+  Version,
 } from "../data/types";
 
 export type ContentLocale = "en" | "ar";
@@ -185,6 +187,8 @@ const normalizeLanguages = (languages: Language[]) =>
     aboutDescription: language.aboutDescription ?? language.description,
     insights: normalizeAccordionItems(language.insights),
     interviewQuestions: normalizeAccordionItems(language.interviewQuestions),
+    roadmap: normalizeRoadmapSteps(language.roadmap ?? []),
+    versions: normalizeVersions(language.versions ?? []),
   }));
 
 const normalizeFrameworks = (frameworks: Framework[]) =>
@@ -193,6 +197,27 @@ const normalizeFrameworks = (frameworks: Framework[]) =>
     aboutDescription: framework.aboutDescription ?? framework.description,
     insights: normalizeAccordionItems(framework.insights),
     interviewQuestions: normalizeAccordionItems(framework.interviewQuestions),
+    roadmap: normalizeRoadmapSteps(framework.roadmap ?? []),
+    versions: normalizeVersions(framework.versions ?? []),
+  }));
+
+const normalizeRoadmapSteps = (steps: RoadmapStep[]) =>
+  steps.map((step, index) => ({
+    id: step.id || makeId("roadmap", index),
+    title: step.title ?? "",
+    description: step.description ?? "",
+    status: step.status ?? "planned",
+    priority: step.priority,
+  }));
+
+const normalizeVersions = (versions: Version[]) =>
+  versions.map((version, index) => ({
+    id: version.id || makeId("version", index),
+    version: version.version ?? "",
+    releaseDate: version.releaseDate ?? "",
+    title: version.title,
+    changes: Array.isArray(version.changes) ? version.changes : [],
+    type: version.type ?? "minor",
   }));
 
 async function readRawSiteContent(
@@ -226,9 +251,24 @@ async function readRawSiteContent(
 }
 
 const normalizeSiteContent = (parsed: Partial<SiteContent>): SiteContent => ({
-  home: parsed.home ?? defaultSiteContent.home,
-  about: parsed.about ?? defaultSiteContent.about,
-  contact: parsed.contact ?? defaultSiteContent.contact,
+  home: {
+    ...defaultSiteContent.home,
+    ...(parsed.home ?? {}),
+    features: Array.isArray(parsed.home?.features) ? parsed.home.features : [],
+  },
+  about: {
+    ...defaultSiteContent.about,
+    ...(parsed.about ?? {}),
+    paragraphs: Array.isArray(parsed.about?.paragraphs)
+      ? parsed.about.paragraphs
+      : [],
+    skills: Array.isArray(parsed.about?.skills) ? parsed.about.skills : [],
+  },
+  contact: {
+    ...defaultSiteContent.contact,
+    ...(parsed.contact ?? {}),
+    links: Array.isArray(parsed.contact?.links) ? parsed.contact.links : [],
+  },
   projects: parsed.projects ?? [],
   languages: normalizeLanguages(parsed.languages ?? []),
   frameworks: normalizeFrameworks(parsed.frameworks ?? []),

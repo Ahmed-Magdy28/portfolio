@@ -40,7 +40,7 @@ export const Accordion = ({ items }: AccordionProps) => {
     switch (block.type) {
       case 'text':
         return (
-          <div className="text-gray-700 dark:text-gray-300 whitespace-pre-wrap">
+          <div className="text-gray-700 dark:text-gray-300 whitespace-pre-wrap leading-relaxed">
             {block.text}
           </div>
         );
@@ -48,21 +48,41 @@ export const Accordion = ({ items }: AccordionProps) => {
         return <CodeBlock code={block.code} language={block.language || 'javascript'} />;
       case 'video':
         return <VideoPlayer url={block.url} />;
-      case 'image':
+      case 'image': {
+        const aspectClasses = {
+          auto: 'aspect-auto',
+          square: 'aspect-square',
+          video: 'aspect-video',
+          wide: 'aspect-[21/9]',
+        };
+        
         return (
-          <img
-            src={block.url}
-            alt={block.alt || 'Content image'}
-            className="max-h-[28rem] w-full rounded-2xl object-cover"
-          />
+          <div className="flex flex-col gap-2">
+            <div 
+              className={`relative overflow-hidden rounded-2xl border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 ${aspectClasses[block.aspectRatio || 'auto']}`}
+              style={{
+                width: block.width || '100%',
+                height: block.height || 'auto',
+                maxWidth: '100%',
+              }}
+            >
+              <img
+                src={block.url}
+                alt={block.alt || 'Content image'}
+                className="w-full h-full object-cover transition-opacity duration-300"
+              />
+            </div>
+            {block.alt && <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground px-2">{block.alt}</span>}
+          </div>
         );
+      }
       case 'link':
         return (
           <a
             href={block.url}
             target={block.url.startsWith('http') ? '_blank' : undefined}
             rel={block.url.startsWith('http') ? 'noopener noreferrer' : undefined}
-            className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-blue-700"
+            className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-2.5 text-sm font-black text-white transition hover:bg-blue-500 hover:shadow-lg hover:shadow-blue-500/20"
           >
             <span>{block.label}</span>
             <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,7 +101,7 @@ export const Accordion = ({ items }: AccordionProps) => {
             {block.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700 dark:border-blue-800 dark:bg-blue-950/40 dark:text-blue-200"
+                className="rounded-lg border border-blue-200 bg-blue-50 px-2.5 py-1 text-[10px] font-black text-blue-700 dark:border-blue-800 dark:bg-blue-950/40 dark:text-blue-200 uppercase tracking-tighter"
               >
                 {tag.startsWith('#') ? tag : `#${tag}`}
               </span>

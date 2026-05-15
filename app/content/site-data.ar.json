@@ -6,19 +6,24 @@
     "cvUrl": "https://drive.usercontent.google.com/download?id=1aqEvGWxLCRlbLhH7TRnXHoK8rZZwHkg4&export=download&authuser=1&confirm=t&uuid=3491208b-7b74-4d07-84b6-162608feb2ab&at=ALBwUgkYBI0lTgboskkVQzSWqumX:1776707742570",
     "features": [
       {
-        "icon": "⚡",
-        "title": "أداء عالي",
-        "description": "تطبيقات محسّنة وسريعة التحميل باستخدام أفضل ممارسات الواجهة الأمامية الحديثة"
+        "icon": "Zap",
+        "title": "بنية عالية الأداء",
+        "description": "مصممة للسرعة وتحسين محركات البحث، باستخدام قدرات SSR في React Router 7 لتحميل الصفحات في أجزاء من الثانية."
       },
       {
-        "icon": "🧠",
-        "title": "قابل للتوسع وذكي",
-        "description": "مبني باستخدام React و Next.js و Redux Toolkit و TanStack Query لهندسة قابلة للتوسع"
+        "icon": "Shield",
+        "title": "إدارة حالة قابلة للتوسع",
+        "description": "التعامل مع حالات التطبيقات المعقدة والبيانات الفورية باستخدام Redux Toolkit و TanStack Query."
       },
       {
-        "icon": "🌐",
-        "title": "تطوير متكامل ومتعدد المنصات",
-        "description": "خبرة في WordPress و Flask/Django و Flutter لتطوير حلول الويب والموبايل"
+        "icon": "Sparkles",
+        "title": "تفاعلات واجهة متقدمة",
+        "description": "إنشاء تجارب مستخدم غامرة مع انتقالات سلسة ومكونات تفاعلية باستخدام Motion."
+      },
+      {
+        "icon": "Globe",
+        "title": "دعم عالمي متكامل",
+        "description": "دعم كامل للاتجاه من اليمين إلى اليسار (RTL) وتكامل سلس للغات المتعددة للجمهور العالمي."
       }
     ]
   },
@@ -93,9 +98,9 @@
     "ctaLinkUrl": "/contact"
   },
   "contact": {
-    "intro": "Have a project in mind? Let's talk about it!",
-    "connectTitle": "Connect With Me",
-    "connectText": "Feel free to reach out through any of these platforms:",
+    "intro": "هل لديك مشروع في ذهنك؟ دعنا نتحدث عنه!",
+    "connectTitle": "تواصل معي",
+    "connectText": "لا تتردد في التواصل معي عبر أي من هذه المنصات:",
     "links": [
       {
         "label": "GitHub",
@@ -263,7 +268,7 @@
       ],
       "liveUrl": "https://fast-react-pizza-orcin-kappa.vercel.app/",
       "sourceUrl": "https://github.com/Ahmed-Magdy28/fast-react-pizza",
-      "fullDescription": "Fast React Pizza هو تطبيق واجهة أمامية تم تطويره أثناء تعلم React، مع التركيز على المفاهيم الأساسية مثل التوجيه (Routing)، إدارة الحالة العامة (Global State Management)، وبنية المكونات (Component-based Architecture). يتيح التطبيق للمستخدمين تصفح قائمة الطعام، إضافة العناصر إلى سلة المشتريات، وإتمام الطلب من خلال واجهة سلسة وتفاعلية. يستخدم React Router للتنقل بين الصفحات، وRedux لإدارة الحالة العامة مثل سلة المشتريات وبيانات الطلبات. يركز المشروع على كتابة مكونات منظمة وقابلة لإعادة الاستخدام مع تدفق بيانات واضح وقابل للتوقع، مما يجعله أساسًا قويًا لبناء تطبيقات React قابلة للتوسع.",
+      "fullDescription": "Fast React Pizza هو تطبيق واجهة أمامية تم تطويره أثناء تعلم React, مع التركيز على المفاهيم الأساسية مثل التوجيه (Routing), إدارة الحالة العامة (Global State Management), وبنية المكونات (Component-based Architecture). يتيح التطبيق للمستخدمين تصفح قائمة الطعام, إضافة العناصر إلى سلة المشتريات, وإتمام الطلب من خلال واجهة سلسة وتفاعلية. يستخدم React Router للتنقل بين الصفحات, وRedux لإدارة الحالة العامة مثل سلة المشتريات وبيانات الطلبات. يركز المشروع على كتابة مكونات منظمة وقابلة لإعادة الاستخدام مع تدفق بيانات واضح وقابل للتوقع, مما يجعله أساسًا قويًا لبناء تطبيقات React قابلة للتوسع.",
       "challenges": [
         "فهم وتنفيذ إدارة الحالة العامة باستخدام Redux.",
         "تنظيم المكونات بطريقة قابلة للتوسع وإعادة الاستخدام.",
@@ -530,7 +535,7 @@
       ],
       "liveUrl": "",
       "sourceUrl": "https://github.com/Ahmed-Magdy28/simple_shell",
-      "fullDescription": "Simple Shell هو مشروع برمجة أنظمة منخفضة المستوى مكتوب بلغة C يحاكي السلوك الأساسي لواجهة سطر أوامر UNIX. يدعم تنفيذ الأوامر الأساسية مثل cd و ls من خلال التفاعل المباشر مع نظام التشغيل باستخدام system calls. تم تطوير المشروع بشكل تعاوني مع زميل، مع التركيز على تعلم المفاهيم الأساسية مثل إنشاء العمليات (process creation)، تحليل الأوامر (command parsing)، والتفاعل مع الطرفية (terminal interaction). يوفر المشروع خبرة عملية لفهم كيفية عمل أنظمة الشيل داخليًا على مستوى النظام.",
+      "fullDescription": "Simple Shell هو مشروع برمجة أنظمة منخفضة المستوى مكتوب بلغة C يحاكي السلوك الأساسي لواجهة سطر أوامر UNIX. يدعم تنفيذ الأوامر الأساسية مثل cd و ls من خلال التفاعل المباشر مع نظام التشغيل باستخدام system calls. تم تطوير المشروع بشكل تعاوني مع زميل، مع التركيز على تعلم المفاييم الأساسية مثل إنشاء العمليات (process creation)، تحليل الأوامر (command parsing)، والتفاعل مع الطرفية (terminal interaction). يوفر المشروع خبرة عملية لفهم كيفية عمل أنظمة الشيل داخليًا على مستوى النظام.",
       "challenges": [
         "فهم إنشاء العمليات في UNIX وتنفيذها باستخدام system calls.",
         "تحليل مدخلات المستخدم والتعامل مع وسائط الأوامر بشكل صحيح.",
@@ -610,117 +615,212 @@
     {
       "slug": "javascript",
       "title": "JavaScript",
-      "description": "Core language for building dynamic, interactive, and high-performance web applications using modern ES6+ features.",
+      "description": "اللغة الأساسية لبناء تطبيقات ويب ديناميكية وتفاعلية وعالية الأداء باستخدام ميزات ES6+ الحديثة.",
       "icon": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "JavaScript is a high-level, dynamic, single-threaded programming language used to build interactive and scalable web applications. It runs in the browser and on the server (via Node.js), making it a full-stack language.\n⚡ Core Strengths\nEvent-driven architecture → ideal for UI interactions\nAsynchronous programming → handles APIs, real-time updates\nPrototype-based OOP → flexible object modeling\nMassive ecosystem → frameworks, tools, and libraries"
-    },
-    {
-      "slug": "python",
-      "title": "Python",
-      "description": "Versatile language used for backend development, automation, and building scalable web applications.",
-      "icon": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
-      "insights": [],
-      "interviewQuestions": [],
-      "aboutDescription": "Python for web development and data science"
+      "aboutDescription": "JavaScript هي لغة برمجة عالية المستوى وديناميكية تُستخدم لبناء تطبيقات ويب تفاعلية وقابلة للتوسع.",
+      "roadmap": [
+        {
+          "id": "item-1778363531895",
+          "title": "",
+          "content": "",
+          "blocks": [
+            {
+              "id": "block-1778363531895-y6gpfs",
+              "type": "text",
+              "text": ""
+            }
+          ]
+        }
+      ]
     },
     {
       "slug": "typescript",
       "title": "TypeScript",
-      "description": "Strongly typed superset of JavaScript that improves scalability, maintainability, and developer productivity.",
+      "description": "مجموعة برمجية من JavaScript تضيف الأنواع الثابتة (Static Types) لتحسين قابلية التوسع والصيانة.",
       "icon": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Typescript.svg",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "Type-safe JavaScript development"
+      "roadmapUrl": "https://roadmap.sh/typescript",
+      "versions": [
+        {
+          "id": "ts-5-4",
+          "version": "5.4",
+          "releaseDate": "2024-03-06",
+          "title": "Preserved Narrowing in Closures",
+          "type": "minor",
+          "changes": [
+            "Preserved narrowing in closures following last assignments",
+            "The NoInfer utility type",
+            "Object.groupBy and Map.groupBy",
+            "Support for require() calls in --module preserve"
+          ]
+        }
+      ],
+      "aboutDescription": "تطوير JavaScript آمن وبنية برمجية قوية لتطبيقات الويب الحديثة."
     },
     {
-      "slug": "language-1776633114635",
+      "slug": "python",
+      "title": "Python",
+      "description": "لغة متعددة الاستخدامات تُستخدم في تطوير الباك إند، الأتمتة، وبناء تطبيقات الويب القابلة للتوسع.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Python لتطوير الويب، الأتمتة، وخدمات الباك إند."
+    },
+    {
+      "slug": "dart",
       "title": "Dart",
-      "description": "Modern language optimized for building fast, cross-platform applications with Flutter.",
+      "description": "لغة حديثة محسنة لبناء تطبيقات سريعة ومتعددة المنصات باستخدام Flutter.",
       "icon": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "Add a short description"
+      "aboutDescription": "محسنة لتطوير تطبيقات الواجهة الأمامية للموبايل والويب."
     },
     {
-      "slug": "language-1776633522012",
+      "slug": "c-lang",
       "title": "C",
-      "description": "Low-level programming language that provides deep understanding of memory management and system-level concepts.",
+      "description": "لغة برمجة منخفضة المستوى توفر فهمًا عميقًا لإدارة الذاكرة ومفاهيم أنظمة التشغيل.",
       "icon": "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "Add a short description"
+      "aboutDescription": "الأساس المتين لعلوم الحاسب وبرمجيات الأنظمة."
+    },
+    {
+      "slug": "html",
+      "title": "HTML",
+      "description": "لغة التوصيف القياسية لإنشاء صفحات وتطبيقات الويب.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "تحديد هيكل وبنية محتوى الويب."
+    },
+    {
+      "slug": "css",
+      "title": "CSS",
+      "description": "لغة تنسيق تُستخدم لوصف طريقة عرض المستندات المكتوبة بلغة توصيف.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "تصميم واجهات مستخدم جميلة ومتجاوبة."
     }
   ],
   "frameworks": [
     {
       "slug": "react",
       "title": "React",
-      "description": "A JavaScript library for building user interfaces",
+      "description": "مكتبة JavaScript لبناء واجهات مستخدم تعتمد على المكونات مع التركيز على الكفاءة والقابلية للتوسع.",
       "icon": "⚛️",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "A JavaScript library for building user interfaces"
+      "roadmapUrl": "https://roadmap.sh/react",
+      "versions": [
+        {
+          "id": "react-19",
+          "version": "19.0",
+          "releaseDate": "2024-12-05",
+          "title": "React 19 RC",
+          "type": "major",
+          "changes": [
+            "Actions: Support for async functions in transitions",
+            "New hook: useActionState for form handling",
+            "New hook: useOptimistic for optimistic updates",
+            "New API: use for reading resources in render",
+            "Server Components and Server Actions"
+          ]
+        },
+        {
+          "id": "react-18-2",
+          "version": "18.2",
+          "releaseDate": "2022-06-14",
+          "title": "React 18.2.0",
+          "type": "minor",
+          "changes": [
+            "Performance improvements",
+            "Bug fixes for Concurrent React",
+            "Stable release of many 18.0 features"
+          ]
+        }
+      ],
+      "aboutDescription": "مكتبة JavaScript لبناء واجهات مستخدم تفاعلية."
     },
     {
       "slug": "nextjs",
       "title": "Next.js",
-      "description": "The React Framework for Production",
+      "description": "إطار عمل React للإنتاج، يوفر SSR و SSG وتجربة تطوير محسنة.",
       "icon": "▲",
-      "insights": [
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "إطار عمل React المتطور للإنتاج.",
+      "roadmap": [
         {
-          "id": "next-1",
-          "title": "Server Components vs Client Components",
-          "content": "Next.js 13+ introduces Server Components by default. Use \"use client\" directive only when you need interactivity, browser APIs, or React hooks.",
-          "code": "// Server Component (default)\nasync function Page() {\n  const data = await fetch('https://api.example.com/data');\n  return <div>{data}</div>;\n}\n\n// Client Component\n'use client';\nimport { useState } from 'react';\n\nexport function Counter() {\n  const [count, setCount] = useState(0);\n  return <button onClick={() => setCount(count + 1)}>{count}</button>;\n}",
-          "language": "typescript",
-          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "id": "item-1778363683978",
+          "title": "",
+          "content": "",
           "blocks": [
             {
-              "id": "next-1-1",
+              "id": "block-1778363683978-e97i63",
               "type": "text",
-              "text": "Next.js 13+ introduces Server Components by default. Use \"use client\" directive only when you need interactivity, browser APIs, or React hooks."
-            },
-            {
-              "id": "next-1-2",
-              "type": "code",
-              "code": "// Server Component (default)\nasync function Page() {\n  const data = await fetch('https://api.example.com/data');\n  return <div>{data}</div>;\n}\n\n// Client Component\n'use client';\nimport { useState } from 'react';\n\nexport function Counter() {\n  const [count, setCount] = useState(0);\n  return <button onClick={() => setCount(count + 1)}>{count}</button>;\n}",
-              "language": "typescript"
-            },
-            {
-              "id": "next-1-3",
-              "type": "video",
-              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              "text": ""
             }
           ]
         }
-      ],
-      "interviewQuestions": [
-        {
-          "id": "next-q1",
-          "title": "What are the different rendering methods in Next.js?",
-          "content": "Next.js supports Static Site Generation (SSG), Server-Side Rendering (SSR), Incremental Static Regeneration (ISR), and Client-Side Rendering (CSR). Choose based on your data freshness and performance requirements.",
-          "difficulty": "hard",
-          "blocks": [
-            {
-              "id": "next-q1-1",
-              "type": "text",
-              "text": "Next.js supports Static Site Generation (SSG), Server-Side Rendering (SSR), Incremental Static Regeneration (ISR), and Client-Side Rendering (CSR). Choose based on your data freshness and performance requirements."
-            }
-          ]
-        }
-      ],
-      "aboutDescription": "The React Framework for Production"
+      ]
     },
     {
       "slug": "django",
       "title": "Django",
-      "description": "High-level Python web framework",
+      "description": "إطار عمل ويب Python عالى المستوى يشجع على التطوير السريع والتصميم النظيف والعملي.",
       "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTioAoZJxF6BI-nOen5eh82SDOuK_S3mnqJgwL74oTwgj5VRJy72LiEuEs&s",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "High-level Python web framework"
+      "aboutDescription": "إطار عمل ويب Python متكامل وقوي."
+    },
+    {
+      "slug": "flutter",
+      "title": "Flutter",
+      "description": "مجموعة أدوات واجهة المستخدم من Google لبناء تطبيقات جميلة مجمعة أصليًا للموبايل والويب وسطح المكتب من كود واحد.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "بناء تطبيقات رائعة متعددة المنصات من قاعدة كود واحدة."
+    },
+    {
+      "slug": "wordpress",
+      "title": "WordPress",
+      "description": "نظام إدارة المحتوى الأكثر شهرة في العالم، يُستخدم لبناء كل شيء من المدونات البسيطة إلى مواقع التجارة الإلكترونية المعقدة.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "نظام إدارة محتوى قوي لتطوير ويب مرن."
+    },
+    {
+      "slug": "tailwindcss",
+      "title": "Tailwind CSS",
+      "description": "إطار عمل CSS يعتمد على الفئات الخدمية (Utility-first) لبناء واجهات مستخدم مخصصة بسرعة مباشرة داخل الكود.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "CSS حديث يعتمد على الخدمات لتطوير واجهات سريع."
+    },
+    {
+      "slug": "react-router",
+      "title": "React Router",
+      "description": "المكتبة القياسية للتوجيه (Routing) في React، تتيح إنشاء تطبيقات الصفحة الواحدة الديناميكية مع تنقل سلس.",
+      "icon": "https://reactrouter.com/_brand/react-router-mark-color.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "توجيه تصريحي لتطبيقات React."
+    },
+    {
+      "slug": "redux-toolkit",
+      "title": "Redux Toolkit",
+      "description": "الأداة الرسمية والموصى بها لتطوير Redux بكفاءة، تبسط إدارة الحالة في تطبيقات React.",
+      "icon": "https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "إدارة حالة فعالة وقابلة للتنبؤ لتطبيقات React."
     }
   ]
 }

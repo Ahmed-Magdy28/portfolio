@@ -1,28 +1,20 @@
 import { useOutletContext } from 'react-router';
-import { Accordion } from '../components/Accordion';
-import { AdminArrayItemsEditor } from '../components/admin/AdminArrayItemsEditor';
+import { TechAccordionPage } from '../components/tech/TechAccordionPage';
 import type { Language } from '../data/types';
-import { useAdminSession } from '../hooks/useAdminSession';
+import { useTechPageCopy } from '../hooks/useTechPageCopy';
 
 export const LanguageInterview = () => {
   const { data } = useOutletContext<{ data: Language }>();
-  const { isAdminAuthenticated } = useAdminSession();
+  const copy = useTechPageCopy('languages');
 
   return (
-    <div className="space-y-6">
-      <Accordion items={data.interviewQuestions} />
-
-      {isAdminAuthenticated ? (
-        <AdminArrayItemsEditor
-          title="Interview questions manager"
-          description="Edit and reorder only the interview questions for this language here."
-          items={data.interviewQuestions}
-          entity={data}
-          entityField="interviewQuestions"
-          collection="languages"
-          itemId={data.slug}
-        />
-      ) : null}
-    </div>
+    <TechAccordionPage
+      copy={copy}
+      data={data}
+      description={copy.interviewAdminDescription}
+      entityField="interviewQuestions"
+      items={data.interviewQuestions}
+      title="Interview Questions Manager"
+    />
   );
 };

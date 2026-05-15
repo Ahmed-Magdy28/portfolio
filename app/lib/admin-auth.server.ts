@@ -32,7 +32,10 @@ const safeCompare = (left: string, right: string) => {
   return timingSafeEqual(leftBuffer, rightBuffer);
 };
 
-export const getAdminRoutePath = () => process.env.ADMIN_ROUTE_PATH ?? 'vault-7f3a-admin';
+export const getAdminRoutePath = () => {
+  const path = process.env.ADMIN_ROUTE_PATH ?? 'vault-7f3a-admin';
+  return path.startsWith('/') ? path.slice(1) : path;
+};
 
 export async function isAuthenticatedAdmin(request: Request) {
   const session = await storage.getSession(request.headers.get('Cookie'));

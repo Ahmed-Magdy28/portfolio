@@ -88,6 +88,48 @@ export async function action({ request }: { request: Request }) {
       }
     }
 
+    if (intent === "save-entity-field") {
+      const collection = String(formData.get("collection") ?? "");
+      const itemId = String(formData.get("itemId") ?? "");
+      const field = String(formData.get("field") ?? "");
+      const value = String(formData.get("value") ?? "");
+      const content = await readSiteContent(locale);
+
+      if (field !== "roadmapUrl") {
+        return { error: "Unsupported entity field." };
+      }
+
+      if (collection === "languages") {
+        await writeSiteContent(
+          {
+            ...content,
+            languages: content.languages.map((item) =>
+              item.slug === itemId
+                ? { ...item, [field]: value.trim() || undefined }
+                : item,
+            ),
+          },
+          locale,
+        );
+        return { success: `Language ${field} updated for ${locale}.` };
+      }
+
+      if (collection === "frameworks") {
+        await writeSiteContent(
+          {
+            ...content,
+            frameworks: content.frameworks.map((item) =>
+              item.slug === itemId
+                ? { ...item, [field]: value.trim() || undefined }
+                : item,
+            ),
+          },
+          locale,
+        );
+        return { success: `Framework ${field} updated for ${locale}.` };
+      }
+    }
+
     if (intent === "save-translation-section") {
       const section = String(formData.get("section") ?? "");
       const localeParam = formData.get("locale");

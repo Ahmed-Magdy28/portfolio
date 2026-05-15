@@ -29,12 +29,32 @@ export interface ImageBlock {
   type: "image";
   url: string;
   alt?: string;
+  width?: string;
+  height?: string;
+  aspectRatio?: "auto" | "square" | "video" | "wide";
 }
 
 export interface HashtagsBlock {
   id: string;
   type: "hashtags";
   tags: string[];
+}
+
+export interface RoadmapStep {
+  id: string;
+  title: string;
+  description: string;
+  status: "completed" | "in-progress" | "planned";
+  priority?: "low" | "medium" | "high";
+}
+
+export interface Version {
+  id: string;
+  version: string;
+  releaseDate: string;
+  title?: string;
+  changes: string[];
+  type: "major" | "minor" | "patch";
 }
 
 export type ContentBlock =
@@ -67,6 +87,7 @@ export interface Project {
   liveUrl?: string;
   sourceUrl?: string;
   image?: string;
+  icon?: string;
   fullDescription: string;
   challenges: string;
   video?: string;
@@ -80,6 +101,9 @@ export interface Language {
   icon: string;
   insights: AccordionItem[];
   interviewQuestions: AccordionItem[];
+  roadmap?: RoadmapStep[];
+  roadmapUrl?: string;
+  versions?: Version[];
 }
 
 export interface Framework {
@@ -90,4 +114,7 @@ export interface Framework {
   icon: string;
   insights: AccordionItem[];
   interviewQuestions: AccordionItem[];
+  roadmap?: RoadmapStep[];
+  roadmapUrl?: string;
+  versions?: Version[];
 }
