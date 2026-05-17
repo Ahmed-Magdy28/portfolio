@@ -15,9 +15,14 @@ const isImageLike = (value?: string) =>
       /\.(png|jpe?g|gif|webp|svg|avif)$/i.test(value)
     : false;
 
-export const Hero = ({ t, home }: HeroProps) => {
+export const Hero = ({
+  t,
+  home,
+}: HeroProps) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
+
+  const titles = Array.isArray(home.titles) ? home.titles : [];
 
   const mouseXSpring = useSpring(x);
   const mouseYSpring = useSpring(y);
@@ -101,7 +106,7 @@ export const Hero = ({ t, home }: HeroProps) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-8 leading-[0.9] text-foreground"
+            className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4 leading-[0.9] text-foreground"
           >
             {home.name.split(" ").map((word: string, i: number) => (
                 <span key={i} className={i === home.name.split(" ").length - 1 ? "text-blue-600 dark:text-blue-500" : ""}>
@@ -109,6 +114,26 @@ export const Hero = ({ t, home }: HeroProps) => {
                 </span>
             ))}
           </motion.h1>
+
+          {titles.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-2 mb-8"
+            >
+              {titles.map((title: string, index: number) => (
+                <div key={index} className="flex items-center gap-4">
+                  <span className="text-xl md:text-2xl font-bold text-gray-400 dark:text-gray-500 tracking-tight">
+                    {title}
+                  </span>
+                  {index < titles.length - 1 && (
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-600/30" />
+                  )}
+                </div>
+              ))}
+            </motion.div>
+          )}
 
           {/* Mobile Image Placement: Under the name */}
           <motion.div 

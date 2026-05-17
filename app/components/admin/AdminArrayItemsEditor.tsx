@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { useFetcher, useRevalidator } from "react-router";
 import type { AccordionItem, ContentBlock, RoadmapStep } from "../../data/types";
-import { Trash2, GripVertical, Save, Plus, Type, Video, Code, Link as LinkIcon, Image as ImageIcon, Hash, ChevronDown, ChevronUp, Star, Layers, AlertCircle, CheckCircle2 } from "lucide-react";
+import { Trash2, GripVertical, Save, Plus, Type, Video, Code, Link as LinkIcon, Image as ImageIcon, Hash, ChevronDown, ChevronUp, Star, Layers, AlertCircle, CheckCircle2, Linkedin } from "lucide-react";
 import { Badge } from "../ui/badge";
 import { IconValue } from "../IconValue";
 import { useTranslation } from "../../i18n/useTranslation";
 import { AdminCard } from "./ui/AdminCard";
 import { AdminButton } from "./ui/AdminButton";
 import { cn } from "../ui/utils";
+import { toast } from "sonner";
 
 interface AdminArrayItemsEditorProps {
   title: string;
@@ -717,7 +718,45 @@ export const AdminArrayItemsEditor = ({
                   </div>
                   )}
 
-                  <div className="flex justify-end pt-8 border-t border-gray-50 dark:border-gray-800">
+                  <div className="flex justify-between items-center pt-8 border-t border-gray-50 dark:border-gray-800">
+                     <div>
+                       {(entityField === "insights" || entityField === "interviewQuestions") && (
+                         <AdminButton
+                           type="button"
+                           variant="outline"
+                           size="md"
+                           className="border-gray-200 dark:border-gray-800 hover:bg-blue-50 dark:hover:bg-blue-900/20 text-gray-700 dark:text-gray-300 transition-colors"
+                           leftIcon={<Linkedin className="w-4 h-4 text-[#0A66C2]" />}
+                           onClick={() => {
+                             const title = item.title || 'Untitled';
+                             const diff = accordionItem.difficulty ? `Difficulty: ${accordionItem.difficulty.charAt(0).toUpperCase() + accordionItem.difficulty.slice(1)}\n` : '';
+                             const content = (accordionItem.blocks || []).map(block => {
+                               if (block.type === 'text') return block.text;
+                               if (block.type === 'code') return `\n\`\`\`${block.language || ''}\n${block.code}\n\`\`\`\n`;
+                               if (block.type === 'hashtags') return block.tags.map(t => `#${t}`).join(' ');
+                               if (block.type === 'link') return `🔗 ${block.label}: ${block.url}`;
+                               return '';
+                             }).filter(Boolean).join('\n\n');
+                             
+                             const tagSuffix = entityField === "insights" ? "#TechInsights #SoftwareEngineering #WebDevelopment" : "#InterviewPrep #SoftwareEngineering #TechCareer";
+                             const prefix = entityField === "insights" ? "💡" : "🧠";
+                             
+                             const text = `${prefix} ${title}\n\n${diff}${content}\n\n${tagSuffix}`;
+                             
+                             navigator.clipboard.writeText(text).then(() => {
+                               toast.success("Copied to clipboard!", {
+                                 description: "Ready to be pasted as a LinkedIn post.",
+                                 icon: <Linkedin className="w-4 h-4 text-[#0A66C2]" />
+                               });
+                             }).catch(() => {
+                               toast.error("Failed to copy to clipboard.");
+                             });
+                           }}
+                         >
+                           Share on LinkedIn
+                         </AdminButton>
+                       )}
+                     </div>
                      <AdminButton
                         type="button"
                         onClick={() => submitItems(draftItems)}

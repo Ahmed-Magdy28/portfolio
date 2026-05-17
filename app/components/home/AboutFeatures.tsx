@@ -7,19 +7,15 @@ import { Globe, ArrowRight } from "lucide-react";
 
 interface AboutFeaturesProps {
   lang: string;
-  home: {
-    features: Array<{
-      icon: string;
-      title: string;
-      description: string;
-    }>;
-  };
-  about: {
-    paragraphs: string[];
-  };
+  home: any;
+  about: any;
 }
 
-export const AboutFeatures = ({ lang, home, about }: AboutFeaturesProps) => {
+export const AboutFeatures = ({
+  lang,
+  home,
+  about,
+}: AboutFeaturesProps) => {
   const features = Array.isArray(home.features) ? home.features : [];
   const paragraphs = Array.isArray(about.paragraphs) ? about.paragraphs : [];
 
@@ -46,7 +42,7 @@ export const AboutFeatures = ({ lang, home, about }: AboutFeaturesProps) => {
             </h2>
 
             <div className="space-y-6 text-gray-600 dark:text-gray-400 mb-10 text-lg leading-relaxed">
-              {paragraphs.slice(0, 2).map((p, i) => (
+              {paragraphs.slice(0, 2).map((p: string, i: number) => (
                 <p key={i}>{p}</p>
               ))}
             </div>
@@ -75,7 +71,7 @@ export const AboutFeatures = ({ lang, home, about }: AboutFeaturesProps) => {
 
         {/* Right Side: Features Grid */}
         <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {features.map((feature, i) => (
+          {features.map((feature: any, i: number) => (
             <motion.div
               key={feature.title}
               initial={{ opacity: 0, y: 20 }}

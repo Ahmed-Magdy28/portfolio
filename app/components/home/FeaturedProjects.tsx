@@ -28,18 +28,18 @@ export const FeaturedProjects = ({
   return (
     <Section id="projects" className="relative overflow-hidden py-32">
       {/* 3D Background Parallax Text */}
-      <div className="absolute top-1/2 left-0 w-full pointer-events-none select-none -translate-y-1/2 opacity-[0.03] dark:opacity-[0.07] overflow-hidden whitespace-nowrap z-0">
+      <div className="absolute top-1/2 left-0 w-full pointer-events-none select-none -translate-y-1/2 opacity-[0.05] dark:opacity-[0.12] overflow-hidden whitespace-nowrap z-0">
         <motion.div
           style={{ x: xLeft }}
-          className="text-[15vw] font-black uppercase leading-none mb-4"
+          className="text-[8vw] font-black uppercase leading-none mb-4"
         >
-          Engineering Excellence • Innovation • Design
+          Engineering Excellence
         </motion.div>
         <motion.div
           style={{ x: xRight }}
-          className="text-[15vw] font-black uppercase leading-none"
+          className="text-[8vw] font-black uppercase leading-none"
         >
-          Creative Solutions • Future • Performance
+          Creative Solutions
         </motion.div>
       </div>
 

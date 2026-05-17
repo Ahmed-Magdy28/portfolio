@@ -7,6 +7,9 @@ import { useTranslation } from "../i18n/useTranslation";
 import { PageSEO } from "../components/PageSEO";
 import { AdminSectionWrapper } from "../components/admin/AdminSectionWrapper";
 import { AdminAvatarEditor } from "../components/admin/AdminAvatarEditor";
+import { AdminCard } from "../components/admin/ui/AdminCard";
+import { AdminEntityCollectionEditor } from "../components/admin/AdminEntityCollectionEditor";
+import { Sparkles, Code2, FolderGit2, LayoutDashboard, Globe } from "lucide-react";
 
 // Lazy loaded components
 const Hero = lazy(() =>
@@ -106,63 +109,189 @@ export const Home = () => {
 
       <Suspense fallback={<SectionSkeleton />}>
         <Hero t={t} home={home} />
-      </Suspense>
 
-      <Suspense fallback={<SectionSkeleton />}>
         <TechStack
           lang={lang}
           languages={languages}
           frameworks={frameworks}
           languageSlugs={languageSlugs}
         />
-      </Suspense>
 
-      <Suspense fallback={<SectionSkeleton />}>
         <FeaturedProjects
           t={t}
           lang={lang}
           featuredProjects={featuredProjects}
         />
-      </Suspense>
 
-      <Suspense fallback={<SectionSkeleton />}>
-        <AboutFeatures lang={lang} home={home} about={about} />
-      </Suspense>
+        <AboutFeatures
+          lang={lang}
+          home={home}
+          about={about}
+        />
 
-      <Suspense fallback={<SectionSkeleton />}>
-        <ContactCTA t={t} contact={contact} />
+        <ContactCTA
+          t={t}
+          contact={contact}
+        />
       </Suspense>
 
       {isAdminAuthenticated && (
         <AdminSectionWrapper title="Home Page Management">
-          <div className="space-y-8">
-            <AdminAvatarEditor
-              home={home}
-              avatarValue={avatarValue}
-              avatarSize={avatarSize}
-              setAvatarValue={setAvatarValue}
-              setAvatarSize={setAvatarSize}
-              lang={lang}
-            />
-
+          <div className="space-y-6">
             <Suspense
               fallback={
                 <div className="p-10 text-center animate-pulse">
-                  Loading editor...
+                  Loading management console...
                 </div>
               }
             >
-              <div className="grid gap-6 md:grid-cols-2">
+              {/* Identity & Avatar */}
+              <AdminAvatarEditor
+                home={home}
+                avatarValue={avatarValue}
+                avatarSize={avatarSize}
+                setAvatarValue={setAvatarValue}
+                setAvatarSize={setAvatarSize}
+                lang={lang}
+              />
+
+              {/* Hero Management */}
+              <AdminCard
+                title="Hero & Professional Titles"
+                description="Manage your display name and rotation of professional titles."
+                icon={<Sparkles className="w-6 h-6 text-yellow-500" />}
+                className="border-t-4 border-t-yellow-500"
+                isCollapsible={true}
+                defaultOpen={false}
+              >
                 <LazyPageAdminEditor
-                  title="Page Content"
-                  description="Edit name, avatar, CV, and features."
+                  title="Hero Titles & Data"
+                  description="Edit your name and the 'titles' array."
                   payload={JSON.stringify(home, null, 2)}
                   intent="save-content-section"
                   section="home"
                 />
+              </AdminCard>
+
+              {/* Tech Stack Management */}
+              <AdminCard
+                title="Tech Stack Management"
+                description="Manage your programming languages and frameworks."
+                icon={<Code2 className="w-6 h-6 text-emerald-500" />}
+                className="border-t-4 border-t-emerald-500"
+                isCollapsible={true}
+                defaultOpen={false}
+              >
+                <div className="space-y-8">
+                  <AdminEntityCollectionEditor
+                    title="Languages"
+                    description="Programming languages you specialize in."
+                    items={languages}
+                    collection="languages"
+                    createItem={() => ({
+                      slug: "new-language",
+                      title: "New Language",
+                      description: "Short description",
+                      icon: "👨‍💻",
+                      insights: [],
+                      interviewQuestions: [],
+                    })}
+                    getId={(item) => item.slug}
+                    getEditPath={(item) => `/languages/${item.slug}`}
+                  />
+                  <AdminEntityCollectionEditor
+                    title="Frameworks"
+                    description="Libraries and frameworks in your toolkit."
+                    items={frameworks}
+                    collection="frameworks"
+                    createItem={() => ({
+                      slug: "new-framework",
+                      title: "New Framework",
+                      description: "Short description",
+                      icon: "🚀",
+                      insights: [],
+                      interviewQuestions: [],
+                    })}
+                    getId={(item) => item.slug}
+                    getEditPath={(item) => `/frameworks/${item.slug}`}
+                  />
+                </div>
+              </AdminCard>
+
+              {/* Projects Management */}
+              <AdminCard
+                title="Projects Showcase"
+                description="Curate the projects featured on your home page."
+                icon={<FolderGit2 className="w-6 h-6 text-purple-500" />}
+                className="border-t-4 border-t-purple-500"
+                isCollapsible={true}
+                defaultOpen={false}
+              >
+                <AdminEntityCollectionEditor
+                  title="Featured Projects"
+                  description="Manage the main project collection."
+                  items={projects}
+                  collection="projects"
+                  createItem={() => ({
+                    id: `project-${Date.now()}`,
+                    title: "New Project",
+                    description: "Short summary",
+                    featured: true,
+                    techStack: [],
+                    fullDescription: "Detailed overview",
+                    challenges: "Challenges and solutions",
+                  })}
+                  getId={(item) => item.id}
+                  getEditPath={(item) => `/projects/${item.id}`}
+                />
+              </AdminCard>
+
+              {/* Content & Copy Management */}
+              <AdminCard
+                title="Content & Copy"
+                description="Manage the text content for About and Contact sections."
+                icon={<LayoutDashboard className="w-6 h-6 text-orange-500" />}
+                className="border-t-4 border-t-orange-500"
+                isCollapsible={true}
+                defaultOpen={false}
+              >
+                <div className="grid gap-6 md:grid-cols-2">
+                  <LazyPageAdminEditor
+                    title="Features Cards"
+                    description="Edit the technical expertise cards."
+                    payload={JSON.stringify(home.features, null, 2)}
+                    intent="save-content-section"
+                    section="home"
+                  />
+                  <LazyPageAdminEditor
+                    title="About Text"
+                    description="Edit the summary paragraphs."
+                    payload={JSON.stringify(about, null, 2)}
+                    intent="save-content-section"
+                    section="about"
+                  />
+                  <LazyPageAdminEditor
+                    title="Contact Info"
+                    description="Edit contact intro and links."
+                    payload={JSON.stringify(contact, null, 2)}
+                    intent="save-content-section"
+                    section="contact"
+                  />
+                </div>
+              </AdminCard>
+
+              {/* Advanced Translation Management */}
+              <AdminCard
+                title="Internationalization (i18n)"
+                description="Edit global translation keys for English and Arabic."
+                icon={<Globe className="w-6 h-6 text-cyan-500" />}
+                className="border-t-4 border-t-cyan-500"
+                isCollapsible={true}
+                defaultOpen={false}
+              >
                 <LazyPageAdminEditor
-                  title="Translations"
-                  description="Edit text keys for EN/AR."
+                  title="Home Page Translations"
+                  description="Edit text keys for UI components."
                   payload={JSON.stringify(
                     {
                       en: rootData.translations.en.home,
@@ -174,7 +303,7 @@ export const Home = () => {
                   intent="save-translation-section"
                   section="home"
                 />
-              </div>
+              </AdminCard>
             </Suspense>
           </div>
         </AdminSectionWrapper>

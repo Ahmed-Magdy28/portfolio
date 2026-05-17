@@ -25,7 +25,8 @@
         "title": "Global Ready i18n",
         "description": "Full RTL support and seamless multi-language integration for international audiences."
       }
-    ]
+    ],
+    "titles": []
   },
   "about": {
     "video": "",

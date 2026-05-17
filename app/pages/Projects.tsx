@@ -37,8 +37,8 @@ export const Projects = () => {
         url={`${rootData.siteUrl}/projects`}
       />
 
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 pointer-events-none opacity-[0.03] dark:opacity-[0.05] overflow-hidden select-none">
-         <span className="text-[20vw] font-black leading-none uppercase whitespace-nowrap">Portfolio Showcase</span>
+      <div className="absolute top-12 left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 pointer-events-none opacity-[0.05] dark:opacity-[0.1] overflow-hidden select-none text-center">
+         <span className="text-[10vw] font-black leading-none uppercase whitespace-nowrap inline-block">Portfolio Showcase</span>
       </div>
 
       <motion.div
