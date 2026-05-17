@@ -9,6 +9,7 @@ import { AdminButton } from "./ui/AdminButton";
 import { AdminImageUpload } from "./AdminImageUpload";
 import { cn } from "../ui/utils";
 import { toast } from "sonner";
+import { useSiteContent } from "../../hooks/useSiteContent";
 
 type EditableEntity = Language | Framework | Project;
 
@@ -28,6 +29,7 @@ export const AdminSimpleEntityForm = ({
   entity,
 }: AdminSimpleEntityFormProps) => {
   const { lang } = useTranslation();
+  const { projectCategories = [] } = useSiteContent();
   const activeLocale = lang.toUpperCase();
   const fetcher = useFetcher<{ success?: string; error?: string }>();
   const revalidator = useRevalidator();
@@ -211,6 +213,38 @@ export const AdminSimpleEntityForm = ({
                   className="w-full rounded-xl border border-gray-100 bg-white px-4 py-3 text-sm font-medium dark:border-gray-800 dark:bg-gray-950/50 outline-none focus:border-sky-500 transition-all dark:text-gray-200"
                 />
               </label>
+
+              {collection === "projects" && (
+                <div className="block">
+                  <div className="flex items-center gap-2 mb-3 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                     Categories Assigment
+                  </div>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    {projectCategories.map((category) => {
+                       const isSelected = (draft as Project).categoryIds?.includes(category.id) ?? false;
+                       return (
+                         <label key={category.id} className="flex items-center gap-3 cursor-pointer p-3 rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-950/30 hover:border-sky-200 transition-colors">
+                           <input
+                             type="checkbox"
+                             checked={isSelected}
+                             onChange={(e) => {
+                               const currentIds = (draft as Project).categoryIds || [];
+                               const newIds = e.target.checked 
+                                 ? [...currentIds, category.id]
+                                 : currentIds.filter(id => id !== category.id);
+                               updateField("categoryIds", newIds);
+                             }}
+                             className="w-4 h-4 rounded border-gray-300 text-sky-600 focus:ring-sky-500 dark:border-gray-700 dark:bg-gray-900"
+                           />
+                           <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
+                             {lang === "en" ? category.nameEn : category.nameAr}
+                           </span>
+                         </label>
+                       );
+                    })}
+                  </div>
+                </div>
+              )}
 
               <div className="grid gap-8 md:grid-cols-2">
                 <label className="block">

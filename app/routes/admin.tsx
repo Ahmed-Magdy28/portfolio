@@ -90,6 +90,7 @@ const mergeImportedContent = (
       ? imported.contact.links
       : currentContent.contact.links,
   },
+  projectCategories: Array.isArray(imported.projectCategories) ? imported.projectCategories : currentContent.projectCategories,
   projects: Array.isArray(imported.projects) ? imported.projects : currentContent.projects,
   languages: Array.isArray(imported.languages)
     ? imported.languages

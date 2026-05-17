@@ -141,6 +141,50 @@
       }
     ]
   },
+  "projectCategories": [
+    {
+      "id": "frontend-vanilla",
+      "nameEn": "Frontend Web (Vanilla)",
+      "nameAr": "الواجهة الأمامية (فانيلا)",
+      "isHidden": false
+    },
+    {
+      "id": "frontend-react",
+      "nameEn": "Frontend Web (React)",
+      "nameAr": "الواجهة الأمامية (رياكت)",
+      "isHidden": false
+    },
+    {
+      "id": "backend-node",
+      "nameEn": "Backend (Node Express)",
+      "nameAr": "الباك إند (نود إكسبريس)",
+      "isHidden": true
+    },
+    {
+      "id": "backend-django",
+      "nameEn": "Backend (Django)",
+      "nameAr": "الباك إند (جانغو)",
+      "isHidden": false
+    },
+    {
+      "id": "mobile-flutter",
+      "nameEn": "Mobile (Flutter)",
+      "nameAr": "تطوير الموبايل (فلاتر)",
+      "isHidden": false
+    },
+    {
+      "id": "systems-cshell",
+      "nameEn": "System (C Shell)",
+      "nameAr": "الأنظمة (سي شيل)",
+      "isHidden": false
+    },
+    {
+      "id": "wordpress",
+      "nameEn": "WordPress",
+      "nameAr": "ووردبريس",
+      "isHidden": false
+    }
+  ],
   "projects": [
     {
       "id": "management-platform",
@@ -167,7 +211,10 @@
       "challenges": "Designing a scalable architecture capable of handling complex role-based access control across routes, components, and features.,Separating server state, global state, and local UI state without causing data inconsistency or unnecessary re-renders.,Implementing RBAC logic in a way that remains maintainable as roles and permissions grow.,Managing complex UI interactions such as drag-and-drop task organization while maintaining performance.,Coordinating multiple advanced features like analytics dashboards, notifications, and workflow systems in a single frontend codebase. ",
       "liveUrl": "https://workforce-ultimate-blwecsu0j-ahmed-magdys-projects-b12677cc.vercel.app/",
       "icon": "/uploads/f9c77da512d892f4c6836bf8bf501a00.png",
-      "image": "/uploads/49579fa619e80f8f8182bab018ec61d8.png"
+      "image": "/uploads/49579fa619e80f8f8182bab018ec61d8.png",
+      "categoryIds": [
+        "frontend-react"
+      ]
     },
     {
       "id": "task-management",
@@ -197,7 +244,10 @@
         "Implementing real-time-like updates for bookings and check-in/check-out workflows while preserving performance."
       ],
       "image": "/uploads/08eb160b89cb3638b3b17b5a0b9f33da.png",
-      "icon": "/uploads/124735e44f47c07547683d76b11d8d91.png"
+      "icon": "/uploads/124735e44f47c07547683d76b11d8d91.png",
+      "categoryIds": [
+        "frontend-react"
+      ]
     },
     {
       "id": "noto-cafe",
@@ -218,7 +268,10 @@
         "Balancing design flexibility with WordPress theme constraints."
       ],
       "icon": "https://noto-ksa.com/wp-content/uploads/2024/10/cropped-Logo-192x192.png",
-      "image": "/uploads/b608a24a42ed4c3bb0f28dbe49a3de6b.png"
+      "image": "/uploads/b608a24a42ed4c3bb0f28dbe49a3de6b.png",
+      "categoryIds": [
+        "wordpress"
+      ]
     },
     {
       "id": "manko-restaurant",
@@ -238,7 +291,10 @@
         "Delivering a production-ready website under real-world constraints."
       ],
       "icon": "https://manko-ksa.com/wp-content/uploads/2025/06/logo.png",
-      "image": "/uploads/0d4f47e97666a3d078a978d472508209.png"
+      "image": "/uploads/0d4f47e97666a3d078a978d472508209.png",
+      "categoryIds": [
+        "wordpress"
+      ]
     },
     {
       "id": "cafe-la-prousa",
@@ -258,7 +314,10 @@
         "Deploying and maintaining a stable production website."
       ],
       "image": "/uploads/916d65af1ab68ae139619e6524f66b77.png",
-      "icon": "https://cafelaperouse-ksa.com/wp-content/uploads/2024/10/cropped-apple-touch-icon-192x192.png"
+      "icon": "https://cafelaperouse-ksa.com/wp-content/uploads/2024/10/cropped-apple-touch-icon-192x192.png",
+      "categoryIds": [
+        "wordpress"
+      ]
     },
     {
       "id": "fast-react-pizza",
@@ -278,6 +337,9 @@
         "Structuring components for scalability and reusability.",
         "Managing navigation and dynamic routes using React Router.",
         "Handling user interactions like cart updates and order flow smoothly."
+      ],
+      "categoryIds": [
+        "frontend-react"
       ]
     },
     {
@@ -305,7 +367,10 @@
         "Ensuring cross-platform compatibility across different operating systems and browsers.",
         "Maintaining clean and scalable component structure with many interactive UI elements."
       ],
-      "image": "/uploads/264a2ac5df9e39610f86fb18ba622ee8.png"
+      "image": "/uploads/264a2ac5df9e39610f86fb18ba622ee8.png",
+      "categoryIds": [
+        "frontend-react"
+      ]
     },
     {
       "id": "popcorn-movies",
@@ -326,6 +391,9 @@
         "Persisting user data using localStorage without breaking state consistency.",
         "Managing component state for ratings, watched list, and selections.",
         "Ensuring responsive UI updates when interacting with external API data."
+      ],
+      "categoryIds": [
+        "frontend-react"
       ]
     },
     {
@@ -358,6 +426,10 @@
         "Structuring scalable backend services while supporting multiple user roles.",
         "Containerizing the system using Docker for consistent environments.",
         "Setting up CI/CD workflows using GitHub Actions for automation and reliability."
+      ],
+      "categoryIds": [
+        "backend-django",
+        "mobile-flutter"
       ]
     },
     {
@@ -379,6 +451,9 @@
         "Implementing RESTful endpoints using Django REST Framework.",
         "Handling serialization and validation of incoming data.",
         "Connecting the backend with PostgreSQL and managing migrations."
+      ],
+      "categoryIds": [
+        "backend-django"
       ]
     },
     {
@@ -402,6 +477,9 @@
         "Handling state management efficiently using Provider.",
         "Ensuring message synchronization across users without delays.",
         "Maintaining performance and responsiveness in a real-time chat environment."
+      ],
+      "categoryIds": [
+        "mobile-flutter"
       ]
     },
     {
@@ -425,6 +503,9 @@
         "Ensuring smooth UI updates when fetching remote data.",
         "Persisting user preferences using Shared Preferences.",
         "Building a clean and simple UI while learning Flutter fundamentals."
+      ],
+      "categoryIds": [
+        "mobile-flutter"
       ]
     },
     {
@@ -446,6 +527,9 @@
         "Maintaining UI state consistency during create, update, and delete actions.",
         "Structuring a simple but scalable Flutter project architecture.",
         "Improving understanding of client-server communication basics."
+      ],
+      "categoryIds": [
+        "mobile-flutter"
       ]
     },
     {
@@ -468,6 +552,9 @@
         "Ensuring UI consistency between saved and active task states.",
         "Integrating external actions using URL Launcher.",
         "Building a clean and intuitive UI with reusable Flutter widgets."
+      ],
+      "categoryIds": [
+        "mobile-flutter"
       ]
     },
     {
@@ -488,6 +575,9 @@
         "Persisting user data locally using Shared Preferences.",
         "Improving understanding of Flutter widget lifecycle and structure.",
         "Practicing clean separation of UI and logic in a small project."
+      ],
+      "categoryIds": [
+        "mobile-flutter"
       ]
     },
     {
@@ -506,6 +596,9 @@
         "Learning how widgets build the UI tree.",
         "Running and debugging a Flutter application.",
         "Getting familiar with Dart syntax and Flutter basics."
+      ],
+      "categoryIds": [
+        "mobile-flutter"
       ]
     },
     {
@@ -526,6 +619,9 @@
         "Structuring components for a scalable front-end layout.",
         "Ensuring responsive design across different screen sizes.",
         "Simulating real-world application behavior without frameworks."
+      ],
+      "categoryIds": [
+        "frontend-vanilla"
       ]
     },
     {
@@ -547,6 +643,9 @@
         "Managing child processes and command execution flow.",
         "Handling built-in commands like cd differently from external commands.",
         "Collaborating effectively in a team environment on a systems-level project."
+      ],
+      "categoryIds": [
+        "systems-cshell"
       ]
     },
     {
@@ -569,6 +668,9 @@
         "Managing memory and array manipulation at a low level.",
         "Translating theoretical algorithms into working C implementations.",
         "Improving algorithmic thinking and problem decomposition skills."
+      ],
+      "categoryIds": [
+        "systems-cshell"
       ]
     },
     {
@@ -591,6 +693,9 @@
         "Understanding tree properties such as height, depth, and size.",
         "Building reusable and modular data structure functions.",
         "Translating theoretical binary tree concepts into working C code."
+      ],
+      "categoryIds": [
+        "systems-cshell"
       ]
     },
     {
@@ -613,6 +718,9 @@
         "Managing different data types and their formatting output.",
         "Ensuring correct output behavior without using standard printf.",
         "Collaborating with a teammate on low-level C system design."
+      ],
+      "categoryIds": [
+        "systems-cshell"
       ]
     }
   ],

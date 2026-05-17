@@ -6,6 +6,7 @@ import type {
   Framework,
   Language,
   Project,
+  ProjectCategory,
   RoadmapStep,
   Version,
 } from "../data/types";
@@ -59,6 +60,7 @@ export interface SiteContent {
   home: HomeContent;
   about: AboutContent;
   contact: ContactContent;
+  projectCategories: ProjectCategory[];
   projects: Project[];
   languages: Language[];
   frameworks: Framework[];
@@ -92,6 +94,7 @@ const defaultSiteContent: SiteContent = {
     connectText: "",
     links: [],
   },
+  projectCategories: [],
   projects: [],
   languages: [],
   frameworks: [],
@@ -269,6 +272,7 @@ const normalizeSiteContent = (parsed: Partial<SiteContent>): SiteContent => ({
     ...(parsed.contact ?? {}),
     links: Array.isArray(parsed.contact?.links) ? parsed.contact.links : [],
   },
+  projectCategories: Array.isArray(parsed.projectCategories) ? parsed.projectCategories : [],
   projects: parsed.projects ?? [],
   languages: normalizeLanguages(parsed.languages ?? []),
   frameworks: normalizeFrameworks(parsed.frameworks ?? []),

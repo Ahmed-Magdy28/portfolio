@@ -1,24 +1,29 @@
-import type { ProjectCategory } from "../hooks/useProjectFilters";
+import type { ProjectCategory } from "../data/types";
 import { cn } from "./ui/utils";
 import { useTranslation } from "../i18n/useTranslation";
 
 interface ProjectFilterBarProps {
-  activeCategory: ProjectCategory | null;
-  setActiveCategory: (category: ProjectCategory | null | ((curr: ProjectCategory | null) => ProjectCategory | null)) => void;
+  categories: ProjectCategory[];
+  activeCategoryId: string | null;
+  setActiveCategoryId: (categoryId: string | null | ((curr: string | null) => string | null)) => void;
   searchQuery: string;
   setSearchQuery: (query: string) => void;
   searchPlaceholder?: string;
+  isAdmin?: boolean;
 }
 
 export const ProjectFilterBar = ({
-  activeCategory,
-  setActiveCategory,
+  categories,
+  activeCategoryId,
+  setActiveCategoryId,
   searchQuery,
   setSearchQuery,
   searchPlaceholder = "Search projects...",
+  isAdmin = false,
 }: ProjectFilterBarProps) => {
-  const { t } = useTranslation();
-  const categories = Object.keys(t.projects.categories) as ProjectCategory[];
+  const { lang } = useTranslation();
+  
+  const visibleCategories = categories.filter(c => isAdmin || !c.isHidden);
 
   return (
     <div className="space-y-6">
@@ -33,25 +38,27 @@ export const ProjectFilterBar = ({
       </div>
 
       <div className="flex flex-wrap justify-center gap-2">
-        {categories.map((category) => {
-          const isActive = activeCategory === category;
+        {visibleCategories.map((category) => {
+          const isActive = activeCategoryId === category.id;
           return (
             <button
-              key={category}
+              key={category.id}
               type="button"
               onClick={() =>
-                setActiveCategory((current) =>
-                  current === category ? null : category,
+                setActiveCategoryId((current) =>
+                  current === category.id ? null : category.id,
                 )
               }
               className={cn(
                 "rounded-xl border px-4 py-2 text-[10px] font-bold uppercase tracking-wider transition-all",
                 isActive
                   ? "border-blue-600 bg-blue-600 text-white shadow-md shadow-blue-500/20"
-                  : "border-gray-100 bg-white text-muted-foreground hover:border-blue-200 hover:text-blue-600 dark:border-gray-800 dark:bg-gray-900"
+                  : "border-gray-100 bg-white text-muted-foreground hover:border-blue-200 hover:text-blue-600 dark:border-gray-800 dark:bg-gray-900",
+                category.isHidden && "border-dashed border-red-200 text-red-500 hover:border-red-400 hover:text-red-600 dark:border-red-900/50"
               )}
             >
-              {t.projects.categories[category]}
+              {lang === "en" ? category.nameEn : category.nameAr}
+              {category.isHidden && <span className="ml-1 opacity-50">(Hidden)</span>}
             </button>
           );
         })}

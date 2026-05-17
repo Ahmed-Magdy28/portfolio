@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { AdminEntityCollectionEditor } from "../components/admin/AdminEntityCollectionEditor";
+import { AdminProjectCategoriesEditor } from "../components/admin/AdminProjectCategoriesEditor";
 import { PageAdminEditor } from "../components/admin/PageAdminEditor";
 import { Section } from "../components/Section";
 import { useAdminSession } from "../hooks/useAdminSession";
@@ -15,14 +16,14 @@ import { cn } from "../components/ui/utils";
 
 export const Projects = () => {
   const { t, lang } = useTranslation();
-  const { projects } = useSiteContent();
+  const { projects, projectCategories = [] } = useSiteContent();
   const { isAdminAuthenticated } = useAdminSession();
   const rootData = useRootData();
   const {
-    activeCategory,
+    activeCategoryId,
     displayedProjects,
     searchQuery,
-    setActiveCategory,
+    setActiveCategoryId,
     setSearchQuery,
   } = useProjectFilters(projects);
 
@@ -62,11 +63,13 @@ export const Projects = () => {
             
             <div className="md:mb-2">
                 <ProjectFilterBar 
-                    activeCategory={activeCategory}
-                    setActiveCategory={setActiveCategory}
+                    categories={projectCategories}
+                    activeCategoryId={activeCategoryId}
+                    setActiveCategoryId={setActiveCategoryId}
                     searchQuery={searchQuery}
                     setSearchQuery={setSearchQuery}
                     searchPlaceholder="Quick filter..."
+                    isAdmin={isAdminAuthenticated}
                 />
             </div>
         </div>
@@ -105,28 +108,32 @@ export const Projects = () => {
                     getEditPath={(item) => `/projects/${item.id}`}
                 />
                 
-                <div className="grid gap-6 md:grid-cols-2">
-                    <PageAdminEditor
-                        title="Projects JSON"
-                        description="Bulk edit or review the raw project data."
-                        payload={JSON.stringify(projects, null, 2)}
-                        intent="save-collection"
-                        collection="projects"
-                    />
-                    <PageAdminEditor
-                        title="Translations"
-                        description="Modify UI strings for the projects listing."
-                        payload={JSON.stringify(
-                            {
-                            en: rootData.translations.en.projects,
-                            ar: rootData.translations.ar.projects,
-                            },
-                            null,
-                            2,
-                        )}
-                        intent="save-translation-section"
-                        section="projects"
-                    />
+                <div className="space-y-6">
+                    <AdminProjectCategoriesEditor categories={projectCategories} />
+                    
+                    <div className="grid gap-6 md:grid-cols-2">
+                        <PageAdminEditor
+                            title="Projects JSON"
+                            description="Bulk edit or review the raw project data."
+                            payload={JSON.stringify(projects, null, 2)}
+                            intent="save-collection"
+                            collection="projects"
+                        />
+                        <PageAdminEditor
+                            title="Translations"
+                            description="Modify UI strings for the projects listing."
+                            payload={JSON.stringify(
+                                {
+                                en: rootData.translations.en.projects,
+                                ar: rootData.translations.ar.projects,
+                                },
+                                null,
+                                2,
+                            )}
+                            intent="save-translation-section"
+                            section="projects"
+                        />
+                    </div>
                 </div>
             </div>
           </AdminSectionWrapper>

@@ -78,11 +78,20 @@ export interface AccordionItem {
   difficulty?: "easy" | "medium" | "hard";
 }
 
+export interface ProjectCategory {
+  id: string;
+  nameEn: string;
+  nameAr: string;
+  isHidden?: boolean;
+}
+
 export interface Project {
   id: string;
   title: string;
   description: string;
   featured?: boolean;
+  featuredPro?: boolean;
+  categoryIds?: string[];
   techStack: string[];
   liveUrl?: string;
   sourceUrl?: string;

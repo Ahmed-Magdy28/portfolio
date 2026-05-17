@@ -3,7 +3,7 @@ import { Link, useFetcher, useRevalidator } from "react-router";
 import { useTranslation } from "../../i18n/useTranslation";
 import type { Framework, Language, Project } from "../../data/types";
 import { IconValue } from "../IconValue";
-import { GripVertical, Plus, Trash2, Edit3, Settings2, Sparkles, Database, Layers } from "lucide-react";
+import { GripVertical, Plus, Trash2, Edit3, Settings2, Sparkles, Database, Layers, Star, Flame } from "lucide-react";
 import { toast } from "sonner";
 import { AdminCard } from "./ui/AdminCard";
 import { AdminButton } from "./ui/AdminButton";
@@ -114,6 +114,40 @@ export const AdminEntityCollectionEditor = <T extends Entity>({
       submitCollection(nextItems);
       return nextItems;
     });
+  };
+
+  const toggleFeatured = (id: string) => {
+    if (collection !== "projects") return;
+    const currentItems = draftItems as unknown as Project[];
+    const itemIndex = currentItems.findIndex(p => p.id === id);
+    if (itemIndex === -1) return;
+    const item = currentItems[itemIndex];
+    
+    if (!item.featured) {
+      if (currentItems.filter(p => p.featured).length >= 5) {
+        toast.error("Maximum 5 featured projects allowed. Please remove one first.");
+        return;
+      }
+    }
+    
+    updateItem(id, "featured", !item.featured);
+  };
+
+  const toggleFeaturedPro = (id: string) => {
+    if (collection !== "projects") return;
+    const currentItems = draftItems as unknown as Project[];
+    const itemIndex = currentItems.findIndex(p => p.id === id);
+    if (itemIndex === -1) return;
+    const item = currentItems[itemIndex];
+    
+    if (!item.featuredPro) {
+      if (currentItems.filter(p => p.featuredPro).length >= 3) {
+        toast.error("Maximum 3 featured pro projects allowed. Please remove one first.");
+        return;
+      }
+    }
+    
+    updateItem(id, "featuredPro", !item.featuredPro);
   };
 
   const resetDragState = () => {
@@ -268,6 +302,36 @@ export const AdminEntityCollectionEditor = <T extends Entity>({
 
                 {/* Actions */}
                 <div className="flex flex-row lg:flex-col gap-2 shrink-0 justify-end lg:justify-start">
+                  {collection === "projects" && (
+                    <>
+                      <button
+                        type="button"
+                        onClick={() => toggleFeatured(id)}
+                        className={cn(
+                          "flex-1 lg:flex-none rounded-xl border p-3 transition-all shadow-sm flex items-center justify-center group/btn",
+                          (item as unknown as Project).featured
+                            ? "border-green-200 bg-green-50 text-green-600 dark:border-green-900/50 dark:bg-green-900/20 dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-900/40"
+                            : "border-red-100 bg-red-50 text-red-400 dark:border-red-900/30 dark:bg-red-900/10 dark:text-red-500 hover:bg-red-100 dark:hover:bg-red-900/20"
+                        )}
+                        title={(item as unknown as Project).featured ? "Unfeature Project" : "Feature Project (Projects Page)"}
+                      >
+                        <Star className="w-5 h-5 group-hover/btn:scale-110 transition-transform" />
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => toggleFeaturedPro(id)}
+                        className={cn(
+                          "flex-1 lg:flex-none rounded-xl border p-3 transition-all shadow-sm flex items-center justify-center group/btn",
+                          (item as unknown as Project).featuredPro
+                            ? "border-green-200 bg-green-50 text-green-600 dark:border-green-900/50 dark:bg-green-900/20 dark:text-green-400 hover:bg-green-100 dark:hover:bg-green-900/40"
+                            : "border-red-100 bg-red-50 text-red-400 dark:border-red-900/30 dark:bg-red-900/10 dark:text-red-500 hover:bg-red-100 dark:hover:bg-red-900/20"
+                        )}
+                        title={(item as unknown as Project).featuredPro ? "Unfeature Pro" : "Feature Pro (Home Page)"}
+                      >
+                        <Flame className="w-5 h-5 group-hover/btn:scale-110 transition-transform" />
+                      </button>
+                    </>
+                  )}
                   <Link
                     to={getEditPath(item)}
                     className="flex-1 lg:flex-none rounded-xl border border-gray-100 dark:border-gray-800 p-3 text-gray-400 hover:bg-fuchsia-50 dark:hover:bg-fuchsia-950/20 hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-all shadow-sm flex items-center justify-center group/btn"

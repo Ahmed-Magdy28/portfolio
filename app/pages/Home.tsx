@@ -69,7 +69,7 @@ export const Home = () => {
   );
 
   const featuredProjects = useMemo(
-    () => projects.filter((p) => p.featured).slice(0, 3),
+    () => projects.filter((p) => p.featuredPro).slice(0, 3),
     [projects],
   );
 
