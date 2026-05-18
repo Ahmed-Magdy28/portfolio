@@ -143,6 +143,12 @@
   },
   "projectCategories": [
     {
+      "id": "category-1779137983480",
+      "nameEn": "other",
+      "nameAr": "اخري",
+      "isHidden": true
+    },
+    {
       "id": "frontend-vanilla",
       "nameEn": "Frontend Web (Vanilla)",
       "nameAr": "الواجهة الأمامية (فانيلا)",
@@ -340,7 +346,8 @@
       ],
       "categoryIds": [
         "frontend-react"
-      ]
+      ],
+      "image": "/uploads/fdbf5a672f87e126f1afb57f0c6b1934.png"
     },
     {
       "id": "qr-code-app",
@@ -394,7 +401,8 @@
       ],
       "categoryIds": [
         "frontend-react"
-      ]
+      ],
+      "image": "/uploads/67cf26073f0fdaaa294942ffb2aa938b.png"
     },
     {
       "id": "ashtray-meny",
@@ -722,6 +730,67 @@
       "categoryIds": [
         "systems-cshell"
       ]
+    },
+    {
+      "id": "project-1779135588992",
+      "title": "Forkify",
+      "description": "A modern recipe application that allows users to search for over 1,000,000 recipes, view ingredients, adjust servings, and bookmark favorite recipes.",
+      "featured": false,
+      "techStack": [
+        "JavaScript (ES6+)",
+        "HTML",
+        "CSS",
+        "MVC Architecture",
+        "Parcel",
+        "LocalStorage"
+      ],
+      "fullDescription": "Forkify is a modern recipe web application built as a learning project from Jonas Schmedtmann’s JavaScript course. The app allows users to search through more than 1,000,000 recipes, view detailed recipe information including cooking time and ingredients, and dynamically adjust ingredient quantities based on servings. Users can also bookmark favorite recipes using LocalStorage and upload their own custom recipes to the platform. The project is built using modern JavaScript (ES6+) with a modular architecture and MVC pattern to improve maintainability and scalability. It is fully responsive and optimized for a seamless experience across mobile, tablet, and desktop devices.",
+      "challenges": [
+        "Understanding and implementing the MVC architecture with modular JavaScript structure.",
+        "Managing application state and dynamically updating the UI during searches and serving adjustments.",
+        "Handling asynchronous API requests and recipe data fetching efficiently.",
+        "Implementing bookmark persistence using LocalStorage.",
+        "Building a responsive UI that works smoothly across multiple screen sizes.",
+        "Learning modern JavaScript concepts such as private class fields and ES6 modules."
+      ],
+      "copyright": "© Copyright by Jonas Schmedtmann. Use for learning or your portfolio. Don't use to teach. Don't claim as your own.",
+      "categoryIds": [
+        "frontend-vanilla"
+      ],
+      "liveUrl": "https://forkify-pearl.vercel.app/",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/forkify",
+      "icon": "https://forkify-pearl.vercel.app/favicon.38ab3f7a.png",
+      "image": "/uploads/5fac3af021e9b9b4934280555252172b.png"
+    },
+    {
+      "id": "project-1779138389822",
+      "title": "Omnifood",
+      "description": "An AI-powered food subscription service that delivers healthy, personalized meals year-round based on user preferences and dietary needs.",
+      "featured": false,
+      "techStack": [
+        "HTML5 (Semantic Structure)",
+        "CSS3 (Flexbox, CSS Grid, Custom Properties)",
+        "JavaScript (Vanilla JS)"
+      ],
+      "categoryIds": [
+        "frontend-vanilla"
+      ],
+      "fullDescription": "Omnifood is a modern web project for an AI-powered food subscription service that generates fully personalized weekly meal plans. It allows users to receive diets tailored to their preferences and nutritional needs, including vegan, keto, paleo, and gluten-free options. The project features a modern, clean, and responsive UI designed for a smooth user experience across all devices. It is built using HTML, CSS, and vanilla JavaScript to handle interactions such as mobile navigation and smooth scrolling.",
+      "challenges": [
+        "Building a modern and responsive UI using CSS Grid and Flexbox.",
+        "Structuring CSS into maintainable and scalable files.",
+        "Implementing smooth scrolling and navigation interactions.",
+        "Optimizing performance using modern image formats like WebP.",
+        "Ensuring consistent responsive behavior across all devices and screen sizes."
+      ],
+      "category": "other",
+      "primaryRole": "software engineer",
+      "coreTech": "HTML/CSS/JS",
+      "timeline": "Q2 2026",
+      "icon": "https://omnifood-gray-delta.vercel.app/img/favicon-64-64.png",
+      "image": "/uploads/b71987c2304d76f8840323bbb2788bef.png",
+      "liveUrl": "https://omnifood-gray-delta.vercel.app/",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/Omnifood"
     }
   ],
   "languages": [

@@ -100,6 +100,10 @@ export interface Project {
   fullDescription: string;
   challenges: string;
   video?: string;
+  primaryRole?: string;
+  coreTech?: string;
+  category?: string;
+  timeline?: string;
 }
 
 export interface Language {

@@ -3,7 +3,19 @@ import { useFetcher, useRevalidator } from "react-router";
 import { useTranslation } from "../../i18n/useTranslation";
 import type { Framework, Language, Project } from "../../data/types";
 import { IconValue } from "../IconValue";
-import { Save, ChevronDown, ChevronUp, Layout, Type, Globe, Github, Video, Info, Sparkles, CheckCircle2 } from "lucide-react";
+import {
+  Save,
+  ChevronDown,
+  ChevronUp,
+  Layout,
+  Type,
+  Globe,
+  Github,
+  Video,
+  Info,
+  Sparkles,
+  CheckCircle2,
+} from "lucide-react";
 import { AdminCard } from "./ui/AdminCard";
 import { AdminButton } from "./ui/AdminButton";
 import { AdminImageUpload } from "./AdminImageUpload";
@@ -85,7 +97,13 @@ export const AdminSimpleEntityForm = ({
             onClick={() => setOpen((current) => !current)}
             variant="outline"
             size="sm"
-            rightIcon={open ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            rightIcon={
+              open ? (
+                <ChevronUp className="w-4 h-4" />
+              ) : (
+                <ChevronDown className="w-4 h-4" />
+              )
+            }
           >
             {open ? "Collapse" : "Edit Metadata"}
           </AdminButton>
@@ -134,26 +152,41 @@ export const AdminSimpleEntityForm = ({
           </div>
 
           <div className="space-y-4">
-             <div className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">Visual Preview</div>
-             <div className="relative group overflow-hidden rounded-[2rem] border border-gray-100 bg-gray-50/50 p-8 dark:border-gray-800 dark:bg-gray-950/30 flex flex-col items-center justify-center gap-6 transition-all hover:bg-white dark:hover:bg-gray-950/50 hover:shadow-xl hover:shadow-sky-500/5">
-                <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                
-                <div className="flex gap-4 items-end">
-                   <div className="w-20 h-20 flex items-center justify-center rounded-[1.5rem] bg-white dark:bg-gray-900 shadow-2xl shadow-black/5 border border-gray-50 dark:border-gray-800 group-hover:scale-110 transition-transform duration-500">
-                      <IconValue value={("icon" in draft ? draft.icon : "")} alt="Preview" className="text-4xl" imageClassName="h-12 w-12 object-contain" />
-                   </div>
-                   {"image" in draft && (draft as any).image && (
-                     <div className="w-32 h-20 flex items-center justify-center rounded-[1.5rem] bg-white dark:bg-gray-900 shadow-2xl shadow-black/5 border border-gray-50 dark:border-gray-800 overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                       <img src={(draft as any).image} alt="Project" className="h-full w-full object-cover" />
-                     </div>
-                   )}
+            <div className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2">
+              Visual Preview
+            </div>
+            <div className="relative group overflow-hidden rounded-[2rem] border border-gray-100 bg-gray-50/50 p-8 dark:border-gray-800 dark:bg-gray-950/30 flex flex-col items-center justify-center gap-6 transition-all hover:bg-white dark:hover:bg-gray-950/50 hover:shadow-xl hover:shadow-sky-500/5">
+              <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+
+              <div className="flex gap-4 items-end">
+                <div className="w-20 h-20 flex items-center justify-center rounded-[1.5rem] bg-white dark:bg-gray-900 shadow-2xl shadow-black/5 border border-gray-50 dark:border-gray-800 group-hover:scale-110 transition-transform duration-500">
+                  <IconValue
+                    value={"icon" in draft ? draft.icon : ""}
+                    alt="Preview"
+                    className="text-4xl"
+                    imageClassName="h-12 w-12 object-contain"
+                  />
                 </div>
-                
-                <div className="text-center relative z-10">
-                   <div className="text-lg font-black tracking-tight mb-1">{draft.title || "Untitled Entity"}</div>
-                   <div className="text-[10px] font-black uppercase tracking-[0.3em] text-sky-600/60 dark:text-sky-400/60">Live Snapshot</div>
+                {"image" in draft && (draft as any).image && (
+                  <div className="w-32 h-20 flex items-center justify-center rounded-[1.5rem] bg-white dark:bg-gray-900 shadow-2xl shadow-black/5 border border-gray-50 dark:border-gray-800 overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                    <img
+                      src={(draft as any).image}
+                      alt="Project"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                )}
+              </div>
+
+              <div className="text-center relative z-10">
+                <div className="text-lg font-black tracking-tight mb-1">
+                  {draft.title || "Untitled Entity"}
                 </div>
-             </div>
+                <div className="text-[10px] font-black uppercase tracking-[0.3em] text-sky-600/60 dark:text-sky-400/60">
+                  Live Snapshot
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -194,10 +227,12 @@ export const AdminSimpleEntityForm = ({
             <div className="space-y-8 pt-8 border-t border-gray-100 dark:border-gray-800">
               <label className="block">
                 <div className="flex items-center justify-between mb-2">
-                   <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                  <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
                     Infrastructure / Tech Stack
                   </div>
-                  <div className="text-[9px] font-bold text-sky-600 uppercase">Comma Separated</div>
+                  <div className="text-[9px] font-bold text-sky-600 uppercase">
+                    Comma Separated
+                  </div>
                 </div>
                 <input
                   value={draft.techStack.join(", ")}
@@ -217,30 +252,36 @@ export const AdminSimpleEntityForm = ({
               {collection === "projects" && (
                 <div className="block">
                   <div className="flex items-center gap-2 mb-3 text-[10px] font-black uppercase tracking-widest text-gray-400">
-                     Categories Assigment
+                    Categories Assigment
                   </div>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                     {projectCategories.map((category) => {
-                       const isSelected = (draft as Project).categoryIds?.includes(category.id) ?? false;
-                       return (
-                         <label key={category.id} className="flex items-center gap-3 cursor-pointer p-3 rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-950/30 hover:border-sky-200 transition-colors">
-                           <input
-                             type="checkbox"
-                             checked={isSelected}
-                             onChange={(e) => {
-                               const currentIds = (draft as Project).categoryIds || [];
-                               const newIds = e.target.checked 
-                                 ? [...currentIds, category.id]
-                                 : currentIds.filter(id => id !== category.id);
-                               updateField("categoryIds", newIds);
-                             }}
-                             className="w-4 h-4 rounded border-gray-300 text-sky-600 focus:ring-sky-500 dark:border-gray-700 dark:bg-gray-900"
-                           />
-                           <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
-                             {lang === "en" ? category.nameEn : category.nameAr}
-                           </span>
-                         </label>
-                       );
+                      const isSelected =
+                        (draft as Project).categoryIds?.includes(category.id) ??
+                        false;
+                      return (
+                        <label
+                          key={category.id}
+                          className="flex items-center gap-3 cursor-pointer p-3 rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-950/30 hover:border-sky-200 transition-colors"
+                        >
+                          <input
+                            type="checkbox"
+                            checked={isSelected}
+                            onChange={(e) => {
+                              const currentIds =
+                                (draft as Project).categoryIds || [];
+                              const newIds = e.target.checked
+                                ? [...currentIds, category.id]
+                                : currentIds.filter((id) => id !== category.id);
+                              updateField("categoryIds", newIds);
+                            }}
+                            className="w-4 h-4 rounded border-gray-300 text-sky-600 focus:ring-sky-500 dark:border-gray-700 dark:bg-gray-900"
+                          />
+                          <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
+                            {lang === "en" ? category.nameEn : category.nameAr}
+                          </span>
+                        </label>
+                      );
                     })}
                   </div>
                 </div>
@@ -274,6 +315,66 @@ export const AdminSimpleEntityForm = ({
                   />
                 </label>
               </div>
+
+              {collection === "projects" && (
+                <div className="grid gap-8 md:grid-cols-2 mt-8">
+                  <label className="block">
+                    <div className="flex items-center gap-2 mb-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                      Primary Role
+                    </div>
+                    <input
+                      value={(draft as Project).primaryRole ?? ""}
+                      onChange={(event) =>
+                        updateField(
+                          "primaryRole",
+                          event.target.value || undefined,
+                        )
+                      }
+                      className="w-full rounded-xl border border-gray-100 bg-white px-4 py-3 text-sm dark:border-gray-800 dark:bg-gray-950/50 outline-none focus:border-sky-500 transition-all font-medium"
+                      placeholder="e.g. Engineering Lead"
+                    />
+                  </label>
+                  <label className="block">
+                    <div className="flex items-center gap-2 mb-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                      Core Tech
+                    </div>
+                    <input
+                      value={(draft as Project).coreTech ?? ""}
+                      onChange={(event) =>
+                        updateField("coreTech", event.target.value || undefined)
+                      }
+                      className="w-full rounded-xl border border-gray-100 bg-white px-4 py-3 text-sm dark:border-gray-800 dark:bg-gray-950/50 outline-none focus:border-sky-500 transition-all font-medium"
+                      placeholder="e.g. JavaScript (ES6+)"
+                    />
+                  </label>
+                  <label className="block">
+                    <div className="flex items-center gap-2 mb-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                      Category
+                    </div>
+                    <input
+                      value={(draft as Project).category ?? ""}
+                      onChange={(event) =>
+                        updateField("category", event.target.value || undefined)
+                      }
+                      className="w-full rounded-xl border border-gray-100 bg-white px-4 py-3 text-sm dark:border-gray-800 dark:bg-gray-950/50 outline-none focus:border-sky-500 transition-all font-medium"
+                      placeholder="e.g. Full-Stack Solution"
+                    />
+                  </label>
+                  <label className="block">
+                    <div className="flex items-center gap-2 mb-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
+                      Timeline
+                    </div>
+                    <input
+                      value={(draft as Project).timeline ?? ""}
+                      onChange={(event) =>
+                        updateField("timeline", event.target.value || undefined)
+                      }
+                      className="w-full rounded-xl border border-gray-100 bg-white px-4 py-3 text-sm dark:border-gray-800 dark:bg-gray-950/50 outline-none focus:border-sky-500 transition-all font-medium"
+                      placeholder="e.g. Q2 2026"
+                    />
+                  </label>
+                </div>
+              )}
 
               <label className="block">
                 <div className="flex items-center gap-2 mb-2 text-[10px] font-black uppercase tracking-widest text-gray-400">
@@ -320,13 +421,13 @@ export const AdminSimpleEntityForm = ({
           ) : null}
 
           <div className="flex items-center justify-end gap-4 pt-6 border-t border-gray-100 dark:border-gray-800">
-             {showSuccessMessage && (
-               <div className="flex items-center gap-2 text-xs font-bold text-green-600 dark:text-green-400 animate-in fade-in slide-in-from-right-2">
-                 <CheckCircle2 className="w-4 h-4" />
-                 Update published successfully
-               </div>
-             )}
-             <AdminButton
+            {showSuccessMessage && (
+              <div className="flex items-center gap-2 text-xs font-bold text-green-600 dark:text-green-400 animate-in fade-in slide-in-from-right-2">
+                <CheckCircle2 className="w-4 h-4" />
+                Update published successfully
+              </div>
+            )}
+            <AdminButton
               type="submit"
               isLoading={isSubmitting}
               variant="sky"
@@ -340,20 +441,34 @@ export const AdminSimpleEntityForm = ({
       </fetcher.Form>
 
       {!open && (
-         <div className="flex items-center justify-between mt-4 p-4 rounded-2xl bg-gray-50/50 dark:bg-gray-800/20 border border-gray-100 dark:border-gray-800">
-            <div className="flex items-center gap-4">
-               <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800">
-                  <IconValue value={("icon" in draft ? draft.icon : "")} alt="Preview" className="text-xl" imageClassName="h-6 w-6 object-contain" />
-               </div>
-               <div>
-                  <div className="text-sm font-bold">{draft.title || "Untitled"}</div>
-                  <div className="text-[10px] font-black uppercase tracking-widest opacity-40">Static View</div>
-               </div>
+        <div className="flex items-center justify-between mt-4 p-4 rounded-2xl bg-gray-50/50 dark:bg-gray-800/20 border border-gray-100 dark:border-gray-800">
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800">
+              <IconValue
+                value={"icon" in draft ? draft.icon : ""}
+                alt="Preview"
+                className="text-xl"
+                imageClassName="h-6 w-6 object-contain"
+              />
             </div>
-            <AdminButton variant="ghost" size="sm" onClick={() => setOpen(true)} rightIcon={<ChevronDown className="w-4 h-4" />}>
-               Expand
-            </AdminButton>
-         </div>
+            <div>
+              <div className="text-sm font-bold">
+                {draft.title || "Untitled"}
+              </div>
+              <div className="text-[10px] font-black uppercase tracking-widest opacity-40">
+                Static View
+              </div>
+            </div>
+          </div>
+          <AdminButton
+            variant="ghost"
+            size="sm"
+            onClick={() => setOpen(true)}
+            rightIcon={<ChevronDown className="w-4 h-4" />}
+          >
+            Expand
+          </AdminButton>
+        </div>
       )}
     </AdminCard>
   );

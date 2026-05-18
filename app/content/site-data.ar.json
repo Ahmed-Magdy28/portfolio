@@ -1,11 +1,6 @@
 {
   "home": {
     "name": "أحمد مجدي",
-    "titles": [
-      "مطور واجهات أمامية",
-      "مهندس برمجيات",
-      "طموح للتطوير الشامل"
-    ],
     "avatar": "/me.jpeg",
     "avatarSize": 240,
     "cvUrl": "https://drive.usercontent.google.com/download?id=1aqEvGWxLCRlbLhH7TRnXHoK8rZZwHkg4&export=download&authuser=1&confirm=t&uuid=3491208b-7b74-4d07-84b6-162608feb2ab&at=ALBwUgkYBI0lTgboskkVQzSWqumX:1776707742570",
@@ -30,6 +25,11 @@
         "title": "دعم عالمي متكامل",
         "description": "دعم كامل للاتجاه من اليمين إلى اليسار (RTL) وتكامل سلس للغات المتعددة للجمهور العالمي."
       }
+    ],
+    "titles": [
+      "مطور واجهات أمامية",
+      "مهندس برمجيات",
+      "طموح للتطوير الشامل"
     ]
   },
   "about": {
@@ -145,6 +145,56 @@
       }
     ]
   },
+  "projectCategories": [
+    {
+      "id": "frontend-vanilla",
+      "nameEn": "Frontend Web (Vanilla)",
+      "nameAr": "الواجهة الأمامية (فانيلا)",
+      "isHidden": false
+    },
+    {
+      "id": "frontend-react",
+      "nameEn": "Frontend Web (React)",
+      "nameAr": "الواجهة الأمامية (رياكت)",
+      "isHidden": false
+    },
+    {
+      "id": "backend-node",
+      "nameEn": "Backend (Node Express)",
+      "nameAr": "الباك إند (نود إكسبريس)",
+      "isHidden": true
+    },
+    {
+      "id": "backend-django",
+      "nameEn": "Backend (Django)",
+      "nameAr": "الباك إند (جانغو)",
+      "isHidden": false
+    },
+    {
+      "id": "mobile-flutter",
+      "nameEn": "Mobile (Flutter)",
+      "nameAr": "تطوير الموبايل (فلاتر)",
+      "isHidden": false
+    },
+    {
+      "id": "systems-cshell",
+      "nameEn": "System (C Shell)",
+      "nameAr": "الأنظمة (سي شيل)",
+      "isHidden": false
+    },
+    {
+      "id": "wordpress",
+      "nameEn": "WordPress",
+      "nameAr": "ووردبريس",
+      "isHidden": false
+    },
+    {
+      "id": "wordpress",
+      "nameEn": "WordPress",
+      "nameAr": "ووردبريس",
+      "isHidden": false
+    }
+  ],
   "projects": [
     {
       "id": "management-platform",
@@ -166,7 +216,6 @@
         "إدارة التاريخ والوقت",
         "معالجة الأخطاء بشكل مركزي"
       ],
-      "liveUrl": "https://workforce-ultimate.vercel.app/",
       "sourceUrl": "https://github.com/Ahmed-Magdy28/workforce-ultimate",
       "fullDescription": "WorkForce Ultimate هو منصة حديثة لإدارة الموظفين والمشاريع مستوحاة من أدوات مثل Jira و ClickUp. تم تصميمها لمساعدة المؤسسات على إدارة الموظفين والمشاريع والمهام والجداول الزمنية والأداء بكفاءة من خلال نظام منظم يعتمد على الأدوار. تم بناء التطبيق باستخدام React و TypeScript مع بنية واجهة أمامية قابلة للتوسع وتقسيم واضح بين الحالة العامة (Global State)، حالة الخادم (Server State)، وحالة واجهة المستخدم المحلية (Local UI State) مما يحسن من قابلية الصيانة والأداء. يعتمد النظام على RBAC قوي يدعم أدوارًا متعددة مثل الموظف، المدير، المدير الأول، المدير الإقليمي، والموارد البشرية، حيث يمتلك كل دور لوحة تحكم وصلاحيات مخصصة. توفر المنصة لوحات ديناميكية لتتبع المهام وتقدم المشاريع وأداء الفرق وتحليلات الإنتاجية، بالإضافة إلى ميزات مثل تنظيم المهام بالسحب والإفلات، الإشعارات، التحقق من النماذج، إدارة الملفات، وأنظمة الموافقات المبنية على سير العمل. تم تطوير المشروع باستخدام أفضل ممارسات الواجهة الحديثة مع استخدام Redux Toolkit لإدارة الحالة العامة، وTanStack React Query لإدارة حالة الخادم، وReact Hook Form مع Zod للتحقق من البيانات، مع واجهة نظيفة توفر تجربة مستخدم سلسة ومتجاوبة.",
       "challenges": [
@@ -176,10 +225,13 @@
         "إدارة تفاعلات واجهة معقدة مثل السحب والإفلات مع الحفاظ على الأداء.",
         "تنسيق عدة ميزات متقدمة مثل لوحات التحليلات والإشعارات وأنظمة سير العمل داخل كود واجهة واحد."
       ],
-      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "liveUrl": "https://workforce-ultimate.vercel.app/",
+      "icon": "/uploads/f9c77da512d892f4c6836bf8bf501a00.png",
+      "image": "/uploads/49579fa619e80f8f8182bab018ec61d8.png",
       "categoryIds": [
         "frontend-react"
-      ]
+      ],
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
     },
     {
       "id": "task-management",
@@ -208,6 +260,8 @@
         "بناء نظام واجهة نظيف وقابل للتوسع للوحات التحكم والجداول والنماذج باستخدام مكونات قابلة لإعادة الاستخدام.",
         "تنفيذ تحديثات شبه فورية لعمليات الحجز وتسجيل الدخول والخروج مع الحفاظ على الأداء."
       ],
+      "image": "/uploads/08eb160b89cb3638b3b17b5a0b9f33da.png",
+      "icon": "/uploads/124735e44f47c07547683d76b11d8d91.png",
       "categoryIds": [
         "frontend-react"
       ]
@@ -230,6 +284,8 @@
         "ضمان التوافق والاستجابة عبر مختلف الأجهزة وأحجام الشاشات.",
         "الموازنة بين مرونة التصميم وقيود قوالب WordPress."
       ],
+      "icon": "https://noto-ksa.com/wp-content/uploads/2024/10/cropped-Logo-192x192.png",
+      "image": "/uploads/b608a24a42ed4c3bb0f28dbe49a3de6b.png",
       "categoryIds": [
         "wordpress"
       ]
@@ -251,6 +307,8 @@
         "ضمان التوافق الكامل عبر مختلف المتصفحات والأجهزة.",
         "تسليم موقع جاهز للإنتاج ضمن قيود ومتطلبات واقعية."
       ],
+      "icon": "https://manko-ksa.com/wp-content/uploads/2025/06/logo.png",
+      "image": "/uploads/0d4f47e97666a3d078a978d472508209.png",
       "categoryIds": [
         "wordpress"
       ]
@@ -272,6 +330,8 @@
         "الحفاظ على تصميم متجاوب عبر جميع أحجام الشاشات.",
         "نشر وصيانة موقع مستقر وجاهز للإنتاج."
       ],
+      "image": "/uploads/916d65af1ab68ae139619e6524f66b77.png",
+      "icon": "https://cafelaperouse-ksa.com/wp-content/uploads/2024/10/cropped-apple-touch-icon-192x192.png",
       "categoryIds": [
         "wordpress"
       ]
@@ -297,7 +357,8 @@
       ],
       "categoryIds": [
         "frontend-react"
-      ]
+      ],
+      "image": "/uploads/fdbf5a672f87e126f1afb57f0c6b1934.png"
     },
     {
       "id": "qr-code-app",
@@ -324,6 +385,7 @@
         "ضمان التوافق بين مختلف أنظمة التشغيل والمتصفحات.",
         "الحفاظ على بنية مكونات نظيفة وقابلة للتوسع مع واجهات تفاعلية متعددة."
       ],
+      "image": "/uploads/264a2ac5df9e39610f86fb18ba622ee8.png",
       "categoryIds": [
         "frontend-react"
       ]
@@ -350,7 +412,8 @@
       ],
       "categoryIds": [
         "frontend-react"
-      ]
+      ],
+      "image": "/uploads/67cf26073f0fdaaa294942ffb2aa938b.png"
     },
     {
       "id": "ashtray-meny",
@@ -678,6 +741,71 @@
       "categoryIds": [
         "systems-cshell"
       ]
+    },
+    {
+      "id": "project-1779138389822",
+      "title": "Omnifood",
+      "description": "خدمة اشتراك طعام مدعومة بالذكاء الاصطناعي تقدم وجبات صحية مخصصة طوال أيام السنة بناءً على تفضيلاتك واحتياجاتك الغذائية.",
+      "featured": false,
+      "techStack": [
+        "HTML5 (هيكل دلالي)",
+        "CSS3 (Flexbox, CSS Grid, Custom Properties)",
+        "JavaScript (Vanilla JS)"
+      ],
+      "categoryIds": [
+        "frontend-vanilla"
+      ],
+      "fullDescription": "Omnifood هو مشروع ويب حديث لخدمة اشتراك الطعام يعتمد على الذكاء الاصطناعي لتقديم خطط وجبات أسبوعية مخصصة بالكامل للمستخدم. يتيح النظام إنشاء نظام غذائي يناسب احتياجات المستخدم وتفضيلاته الغذائية مثل النباتي، الكيتو، باليو، وخالي من الجلوتين. يتميز المشروع بواجهة مستخدم حديثة وجذابة مع تجربة استخدام سلسة ومتجاوبة بالكامل على جميع الأجهزة. يعتمد على HTML وCSS الحديثة مع JavaScript بسيط لإدارة التفاعل مثل القائمة المتحركة والتنقل السلس داخل الصفحة.",
+      "challenges": [
+        "تصميم واجهة مستخدم حديثة ومتجاوبة باستخدام CSS Grid وFlexbox.",
+        "تنظيم الأكواد بين ملفات CSS المختلفة وتحسين قابلية الصيانة.",
+        "تنفيذ تجربة مستخدم سلسة عبر التنقل والـ smooth scrolling.",
+        "تحسين الأداء باستخدام صور محسنة وصيغ حديثة مثل WebP.",
+        "التأكد من توافق التصميم عبر مختلف الأجهزة وأحجام الشاشات."
+      ],
+      "category": "other",
+      "primaryRole": "software engineer",
+      "coreTech": "HTML/CSS/JS",
+      "timeline": "Q2 2026",
+      "icon": "https://omnifood-gray-delta.vercel.app/img/favicon-64-64.png",
+      "image": "/uploads/b71987c2304d76f8840323bbb2788bef.png",
+      "liveUrl": "https://omnifood-gray-delta.vercel.app/",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/Omnifood"
+    },
+    {
+      "id": "project-1779135588992",
+      "title": "Forkify",
+      "description": "تطبيق وصفات حديث يتيح للمستخدمين البحث بين أكثر من مليون وصفة، عرض المكونات، تعديل عدد الحصص، وحفظ الوصفات المفضلة.",
+      "featured": false,
+      "techStack": [
+        "JavaScript (ES6+)",
+        "HTML",
+        "CSS",
+        "MVC Architecture",
+        "Parcel",
+        "LocalStorage"
+      ],
+      "categoryIds": [
+        "frontend-vanilla"
+      ],
+      "fullDescription": "Forkify هو تطبيق ويب حديث للوصفات تم تطويره كمشروع تعليمي ضمن دورة JavaScript الخاصة بـ Jonas Schmedtmann. يتيح التطبيق للمستخدمين البحث بين أكثر من 1,000,000 وصفة، عرض تفاصيل الوصفات مثل وقت الطهي والمكونات، وتعديل كميات المكونات ديناميكيًا بناءً على عدد الحصص المطلوبة. كما يمكن للمستخدمين حفظ وصفاتهم المفضلة باستخدام LocalStorage وإضافة وصفاتهم الخاصة إلى المنصة. يعتمد المشروع على JavaScript الحديثة (ES6+) مع بنية Modular Architecture ونمط MVC لتحسين تنظيم الكود وقابلية التوسع والصيانة. التطبيق متجاوب بالكامل ويوفر تجربة استخدام سلسة على الهواتف والأجهزة اللوحية وأجهزة سطح المكتب.",
+      "challenges": [
+        "فهم وتطبيق بنية MVC باستخدام هيكل JavaScript modular.",
+        "إدارة حالة التطبيق وتحديث واجهة المستخدم ديناميكيًا أثناء عمليات البحث وتعديل الحصص.",
+        "التعامل مع طلبات API غير المتزامنة وجلب بيانات الوصفات بكفاءة.",
+        "تنفيذ نظام حفظ الوصفات باستخدام LocalStorage.",
+        "بناء واجهة متجاوبة تعمل بسلاسة على مختلف أحجام الشاشات.",
+        "تعلم مفاهيم JavaScript الحديثة مثل private class fields و ES6 modules."
+      ],
+      "category": "other",
+      "primaryRole": "software engineer",
+      "coreTech": "HTML/CSS/JS",
+      "timeline": "Q2 2026",
+      "icon": "https://forkify-pearl.vercel.app/favicon.38ab3f7a.png",
+      "image": "/uploads/5fac3af021e9b9b4934280555252172b.png",
+      "liveUrl": "https://forkify-pearl.vercel.app/",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/forkify",
+      "copyright": "© حقوق النشر محفوظة لـ Jonas Schmedtmann. يُستخدم للتعلم أو ضمن معرض الأعمال فقط. غير مسموح باستخدامه للتدريس أو ادعاء ملكيته."
     }
   ],
   "languages": [
@@ -693,16 +821,11 @@
         {
           "id": "item-1778363531895",
           "title": "",
-          "content": "",
-          "blocks": [
-            {
-              "id": "block-1778363531895-y6gpfs",
-              "type": "text",
-              "text": ""
-            }
-          ]
+          "description": "",
+          "status": "planned"
         }
-      ]
+      ],
+      "versions": []
     },
     {
       "slug": "typescript",
@@ -718,16 +841,17 @@
           "version": "5.4",
           "releaseDate": "2024-03-06",
           "title": "Preserved Narrowing in Closures",
-          "type": "minor",
           "changes": [
             "Preserved narrowing in closures following last assignments",
             "The NoInfer utility type",
             "Object.groupBy and Map.groupBy",
             "Support for require() calls in --module preserve"
-          ]
+          ],
+          "type": "minor"
         }
       ],
-      "aboutDescription": "تطوير JavaScript آمن وبنية برمجية قوية لتطبيقات الويب الحديثة."
+      "aboutDescription": "تطوير JavaScript آمن وبنية برمجية قوية لتطبيقات الويب الحديثة.",
+      "roadmap": []
     },
     {
       "slug": "python",
@@ -736,7 +860,9 @@
       "icon": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "Python لتطوير الويب، الأتمتة، وخدمات الباك إند."
+      "aboutDescription": "Python لتطوير الويب، الأتمتة، وخدمات الباك إند.",
+      "roadmap": [],
+      "versions": []
     },
     {
       "slug": "dart",
@@ -745,7 +871,9 @@
       "icon": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "محسنة لتطوير تطبيقات الواجهة الأمامية للموبايل والويب."
+      "aboutDescription": "محسنة لتطوير تطبيقات الواجهة الأمامية للموبايل والويب.",
+      "roadmap": [],
+      "versions": []
     },
     {
       "slug": "c-lang",
@@ -754,7 +882,9 @@
       "icon": "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "الأساس المتين لعلوم الحاسب وبرمجيات الأنظمة."
+      "aboutDescription": "الأساس المتين لعلوم الحاسب وبرمجيات الأنظمة.",
+      "roadmap": [],
+      "versions": []
     },
     {
       "slug": "html",
@@ -763,7 +893,9 @@
       "icon": "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "تحديد هيكل وبنية محتوى الويب."
+      "aboutDescription": "تحديد هيكل وبنية محتوى الويب.",
+      "roadmap": [],
+      "versions": []
     },
     {
       "slug": "css",
@@ -772,7 +904,9 @@
       "icon": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "تصميم واجهات مستخدم جميلة ومتجاوبة."
+      "aboutDescription": "تصميم واجهات مستخدم جميلة ومتجاوبة.",
+      "roadmap": [],
+      "versions": []
     }
   ],
   "frameworks": [
@@ -790,29 +924,30 @@
           "version": "19.0",
           "releaseDate": "2024-12-05",
           "title": "React 19 RC",
-          "type": "major",
           "changes": [
             "Actions: Support for async functions in transitions",
             "New hook: useActionState for form handling",
             "New hook: useOptimistic for optimistic updates",
             "New API: use for reading resources in render",
             "Server Components and Server Actions"
-          ]
+          ],
+          "type": "major"
         },
         {
           "id": "react-18-2",
           "version": "18.2",
           "releaseDate": "2022-06-14",
           "title": "React 18.2.0",
-          "type": "minor",
           "changes": [
             "Performance improvements",
             "Bug fixes for Concurrent React",
             "Stable release of many 18.0 features"
-          ]
+          ],
+          "type": "minor"
         }
       ],
-      "aboutDescription": "مكتبة JavaScript لبناء واجهات مستخدم تفاعلية."
+      "aboutDescription": "مكتبة JavaScript لبناء واجهات مستخدم تفاعلية.",
+      "roadmap": []
     },
     {
       "slug": "nextjs",
@@ -826,16 +961,11 @@
         {
           "id": "item-1778363683978",
           "title": "",
-          "content": "",
-          "blocks": [
-            {
-              "id": "block-1778363683978-e97i63",
-              "type": "text",
-              "text": ""
-            }
-          ]
+          "description": "",
+          "status": "planned"
         }
-      ]
+      ],
+      "versions": []
     },
     {
       "slug": "django",
@@ -844,7 +974,9 @@
       "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTioAoZJxF6BI-nOen5eh82SDOuK_S3mnqJgwL74oTwgj5VRJy72LiEuEs&s",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "إطار عمل ويب Python متكامل وقوي."
+      "aboutDescription": "إطار عمل ويب Python متكامل وقوي.",
+      "roadmap": [],
+      "versions": []
     },
     {
       "slug": "flutter",
@@ -853,7 +985,9 @@
       "icon": "https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "بناء تطبيقات رائعة متعددة المنصات من قاعدة كود واحدة."
+      "aboutDescription": "بناء تطبيقات رائعة متعددة المنصات من قاعدة كود واحدة.",
+      "roadmap": [],
+      "versions": []
     },
     {
       "slug": "wordpress",
@@ -862,7 +996,9 @@
       "icon": "https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "نظام إدارة محتوى قوي لتطوير ويب مرن."
+      "aboutDescription": "نظام إدارة محتوى قوي لتطوير ويب مرن.",
+      "roadmap": [],
+      "versions": []
     },
     {
       "slug": "tailwindcss",
@@ -871,7 +1007,9 @@
       "icon": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "CSS حديث يعتمد على الخدمات لتطوير واجهات سريع."
+      "aboutDescription": "CSS حديث يعتمد على الخدمات لتطوير واجهات سريع.",
+      "roadmap": [],
+      "versions": []
     },
     {
       "slug": "react-router",
@@ -880,7 +1018,9 @@
       "icon": "https://reactrouter.com/_brand/react-router-mark-color.svg",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "توجيه تصريحي لتطبيقات React."
+      "aboutDescription": "توجيه تصريحي لتطبيقات React.",
+      "roadmap": [],
+      "versions": []
     },
     {
       "slug": "redux-toolkit",
@@ -889,51 +1029,9 @@
       "icon": "https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "إدارة حالة فعالة وقابلة للتنبؤ لتطبيقات React."
-    }
-  ],
-  "projectCategories": [
-    {
-      "id": "frontend-vanilla",
-      "nameEn": "Frontend Web (Vanilla)",
-      "nameAr": "الواجهة الأمامية (فانيلا)",
-      "isHidden": false
-    },
-    {
-      "id": "frontend-react",
-      "nameEn": "Frontend Web (React)",
-      "nameAr": "الواجهة الأمامية (رياكت)",
-      "isHidden": false
-    },
-    {
-      "id": "backend-node",
-      "nameEn": "Backend (Node Express)",
-      "nameAr": "الباك إند (نود إكسبريس)",
-      "isHidden": true
-    },
-    {
-      "id": "backend-django",
-      "nameEn": "Backend (Django)",
-      "nameAr": "الباك إند (جانغو)",
-      "isHidden": false
-    },
-    {
-      "id": "mobile-flutter",
-      "nameEn": "Mobile (Flutter)",
-      "nameAr": "تطوير الموبايل (فلاتر)",
-      "isHidden": false
-    },
-    {
-      "id": "systems-cshell",
-      "nameEn": "System (C Shell)",
-      "nameAr": "الأنظمة (سي شيل)",
-      "isHidden": false
-    },
-    {
-      "id": "wordpress",
-      "nameEn": "WordPress",
-      "nameAr": "ووردبريس",
-      "isHidden": false
+      "aboutDescription": "إدارة حالة فعالة وقابلة للتنبؤ لتطبيقات React.",
+      "roadmap": [],
+      "versions": []
     }
   ]
 }

@@ -35,7 +35,8 @@ export async function action({ request }: { request: Request }) {
       if (
         collection === "projects" ||
         collection === "languages" ||
-        collection === "frameworks"
+        collection === "frameworks" ||
+        collection === "projectCategories"
       ) {
         await writeSiteContent({ ...content, [collection]: payload }, locale);
         return { success: `${collection} updated for ${locale}.` };

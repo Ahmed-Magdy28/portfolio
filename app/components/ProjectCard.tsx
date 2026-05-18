@@ -19,17 +19,17 @@ export const ProjectCard = ({
   liveLabel,
   sourceLabel,
 }: ProjectCardProps) => {
-  const displayIndex = (index + 1).toString().padStart(2, '0');
+  const displayIndex = (index + 1).toString().padStart(2, "0");
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ 
-        duration: 0.8, 
+      transition={{
+        duration: 0.8,
         delay: index * 0.1,
-        ease: [0.21, 0.47, 0.32, 0.98] 
+        ease: [0.21, 0.47, 0.32, 0.98],
       }}
       className="group"
     >
@@ -42,87 +42,92 @@ export const ProjectCard = ({
 
           {/* Index Number */}
           <div className="absolute top-8 left-8 z-20 mix-blend-difference">
-             <span className="text-[9px] font-black tracking-[0.4em] text-white/30 uppercase">Work {displayIndex}</span>
+            <span className="text-[9px] font-black tracking-[0.4em] text-white/30 uppercase">
+              Work {displayIndex}
+            </span>
           </div>
 
           {/* Visual Canvas */}
           <div className="relative aspect-[16/10] overflow-hidden bg-gray-50 dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
-             <div className="absolute inset-0 bg-linear-to-br from-blue-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-             
-             {project.image ? (
-                <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                />
-             ) : (
-                <div className="w-full h-full flex items-center justify-center p-16">
-                   <div className="relative">
-                      <div className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                      <IconValue 
-                           value={project.icon || ""} 
-                           alt={project.title}
-                           className="text-8xl relative z-10 transition-all duration-700 group-hover:scale-110 group-hover:rotate-3" 
-                           imageClassName="h-32 w-32 object-contain"
-                      />
-                   </div>
-                </div>
-             )}
+            <div className="absolute inset-0 bg-linear-to-br from-blue-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-             <div className="absolute bottom-6 right-6 z-20 scale-75 opacity-0 translate-y-4 group-hover:scale-100 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                <div className="w-12 h-12 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center shadow-xl">
-                   <ArrowUpRight className="w-6 h-6 text-blue-600" />
+            {project.image ? (
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-1000 animate-heartbeat hover:animation-none hover:scale-110"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center p-16">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full scale-150 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <IconValue
+                    value={project.icon || ""}
+                    alt={project.title}
+                    className="text-8xl relative z-10 transition-all duration-700 group-hover:scale-110 group-hover:rotate-3"
+                    imageClassName="h-32 w-32 object-contain"
+                  />
                 </div>
-             </div>
+              </div>
+            )}
+
+            <div className="absolute bottom-6 right-6 z-20 scale-75 opacity-0 translate-y-4 group-hover:scale-100 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+              <div className="w-12 h-12 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center shadow-xl">
+                <ArrowUpRight className="w-6 h-6 text-blue-600" />
+              </div>
+            </div>
           </div>
 
           {/* Content Space */}
           <div className="flex-1 p-10 flex flex-col">
             <div className="flex items-center gap-3 mb-4">
-                <div className="h-px w-8 bg-blue-600/30 group-hover:w-12 transition-all duration-500" />
-                <div className="flex flex-wrap gap-2">
-                    {project.techStack.slice(0, 2).map((tech) => (
-                        <span key={tech} className="text-[9px] font-black uppercase tracking-widest text-blue-600/60 dark:text-blue-400/60">
-                            {tech}
-                        </span>
-                    ))}
-                </div>
+              <div className="h-px w-8 bg-blue-600/30 group-hover:w-12 transition-all duration-500" />
+              <div className="flex flex-wrap gap-2">
+                {project.techStack.slice(0, 2).map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-[9px] font-black uppercase tracking-widest text-blue-600/60 dark:text-blue-400/60"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
 
             <h3 className="text-2xl font-black mb-4 tracking-tight text-foreground leading-tight group-hover:text-blue-600 transition-colors duration-300">
               {project.title}
             </h3>
-            
+
             <p className="text-gray-500 dark:text-gray-400 mb-8 line-clamp-2 leading-relaxed text-sm font-medium">
               {project.description}
             </p>
 
             <div className="mt-auto flex items-center justify-between">
-                <div className="flex gap-4">
-                   {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="text-[10px] font-black uppercase tracking-[0.2em] text-foreground/40 hover:text-blue-600 transition-colors"
-                      >
-                        {liveLabel}
-                      </a>
-                   )}
-                   {project.sourceUrl && (
-                      <a
-                        href={project.sourceUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="text-[10px] font-black uppercase tracking-[0.2em] text-foreground/40 hover:text-blue-600 transition-colors"
-                      >
-                        {sourceLabel}
-                      </a>
-                   )}
-                </div>
-                <div className="w-1.5 h-1.5 rounded-full bg-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="flex gap-4">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="text-[10px] font-black uppercase tracking-[0.2em] text-foreground/40 hover:text-blue-600 transition-colors"
+                  >
+                    {liveLabel}
+                  </a>
+                )}
+                {project.sourceUrl && (
+                  <a
+                    href={project.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                    className="text-[10px] font-black uppercase tracking-[0.2em] text-foreground/40 hover:text-blue-600 transition-colors"
+                  >
+                    {sourceLabel}
+                  </a>
+                )}
+              </div>
+              <div className="w-1.5 h-1.5 rounded-full bg-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
           </div>
         </div>

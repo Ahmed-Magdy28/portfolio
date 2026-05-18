@@ -9,7 +9,13 @@ import { AdminSectionWrapper } from "../components/admin/AdminSectionWrapper";
 import { AdminAvatarEditor } from "../components/admin/AdminAvatarEditor";
 import { AdminCard } from "../components/admin/ui/AdminCard";
 import { AdminEntityCollectionEditor } from "../components/admin/AdminEntityCollectionEditor";
-import { Sparkles, Code2, FolderGit2, LayoutDashboard, Globe } from "lucide-react";
+import {
+  Sparkles,
+  Code2,
+  FolderGit2,
+  LayoutDashboard,
+  Globe,
+} from "lucide-react";
 
 // Lazy loaded components
 const Hero = lazy(() =>
@@ -123,16 +129,9 @@ export const Home = () => {
           featuredProjects={featuredProjects}
         />
 
-        <AboutFeatures
-          lang={lang}
-          home={home}
-          about={about}
-        />
+        <AboutFeatures lang={lang} home={home} about={about} />
 
-        <ContactCTA
-          t={t}
-          contact={contact}
-        />
+        <ContactCTA t={t} contact={contact} />
       </Suspense>
 
       {isAdminAuthenticated && (
@@ -232,15 +231,24 @@ export const Home = () => {
                   description="Manage the main project collection."
                   items={projects}
                   collection="projects"
-                  createItem={() => ({
-                    id: `project-${Date.now()}`,
-                    title: "New Project",
-                    description: "Short summary",
-                    featured: true,
-                    techStack: [],
-                    fullDescription: "Detailed overview",
-                    challenges: "Challenges and solutions",
-                  })}
+                  createItem={() => {
+                    const date = new Date();
+                    const quarter = Math.floor(date.getMonth() / 3) + 1;
+                    return {
+                      id: `project-${Date.now()}`,
+                      title: "New Project",
+                      description: "Short summary",
+                      featured: true,
+                      techStack: ["none"],
+                      categoryIds: ["category-1779137983480"],
+                      fullDescription: "Detailed overview",
+                      challenges: "Challenges and solutions",
+                      primaryRole: "software engineer",
+                      coreTech: "none",
+                      category: "other",
+                      timeline: `Q${quarter} ${date.getFullYear()}`,
+                    };
+                  }}
                   getId={(item) => item.id}
                   getEditPath={(item) => `/projects/${item.id}`}
                 />
