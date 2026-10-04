@@ -2,7 +2,7 @@
 
 ## Project Structure & Module Organization
 
-This is a React Router 7 SSR portfolio app using React 19, TypeScript, Bun, Redux Toolkit, and Tailwind CSS v4. Application code lives in `app/`. Route modules are in `app/routes/` and are wired through `app/routes.ts`; reusable page views live in `app/pages/`. Shared UI is in `app/components/`, with shadcn-style primitives under `app/components/ui/`. Layouts are in `app/layouts/`, Redux state is in `app/store/`, hooks are in `app/hooks/`, and server utilities are in `app/lib/`. Editable content is stored in `app/content/`, translations in `app/i18n/`, global styles in `styles/`, and static assets in `public/`.
+This is a personal portfolio built with Next.js 16 (App Router), React 19, TypeScript, Bun, Redux Toolkit, and Tailwind CSS v4. Application code lives in `app/`. App routes are organized using standard Next.js App Router conventions (`app/page.tsx`, `app/projects/`, etc.). Shared UI is in `app/components/`, with shadcn-style primitives under `app/components/ui/`. Layouts are in `app/layouts/`, Redux state is in `app/store/`, hooks are in `app/hooks/`, and server utilities are in `app/lib/`. Editable content is stored in `app/content/`, translations in `app/i18n/`, global styles in `styles/`, and static assets in `public/`.
 
 ## Build, Test, and Development Commands
 
@@ -10,10 +10,10 @@ Use Bun for package management and scripts:
 
 ```bash
 bun install        # install dependencies from bun.lock
-bun run dev        # start the local React Router dev server
-bun run build      # create the production client/server build
-bun run start      # serve ./build/server/index.js
-bun run typecheck  # generate route types and run TypeScript checks
+bun run dev        # start the local Next.js dev server on port 4000
+bun run build      # create the production Next.js build
+bun run start      # serve the production build on port 4000
+bun run typecheck  # run TypeScript checks
 ```
 
 Run `bun run typecheck` before handing off changes. Run `bun run build` when touching routing, SSR behavior, content loading, or production-only code paths.
