@@ -1,99 +1,135 @@
 {
   "home": {
     "name": "Ahmed Magdy",
-    "avatar": "👨‍💻",
-    "cvUrl": "https://drive.usercontent.google.com/download?id=1aqEvGWxLCRlbLhH7TRnXHoK8rZZwHkg4&export=download&authuser=1&confirm=t&uuid=3491208b-7b74-4d07-84b6-162608feb2ab&at=ALBwUgkYBI0lTgboskkVQzSWqumX:1776707742570",
+    "avatar": "/me.jpeg",
+    "avatarSize": 240,
+    "cvUrl": "https://drive.google.com/file/d/1DNMUMp4toladmr3plv8QmRDQjGyL7SaJ/view?usp=sharing",
     "features": [
       {
         "icon": "Zap",
         "title": "High-Performance Architecture",
-        "description": "Engineered for speed and SEO, utilizing React Router 7's SSR capabilities for sub-second page loads."
+        "description": "Engineered for speed and SEO, optimizing page load times by 25% with React Router 7 SSR and modern caching."
       },
       {
         "icon": "Shield",
-        "title": "Scalable State Management",
-        "description": "Handling complex application states and real-time data with Redux Toolkit and TanStack Query."
+        "title": "Scalable Full-Stack Systems",
+        "description": "Architecting robust state flows and RESTful services with Redux Toolkit, TanStack Query, NestJS, and Django."
       },
       {
         "icon": "Sparkles",
-        "title": "Advanced UI Animations",
-        "description": "Creating immersive user experiences with fluid transitions and interactive components using Motion."
+        "title": "Advanced UI & Design Systems",
+        "description": "Creating fluid, responsive interfaces with React, Next.js, TypeScript, Tailwind CSS, and Motion."
       },
       {
         "icon": "Globe",
-        "title": "Global Ready i18n",
-        "description": "Full RTL support and seamless multi-language integration for international audiences."
+        "title": "Multi-Region & GCC Scale",
+        "description": "Administered multi-region platforms across 6 GCC markets with 99.8% uptime, complete i18n, and RBAC."
       }
+    ],
+    "titles": [
+      "Front-End & Full-Stack Web Developer",
+      "React & Next.js Specialist",
+      "Software Engineer"
     ]
   },
   "about": {
+    "video": "",
     "paragraphs": [
-      "I am a passionate Software Engineer with a strong focus on front-end development using React and Next.js. I have hands-on experience building modern, scalable, and responsive web applications, as well as delivering real-world projects including e-commerce platforms and business websites using WordPress.",
-      "I specialize in JavaScript and TypeScript, and I work with modern tools like Redux Toolkit and TanStack Query for efficient state and server state management, along with i18n for multilingual applications. I also have backend experience with Python using Flask and Django, in addition to building cross-platform mobile applications using Flutter and Dart. I focus on writing clean, maintainable code while continuously improving my skills."
+      "Results-driven Front-End / Full-Stack Web Developer with professional agency experience delivering high-performance web applications using React, Next.js, TypeScript, and WordPress. Proven track record at Digitect managing and deploying multi-region platforms across 6 GCC markets, optimizing page load times by 25%, and streamlining digital systems.",
+      "Hands-on expertise architecting scalable REST APIs and full-stack solutions using Django REST Framework, NestJS, and PostgreSQL. Military Status: Exempted."
     ],
     "skills": [
       {
+        "category": "Languages",
+        "items": [
+          "JavaScript (ES6+)",
+          "TypeScript",
+          "Python",
+          "Dart",
+          "C",
+          "HTML5",
+          "CSS3",
+          "SQL"
+        ]
+      },
+      {
         "category": "Frontend",
         "items": [
-          "React",
+          "React.js",
           "Next.js",
-          "TypeScript",
-          "JavaScript",
-          "Tailwind CSS",
-          "HTML",
-          "CSS"
-        ]
-      },
-      {
-        "category": "State Management & Data",
-        "items": [
           "Redux Toolkit",
           "TanStack Query",
-          "REST APIs",
-          "i18n"
+          "Tailwind CSS",
+          "styled-components",
+          "Context API"
         ]
       },
       {
-        "category": "Backend",
+        "category": "Backend & APIs",
         "items": [
-          "Python",
-          "Flask",
+          "NestJS",
           "Django",
-          "MySQL"
+          "Django REST Framework (DRF)",
+          "RESTful APIs",
+          "JWT Authentication"
         ]
       },
       {
-        "category": "Mobile Development",
+        "category": "Databases & ORM",
         "items": [
-          "Flutter",
-          "Dart",
-          "Cross-platform Development"
+          "PostgreSQL",
+          "MySQL",
+          "Prisma ORM",
+          "Supabase",
+          "Firebase"
         ]
       },
       {
-        "category": "WordPress",
-        "items": [
-          "WordPress",
-          "Elementor",
-          "Astra Theme",
-          "Website Customization",
-          "Performance Optimization"
-        ]
-      },
-      {
-        "category": "Tools",
+        "category": "DevOps & Tools",
         "items": [
           "Git",
-          "GitHub",
-          "Vite",
-          "Postman"
+          "GitHub Actions",
+          "Docker",
+          "WordPress",
+          "Mailchimp",
+          "Postman",
+          "Linux"
         ]
       }
     ],
     "ctaTitle": "Let's Work Together",
     "ctaText": "I'm always open to working on modern web and mobile applications, scalable frontend systems, and impactful digital products.",
     "ctaLinkLabel": "Get In Touch",
-    "ctaLinkUrl": "/contact"
+    "ctaLinkUrl": "/contact",
+    "experiences": [
+      {
+        "id": "digitect-web-developer",
+        "role": "Junior Web Developer",
+        "company": "Digitect",
+        "period": "Oct 2024 – May 2025",
+        "location": "Cairo, Egypt",
+        "note": "Promoted following Web Development Internship: Jul 2024 – Sep 2024",
+        "highlights": [
+          "Administered, updated, and optimized multi-region web infrastructure for AlBorg Diagnostics across 6 GCC countries (KSA, UAE, Kuwait, Oman, Qatar, Bahrain), sustaining 99.8% uptime and consistent localized content.",
+          "Developed and launched custom, responsive WordPress websites from scratch for luxury dining clients (Café LaProusa, Manko Restaurant, Noto Restaurant), reducing page load times by 25%.",
+          "Maintained high-traffic web portals and resolved 40+ client requests for prominent enterprise groups including HAS Foundation and AlNahla Group.",
+          "Automated company-wide digital identity management by implementing automated digital signature and employee ID generation systems for 50+ team members.",
+          "Coded responsive HTML email newsletters and managed targeted distribution for Ferrari via Mailchimp, lifting campaign engagement and click-through rates by 15%."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "id": "alx-holberton",
+        "degree": "ALX Software Engineering Program",
+        "institution": "Powered by Holberton School",
+        "period": "2022 – 2024",
+        "highlights": [
+          "Completed an intensive 15-month curriculum (70+ hrs/week) mastering low-level C programming, data structures, algorithms, Linux systems engineering, and collaborative full-stack web application development.",
+          "Completed a dedicated 3-month professional soft skills training covering cross-functional collaboration, technical communication, agile team workflows, and problem-solving."
+        ]
+      }
+    ]
   },
   "contact": {
     "intro": "Have a project in mind? Let's talk about it!",
@@ -135,41 +171,166 @@
         "value": "AhMeDMaGDY284",
         "url": "https://www.facebook.com/AhMeDMaGDY284/",
         "icon": "facebook"
+      },
+      {
+        "label": "Website",
+        "value": "ahmedmagdy.site",
+        "url": "https://ahmedmagdy.site",
+        "icon": "globe"
       }
     ]
   },
+  "projectCategories": [
+    {
+      "id": "category-1779137983480",
+      "nameEn": "other",
+      "nameAr": "اخري",
+      "isHidden": true
+    },
+    {
+      "id": "frontend-vanilla",
+      "nameEn": "Frontend Web (Vanilla)",
+      "nameAr": "الواجهة الأمامية (فانيلا)",
+      "isHidden": false
+    },
+    {
+      "id": "frontend-react",
+      "nameEn": "Frontend Web (React)",
+      "nameAr": "الواجهة الأمامية (رياكت)",
+      "isHidden": false
+    },
+    {
+      "id": "backend-node",
+      "nameEn": "Backend (Node & NestJS)",
+      "nameAr": "الباك إند (نود و NestJS)",
+      "isHidden": false
+    },
+    {
+      "id": "backend-django",
+      "nameEn": "Backend (Django)",
+      "nameAr": "الباك إند (جانغو)",
+      "isHidden": false
+    },
+    {
+      "id": "mobile-flutter",
+      "nameEn": "Mobile (Flutter)",
+      "nameAr": "تطوير الموبايل (فلاتر)",
+      "isHidden": false
+    },
+    {
+      "id": "systems-cshell",
+      "nameEn": "System (C Shell)",
+      "nameAr": "الأنظمة (سي شيل)",
+      "isHidden": false
+    },
+    {
+      "id": "wordpress",
+      "nameEn": "WordPress",
+      "nameAr": "ووردبريس",
+      "isHidden": false
+    }
+  ],
   "projects": [
     {
       "id": "management-platform",
       "title": "WorkForce Ultimate",
       "featured": true,
-      "description": "A full-featured workforce management system that streamlines project tracking, employee performance, and team collaboration through role-based dashboards and a scalable frontend architecture.",
+      "description": "Enterprise Resource & Staff Management suite featuring granular Role-Based Access Control (RBAC) and complete Arabic/English bilingual (RTL/LTR) internationalization.",
       "techStack": [
         "React",
         "TypeScript",
-        "Tailwind CSS",
         "Redux Toolkit",
-        "TanStack React Query",
+        "TanStack Query",
+        "Tailwind CSS",
         "React Hook Form",
         "Zod",
-        "Charts",
-        "Drag & Drop",
-        "Toast Notifications",
-        "Role-Based Access Control (RBAC)",
-        "Date & Time Handling",
-        "Centralized Error Handling"
+        "RBAC",
+        "i18n"
       ],
-      "liveUrl": "https://workforce-ultimate.vercel.app/",
       "sourceUrl": "https://github.com/Ahmed-Magdy28/workforce-ultimate",
       "fullDescription": "WorkForce Ultimate is a modern workforce and project management platform inspired by tools like Jira and ClickUp. It is designed to help organizations efficiently manage employees, projects, tasks, schedules, and performance through a structured role-based system. The application is built with React and TypeScript, following a scalable and modular frontend architecture that separates global state, server state, and local UI state for better maintainability and performance. It implements a robust Role-Based Access Control (RBAC) system with multiple roles such as Employee, Manager, Senior Manager, Regional Manager, and HR, each with customized dashboards and permissions. The platform includes dynamic dashboards for tracking tasks, project progress, team performance, and productivity analytics. It also supports features like drag-and-drop task organization, notifications, form validation, file handling, and workflow-based approvals. Built using modern frontend best practices, it leverages Redux Toolkit for global state, TanStack React Query for server state management, React Hook Form with Zod for validation, and a clean UI system for a smooth and responsive user experience.",
-      "challenges": [
-        "Designing a scalable architecture capable of handling complex role-based access control across routes, components, and features.",
-        "Separating server state, global state, and local UI state without causing data inconsistency or unnecessary re-renders.",
-        "Implementing RBAC logic in a way that remains maintainable as roles and permissions grow.",
-        "Managing complex UI interactions such as drag-and-drop task organization while maintaining performance.",
-        "Coordinating multiple advanced features like analytics dashboards, notifications, and workflow systems in a single frontend codebase."
+      "challenges": "Engineered an enterprise workforce suite with granular Role-Based Access Control (RBAC) and complete Arabic/English bilingual (RTL/LTR) internationalization., Implemented TanStack Query for smart client-side caching and optimistic UI updates, cutting redundant network requests by 40%.",
+      "liveUrl": "https://workforce-ultimate-blwecsu0j-ahmed-magdys-projects-b12677cc.vercel.app/",
+      "icon": "/uploads/f9c77da512d892f4c6836bf8bf501a00.png",
+      "image": "/uploads/49579fa619e80f8f8182bab018ec61d8.png",
+      "categoryIds": [
+        "frontend-react"
       ],
-      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      "featuredPro": true
+    },
+    {
+      "id": "alborg-diagnostics",
+      "title": "AlBorg Diagnostics",
+      "description": "Multi-region web infrastructure administration, optimization, and localization for AlBorg Diagnostics across 6 GCC countries sustaining 99.8% uptime.",
+      "featured": false,
+      "categoryIds": [
+        "wordpress"
+      ],
+      "techStack": [
+        "WordPress",
+        "Web Infrastructure",
+        "Performance Optimization",
+        "Localization (i18n)",
+        "Multi-Region Hosting"
+      ],
+      "fullDescription": "Administered, updated, and optimized multi-region web infrastructure for AlBorg Diagnostics across 6 GCC countries (KSA, UAE, Kuwait, Oman, Qatar, Bahrain), sustaining 99.8% uptime and consistent localized content during web development tenure at Digitect.",
+      "challenges": "Administered, updated, and optimized multi-region web infrastructure for AlBorg Diagnostics across 6 GCC countries sustaining 99.8% uptime and consistent localized content.",
+      "primaryRole": "Junior Web Developer (Digitect)",
+      "coreTech": "WordPress, Web Infrastructure, i18n"
+    },
+    {
+      "id": "dahlan-law-firm",
+      "title": "Dahlan Law Firm",
+      "featured": true,
+      "description": "Bilingual corporate website for a premier law and legal consultations firm in Saudi Arabia, engineered with custom responsive architecture and localized Arabic/English interfaces.",
+      "techStack": [
+        "WordPress",
+        "Astra Theme",
+        "Elementor Pro",
+        "Localization (i18n)",
+        "Performance Optimization",
+        "Responsive Design"
+      ],
+      "liveUrl": "https://dahlanlaw.com/dhlan/",
+      "fullDescription": "Dahlan Law Firm is an official corporate website for a distinguished law and legal consultancy firm based in Saudi Arabia (KSA). Delivered with precision using WordPress, Astra Theme, and responsive layout systems, the platform reflects institutional credibility and trust. Key deliverables include complete bilingual functionality (Arabic RTL and English LTR), comprehensive practice areas and services directory, client consultation inquiry forms, and optimized loading speeds across both desktop and mobile devices.",
+      "challenges": [
+        "Developing a fully bilingual (Arabic RTL / English LTR) layout adhering to Saudi corporate legal branding standards.",
+        "Structuring multi-tier legal consultation practice areas and attorney profiles with intuitive navigation.",
+        "Optimizing typography and media asset delivery (Alexandria Arabic font) for low latency across the GCC.",
+        "Ensuring pixel-perfect responsiveness and fast performance across all screen sizes and browsers."
+      ],
+      "image": "/uploads/DahlanLaw.png",
+      "icon": "/uploads/DahlanLaw.png",
+      "categoryIds": [
+        "wordpress"
+      ],
+      "timeline": "2 months ago"
+    },
+    {
+      "id": "nest-next-store",
+      "title": "Nest Next Store",
+      "description": "Full-Stack Headless E-Commerce Platform architected with Next.js, NestJS, TypeScript, PostgreSQL, and Prisma ORM.",
+      "featured": true,
+      "featuredPro": true,
+      "categoryIds": [
+        "frontend-react",
+        "backend-node"
+      ],
+      "techStack": [
+        "Next.js",
+        "NestJS",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma ORM",
+        "RESTful APIs",
+        "JWT Authentication",
+        "Tailwind CSS"
+      ],
+      "sourceUrl": "https://github.com/Ahmed-Magdy28",
+      "fullDescription": "Nest Next Store is a high-performance headless e-commerce platform built with Next.js, NestJS, TypeScript, and PostgreSQL. It features a modern decoupled architecture that manages product catalogs, shopping carts, coupons, wishlists, and a dynamic checkout experience. The backend services are built with modular NestJS patterns and Prisma ORM, leveraging relational database schema constraints to improve query performance by 30%.",
+      "challenges": "Architected decoupled e-commerce architecture managing product catalogs, shopping carts, coupons, wishlist, and dynamic checkout., Designed modular NestJS backend services with Prisma ORM and relational schema constraints, improving database query efficiency by 30%.",
+      "primaryRole": "Full-Stack Web Developer",
+      "coreTech": "Next.js, NestJS, Prisma, PostgreSQL"
     },
     {
       "id": "task-management",
@@ -197,13 +358,18 @@
         "Handling synchronized state between React Query cache and Supabase backend without data inconsistencies.",
         "Building a clean and scalable UI system for dashboards, tables, and forms with reusable components.",
         "Implementing real-time-like updates for bookings and check-in/check-out workflows while preserving performance."
+      ],
+      "image": "/uploads/08eb160b89cb3638b3b17b5a0b9f33da.png",
+      "icon": "/uploads/124735e44f47c07547683d76b11d8d91.png",
+      "categoryIds": [
+        "frontend-react"
       ]
     },
     {
       "id": "noto-cafe",
       "title": "Noto Cafe",
       "featured": true,
-      "description": "A premium restaurant website built with WordPress, delivering a modern UI and seamless customer experience.",
+      "description": "Custom responsive WordPress website developed from scratch for luxury dining client at Digitect, reducing page load times by 25%.",
       "techStack": [
         "WordPress",
         "Elementor Pro",
@@ -216,13 +382,18 @@
         "Maintaining performance while using visual builders like Elementor.",
         "Ensuring responsive behavior across a wide range of devices and screen sizes.",
         "Balancing design flexibility with WordPress theme constraints."
+      ],
+      "icon": "https://noto-ksa.com/wp-content/uploads/2024/10/cropped-Logo-192x192.png",
+      "image": "/uploads/b608a24a42ed4c3bb0f28dbe49a3de6b.png",
+      "categoryIds": [
+        "wordpress"
       ]
     },
     {
       "id": "manko-restaurant",
       "title": "Manko Restaurant",
       "featured": true,
-      "description": "A high-end restaurant website with responsive design and production-ready performance built using WordPress.",
+      "description": "Custom responsive WordPress website developed from scratch for luxury dining client in KSA at Digitect, reducing page load times by 25%.",
       "techStack": [
         "WordPress",
         "Elementor Pro"
@@ -234,13 +405,18 @@
         "Optimizing performance for a visually rich restaurant website.",
         "Ensuring consistent behavior across browsers and devices.",
         "Delivering a production-ready website under real-world constraints."
+      ],
+      "icon": "https://manko-ksa.com/wp-content/uploads/2025/06/logo.png",
+      "image": "/uploads/0d4f47e97666a3d078a978d472508209.png",
+      "categoryIds": [
+        "wordpress"
       ]
     },
     {
       "id": "cafe-la-prousa",
       "title": "Café La Prousa",
       "featured": true,
-      "description": "A customer-facing restaurant website focused on performance, responsiveness, and smooth user experience.",
+      "description": "Custom responsive WordPress website developed from scratch for luxury dining client at Digitect, reducing page load times by 25%.",
       "techStack": [
         "WordPress",
         "Elementor Pro"
@@ -252,6 +428,11 @@
         "Ensuring cross-browser compatibility and consistency.",
         "Maintaining responsive design across all screen sizes.",
         "Deploying and maintaining a stable production website."
+      ],
+      "image": "/uploads/916d65af1ab68ae139619e6524f66b77.png",
+      "icon": "https://cafelaperouse-ksa.com/wp-content/uploads/2024/10/cropped-apple-touch-icon-192x192.png",
+      "categoryIds": [
+        "wordpress"
       ]
     },
     {
@@ -272,7 +453,11 @@
         "Structuring components for scalability and reusability.",
         "Managing navigation and dynamic routes using React Router.",
         "Handling user interactions like cart updates and order flow smoothly."
-      ]
+      ],
+      "categoryIds": [
+        "frontend-react"
+      ],
+      "image": "/uploads/fdbf5a672f87e126f1afb57f0c6b1934.png"
     },
     {
       "id": "qr-code-app",
@@ -298,6 +483,10 @@
         "Integrating QR generation libraries with custom styling controls.",
         "Ensuring cross-platform compatibility across different operating systems and browsers.",
         "Maintaining clean and scalable component structure with many interactive UI elements."
+      ],
+      "image": "/uploads/264a2ac5df9e39610f86fb18ba622ee8.png",
+      "categoryIds": [
+        "frontend-react"
       ]
     },
     {
@@ -319,39 +508,39 @@
         "Persisting user data using localStorage without breaking state consistency.",
         "Managing component state for ratings, watched list, and selections.",
         "Ensuring responsive UI updates when interacting with external API data."
-      ]
+      ],
+      "categoryIds": [
+        "frontend-react"
+      ],
+      "image": "/uploads/67cf26073f0fdaaa294942ffb2aa938b.png"
     },
     {
       "id": "ashtray-meny",
-      "title": "Ashtray Meny",
-      "description": "A fullstack e-commerce platform with a Django REST API and Flutter mobile app, featuring JWT authentication, role-based access control, and CI/CD workflows.",
+      "title": "Ashtry Meny",
+      "description": "End-to-end multi-vendor e-commerce marketplace featuring a cross-platform Flutter mobile application and a scalable Django REST Framework backend.",
       "techStack": [
-        "Django",
-        "Django REST Framework",
-        "PostgreSQL",
-        "JWT Authentication",
         "Flutter",
         "Dart",
-        "Provider",
-        "Dio",
-        "Shared Preferences",
+        "Django REST Framework",
+        "PostgreSQL",
         "Docker",
-        "GitHub Actions",
-        "drf-spectacular"
+        "JWT Authentication",
+        "drf-spectacular",
+        "GitHub Actions"
       ],
       "liveUrl": "https://www.linkedin.com/posts/ahmedmagdy2849_django-flutter-docker-activity-7256912023278501888-eL9n",
       "sourceUrl": "https://github.com/Ahmed-Magdy28/ashtray-meny",
       "fullDescription": "Ashtray Meny is a fullstack e-commerce platform combining a Django REST Framework backend with a Flutter mobile application. The backend provides a scalable API for managing users, products, shops, categories, orders, and reviews, while the Flutter frontend delivers a responsive and smooth mobile experience. The system uses JWT-based authentication and role-based access control to support multiple user roles including admins, shop owners, and customers. On the mobile side, Provider is used for state management, Dio for API communication, and Shared Preferences for local persistence. The platform supports product browsing, filtering, order management, wishlist functionality, and a review system. It also includes Swagger API documentation using drf-spectacular. The project is containerized using Docker and integrates GitHub Actions for automated workflows, reflecting a production-oriented and DevOps-aware architecture.",
       "challenges": [
-        "Designing a fullstack architecture integrating Django backend with Flutter mobile frontend.",
-        "Implementing secure JWT authentication across backend and mobile client.",
-        "Managing state in Flutter using Provider while keeping UI responsive.",
-        "Handling API communication and error states efficiently using Dio.",
-        "Maintaining data consistency between mobile app and backend APIs.",
-        "Structuring scalable backend services while supporting multiple user roles.",
-        "Containerizing the system using Docker for consistent environments.",
-        "Setting up CI/CD workflows using GitHub Actions for automation and reliability."
-      ]
+        "Developed an end-to-end multi-vendor marketplace featuring a cross-platform mobile application and a scalable Django REST backend.",
+        "Configured secure JWT authentication, vendor management, and isolated local development environments using Docker."
+      ],
+      "categoryIds": [
+        "backend-django",
+        "mobile-flutter"
+      ],
+      "featured": true,
+      "featuredPro": true
     },
     {
       "id": "recipe-app-api",
@@ -372,6 +561,9 @@
         "Implementing RESTful endpoints using Django REST Framework.",
         "Handling serialization and validation of incoming data.",
         "Connecting the backend with PostgreSQL and managing migrations."
+      ],
+      "categoryIds": [
+        "backend-django"
       ]
     },
     {
@@ -395,6 +587,9 @@
         "Handling state management efficiently using Provider.",
         "Ensuring message synchronization across users without delays.",
         "Maintaining performance and responsiveness in a real-time chat environment."
+      ],
+      "categoryIds": [
+        "mobile-flutter"
       ]
     },
     {
@@ -418,6 +613,9 @@
         "Ensuring smooth UI updates when fetching remote data.",
         "Persisting user preferences using Shared Preferences.",
         "Building a clean and simple UI while learning Flutter fundamentals."
+      ],
+      "categoryIds": [
+        "mobile-flutter"
       ]
     },
     {
@@ -439,6 +637,9 @@
         "Maintaining UI state consistency during create, update, and delete actions.",
         "Structuring a simple but scalable Flutter project architecture.",
         "Improving understanding of client-server communication basics."
+      ],
+      "categoryIds": [
+        "mobile-flutter"
       ]
     },
     {
@@ -461,6 +662,9 @@
         "Ensuring UI consistency between saved and active task states.",
         "Integrating external actions using URL Launcher.",
         "Building a clean and intuitive UI with reusable Flutter widgets."
+      ],
+      "categoryIds": [
+        "mobile-flutter"
       ]
     },
     {
@@ -481,6 +685,9 @@
         "Persisting user data locally using Shared Preferences.",
         "Improving understanding of Flutter widget lifecycle and structure.",
         "Practicing clean separation of UI and logic in a small project."
+      ],
+      "categoryIds": [
+        "mobile-flutter"
       ]
     },
     {
@@ -499,6 +706,9 @@
         "Learning how widgets build the UI tree.",
         "Running and debugging a Flutter application.",
         "Getting familiar with Dart syntax and Flutter basics."
+      ],
+      "categoryIds": [
+        "mobile-flutter"
       ]
     },
     {
@@ -519,6 +729,9 @@
         "Structuring components for a scalable front-end layout.",
         "Ensuring responsive design across different screen sizes.",
         "Simulating real-world application behavior without frameworks."
+      ],
+      "categoryIds": [
+        "frontend-vanilla"
       ]
     },
     {
@@ -540,6 +753,9 @@
         "Managing child processes and command execution flow.",
         "Handling built-in commands like cd differently from external commands.",
         "Collaborating effectively in a team environment on a systems-level project."
+      ],
+      "categoryIds": [
+        "systems-cshell"
       ]
     },
     {
@@ -562,6 +778,9 @@
         "Managing memory and array manipulation at a low level.",
         "Translating theoretical algorithms into working C implementations.",
         "Improving algorithmic thinking and problem decomposition skills."
+      ],
+      "categoryIds": [
+        "systems-cshell"
       ]
     },
     {
@@ -584,6 +803,9 @@
         "Understanding tree properties such as height, depth, and size.",
         "Building reusable and modular data structure functions.",
         "Translating theoretical binary tree concepts into working C code."
+      ],
+      "categoryIds": [
+        "systems-cshell"
       ]
     },
     {
@@ -606,7 +828,71 @@
         "Managing different data types and their formatting output.",
         "Ensuring correct output behavior without using standard printf.",
         "Collaborating with a teammate on low-level C system design."
+      ],
+      "categoryIds": [
+        "systems-cshell"
       ]
+    },
+    {
+      "id": "project-1779135588992",
+      "title": "Forkify",
+      "description": "A modern recipe application that allows users to search for over 1,000,000 recipes, view ingredients, adjust servings, and bookmark favorite recipes.",
+      "featured": false,
+      "techStack": [
+        "JavaScript (ES6+)",
+        "HTML",
+        "CSS",
+        "MVC Architecture",
+        "Parcel",
+        "LocalStorage"
+      ],
+      "fullDescription": "Forkify is a modern recipe web application built as a learning project from Jonas Schmedtmann’s JavaScript course. The app allows users to search through more than 1,000,000 recipes, view detailed recipe information including cooking time and ingredients, and dynamically adjust ingredient quantities based on servings. Users can also bookmark favorite recipes using LocalStorage and upload their own custom recipes to the platform. The project is built using modern JavaScript (ES6+) with a modular architecture and MVC pattern to improve maintainability and scalability. It is fully responsive and optimized for a seamless experience across mobile, tablet, and desktop devices.",
+      "challenges": [
+        "Understanding and implementing the MVC architecture with modular JavaScript structure.",
+        "Managing application state and dynamically updating the UI during searches and serving adjustments.",
+        "Handling asynchronous API requests and recipe data fetching efficiently.",
+        "Implementing bookmark persistence using LocalStorage.",
+        "Building a responsive UI that works smoothly across multiple screen sizes.",
+        "Learning modern JavaScript concepts such as private class fields and ES6 modules."
+      ],
+      "copyright": "© Copyright by Jonas Schmedtmann. Use for learning or your portfolio. Don't use to teach. Don't claim as your own.",
+      "categoryIds": [
+        "frontend-vanilla"
+      ],
+      "liveUrl": "https://forkify-pearl.vercel.app/",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/forkify",
+      "icon": "https://forkify-pearl.vercel.app/favicon.38ab3f7a.png",
+      "image": "/uploads/5fac3af021e9b9b4934280555252172b.png"
+    },
+    {
+      "id": "project-1779138389822",
+      "title": "Omnifood",
+      "description": "An AI-powered food subscription service that delivers healthy, personalized meals year-round based on user preferences and dietary needs.",
+      "featured": false,
+      "techStack": [
+        "HTML5 (Semantic Structure)",
+        "CSS3 (Flexbox, CSS Grid, Custom Properties)",
+        "JavaScript (Vanilla JS)"
+      ],
+      "categoryIds": [
+        "frontend-vanilla"
+      ],
+      "fullDescription": "Omnifood is a modern web project for an AI-powered food subscription service that generates fully personalized weekly meal plans. It allows users to receive diets tailored to their preferences and nutritional needs, including vegan, keto, paleo, and gluten-free options. The project features a modern, clean, and responsive UI designed for a smooth user experience across all devices. It is built using HTML, CSS, and vanilla JavaScript to handle interactions such as mobile navigation and smooth scrolling.",
+      "challenges": [
+        "Building a modern and responsive UI using CSS Grid and Flexbox.",
+        "Structuring CSS into maintainable and scalable files.",
+        "Implementing smooth scrolling and navigation interactions.",
+        "Optimizing performance using modern image formats like WebP.",
+        "Ensuring consistent responsive behavior across all devices and screen sizes."
+      ],
+      "category": "other",
+      "primaryRole": "software engineer",
+      "coreTech": "HTML/CSS/JS",
+      "timeline": "Q2 2026",
+      "icon": "https://omnifood-gray-delta.vercel.app/img/favicon-64-64.png",
+      "image": "/uploads/b71987c2304d76f8840323bbb2788bef.png",
+      "liveUrl": "https://omnifood-gray-delta.vercel.app/",
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/Omnifood"
     }
   ],
   "languages": [
@@ -617,16 +903,9 @@
       "icon": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "JavaScript is a high-level, dynamic, single-threaded programming language used to build interactive and scalable web applications. It runs in the browser and on the server (via Node.js), making it a full-stack language.\n⚡ Core Strengths\nEvent-driven architecture → ideal for UI interactions\nAsynchronous programming → handles APIs, real-time updates\nPrototype-based OOP → flexible object modeling\nMassive ecosystem → frameworks, tools, and libraries"
-    },
-    {
-      "slug": "python",
-      "title": "Python",
-      "description": "Versatile language used for backend development, automation, and building scalable web applications.",
-      "icon": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
-      "insights": [],
-      "interviewQuestions": [],
-      "aboutDescription": "Python for web development and data science"
+      "aboutDescription": "JavaScript is a high-level, dynamic, single-threaded programming language used to build interactive and scalable web applications.",
+      "roadmap": [],
+      "versions": []
     },
     {
       "slug": "typescript",
@@ -642,42 +921,80 @@
           "version": "5.4",
           "releaseDate": "2024-03-06",
           "title": "Preserved Narrowing in Closures",
-          "type": "minor",
           "changes": [
             "Preserved narrowing in closures following last assignments",
             "The NoInfer utility type",
             "Object.groupBy and Map.groupBy",
             "Support for require() calls in --module preserve"
-          ]
+          ],
+          "type": "minor"
         }
       ],
-      "aboutDescription": "Type-safe JavaScript development"
+      "aboutDescription": "Type-safe JavaScript development for modern web apps.",
+      "roadmap": []
     },
     {
-      "slug": "language-1776633114635",
+      "slug": "python",
+      "title": "Python",
+      "description": "Versatile language used for backend development, automation, and building scalable web applications.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Python for web development, automation, and backend services.",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "dart",
       "title": "Dart",
       "description": "Modern language optimized for building fast, cross-platform applications with Flutter.",
       "icon": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "Add a short description"
+      "aboutDescription": "Optimized for client-side development for web and mobile.",
+      "roadmap": [],
+      "versions": []
     },
     {
-      "slug": "language-1776633522012",
+      "slug": "c-lang",
       "title": "C",
       "description": "Low-level programming language that provides deep understanding of memory management and system-level concepts.",
       "icon": "https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "Add a short description"
+      "aboutDescription": "The foundation of modern computing and systems programming.",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "html",
+      "title": "HTML",
+      "description": "The standard markup language for creating web pages and applications.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Defining the structure of web content.",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "css",
+      "title": "CSS",
+      "description": "Style sheet language used for describing the presentation of a document written in markup language.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Designing beautiful and responsive user interfaces.",
+      "roadmap": [],
+      "versions": []
     }
   ],
   "frameworks": [
     {
       "slug": "react",
       "title": "React",
-      "description": "A JavaScript library for building user interfaces",
-      "icon": "⚛️",
+      "description": "A JavaScript library for building component-based user interfaces with a focus on efficiency and scalability.",
+      "icon": "https://e7.pngegg.com/pngimages/452/495/png-clipart-react-javascript-angularjs-ionic-github-text-logo-thumbnail.png",
       "insights": [],
       "interviewQuestions": [],
       "roadmapUrl": "https://roadmap.sh/react",
@@ -687,76 +1004,126 @@
           "version": "19.0",
           "releaseDate": "2024-12-05",
           "title": "React 19 RC",
-          "type": "major",
           "changes": [
             "Actions: Support for async functions in transitions",
             "New hook: useActionState for form handling",
             "New hook: useOptimistic for optimistic updates",
             "New API: use for reading resources in render",
             "Server Components and Server Actions"
-          ]
+          ],
+          "type": "major"
+        },
+        {
+          "id": "react-18-2",
+          "version": "18.2",
+          "releaseDate": "2022-06-14",
+          "title": "React 18.2.0",
+          "changes": [
+            "Performance improvements",
+            "Bug fixes for Concurrent React",
+            "Stable release of many 18.0 features"
+          ],
+          "type": "minor"
         }
       ],
-      "aboutDescription": "A JavaScript library for building user interfaces"
+      "aboutDescription": "A JavaScript library for building user interfaces",
+      "roadmap": []
     },
     {
       "slug": "nextjs",
       "title": "Next.js",
-      "description": "The React Framework for Production",
-      "icon": "▲",
-      "insights": [
+      "description": "The React Framework for Production, offering SSR, SSG, and optimized developer experience.",
+      "icon": "https://icon.icepanel.io/Technology/svg/Next.js.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "The React Framework for Production",
+      "roadmap": [
         {
-          "id": "next-1",
-          "title": "Server Components vs Client Components",
-          "content": "Next.js 13+ introduces Server Components by default. Use \"use client\" directive only when you need interactivity, browser APIs, or React hooks.",
-          "code": "// Server Component (default)\nasync function Page() {\n  const data = await fetch('https://api.example.com/data');\n  return <div>{data}</div>;\n}\n\n// Client Component\n'use client';\nimport { useState } from 'react';\n\nexport function Counter() {\n  const [count, setCount] = useState(0);\n  return <button onClick={() => setCount(count + 1)}>{count}</button>;\n}",
-          "language": "typescript",
-          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-          "blocks": [
-            {
-              "id": "next-1-1",
-              "type": "text",
-              "text": "Next.js 13+ introduces Server Components by default. Use \"use client\" directive only when you need interactivity, browser APIs, or React hooks."
-            },
-            {
-              "id": "next-1-2",
-              "type": "code",
-              "code": "// Server Component (default)\nasync function Page() {\n  const data = await fetch('https://api.example.com/data');\n  return <div>{data}</div>;\n}\n\n// Client Component\n'use client';\nimport { useState } from 'react';\n\nexport function Counter() {\n  const [count, setCount] = useState(0);\n  return <button onClick={() => setCount(count + 1)}>{count}</button>;\n}",
-              "language": "typescript"
-            },
-            {
-              "id": "next-1-3",
-              "type": "video",
-              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            }
-          ]
+          "id": "item-1778363683978",
+          "title": "",
+          "description": "",
+          "status": "planned"
         }
       ],
-      "interviewQuestions": [
-        {
-          "id": "next-q1",
-          "title": "What are the different rendering methods in Next.js?",
-          "content": "Next.js supports Static Site Generation (SSG), Server-Side Rendering (SSR), Incremental Static Regeneration (ISR), and Client-Side Rendering (CSR). Choose based on your data freshness and performance requirements.",
-          "difficulty": "hard",
-          "blocks": [
-            {
-              "id": "next-q1-1",
-              "type": "text",
-              "text": "Next.js supports Static Site Generation (SSG), Server-Side Rendering (SSR), Incremental Static Regeneration (ISR), and Client-Side Rendering (CSR). Choose based on your data freshness and performance requirements."
-            }
-          ]
-        }
-      ],
-      "aboutDescription": "The React Framework for Production"
+      "versions": []
     },
     {
       "slug": "django",
       "title": "Django",
-      "description": "High-level Python web framework",
+      "description": "A high-level Python web framework that encourages rapid development and clean, pragmatic design.",
       "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTioAoZJxF6BI-nOen5eh82SDOuK_S3mnqJgwL74oTwgj5VRJy72LiEuEs&s",
       "insights": [],
       "interviewQuestions": [],
-      "aboutDescription": "High-level Python web framework"
+      "aboutDescription": "High-level Python web framework",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "flutter",
+      "title": "Flutter",
+      "description": "Google's UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.",
+      "icon": "https://flutter.dev/assets/lockup_flutter_horizontal.549a1b7dd82615e8e9c95c1ade8cee42.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Build beautiful cross-platform apps from one codebase.",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "wordpress",
+      "title": "WordPress",
+      "description": "The world's most popular content management system, used to build everything from simple blogs to complex e-commerce sites.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Powerful CMS for flexible web development.",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "tailwindcss",
+      "title": "Tailwind CSS",
+      "description": "A utility-first CSS framework for rapidly building custom user interfaces directly in your markup.",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Modern utility-first CSS for fast UI development.",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "react-router",
+      "title": "React Router",
+      "description": "A standard library for routing in React, enabling the creation of dynamic, single-page applications with seamless navigation.",
+      "icon": "https://reactrouter.com/_brand/react-router-brand-assets/lockup/Light.png",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Declarative routing for React applications.",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "redux-toolkit",
+      "title": "Redux Toolkit",
+      "description": "The official, opinionated, batteries-included toolset for efficient Redux development, simplifying state management.",
+      "icon": "https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png",
+      "insights": [],
+      "interviewQuestions": [],
+      "aboutDescription": "Efficient and predictable state management for React.",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "nestjs",
+      "title": "NestJS",
+      "description": "A progressive Node.js framework for building efficient, reliable, and scalable server-side enterprise applications with TypeScript.",
+      "aboutDescription": "NestJS is a progressive Node.js framework for building scalable enterprise backend applications using TypeScript, modular design, and robust dependency injection.",
+      "icon": "https://nestjs.com/img/logo-small.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "roadmapUrl": "https://roadmap.sh/nodejs",
+      "roadmap": [],
+      "versions": []
     }
   ]
 }

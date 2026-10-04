@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import { toggleTheme } from '../store/themeSlice';
 import { motion } from 'motion/react';
@@ -5,10 +8,29 @@ import { motion } from 'motion/react';
 export const ThemeToggle = () => {
   const dispatch = useAppDispatch();
   const theme = useAppSelector((state) => state.theme.mode);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <button
+        type="button"
+        className="relative p-2 rounded-lg bg-gray-200 dark:bg-gray-700 transition-colors"
+        aria-label="Toggle theme"
+      >
+        <div className="relative w-5 h-5" />
+      </button>
+    );
+  }
+
   const isDark = theme === 'dark';
 
   return (
     <button
+      type="button"
       onClick={() => dispatch(toggleTheme())}
       className="relative p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
       aria-label="Toggle theme"

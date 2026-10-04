@@ -1,4 +1,4 @@
-import { useFetcher } from "react-router";
+import { useFetcher } from "../../lib/useFetcherCompat";
 import { AdminCard } from "./ui/AdminCard";
 import { AdminButton } from "./ui/AdminButton";
 import { User, Smartphone, Image as ImageIcon } from "lucide-react";

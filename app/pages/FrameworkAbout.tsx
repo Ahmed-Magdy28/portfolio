@@ -1,13 +1,13 @@
-import { useOutletContext } from 'react-router';
-import { TechAboutPage } from '../components/tech/TechAboutPage';
-import type { Framework } from '../data/types';
-import { useTechPageCopy } from '../hooks/useTechPageCopy';
-import { useTranslation } from '../i18n/useTranslation';
+import { useTechEntity } from "../context/TechEntityContext";
+import { TechAboutPage } from "../components/tech/TechAboutPage";
+import type { Framework } from "../data/types";
+import { useTechPageCopy } from "../hooks/useTechPageCopy";
+import { useTranslation } from "../i18n/useTranslation";
 
 export const FrameworkAbout = () => {
   const { t } = useTranslation();
-  const { data } = useOutletContext<{ data: Framework }>();
-  const copy = useTechPageCopy('frameworks');
+  const { data } = useTechEntity<Framework>();
+  const copy = useTechPageCopy("frameworks");
 
   return (
     <TechAboutPage

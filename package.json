@@ -3,10 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "react-router build",
-    "dev": "react-router dev --port 4000",
-    "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "dev": "next dev --port 4000",
+    "build": "next build",
+    "start": "next start --port 4000",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
@@ -54,6 +54,7 @@
     "isbot": "^5.1.39",
     "lucide-react": "0.487.0",
     "motion": "12.23.24",
+    "next": "^16.3.8",
     "next-themes": "0.4.6",
     "react": "^19.2.5",
     "react-day-picker": "8.10.1",
@@ -77,6 +78,7 @@
   },
   "devDependencies": {
     "@react-router/dev": "7.14.0",
+    "@tailwindcss/postcss": "^4.3.3",
     "@tailwindcss/vite": "^4.2.2",
     "@types/node": "^22.19.17",
     "@types/react": "^19.2.14",

@@ -39,6 +39,7 @@ export const ContactCTA = ({ t, contact }: ContactCTAProps) => {
                 rel="noopener noreferrer"
                 className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-white/20 hover:bg-white/30 rounded-full transition-all backdrop-blur-md shadow-lg"
                 title={link.label}
+                aria-label={link.label}
               >
                 {link.icon === "github" && (
                   <Github className="w-5 h-5 md:w-6 md:h-6" />

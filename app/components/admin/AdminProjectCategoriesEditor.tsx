@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { useFetcher, useRevalidator } from "react-router";
+import { useFetcher, useRevalidator } from "../../lib/useFetcherCompat";
 import type { ProjectCategory } from "../../data/types";
 import { AdminCard } from "./ui/AdminCard";
 import { AdminButton } from "./ui/AdminButton";

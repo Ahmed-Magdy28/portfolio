@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "../Link";
 import { IconValue } from "../IconValue";
 import { Section } from "../Section";
 
@@ -28,7 +28,7 @@ export const TechStack = ({
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+      <div className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 max-w-6xl mx-auto px-4">
         {[...languages, ...frameworks].map((tech) => (
           <Link
             key={tech.slug}
@@ -37,16 +37,16 @@ export const TechStack = ({
                 ? `/languages/${tech.slug}`
                 : `/frameworks/${tech.slug}`
             }
-            className="flex flex-col items-center gap-3 group transition-all"
+            className="flex items-center gap-3 px-4 sm:px-5 py-3 rounded-2xl bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-gray-200/90 dark:border-gray-700/80 shadow-xs hover:shadow-lg hover:shadow-blue-500/10 hover:border-blue-500/50 hover:-translate-y-1 transition-all duration-300 group"
           >
-            <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm group-hover:shadow-md group-hover:border-blue-500/50 group-hover:-translate-y-2 transition-all duration-300">
+            <div className="w-8 h-8 flex items-center justify-center shrink-0">
               <IconValue
                 value={tech.icon}
                 alt={tech.title}
-                className="w-10 h-10 md:w-12 md:h-12 object-contain"
+                className="w-7 h-7 object-contain"
               />
             </div>
-            <span className="text-xs font-semibold text-muted-foreground group-hover:text-foreground transition-colors uppercase tracking-wider">
+            <span className="text-sm font-semibold text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
               {tech.title}
             </span>
           </Link>

@@ -9,12 +9,14 @@ interface FeaturedProjectsProps {
   t: any;
   lang: string;
   featuredProjects: any[];
+  totalProjectsCount?: number;
 }
 
 export const FeaturedProjects = ({
   t,
   lang,
   featuredProjects,
+  totalProjectsCount = 26,
 }: FeaturedProjectsProps) => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -46,24 +48,34 @@ export const FeaturedProjects = ({
       <div className="relative z-10" ref={containerRef}>
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-20 gap-10">
           <div className="max-w-2xl text-center lg:text-left rtl:lg:text-right">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-[10px] font-black uppercase tracking-[0.3em] mb-6">
-              <Sparkles className="w-3 h-3" /> Selected Works
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-[10px] font-black uppercase tracking-[0.3em]">
+                <Sparkles className="w-3 h-3" /> Selected Works
+              </div>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 text-[10px] font-black tracking-wider border border-emerald-200/50 dark:border-emerald-800/40">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                {lang === "en"
+                  ? `${totalProjectsCount}+ Projects Done`
+                  : `${totalProjectsCount}+ مشروع منجز`}
+              </div>
             </div>
             <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tighter leading-[0.9]">
               {t.home.viewProjects}
             </h2>
             <p className="text-lg text-muted-foreground font-medium leading-relaxed">
               {lang === "en"
-                ? "A showcase of high-impact engineering solutions, ranging from scalable full-stack platforms to elegant mobile experiences."
-                : "معرض للحلول الهندسية عالية التأثير، تتراوح من المنصات المتكاملة القابلة للتطوير إلى تجارب الهاتف المحمول الأنيقة."}
+                ? `A showcase of ${totalProjectsCount}+ high-impact engineering solutions, ranging from scalable full-stack platforms to elegant mobile experiences.`
+                : `معرض لأكثر من ${totalProjectsCount} حل هندسي عالي التأثير، من المنصات المتكاملة القابلة للتطوير إلى تطبيقات الهاتف المحمول.`}
             </p>
           </div>
           <Button
             to="/projects"
             variant="outline"
-            className="rounded-2xl h-14 px-10 font-black uppercase tracking-widest text-[11px] group self-center lg:self-end border-2"
+            className="rounded-2xl h-14 px-8 font-black uppercase tracking-widest text-[11px] group self-center lg:self-end border-2"
           >
-            {lang === "en" ? "Explore Archive" : "استكشاف الأرشيف"}
+            {lang === "en"
+              ? `Explore All (${totalProjectsCount}+ Projects)`
+              : `استكشاف كافة المشاريع (${totalProjectsCount}+)`}
             <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
           </Button>
         </div>

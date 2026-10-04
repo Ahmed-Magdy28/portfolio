@@ -1,4 +1,37 @@
 :root {
-  --font-family-ui: "Inter", sans-serif;
-  --font-family-code: "JetBrains Mono", monospace;
+  --font-family-arabic: "Cairo", "Segoe UI", Tahoma, Arial, sans-serif;
+  --font-family-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --font-family-code: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+[dir="rtl"],
+[lang="ar"],
+html[lang="ar"],
+body[dir="rtl"] {
+  font-family: var(--font-family-arabic);
+}
+
+body {
+  font-family: var(--font-family-ui);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Arabic typography: prevent tracking/letter-spacing distortion on cursive Arabic scripts */
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6,
+[dir="rtl"] button,
+[dir="rtl"] a,
+[dir="rtl"] span,
+[dir="rtl"] .tracking-tighter,
+[dir="rtl"] .tracking-tight,
+[dir="rtl"] .tracking-wide,
+[dir="rtl"] .tracking-wider,
+[dir="rtl"] .tracking-widest {
+  letter-spacing: 0 !important;
 }

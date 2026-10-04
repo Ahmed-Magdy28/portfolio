@@ -1,10 +1,10 @@
-import { useOutletContext } from 'react-router';
+import { useTechEntity } from '../context/TechEntityContext';
 import { TechAccordionPage } from '../components/tech/TechAccordionPage';
 import type { Framework } from '../data/types';
 import { useTechPageCopy } from '../hooks/useTechPageCopy';
 
 export const FrameworkInterview = () => {
-  const { data } = useOutletContext<{ data: Framework }>();
+  const { data } = useTechEntity<Framework>();
   const copy = useTechPageCopy('frameworks');
 
   return (

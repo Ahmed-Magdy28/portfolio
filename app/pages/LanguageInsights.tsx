@@ -1,10 +1,10 @@
-import { useOutletContext } from 'react-router';
+import { useTechEntity } from '../context/TechEntityContext';
 import { TechAccordionPage } from '../components/tech/TechAccordionPage';
 import type { Language } from '../data/types';
 import { useTechPageCopy } from '../hooks/useTechPageCopy';
 
 export const LanguageInsights = () => {
-  const { data } = useOutletContext<{ data: Language }>();
+  const { data } = useTechEntity<Language>();
   const copy = useTechPageCopy('languages');
 
   return (

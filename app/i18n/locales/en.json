@@ -8,15 +8,19 @@
     "contact": "Contact"
   },
   "home": {
-    "title": "Front-End Developer",
-    "intro": "Building scalable web applications with modern technologies",
+    "title": "Front-End & Full-Stack Web Developer",
+    "intro": "Building high-performance, scalable web applications with React, Next.js, and modern full-stack architectures",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me",
     "downloadCV": "Download CV"
   },
   "about": {
     "title": "About Me",
-    "description": "Passionate Software Engineer with expertise in modern web technologies"
+    "description": "Results-driven Front-End / Full-Stack Web Developer with professional agency experience delivering high-performance web applications.",
+    "experienceTitle": "Work Experience",
+    "educationTitle": "Education & Professional Training",
+    "skillsTitle": "Technical Skills",
+    "militaryStatus": "Military Status: Exempted"
   },
   "projects": {
     "title": "My Projects",

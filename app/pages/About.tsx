@@ -1,13 +1,14 @@
 import { motion } from "motion/react";
-import { useRouteLoaderData } from "react-router";
 import { PageAdminEditor } from "../components/admin/PageAdminEditor";
 import { VideoPlayer } from "../components/VideoPlayer";
 import { Section } from "../components/Section";
 import { useAdminSession } from "../hooks/useAdminSession";
 import { useSiteContent } from "../hooks/useSiteContent";
 import { useTranslation } from "../i18n/useTranslation";
-import type { loader as rootLoader } from "../root";
+import { useRootData } from "../hooks/useRootData";
 import { PageSEO } from "../components/PageSEO";
+import { ExperienceSection } from "../components/about/ExperienceSection";
+import { EducationSection } from "../components/about/EducationSection";
 import { SkillGroup } from "../components/about/SkillGroup";
 import { AboutCTA } from "../components/about/AboutCTA";
 import { AdminSectionWrapper } from "../components/admin/AdminSectionWrapper";
@@ -16,15 +17,15 @@ export const About = () => {
   const { about } = useSiteContent();
   const { t, lang } = useTranslation();
   const { isAdminAuthenticated } = useAdminSession();
-  const rootData = useRouteLoaderData<typeof rootLoader>("root");
+  const rootData = useRootData();
 
   if (!rootData) {
     throw new Error("Root data is not available.");
   }
 
-  const seoTitle = "About Ahmed Magdy | Frontend Web Developer";
+  const seoTitle = "About Ahmed Magdy | Front-End & Full-Stack Web Developer";
   const seoDescription =
-    "Learn more about Ahmed Magdy, a passionate Software Engineer and Frontend Developer specializing in building modern digital products.";
+    "Learn more about Ahmed Magdy, a results-driven Front-End and Full-Stack Web Developer with agency experience delivering high-performance web applications.";
 
   return (
     <Section>
@@ -41,12 +42,12 @@ export const About = () => {
       >
         <h1 className="text-5xl md:text-7xl font-black mb-12 tracking-tight">{t.about.title}</h1>
 
-        <div className="prose prose-xl dark:prose-invert max-w-none mb-20">
-          <p className="text-2xl text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
+        <div className="prose prose-xl dark:prose-invert max-w-none mb-16">
+          <p className="text-2xl text-gray-700 dark:text-gray-300 leading-relaxed font-semibold">
             {t.about.description}
           </p>
 
-          <div className="mt-10 space-y-6">
+          <div className="mt-8 space-y-6">
             {about.paragraphs.map((paragraph, index) => (
                 <p
                 key={`${paragraph.slice(0, 20)}-${index}`}
@@ -75,9 +76,25 @@ export const About = () => {
           </motion.div>
         )}
 
-        <div className="mb-12">
-            <h2 className="text-3xl font-black tracking-tight mb-8">Technical Expertise</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {about.experiences && about.experiences.length > 0 && (
+          <ExperienceSection
+            title={t.about.experienceTitle || "Work Experience"}
+            experiences={about.experiences}
+          />
+        )}
+
+        {about.education && about.education.length > 0 && (
+          <EducationSection
+            title={t.about.educationTitle || "Education & Professional Training"}
+            education={about.education}
+          />
+        )}
+
+        <div className="mb-16">
+            <h2 className="text-3xl font-black tracking-tight mb-8">
+              {t.about.skillsTitle || "Technical Expertise"}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {about.skills.map((skillGroup, index) => (
                 <SkillGroup 
                     key={skillGroup.category} 

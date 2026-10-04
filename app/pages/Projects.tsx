@@ -52,18 +52,41 @@ export const Projects = () => {
       >
         <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-12">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-600 dark:text-blue-400">
-                Engineering Directory
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-600 dark:text-blue-400">
+                  Engineering Directory
+                </span>
+              </div>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 text-xs font-black tracking-wider border border-emerald-200/50 dark:border-emerald-800/40">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                {lang === "en"
+                  ? `${projects.length}+ Projects Done`
+                  : `${projects.length}+ مشروع منجز`}
               </span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter text-foreground leading-none">
+            <h1 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter text-foreground leading-tight">
               {t.projects.title}
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed font-medium">
+            <p className="text-xl text-muted-foreground leading-relaxed font-medium mb-6">
               {t.projects.description}
             </p>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-gray-100 dark:bg-gray-800/80 text-xs font-bold text-gray-700 dark:text-gray-300">
+              <span className="w-2 h-2 rounded-full bg-blue-500" />
+              <span>
+                {lang === "en"
+                  ? `${projects.length} Total Completed Projects`
+                  : `إجمالي المشاريع المنجزة: ${projects.length}`}
+              </span>
+              {displayedProjects.length !== projects.length && (
+                <span className="text-blue-600 dark:text-blue-400">
+                  {lang === "en"
+                    ? `(${displayedProjects.length} matching filter)`
+                    : `(${displayedProjects.length} مطابق للتصفية)`}
+                </span>
+              )}
+            </div>
           </div>
 
           <div className="md:mb-2">
@@ -79,21 +102,31 @@ export const Projects = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {displayedProjects.map((project, index) => (
-            <div
-              key={project.id}
-              className={cn(index % 2 === 1 ? "md:translate-y-20" : "")}
-            >
-              <ProjectCard
-                project={project}
-                index={index}
-                liveLabel={t.projects.liveDemo}
-                sourceLabel={t.projects.sourceCode}
-              />
-            </div>
-          ))}
-        </div>
+        {displayedProjects.length === 0 ? (
+          <div className="py-20 text-center rounded-3xl border border-dashed border-gray-200 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/20">
+            <p className="text-muted-foreground text-lg font-medium">
+              {lang === "en"
+                ? "No projects found matching your search."
+                : "لم يتم العثور على مشاريع مطابقة للبحث."}
+            </p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {displayedProjects.map((project, index) => (
+              <div
+                key={project.id}
+                className={cn(index % 2 === 1 ? "md:translate-y-20" : "")}
+              >
+                <ProjectCard
+                  project={project}
+                  index={index}
+                  liveLabel={t.projects.liveDemo}
+                  sourceLabel={t.projects.sourceCode}
+                />
+              </div>
+            ))}
+          </div>
+        )}
 
         {isAdminAuthenticated && (
           <AdminSectionWrapper title="Projects Inventory Management">

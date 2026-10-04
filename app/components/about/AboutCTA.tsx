@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Link } from "react-router";
+import { Link } from "../Link";
 import { ArrowRight } from "lucide-react";
 
 interface AboutCTAProps {

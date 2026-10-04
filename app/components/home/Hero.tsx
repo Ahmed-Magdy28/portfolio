@@ -69,6 +69,11 @@ export const Hero = ({
           <img
             src={home.avatar}
             alt={home.name}
+            width={288}
+            height={288}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
           />
         ) : (
@@ -106,10 +111,13 @@ export const Hero = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4 leading-[0.9] text-foreground"
+            className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4 leading-tight md:leading-[1.05] text-foreground"
           >
             {home.name.split(" ").map((word: string, i: number) => (
-                <span key={i} className={i === home.name.split(" ").length - 1 ? "text-blue-600 dark:text-blue-500" : ""}>
+                <span 
+                  key={i} 
+                  className={i === home.name.split(" ").length - 1 ? "bg-gradient-to-r from-blue-600 via-indigo-600 to-sky-500 dark:from-blue-400 dark:via-indigo-400 dark:to-sky-400 bg-clip-text text-transparent" : ""}
+                >
                     {word}{" "}
                 </span>
             ))}
@@ -124,11 +132,11 @@ export const Hero = ({
             >
               {titles.map((title: string, index: number) => (
                 <div key={index} className="flex items-center gap-4">
-                  <span className="text-xl md:text-2xl font-bold text-gray-400 dark:text-gray-500 tracking-tight">
+                  <span className="text-xl md:text-2xl font-bold text-gray-500 dark:text-gray-400 tracking-tight">
                     {title}
                   </span>
                   {index < titles.length - 1 && (
-                    <div className="w-1.5 h-1.5 rounded-full bg-blue-600/30" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-600/40" />
                   )}
                 </div>
               ))}
@@ -149,7 +157,7 @@ export const Hero = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-xl text-muted-foreground mb-10 max-w-xl leading-relaxed font-medium opacity-90"
+            className="text-lg md:text-xl text-muted-foreground mb-10 max-w-xl leading-relaxed font-medium"
           >
             {t.home.intro}
           </motion.p>
@@ -158,23 +166,24 @@ export const Hero = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-wrap items-center justify-center lg:justify-start gap-5"
+            className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-5"
           >
             <Button
               to="/projects"
               variant="primary"
-              className="h-14 px-8 rounded-2xl font-black uppercase tracking-widest text-[11px] shadow-xl shadow-blue-600/10 transition-all group"
+              className="h-14 px-8 rounded-2xl font-black uppercase tracking-widest text-[11px] shadow-xl shadow-blue-600/15 hover:shadow-blue-600/25 transition-all group"
             >
-              {t.home.viewProjects}
+              <span>{t.home.viewProjects}</span>
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1" />
             </Button>
             <Button
               href={home.cvUrl}
               external
               variant="outline"
-              className="h-14 px-8 rounded-2xl font-black uppercase tracking-widest text-[11px] border-2 transition-all dark:border-white/10 dark:text-white dark:hover:bg-white/5"
+              className="h-14 px-8 rounded-2xl font-black uppercase tracking-widest text-[11px] border-2 transition-all dark:border-white/10 dark:text-white dark:hover:bg-white/5 inline-flex items-center gap-2 group hover:border-blue-500/50"
             >
-              <Download className="w-4 h-4 mr-2" /> {t.home.downloadCV}
+              <Download className="w-4 h-4 transition-transform group-hover:-translate-y-0.5" />
+              <span>{t.home.downloadCV}</span>
             </Button>
           </motion.div>
         </div>

@@ -2,6 +2,12 @@
 .env
 /node_modules/
 
-# React Router
+# React Router (legacy)
 /.react-router/
 /build/
+
+# Next.js
+/.next/
+/out/
+*.tsbuildinfo
+next-env.d.ts

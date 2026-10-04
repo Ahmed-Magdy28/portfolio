@@ -1,4 +1,5 @@
-import { Link, Outlet, useParams } from "react-router";
+import { Link } from "../Link";
+import { useParams } from "next/navigation";
 import { Helmet } from "react-helmet-async";
 import { motion } from "motion/react";
 import { ArrowLeft, Sparkles } from "lucide-react";
@@ -12,6 +13,7 @@ import { Tabs } from "../Tabs";
 import { useAdminSession } from "../../hooks/useAdminSession";
 import { useRootData } from "../../hooks/useRootData";
 import { useTranslation } from "../../i18n/useTranslation";
+import { TechEntityProvider } from "../../context/TechEntityContext";
 import type { TechEntity, TechPageCopy } from "./types";
 
 interface TechDetailLayoutProps {
@@ -25,6 +27,7 @@ interface TechDetailLayoutProps {
     versions: string;
   };
   translationPayload: unknown;
+  children?: React.ReactNode;
 }
 
 export const TechDetailLayout = ({
@@ -32,6 +35,7 @@ export const TechDetailLayout = ({
   items,
   tabLabels,
   translationPayload,
+  children,
 }: TechDetailLayoutProps) => {
   const { slug } = useParams();
   const { t } = useTranslation();
@@ -137,7 +141,7 @@ export const TechDetailLayout = ({
         <div className="relative">
           <Tabs tabs={tabs} />
           <div className="mt-12">
-            <Outlet context={{ data: item }} />
+            <TechEntityProvider data={item}>{children}</TechEntityProvider>
           </div>
         </div>
 

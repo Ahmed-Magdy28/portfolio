@@ -85,6 +85,24 @@ export interface ProjectCategory {
   isHidden?: boolean;
 }
 
+export interface ExperienceItem {
+  id: string;
+  role: string;
+  company: string;
+  location?: string;
+  period: string;
+  note?: string;
+  highlights: string[];
+}
+
+export interface EducationItem {
+  id: string;
+  degree: string;
+  institution: string;
+  period: string;
+  highlights: string[];
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -98,7 +116,7 @@ export interface Project {
   image?: string;
   icon?: string;
   fullDescription: string;
-  challenges: string;
+  challenges: string | string[];
   video?: string;
   primaryRole?: string;
   coreTech?: string;

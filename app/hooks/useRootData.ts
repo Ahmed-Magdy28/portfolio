@@ -1,12 +1,7 @@
-import { useRouteLoaderData } from "react-router";
-import type { loader as rootLoader } from "../root";
+'use client';
+
+import { useRootDataContext } from "../context/RootDataContext";
 
 export const useRootData = () => {
-  const rootData = useRouteLoaderData<typeof rootLoader>("root");
-
-  if (!rootData) {
-    throw new Error("Root data is not available.");
-  }
-
-  return rootData;
+  return useRootDataContext();
 };

@@ -1,12 +1,9 @@
-import { useRouteLoaderData } from 'react-router';
-import type { loader as rootLoader } from '../root';
+'use client';
+
+import { useRootDataContext } from '../context/RootDataContext';
 
 export const useAdminSession = () => {
-  const data = useRouteLoaderData<typeof rootLoader>('root');
-
-  if (!data) {
-    throw new Error('Admin session data is not available from the root loader.');
-  }
+  const data = useRootDataContext();
 
   return {
     adminRoutePath: data.adminRoutePath,

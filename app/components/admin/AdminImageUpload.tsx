@@ -1,4 +1,4 @@
-import { useFetcher } from "react-router";
+import { useFetcher } from "../../lib/useFetcherCompat";
 import { useState, useRef, useEffect } from "react";
 import { Upload, Link as LinkIcon, X, ImageIcon } from "lucide-react";
 import { AdminButton } from "./ui/AdminButton";

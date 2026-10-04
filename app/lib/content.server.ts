@@ -3,6 +3,8 @@ import path from "node:path";
 import type {
   AccordionItem,
   ContentBlock,
+  EducationItem,
+  ExperienceItem,
   Framework,
   Language,
   Project,
@@ -25,6 +27,7 @@ export interface HomeContent {
   avatarSize: number;
   cvUrl: string;
   features: HomeFeature[];
+  titles?: string[];
 }
 
 export interface SkillGroup {
@@ -36,6 +39,8 @@ export interface AboutContent {
   video?: string;
   paragraphs: string[];
   skills: SkillGroup[];
+  experiences?: ExperienceItem[];
+  education?: EducationItem[];
   ctaTitle: string;
   ctaText: string;
   ctaLinkLabel: string;
@@ -46,7 +51,7 @@ export interface ContactLink {
   label: string;
   value: string;
   url: string;
-  icon: "github" | "linkedin" | "email";
+  icon: string;
 }
 
 export interface ContactContent {
@@ -83,6 +88,8 @@ const defaultSiteContent: SiteContent = {
     video: "",
     paragraphs: [],
     skills: [],
+    experiences: [],
+    education: [],
     ctaTitle: "",
     ctaText: "",
     ctaLinkLabel: "",
@@ -266,6 +273,12 @@ const normalizeSiteContent = (parsed: Partial<SiteContent>): SiteContent => ({
       ? parsed.about.paragraphs
       : [],
     skills: Array.isArray(parsed.about?.skills) ? parsed.about.skills : [],
+    experiences: Array.isArray(parsed.about?.experiences)
+      ? parsed.about.experiences
+      : [],
+    education: Array.isArray(parsed.about?.education)
+      ? parsed.about.education
+      : [],
   },
   contact: {
     ...defaultSiteContent.contact,

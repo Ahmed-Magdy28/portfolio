@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useFetcher, useRevalidator } from "react-router";
+import { useFetcher, useRevalidator } from "../../lib/useFetcherCompat";
 import type { AccordionItem, ContentBlock, RoadmapStep } from "../../data/types";
 import { Trash2, GripVertical, Save, Plus, Type, Video, Code, Link as LinkIcon, Image as ImageIcon, Hash, ChevronDown, ChevronUp, Star, Layers, AlertCircle, CheckCircle2, Linkedin } from "lucide-react";
 import { Badge } from "../ui/badge";

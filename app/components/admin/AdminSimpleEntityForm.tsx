@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useFetcher, useRevalidator } from "react-router";
+import { useFetcher, useRevalidator } from "../../lib/useFetcherCompat";
 import { useTranslation } from "../../i18n/useTranslation";
 import type { Framework, Language, Project } from "../../data/types";
 import { IconValue } from "../IconValue";

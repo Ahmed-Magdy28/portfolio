@@ -4,7 +4,7 @@ import { useSiteContent } from '../hooks/useSiteContent';
 import { useTechPageCopy } from "../hooks/useTechPageCopy";
 import { useTranslation } from '../i18n/useTranslation';
 
-export const FrameworkDetail = () => {
+export const FrameworkDetail = ({ children }: { children?: React.ReactNode }) => {
   const { t } = useTranslation();
   const { frameworks } = useSiteContent();
   const rootData = useRootData();
@@ -19,6 +19,8 @@ export const FrameworkDetail = () => {
         en: rootData.translations.en.frameworks,
         ar: rootData.translations.ar.frameworks,
       }}
-    />
+    >
+      {children}
+    </TechDetailLayout>
   );
 };

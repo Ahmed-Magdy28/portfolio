@@ -1,16 +1,16 @@
 # Ahmed Magdy Portfolio - Gemini CLI Context
 
-This project is a personal portfolio built with **React Router 7 (SSR mode)**, **React 19**, **TypeScript**, and **Tailwind CSS v4**. It features a robust content management system with an admin panel and supports localization (English/Arabic).
+This project is a personal portfolio built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, and **Tailwind CSS v4**. It features a robust content management system with an admin panel and supports localization (English/Arabic).
 
 ## Project Overview
 
-- **Core Stack:** React 19, React Router 7 (Framework Mode), TypeScript, Bun.
+- **Core Stack:** React 19, Next.js 16 (App Router), TypeScript, Bun.
 - **Styling:** Tailwind CSS v4, Motion (for animations).
 - **State Management:** Redux Toolkit (Theme, Language, and global UI state).
 - **Content Management:** JSON-based content stored in `app/content/`, managed via an admin panel.
 - **Localization:** Supports `en` and `ar`. Translations are in `app/i18n/locales/`.
 - **UI Components:** Custom components built on Radix UI primitives (following shadcn/ui patterns).
-- **SSR/SEO:** Server-side rendered with SEO metadata managed via `react-helmet-async`.
+- **SSR/SEO:** Server-side rendered with Next.js Metadata API and `react-helmet-async`.
 
 ## Project Structure
 
@@ -24,9 +24,10 @@ This project is a personal portfolio built with **React Router 7 (SSR mode)**, *
 - `app/layouts/`: Core layout components (`Navbar`, `Footer`, `RootLayout`).
 - `app/lib/`: Server-side utilities for auth, content reading/writing, and translations.
 - `app/pages/`: Reusable page views that are mapped to routes.
-- `app/routes/`: Route modules (the entry points for React Router).
+- `app/layout.tsx`: Root Server Component and shell layout.
+- `app/page.tsx`: Home page route.
+- `app/[adminPath]/`: Admin dashboard route.
 - `app/store/`: Redux store configuration and slices (`langSlice`, `themeSlice`).
-- `app/root.tsx`: The application's entry point, containing providers and the HTML shell.
 - `styles/`: Global styles, theme tokens, and font configurations.
 
 ## Building and Running
@@ -37,7 +38,7 @@ This project uses **Bun** as the package manager and runtime.
 - **Development Server:** `bun run dev`
 - **Production Build:** `bun run build`
 - **Serve Production:** `bun run start`
-- **Type Checking:** `bun run typecheck` (Runs `react-router typegen` then `tsc`)
+- **Type Checking:** `bun run typecheck` (Runs `tsc --noEmit`)
 
 ## Development Conventions
 

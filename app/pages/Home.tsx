@@ -17,10 +17,9 @@ import {
   Globe,
 } from "lucide-react";
 
+import { Hero } from "../components/home/Hero";
+
 // Lazy loaded components
-const Hero = lazy(() =>
-  import("../components/home/Hero").then((m) => ({ default: m.Hero })),
-);
 const TechStack = lazy(() =>
   import("../components/home/TechStack").then((m) => ({
     default: m.TechStack,
@@ -74,14 +73,15 @@ export const Home = () => {
     [languages],
   );
 
-  const featuredProjects = useMemo(
-    () => projects.filter((p) => p.featuredPro).slice(0, 3),
-    [projects],
-  );
+  const featuredProjects = useMemo(() => {
+    const pro = projects.filter((p) => p.featuredPro);
+    if (pro.length > 0) return pro.slice(0, 3);
+    return projects.filter((p) => p.featured).slice(0, 3);
+  }, [projects]);
 
-  const seoTitle = `${home.name} | Professional Frontend Web Developer`;
+  const seoTitle = `${home.name} | Front-End & Full-Stack Web Developer`;
   const seoDescription =
-    "Ahmed Magdy is a Frontend Web Developer and Software Engineer building modern, high-performance web applications with React, TypeScript, and Next.js. Explore my projects and tech stack.";
+    "Ahmed Magdy is a Front-End & Full-Stack Web Developer specializing in React, Next.js, TypeScript, and modern backend architectures with NestJS, Django, and PostgreSQL.";
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -113,9 +113,9 @@ export const Home = () => {
         structuredData={structuredData}
       />
 
-      <Suspense fallback={<SectionSkeleton />}>
-        <Hero t={t} home={home} />
+      <Hero t={t} home={home} />
 
+      <Suspense fallback={<SectionSkeleton />}>
         <TechStack
           lang={lang}
           languages={languages}
@@ -127,6 +127,7 @@ export const Home = () => {
           t={t}
           lang={lang}
           featuredProjects={featuredProjects}
+          totalProjectsCount={projects.length}
         />
 
         <AboutFeatures lang={lang} home={home} about={about} />

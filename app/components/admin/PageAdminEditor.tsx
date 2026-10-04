@@ -1,5 +1,5 @@
 import { useEffect, useId, useRef, useState } from "react";
-import { useFetcher, useRevalidator } from "react-router";
+import { useFetcher, useRevalidator } from "../../lib/useFetcherCompat";
 import { useTranslation } from "../../i18n/useTranslation";
 import { AdminCard } from "../admin/ui/AdminCard";
 import { AdminButton } from "../admin/ui/AdminButton";

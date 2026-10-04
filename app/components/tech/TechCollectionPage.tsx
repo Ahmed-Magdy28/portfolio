@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Link } from "react-router";
+import { Link } from "../Link";
 import { Helmet } from "react-helmet-async";
 import { BookOpen, ChevronRight, Sparkles, type LucideIcon } from "lucide-react";
 import { AdminEntityCollectionEditor } from "../admin/AdminEntityCollectionEditor";

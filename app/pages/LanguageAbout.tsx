@@ -1,4 +1,4 @@
-import { useOutletContext } from "react-router";
+import { useTechEntity } from "../context/TechEntityContext";
 import { TechAboutPage } from "../components/tech/TechAboutPage";
 import type { Language } from "../data/types";
 import { useTechPageCopy } from "../hooks/useTechPageCopy";
@@ -6,7 +6,7 @@ import { useTranslation } from "../i18n/useTranslation";
 
 export const LanguageAbout = () => {
   const { t } = useTranslation();
-  const { data } = useOutletContext<{ data: Language }>();
+  const { data } = useTechEntity<Language>();
   const copy = useTechPageCopy("languages");
 
   return (

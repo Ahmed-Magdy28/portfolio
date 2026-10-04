@@ -1,5 +1,8 @@
-import { Link, useLocation } from 'react-router';
+'use client';
+
+import { usePathname } from 'next/navigation';
 import { motion } from 'motion/react';
+import { Link } from './Link';
 
 interface Tab {
   label: string;
@@ -13,13 +16,13 @@ interface TabsProps {
 export type { Tab };
 
 export const Tabs = ({ tabs }: TabsProps) => {
-  const location = useLocation();
+  const pathname = usePathname();
 
   return (
     <div className="border-b border-gray-200 dark:border-gray-700 mb-8">
       <nav className="flex gap-8 overflow-x-auto">
         {tabs.map((tab) => {
-          const isActive = location.pathname === tab.path;
+          const isActive = pathname === tab.path;
 
           return (
             <Link

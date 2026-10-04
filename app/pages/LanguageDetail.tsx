@@ -4,7 +4,7 @@ import { useSiteContent } from '../hooks/useSiteContent';
 import { useTechPageCopy } from "../hooks/useTechPageCopy";
 import { useTranslation } from '../i18n/useTranslation';
 
-export const LanguageDetail = () => {
+export const LanguageDetail = ({ children }: { children?: React.ReactNode }) => {
   const { t } = useTranslation();
   const { languages } = useSiteContent();
   const rootData = useRootData();
@@ -19,6 +19,8 @@ export const LanguageDetail = () => {
         en: rootData.translations.en.languages,
         ar: rootData.translations.ar.languages,
       }}
-    />
+    >
+      {children}
+    </TechDetailLayout>
   );
 };

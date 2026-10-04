@@ -3,100 +3,133 @@
     "name": "Ahmed Magdy",
     "avatar": "/me.jpeg",
     "avatarSize": 240,
-    "cvUrl": "https://drive.usercontent.google.com/download?id=1aqEvGWxLCRlbLhH7TRnXHoK8rZZwHkg4&export=download&authuser=1&confirm=t&uuid=3491208b-7b74-4d07-84b6-162608feb2ab&at=ALBwUgkYBI0lTgboskkVQzSWqumX:1776707742570",
+    "cvUrl": "https://drive.google.com/file/d/1DNMUMp4toladmr3plv8QmRDQjGyL7SaJ/view?usp=sharing",
     "features": [
       {
         "icon": "Zap",
         "title": "High-Performance Architecture",
-        "description": "Engineered for speed and SEO, utilizing React Router 7's SSR capabilities for sub-second page loads."
+        "description": "Engineered for speed and SEO, optimizing page load times by 25% with React Router 7 SSR and modern caching."
       },
       {
         "icon": "Shield",
-        "title": "Scalable State Management",
-        "description": "Handling complex application states and real-time data with Redux Toolkit and TanStack Query."
+        "title": "Scalable Full-Stack Systems",
+        "description": "Architecting robust state flows and RESTful services with Redux Toolkit, TanStack Query, NestJS, and Django."
       },
       {
         "icon": "Sparkles",
-        "title": "Advanced UI Animations",
-        "description": "Creating immersive user experiences with fluid transitions and interactive components using Motion."
+        "title": "Advanced UI & Design Systems",
+        "description": "Creating fluid, responsive interfaces with React, Next.js, TypeScript, Tailwind CSS, and Motion."
       },
       {
         "icon": "Globe",
-        "title": "Global Ready i18n",
-        "description": "Full RTL support and seamless multi-language integration for international audiences."
+        "title": "Multi-Region & GCC Scale",
+        "description": "Administered multi-region platforms across 6 GCC markets with 99.8% uptime, complete i18n, and RBAC."
       }
     ],
-    "titles": []
+    "titles": [
+      "Front-End & Full-Stack Web Developer",
+      "React & Next.js Specialist",
+      "Software Engineer"
+    ]
   },
   "about": {
     "video": "",
     "paragraphs": [
-      "I am a passionate Software Engineer with a strong focus on front-end development using React and Next.js. I have hands-on experience building modern, scalable, and responsive web applications, as well as delivering real-world projects including e-commerce platforms and business websites using WordPress.",
-      "I specialize in JavaScript and TypeScript, and I work with modern tools like Redux Toolkit and TanStack Query for efficient state and server state management, along with i18n for multilingual applications. I also have backend experience with Python using Flask and Django, in addition to building cross-platform mobile applications using Flutter and Dart. I focus on writing clean, maintainable code while continuously improving my skills."
+      "Results-driven Front-End / Full-Stack Web Developer with professional agency experience delivering high-performance web applications using React, Next.js, TypeScript, and WordPress. Proven track record at Digitect managing and deploying multi-region platforms across 6 GCC markets, optimizing page load times by 25%, and streamlining digital systems.",
+      "Hands-on expertise architecting scalable REST APIs and full-stack solutions using Django REST Framework, NestJS, and PostgreSQL. Military Status: Exempted."
     ],
     "skills": [
       {
+        "category": "Languages",
+        "items": [
+          "JavaScript (ES6+)",
+          "TypeScript",
+          "Python",
+          "Dart",
+          "C",
+          "HTML5",
+          "CSS3",
+          "SQL"
+        ]
+      },
+      {
         "category": "Frontend",
         "items": [
-          "React",
+          "React.js",
           "Next.js",
-          "TypeScript",
-          "JavaScript",
-          "Tailwind CSS",
-          "HTML",
-          "CSS"
-        ]
-      },
-      {
-        "category": "State Management & Data",
-        "items": [
           "Redux Toolkit",
           "TanStack Query",
-          "REST APIs",
-          "i18n"
+          "Tailwind CSS",
+          "styled-components",
+          "Context API"
         ]
       },
       {
-        "category": "Backend",
+        "category": "Backend & APIs",
         "items": [
-          "Python",
-          "Flask",
+          "NestJS",
           "Django",
-          "MySQL"
+          "Django REST Framework (DRF)",
+          "RESTful APIs",
+          "JWT Authentication"
         ]
       },
       {
-        "category": "Mobile Development",
+        "category": "Databases & ORM",
         "items": [
-          "Flutter",
-          "Dart",
-          "Cross-platform Development"
+          "PostgreSQL",
+          "MySQL",
+          "Prisma ORM",
+          "Supabase",
+          "Firebase"
         ]
       },
       {
-        "category": "WordPress",
-        "items": [
-          "WordPress",
-          "Elementor",
-          "Astra Theme",
-          "Website Customization",
-          "Performance Optimization"
-        ]
-      },
-      {
-        "category": "Tools",
+        "category": "DevOps & Tools",
         "items": [
           "Git",
-          "GitHub",
-          "Vite",
-          "Postman"
+          "GitHub Actions",
+          "Docker",
+          "WordPress",
+          "Mailchimp",
+          "Postman",
+          "Linux"
         ]
       }
     ],
     "ctaTitle": "Let's Work Together",
     "ctaText": "I'm always open to working on modern web and mobile applications, scalable frontend systems, and impactful digital products.",
     "ctaLinkLabel": "Get In Touch",
-    "ctaLinkUrl": "/contact"
+    "ctaLinkUrl": "/contact",
+    "experiences": [
+      {
+        "id": "digitect-web-developer",
+        "role": "Junior Web Developer",
+        "company": "Digitect",
+        "period": "Oct 2024 – May 2025",
+        "location": "Cairo, Egypt",
+        "note": "Promoted following Web Development Internship: Jul 2024 – Sep 2024",
+        "highlights": [
+          "Administered, updated, and optimized multi-region web infrastructure for AlBorg Diagnostics across 6 GCC countries (KSA, UAE, Kuwait, Oman, Qatar, Bahrain), sustaining 99.8% uptime and consistent localized content.",
+          "Developed and launched custom, responsive WordPress websites from scratch for luxury dining clients (Café LaProusa, Manko Restaurant, Noto Restaurant), reducing page load times by 25%.",
+          "Maintained high-traffic web portals and resolved 40+ client requests for prominent enterprise groups including HAS Foundation and AlNahla Group.",
+          "Automated company-wide digital identity management by implementing automated digital signature and employee ID generation systems for 50+ team members.",
+          "Coded responsive HTML email newsletters and managed targeted distribution for Ferrari via Mailchimp, lifting campaign engagement and click-through rates by 15%."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "id": "alx-holberton",
+        "degree": "ALX Software Engineering Program",
+        "institution": "Powered by Holberton School",
+        "period": "2022 – 2024",
+        "highlights": [
+          "Completed an intensive 15-month curriculum (70+ hrs/week) mastering low-level C programming, data structures, algorithms, Linux systems engineering, and collaborative full-stack web application development.",
+          "Completed a dedicated 3-month professional soft skills training covering cross-functional collaboration, technical communication, agile team workflows, and problem-solving."
+        ]
+      }
+    ]
   },
   "contact": {
     "intro": "Have a project in mind? Let's talk about it!",
@@ -138,6 +171,12 @@
         "value": "AhMeDMaGDY284",
         "url": "https://www.facebook.com/AhMeDMaGDY284/",
         "icon": "facebook"
+      },
+      {
+        "label": "Website",
+        "value": "ahmedmagdy.site",
+        "url": "https://ahmedmagdy.site",
+        "icon": "globe"
       }
     ]
   },
@@ -162,9 +201,9 @@
     },
     {
       "id": "backend-node",
-      "nameEn": "Backend (Node Express)",
-      "nameAr": "الباك إند (نود إكسبريس)",
-      "isHidden": true
+      "nameEn": "Backend (Node & NestJS)",
+      "nameAr": "الباك إند (نود و NestJS)",
+      "isHidden": false
     },
     {
       "id": "backend-django",
@@ -196,31 +235,102 @@
       "id": "management-platform",
       "title": "WorkForce Ultimate",
       "featured": true,
-      "description": "A full-featured workforce management system that streamlines project tracking, employee performance, and team collaboration through role-based dashboards and a scalable frontend architecture.",
+      "description": "Enterprise Resource & Staff Management suite featuring granular Role-Based Access Control (RBAC) and complete Arabic/English bilingual (RTL/LTR) internationalization.",
       "techStack": [
         "React",
         "TypeScript",
-        "Tailwind CSS",
         "Redux Toolkit",
-        "TanStack React Query",
+        "TanStack Query",
+        "Tailwind CSS",
         "React Hook Form",
         "Zod",
-        "Charts",
-        "Drag & Drop",
-        "Toast Notifications",
-        "Role-Based Access Control (RBAC)",
-        "Date & Time Handling",
-        "Centralized Error Handling"
+        "RBAC",
+        "i18n"
       ],
       "sourceUrl": "https://github.com/Ahmed-Magdy28/workforce-ultimate",
       "fullDescription": "WorkForce Ultimate is a modern workforce and project management platform inspired by tools like Jira and ClickUp. It is designed to help organizations efficiently manage employees, projects, tasks, schedules, and performance through a structured role-based system. The application is built with React and TypeScript, following a scalable and modular frontend architecture that separates global state, server state, and local UI state for better maintainability and performance. It implements a robust Role-Based Access Control (RBAC) system with multiple roles such as Employee, Manager, Senior Manager, Regional Manager, and HR, each with customized dashboards and permissions. The platform includes dynamic dashboards for tracking tasks, project progress, team performance, and productivity analytics. It also supports features like drag-and-drop task organization, notifications, form validation, file handling, and workflow-based approvals. Built using modern frontend best practices, it leverages Redux Toolkit for global state, TanStack React Query for server state management, React Hook Form with Zod for validation, and a clean UI system for a smooth and responsive user experience.",
-      "challenges": "Designing a scalable architecture capable of handling complex role-based access control across routes, components, and features.,Separating server state, global state, and local UI state without causing data inconsistency or unnecessary re-renders.,Implementing RBAC logic in a way that remains maintainable as roles and permissions grow.,Managing complex UI interactions such as drag-and-drop task organization while maintaining performance.,Coordinating multiple advanced features like analytics dashboards, notifications, and workflow systems in a single frontend codebase. ",
+      "challenges": "Engineered an enterprise workforce suite with granular Role-Based Access Control (RBAC) and complete Arabic/English bilingual (RTL/LTR) internationalization., Implemented TanStack Query for smart client-side caching and optimistic UI updates, cutting redundant network requests by 40%.",
       "liveUrl": "https://workforce-ultimate-blwecsu0j-ahmed-magdys-projects-b12677cc.vercel.app/",
       "icon": "/uploads/f9c77da512d892f4c6836bf8bf501a00.png",
       "image": "/uploads/49579fa619e80f8f8182bab018ec61d8.png",
       "categoryIds": [
         "frontend-react"
-      ]
+      ],
+      "featuredPro": true
+    },
+    {
+      "id": "alborg-diagnostics",
+      "title": "AlBorg Diagnostics",
+      "description": "Multi-region web infrastructure administration, optimization, and localization for AlBorg Diagnostics across 6 GCC countries sustaining 99.8% uptime.",
+      "featured": false,
+      "categoryIds": [
+        "wordpress"
+      ],
+      "techStack": [
+        "WordPress",
+        "Web Infrastructure",
+        "Performance Optimization",
+        "Localization (i18n)",
+        "Multi-Region Hosting"
+      ],
+      "fullDescription": "Administered, updated, and optimized multi-region web infrastructure for AlBorg Diagnostics across 6 GCC countries (KSA, UAE, Kuwait, Oman, Qatar, Bahrain), sustaining 99.8% uptime and consistent localized content during web development tenure at Digitect.",
+      "challenges": "Administered, updated, and optimized multi-region web infrastructure for AlBorg Diagnostics across 6 GCC countries sustaining 99.8% uptime and consistent localized content.",
+      "primaryRole": "Junior Web Developer (Digitect)",
+      "coreTech": "WordPress, Web Infrastructure, i18n"
+    },
+    {
+      "id": "dahlan-law-firm",
+      "title": "Dahlan Law Firm",
+      "featured": true,
+      "description": "Bilingual corporate website for a premier law and legal consultations firm in Saudi Arabia, engineered with custom responsive architecture and localized Arabic/English interfaces.",
+      "techStack": [
+        "WordPress",
+        "Astra Theme",
+        "Elementor Pro",
+        "Localization (i18n)",
+        "Performance Optimization",
+        "Responsive Design"
+      ],
+      "liveUrl": "https://dahlanlaw.com/dhlan/",
+      "fullDescription": "Dahlan Law Firm is an official corporate website for a distinguished law and legal consultancy firm based in Saudi Arabia (KSA). Delivered with precision using WordPress, Astra Theme, and responsive layout systems, the platform reflects institutional credibility and trust. Key deliverables include complete bilingual functionality (Arabic RTL and English LTR), comprehensive practice areas and services directory, client consultation inquiry forms, and optimized loading speeds across both desktop and mobile devices.",
+      "challenges": [
+        "Developing a fully bilingual (Arabic RTL / English LTR) layout adhering to Saudi corporate legal branding standards.",
+        "Structuring multi-tier legal consultation practice areas and attorney profiles with intuitive navigation.",
+        "Optimizing typography and media asset delivery (Alexandria Arabic font) for low latency across the GCC.",
+        "Ensuring pixel-perfect responsiveness and fast performance across all screen sizes and browsers."
+      ],
+      "image": "/uploads/DahlanLaw.png",
+      "icon": "/uploads/DahlanLaw.png",
+      "categoryIds": [
+        "wordpress"
+      ],
+      "timeline": "2 months ago"
+    },
+    {
+      "id": "nest-next-store",
+      "title": "Nest Next Store",
+      "description": "Full-Stack Headless E-Commerce Platform architected with Next.js, NestJS, TypeScript, PostgreSQL, and Prisma ORM.",
+      "featured": true,
+      "featuredPro": true,
+      "categoryIds": [
+        "frontend-react",
+        "backend-node"
+      ],
+      "techStack": [
+        "Next.js",
+        "NestJS",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma ORM",
+        "RESTful APIs",
+        "JWT Authentication",
+        "Tailwind CSS"
+      ],
+      "sourceUrl": "https://github.com/Ahmed-Magdy28",
+      "fullDescription": "Nest Next Store is a high-performance headless e-commerce platform built with Next.js, NestJS, TypeScript, and PostgreSQL. It features a modern decoupled architecture that manages product catalogs, shopping carts, coupons, wishlists, and a dynamic checkout experience. The backend services are built with modular NestJS patterns and Prisma ORM, leveraging relational database schema constraints to improve query performance by 30%.",
+      "challenges": "Architected decoupled e-commerce architecture managing product catalogs, shopping carts, coupons, wishlist, and dynamic checkout., Designed modular NestJS backend services with Prisma ORM and relational schema constraints, improving database query efficiency by 30%.",
+      "primaryRole": "Full-Stack Web Developer",
+      "coreTech": "Next.js, NestJS, Prisma, PostgreSQL"
     },
     {
       "id": "task-management",
@@ -259,7 +369,7 @@
       "id": "noto-cafe",
       "title": "Noto Cafe",
       "featured": true,
-      "description": "A premium restaurant website built with WordPress, delivering a modern UI and seamless customer experience.",
+      "description": "Custom responsive WordPress website developed from scratch for luxury dining client at Digitect, reducing page load times by 25%.",
       "techStack": [
         "WordPress",
         "Elementor Pro",
@@ -283,7 +393,7 @@
       "id": "manko-restaurant",
       "title": "Manko Restaurant",
       "featured": true,
-      "description": "A high-end restaurant website with responsive design and production-ready performance built using WordPress.",
+      "description": "Custom responsive WordPress website developed from scratch for luxury dining client in KSA at Digitect, reducing page load times by 25%.",
       "techStack": [
         "WordPress",
         "Elementor Pro"
@@ -306,7 +416,7 @@
       "id": "cafe-la-prousa",
       "title": "Café La Prousa",
       "featured": true,
-      "description": "A customer-facing restaurant website focused on performance, responsiveness, and smooth user experience.",
+      "description": "Custom responsive WordPress website developed from scratch for luxury dining client at Digitect, reducing page load times by 25%.",
       "techStack": [
         "WordPress",
         "Elementor Pro"
@@ -406,39 +516,31 @@
     },
     {
       "id": "ashtray-meny",
-      "title": "Ashtray Meny",
-      "description": "A fullstack e-commerce platform with a Django REST API and Flutter mobile app, featuring JWT authentication, role-based access control, and CI/CD workflows.",
+      "title": "Ashtry Meny",
+      "description": "End-to-end multi-vendor e-commerce marketplace featuring a cross-platform Flutter mobile application and a scalable Django REST Framework backend.",
       "techStack": [
-        "Django",
-        "Django REST Framework",
-        "PostgreSQL",
-        "JWT Authentication",
         "Flutter",
         "Dart",
-        "Provider",
-        "Dio",
-        "Shared Preferences",
+        "Django REST Framework",
+        "PostgreSQL",
         "Docker",
-        "GitHub Actions",
-        "drf-spectacular"
+        "JWT Authentication",
+        "drf-spectacular",
+        "GitHub Actions"
       ],
       "liveUrl": "https://www.linkedin.com/posts/ahmedmagdy2849_django-flutter-docker-activity-7256912023278501888-eL9n",
       "sourceUrl": "https://github.com/Ahmed-Magdy28/ashtray-meny",
       "fullDescription": "Ashtray Meny is a fullstack e-commerce platform combining a Django REST Framework backend with a Flutter mobile application. The backend provides a scalable API for managing users, products, shops, categories, orders, and reviews, while the Flutter frontend delivers a responsive and smooth mobile experience. The system uses JWT-based authentication and role-based access control to support multiple user roles including admins, shop owners, and customers. On the mobile side, Provider is used for state management, Dio for API communication, and Shared Preferences for local persistence. The platform supports product browsing, filtering, order management, wishlist functionality, and a review system. It also includes Swagger API documentation using drf-spectacular. The project is containerized using Docker and integrates GitHub Actions for automated workflows, reflecting a production-oriented and DevOps-aware architecture.",
       "challenges": [
-        "Designing a fullstack architecture integrating Django backend with Flutter mobile frontend.",
-        "Implementing secure JWT authentication across backend and mobile client.",
-        "Managing state in Flutter using Provider while keeping UI responsive.",
-        "Handling API communication and error states efficiently using Dio.",
-        "Maintaining data consistency between mobile app and backend APIs.",
-        "Structuring scalable backend services while supporting multiple user roles.",
-        "Containerizing the system using Docker for consistent environments.",
-        "Setting up CI/CD workflows using GitHub Actions for automation and reliability."
+        "Developed an end-to-end multi-vendor marketplace featuring a cross-platform mobile application and a scalable Django REST backend.",
+        "Configured secure JWT authentication, vendor management, and isolated local development environments using Docker."
       ],
       "categoryIds": [
         "backend-django",
         "mobile-flutter"
-      ]
+      ],
+      "featured": true,
+      "featuredPro": true
     },
     {
       "id": "recipe-app-api",
@@ -1008,6 +1110,18 @@
       "insights": [],
       "interviewQuestions": [],
       "aboutDescription": "Efficient and predictable state management for React.",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "nestjs",
+      "title": "NestJS",
+      "description": "A progressive Node.js framework for building efficient, reliable, and scalable server-side enterprise applications with TypeScript.",
+      "aboutDescription": "NestJS is a progressive Node.js framework for building scalable enterprise backend applications using TypeScript, modular design, and robust dependency injection.",
+      "icon": "https://nestjs.com/img/logo-small.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "roadmapUrl": "https://roadmap.sh/nodejs",
       "roadmap": [],
       "versions": []
     }

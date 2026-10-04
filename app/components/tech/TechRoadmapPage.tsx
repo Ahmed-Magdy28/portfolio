@@ -1,4 +1,4 @@
-import { useFetcher } from "react-router";
+import { useFetcher } from "../../lib/useFetcherCompat";
 import { motion } from "motion/react";
 import { CheckCircle2, Circle, Clock, ExternalLink, Flag } from "lucide-react";
 import { AdminArrayItemsEditor } from "../admin/AdminArrayItemsEditor";

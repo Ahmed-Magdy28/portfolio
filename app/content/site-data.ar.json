@@ -3,104 +3,133 @@
     "name": "أحمد مجدي",
     "avatar": "/me.jpeg",
     "avatarSize": 240,
-    "cvUrl": "https://drive.usercontent.google.com/download?id=1aqEvGWxLCRlbLhH7TRnXHoK8rZZwHkg4&export=download&authuser=1&confirm=t&uuid=3491208b-7b74-4d07-84b6-162608feb2ab&at=ALBwUgkYBI0lTgboskkVQzSWqumX:1776707742570",
+    "cvUrl": "https://drive.google.com/file/d/1DNMUMp4toladmr3plv8QmRDQjGyL7SaJ/view?usp=sharing",
     "features": [
       {
         "icon": "Zap",
         "title": "بنية عالية الأداء",
-        "description": "مصممة للسرعة وتحسين محركات البحث، باستخدام قدرات SSR في React Router 7 لتحميل الصفحات في أجزاء من الثانية."
+        "description": "مصممة للسرعة ومحركات البحث، مع تقليل زمن التحميل بنسبة 25% باستخدام قدرات React Router 7 SSR والتخزين المؤقت الحديث."
       },
       {
         "icon": "Shield",
-        "title": "إدارة حالة قابلة للتوسع",
-        "description": "التعامل مع حالات التطبيقات المعقدة والبيانات الفورية باستخدام Redux Toolkit و TanStack Query."
+        "title": "أنظمة متكاملة وواجهات برمجية قابلة للتوسع",
+        "description": "تصميم تدفقات بيانات وواجهات REST متقدمة باستخدام Redux Toolkit و TanStack Query و NestJS و Django."
       },
       {
         "icon": "Sparkles",
-        "title": "تفاعلات واجهة متقدمة",
-        "description": "إنشاء تجارب مستخدم غامرة مع انتقالات سلسة ومكونات تفاعلية باستخدام Motion."
+        "title": "واجهات مستخدم تفاعلية متقدمة",
+        "description": "بناء واجهات مستخدم سلسة ومتجاوبة باستخدام React و Next.js و TypeScript و Tailwind CSS و Motion."
       },
       {
         "icon": "Globe",
-        "title": "دعم عالمي متكامل",
-        "description": "دعم كامل للاتجاه من اليمين إلى اليسار (RTL) وتكامل سلس للغات المتعددة للجمهور العالمي."
+        "title": "منصات متعددة المناطق وموجهة للخليج",
+        "description": "إدارة منصات في 6 أسواق خليجية بنسبة تشغيل 99.8% مع دعم كامل للغات المتعددة ونظام الصلاحيات RBAC."
       }
     ],
     "titles": [
-      "مطور واجهات أمامية",
-      "مهندس برمجيات",
-      "طموح للتطوير الشامل"
+      "مطور واجهات أمامية ومطور ويب متكامل",
+      "متخصص React & Next.js",
+      "مهندس برمجيات"
     ]
   },
   "about": {
     "video": "",
     "paragraphs": [
-      "أنا مهندس برمجيات شغوف مع تركيز قوي على تطوير الواجهات الأمامية باستخدام React و Next.js. أمتلك خبرة عملية في بناء تطبيقات ويب حديثة وقابلة للتوسع ومتجاوبة، بالإضافة إلى تنفيذ مشاريع واقعية مثل منصات التجارة الإلكترونية ومواقع الشركات باستخدام WordPress.",
-      "أتخصص في JavaScript و TypeScript، وأعمل باستخدام أدوات حديثة مثل Redux Toolkit و TanStack Query لإدارة الحالة وحالة البيانات من الخادم بكفاءة، بالإضافة إلى i18n لدعم التطبيقات متعددة اللغات. كما أمتلك خبرة في تطوير الباك إند باستخدام Python عبر Flask و Django، إلى جانب بناء تطبيقات موبايل متعددة المنصات باستخدام Flutter و Dart. أركز على كتابة كود نظيف وقابل للصيانة مع الاستمرار في تطوير مهاراتي."
+      "مطور واجهات أمامية ومطور ويب متكامل (Front-End & Full-Stack) ذو خبرة مهنية في الوكالات في تطوير تطبيقات ويب عالية الأداء باستخدام React و Next.js و TypeScript و WordPress. سجل حافل بالنجاحات في شركة Digitect بإدارة ونشر منصات متعددة المناطق عبر 6 أسواق خليجية، وتحسين أوقات تحميل الصفحات بنسبة 25%، وتبسيط الأنظمة الرقمية.",
+      "خبرة عملية في تصميم واجهات برمجة تطبيقات REST قابلة للتوسع وحلول متكاملة باستخدام Django REST Framework و NestJS و PostgreSQL. الموقف من التجنيد: إعفاء نهائي."
     ],
     "skills": [
       {
+        "category": "لغات البرمجة",
+        "items": [
+          "JavaScript (ES6+)",
+          "TypeScript",
+          "Python",
+          "Dart",
+          "C",
+          "HTML5",
+          "CSS3",
+          "SQL"
+        ]
+      },
+      {
         "category": "الواجهة الأمامية",
         "items": [
-          "React",
+          "React.js",
           "Next.js",
-          "TypeScript",
-          "JavaScript",
-          "Tailwind CSS",
-          "HTML",
-          "CSS"
-        ]
-      },
-      {
-        "category": "إدارة الحالة والبيانات",
-        "items": [
           "Redux Toolkit",
           "TanStack Query",
-          "REST APIs",
-          "i18n"
+          "Tailwind CSS",
+          "styled-components",
+          "Context API"
         ]
       },
       {
-        "category": "الباك إند",
+        "category": "الباك إند وواجهات البرمجة",
         "items": [
-          "Python",
-          "Flask",
+          "NestJS",
           "Django",
-          "MySQL"
+          "Django REST Framework (DRF)",
+          "RESTful APIs",
+          "JWT Authentication"
         ]
       },
       {
-        "category": "تطوير الموبايل",
+        "category": "قواعد البيانات و ORM",
         "items": [
-          "Flutter",
-          "Dart",
-          "تطوير متعدد المنصات"
+          "PostgreSQL",
+          "MySQL",
+          "Prisma ORM",
+          "Supabase",
+          "Firebase"
         ]
       },
       {
-        "category": "ووردبريس",
-        "items": [
-          "WordPress",
-          "Elementor",
-          "Astra Theme",
-          "تخصيص المواقع",
-          "تحسين الأداء"
-        ]
-      },
-      {
-        "category": "الأدوات",
+        "category": "أدوات التطوير و DevOps",
         "items": [
           "Git",
-          "GitHub",
-          "Vite",
-          "Postman"
+          "GitHub Actions",
+          "Docker",
+          "WordPress",
+          "Mailchimp",
+          "Postman",
+          "Linux"
         ]
       }
     ],
     "ctaTitle": "لنبدأ العمل معًا",
     "ctaText": "أنا دائمًا منفتح للعمل على تطبيقات ويب وموبايل حديثة، أنظمة واجهات أمامية قابلة للتوسع، ومنتجات رقمية مؤثرة.",
     "ctaLinkLabel": "تواصل معي",
-    "ctaLinkUrl": "/contact"
+    "ctaLinkUrl": "/contact",
+    "experiences": [
+      {
+        "id": "digitect-web-developer",
+        "role": "مطور ويب مبتدئ (Junior Web Developer)",
+        "company": "Digitect",
+        "period": "أكتوبر 2024 – مايو 2025",
+        "location": "القاهرة، مصر",
+        "note": "تمت الترقية بعد فترة تدريب تطوير الويب: يوليو 2024 – سبتمبر 2024",
+        "highlights": [
+          "إدارة وتحديث وتحسين البنية التحتية لمواقع مختبرات البرج للتشخيص (AlBorg Diagnostics) عبر 6 دول خليجية (السعودية، الإمارات، الكويت، عُمان، قطر، البحرين)، مع ضمان وقت تشغيل 99.8% وتناسق المحتوى المحلي.",
+          "تطوير وإطلاق مواقع ووردبريس مخصصة ومتجاوبة من الصفر لمطاعم فاخرة (Café LaProusa، و Manko Restaurant، و Noto Restaurant)، مما قلل أوقات تحميل الصفحات بنسبة 25%.",
+          "صيانة بوابات الويب ذات الزيارات الكثيفة وحل أكثر من 40 طلباً للعملاء لمجموعات رائدة منها مؤسسة حسن عباس شربتلي (HAS Foundation) ومجموعة النهلة (AlNahla Group).",
+          "أتمتة إدارة الهوية الرقمية للشركة عبر تطبيق نظام آلي لإنشاء التوقيعات الرقمية وبطاقات هوية الموظفين لأكثر من 50 عضواً في الفريق.",
+          "برمجة رسائل بريد إلكتروني إخبارية متجاوبة بتقنية HTML وإدارة حملات التوزيع المستهدفة لعلامة فيراري (Ferrari) عبر Mailchimp، مما رفع معدل التفاعل والنقر بنسبة 15%."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "id": "alx-holberton",
+        "degree": "برنامج هندسة البرمجيات ALX",
+        "institution": "بالشراكة مع Holberton School",
+        "period": "2022 – 2024",
+        "highlights": [
+          "إتمام منهج دراسي مكثف على مدار 15 شهراً (بمعدل أكثر من 70 ساعة أسبوعياً) لإتقان برمجة C منخفضة المستوى، هياكل البيانات، الخوارزميات، هندسة أنظمة لينكس، وتطوير تطبيقات الويب المتكاملة بالتعاون الجماعي.",
+          "إتمام تدريب احترافي متخصص لمدة 3 أشهر في المهارات الشخصية وبيئة العمل يغطي التعاون بين الفرق، التواصل التقني، منهجيات فرق العمل المرنة (Agile)، وحل المشكلات."
+        ]
+      }
+    ]
   },
   "contact": {
     "intro": "هل لديك مشروع في ذهنك؟ دعنا نتحدث عنه!",
@@ -142,6 +171,12 @@
         "value": "AhMeDMaGDY284",
         "url": "https://www.facebook.com/AhMeDMaGDY284/",
         "icon": "facebook"
+      },
+      {
+        "label": "الموقع الإلكتروني",
+        "value": "ahmedmagdy.site",
+        "url": "https://ahmedmagdy.site",
+        "icon": "globe"
       }
     ]
   },
@@ -160,9 +195,9 @@
     },
     {
       "id": "backend-node",
-      "nameEn": "Backend (Node Express)",
-      "nameAr": "الباك إند (نود إكسبريس)",
-      "isHidden": true
+      "nameEn": "Backend (Node & NestJS)",
+      "nameAr": "الباك إند (نود و NestJS)",
+      "isHidden": false
     },
     {
       "id": "backend-django",
@@ -200,38 +235,103 @@
       "id": "management-platform",
       "title": "WorkForce Ultimate",
       "featured": true,
-      "description": "نظام متكامل لإدارة القوى العاملة يسهّل تتبع المشاريع، أداء الموظفين، والتعاون بين الفرق من خلال لوحات تحكم تعتمد على الأدوار وبنية واجهة أمامية قابلة للتوسع.",
+      "description": "نظام متكامل لإدارة موارد المؤسسات وفريق العمل يتميز بنظام صلاحيات دقيق (RBAC) ودعم ثنائي اللغة عربي/إنجليزي (RTL/LTR) كامل.",
       "techStack": [
         "React",
         "TypeScript",
-        "Tailwind CSS",
         "Redux Toolkit",
-        "TanStack React Query",
+        "TanStack Query",
+        "Tailwind CSS",
         "React Hook Form",
         "Zod",
-        "Charts",
-        "Drag & Drop",
-        "Toast Notifications",
-        "التحكم في الوصول حسب الدور (RBAC)",
-        "إدارة التاريخ والوقت",
-        "معالجة الأخطاء بشكل مركزي"
+        "RBAC",
+        "i18n"
       ],
       "sourceUrl": "https://github.com/Ahmed-Magdy28/workforce-ultimate",
       "fullDescription": "WorkForce Ultimate هو منصة حديثة لإدارة الموظفين والمشاريع مستوحاة من أدوات مثل Jira و ClickUp. تم تصميمها لمساعدة المؤسسات على إدارة الموظفين والمشاريع والمهام والجداول الزمنية والأداء بكفاءة من خلال نظام منظم يعتمد على الأدوار. تم بناء التطبيق باستخدام React و TypeScript مع بنية واجهة أمامية قابلة للتوسع وتقسيم واضح بين الحالة العامة (Global State)، حالة الخادم (Server State)، وحالة واجهة المستخدم المحلية (Local UI State) مما يحسن من قابلية الصيانة والأداء. يعتمد النظام على RBAC قوي يدعم أدوارًا متعددة مثل الموظف، المدير، المدير الأول، المدير الإقليمي، والموارد البشرية، حيث يمتلك كل دور لوحة تحكم وصلاحيات مخصصة. توفر المنصة لوحات ديناميكية لتتبع المهام وتقدم المشاريع وأداء الفرق وتحليلات الإنتاجية، بالإضافة إلى ميزات مثل تنظيم المهام بالسحب والإفلات، الإشعارات، التحقق من النماذج، إدارة الملفات، وأنظمة الموافقات المبنية على سير العمل. تم تطوير المشروع باستخدام أفضل ممارسات الواجهة الحديثة مع استخدام Redux Toolkit لإدارة الحالة العامة، وTanStack React Query لإدارة حالة الخادم، وReact Hook Form مع Zod للتحقق من البيانات، مع واجهة نظيفة توفر تجربة مستخدم سلسة ومتجاوبة.",
-      "challenges": [
-        "تصميم بنية قابلة للتوسع قادرة على التعامل مع نظام صلاحيات معقد عبر المسارات والمكونات والميزات.",
-        "فصل حالة الخادم والحالة العامة وحالة واجهة المستخدم دون التسبب في تعارض البيانات أو إعادة التصيير غير الضرورية.",
-        "تنفيذ منطق RBAC بطريقة قابلة للصيانة مع نمو عدد الأدوار والصلاحيات.",
-        "إدارة تفاعلات واجهة معقدة مثل السحب والإفلات مع الحفاظ على الأداء.",
-        "تنسيق عدة ميزات متقدمة مثل لوحات التحليلات والإشعارات وأنظمة سير العمل داخل كود واجهة واحد."
-      ],
+      "challenges": "هندسة منصة مؤسسية بنظام تحكم بالوصول قائم على الأدوار (RBAC) مع دعم كامل للغتين العربية والإنجليزية (RTL/LTR)., تطبيق TanStack Query للتخزين المؤقت الذكي والتحديثات المتفائلة للواجهة مما خفض طلبات الشبكة الزائدة بنسبة 40%.",
       "liveUrl": "https://workforce-ultimate.vercel.app/",
       "icon": "/uploads/f9c77da512d892f4c6836bf8bf501a00.png",
       "image": "/uploads/49579fa619e80f8f8182bab018ec61d8.png",
       "categoryIds": [
         "frontend-react"
       ],
-      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "featuredPro": true
+    },
+    {
+      "id": "alborg-diagnostics",
+      "title": "مختبرات البرج للتشخيص (AlBorg Diagnostics)",
+      "description": "إدارة وتحديث وتحسين البنية التحتية لمواقع مختبرات البرج للتشخيص عبر 6 دول خليجية مع ضمان وقت تشغيل 99.8% وتناسق المحتوى المحلي.",
+      "featured": false,
+      "categoryIds": [
+        "wordpress"
+      ],
+      "techStack": [
+        "WordPress",
+        "Web Infrastructure",
+        "Performance Optimization",
+        "Localization (i18n)",
+        "Multi-Region Hosting"
+      ],
+      "fullDescription": "إدارة وتحديث وتحسين البنية التحتية لمواقع مختبرات البرج للتشخيص (AlBorg Diagnostics) عبر 6 دول خليجية (السعودية، الإمارات، الكويت، عُمان، قطر، البحرين)، مع ضمان وقت تشغيل 99.8% وتناسق المحتوى المحلي أثناء العمل في شركة Digitect.",
+      "challenges": "إدارة وتحديث البنية التحتية عبر 6 دول خليجية مع استمرارية التشغيل بنسبة 99.8% ودقة توطين المحتوى.",
+      "primaryRole": "مطور ويب مبتدئ (Digitect)",
+      "coreTech": "WordPress, Web Infrastructure, i18n"
+    },
+    {
+      "id": "dahlan-law-firm",
+      "title": "مكتب دحلان للمحاماة",
+      "featured": true,
+      "description": "موقع إلكتروني متكامل وثنائي اللغة لشركة محاماة واستشارات قانونية كبرى في المملكة العربية السعودية، مبني بتصميم متجاوب وواجهات عربية وإنجليزية مخصصة.",
+      "techStack": [
+        "WordPress",
+        "Astra Theme",
+        "Elementor Pro",
+        "Localization (i18n)",
+        "Performance Optimization",
+        "Responsive Design"
+      ],
+      "liveUrl": "https://dahlanlaw.com/dhlan/",
+      "fullDescription": "موقع شركة ومكتب دحلان للمحاماة والاستشارات القانونية في المملكة العربية السعودية. تم تطوير الموقع باستخدام WordPress وقالب Astra مع معايير تصميم حديثة تعكس الاحترافية والموثوقية العالية لمجال المحاماة والاستشارات. يتميز الموقع بدعم كامل للغتين العربية والإنجليزية مع توافق دقيق لاتجاهات القراءة (RTL/LTR)، وأقسام منظمة للخدمات القانونية والممارسات الاستشارية، ونماذج استشارات سريعة للعملاء، مع تحسين فائق لسرعة التحميل وتجربة التصفح على الهواتف والأجهزة المكتبية.",
+      "challenges": [
+        "بناء وتصميم موقع ثنائي اللغة (عربي RTL وإنجليزي LTR) يتوافق مع الهوية المؤسسية الراقية لشركات المحاماة في السعودية.",
+        "تنظيم وعرض مجالات الممارسة القانونية والاستشارات المختلفة بنظام تصفح سلس وتفاعلي.",
+        "تحسين أداء وسرعة تحميل الخطوط العربية (خط Alexandria) والأصول الرقمية لتوفير استجابة سريعة داخل منطقة الخليج.",
+        "ضمان التجاوب التام والتوافق الدقيق عبر مختلف المتصفحات والأجهزة المحمولة."
+      ],
+      "image": "/uploads/DahlanLaw.png",
+      "icon": "/uploads/DahlanLaw.png",
+      "categoryIds": [
+        "wordpress"
+      ],
+      "timeline": "منذ شهرين"
+    },
+    {
+      "id": "nest-next-store",
+      "title": "Nest Next Store",
+      "description": "منصة تجارة إلكترونية متكاملة بدون رأس (Headless E-Commerce Platform) مبنية باستخدام Next.js و NestJS و TypeScript و PostgreSQL و Prisma ORM.",
+      "featured": true,
+      "featuredPro": true,
+      "categoryIds": [
+        "frontend-react",
+        "backend-node"
+      ],
+      "techStack": [
+        "Next.js",
+        "NestJS",
+        "TypeScript",
+        "PostgreSQL",
+        "Prisma ORM",
+        "RESTful APIs",
+        "JWT Authentication",
+        "Tailwind CSS"
+      ],
+      "sourceUrl": "https://github.com/Ahmed-Magdy28",
+      "fullDescription": "منصة Nest Next Store هي منصة تجارة إلكترونية بدون رأس فائقة الأداء تجمع بين واجهة Next.js وخادم NestJS معياري مع PostgreSQL و Prisma ORM. تدير المنصة كتالوجات المنتجات وسلات التسوق وقسائم الخصم وقوائم الرغبات ومراحل إتمام الشراء الديناميكية، مع رفع كفاءة استعلامات قاعدة البيانات بنسبة 30%.",
+      "challenges": "تصميم بنية تحتية منفصلة للتجارة الإلكترونية تدير كتالوجات المنتجات وسلات التسوق والكوبونات والدفع الديناميكي., بناء خدمات خلفية معيارية بـ NestJS مع قيود الجداول العلائقية في Prisma ORM مما رفع كفاءة الاستعلامات بنسبة 30%.",
+      "primaryRole": "مطور ويب متكامل",
+      "coreTech": "Next.js, NestJS, Prisma, PostgreSQL"
     },
     {
       "id": "task-management",
@@ -270,7 +370,7 @@
       "id": "noto-cafe",
       "title": "Noto Cafe",
       "featured": true,
-      "description": "موقع مطعم فاخر مبني باستخدام WordPress يقدم واجهة مستخدم حديثة وتجربة سلسة للعملاء.",
+      "description": "موقع مخصص لمطعم فاخر تم تطويره من الصفر لشركة Digitect، مع تقليل زمن تحميل الصفحات بنسبة 25%.",
       "techStack": [
         "WordPress",
         "Elementor Pro",
@@ -294,7 +394,7 @@
       "id": "manko-restaurant",
       "title": "Manko Restaurant",
       "featured": true,
-      "description": "موقع مطعم فاخر بتصميم متجاوب وأداء جاهز للإنتاج تم تطويره باستخدام WordPress.",
+      "description": "موقع مخصص لمطعم فاخر في المملكة العربية السعودية تم تطويره من الصفر لشركة Digitect، مع تقليل وقت التحميل بنسبة 25%.",
       "techStack": [
         "WordPress",
         "Elementor Pro"
@@ -317,7 +417,7 @@
       "id": "cafe-la-prousa",
       "title": "Café La Prousa",
       "featured": true,
-      "description": "موقع مطعم موجه للعملاء يركز على الأداء، الاستجابة، وتجربة مستخدم سلسة.",
+      "description": "موقع مخصص لمطعم وكافيه فاخر تم تطويره من الصفر لشركة Digitect، مع تجربة مستخدم سريعة وخفض أوقات التحميل بنسبة 25%.",
       "techStack": [
         "WordPress",
         "Elementor Pro"
@@ -417,39 +517,31 @@
     },
     {
       "id": "ashtray-meny",
-      "title": "Ashtray Meny",
-      "description": "منصة تجارة إلكترونية متكاملة (Fullstack) تتكون من API باستخدام Django وتطبيق موبايل Flutter، مع دعم المصادقة JWT، التحكم في الصلاحيات، وعمليات CI/CD.",
+      "title": "اشتري مني (Ashtry Meny)",
+      "description": "سوق تجارة إلكترونية متعدد التجار بتطبيق هاتف محمول متعدد المنصات (Flutter) وخلفية برمجية قابلة للتوسع باستخدام Django REST Framework و Docker.",
       "techStack": [
-        "Django",
-        "Django REST Framework",
-        "PostgreSQL",
-        "JWT Authentication",
         "Flutter",
         "Dart",
-        "Provider",
-        "Dio",
-        "Shared Preferences",
+        "Django REST Framework",
+        "PostgreSQL",
         "Docker",
-        "GitHub Actions",
-        "drf-spectacular"
+        "JWT Authentication",
+        "drf-spectacular",
+        "GitHub Actions"
       ],
       "liveUrl": "https://www.linkedin.com/posts/ahmedmagdy2849_django-flutter-docker-activity-7256912023278501888-eL9n",
       "sourceUrl": "https://github.com/Ahmed-Magdy28/ashtray-meny",
       "fullDescription": "Ashtray Meny هو مشروع تجارة إلكترونية متكامل يجمع بين باك إند مبني باستخدام Django REST Framework وتطبيق موبايل مبني باستخدام Flutter. يوفر الباك إند API قابل للتوسع لإدارة المستخدمين، المنتجات، المتاجر، التصنيفات، الطلبات، والمراجعات، بينما يقدم تطبيق Flutter تجربة استخدام سلسة ومتجاوبة على الموبايل. يعتمد النظام على JWT Authentication مع نظام تحكم في الصلاحيات لدعم أدوار متعددة مثل الأدمن، أصحاب المتاجر، والعملاء. في جانب الموبايل، يتم استخدام Provider لإدارة الحالة، وDio للتعامل مع الـ API، وShared Preferences لتخزين البيانات محليًا. يدعم المشروع تصفح المنتجات، الفلترة، إدارة الطلبات، قائمة المفضلة، ونظام التقييمات. كما يحتوي على توثيق API باستخدام drf-spectacular. تم حاوية المشروع باستخدام Docker مع تكامل GitHub Actions لأتمتة العمليات، مما يعكس بنية احترافية جاهزة للإنتاج.",
       "challenges": [
-        "تصميم بنية Fullstack تربط بين Django backend وتطبيق Flutter.",
-        "تنفيذ مصادقة آمنة باستخدام JWT عبر الباك إند والموبايل.",
-        "إدارة الحالة في Flutter باستخدام Provider مع الحفاظ على استجابة الواجهة.",
-        "التعامل مع الـ API ومعالجة الأخطاء باستخدام Dio بشكل فعال.",
-        "ضمان اتساق البيانات بين تطبيق الموبايل والباك إند.",
-        "تصميم باك إند قابل للتوسع يدعم عدة أدوار للمستخدمين.",
-        "استخدام Docker لتوحيد بيئات التشغيل.",
-        "إعداد CI/CD باستخدام GitHub Actions لأتمتة العمليات."
+        "تطوير سوق إلكتروني شامل متعدد التجار بتطبيق موبايل هجين وخلفية برمجية قابلة للتوسع بـ Django REST.",
+        "تهيئة توثيق آمن بـ JWT، وإدارة البائعين، وبيئات تطوير محلية معزولة باستخدام Docker."
       ],
       "categoryIds": [
         "backend-django",
         "mobile-flutter"
-      ]
+      ],
+      "featured": true,
+      "featuredPro": true
     },
     {
       "id": "recipe-app-api",
@@ -1030,6 +1122,18 @@
       "insights": [],
       "interviewQuestions": [],
       "aboutDescription": "إدارة حالة فعالة وقابلة للتنبؤ لتطبيقات React.",
+      "roadmap": [],
+      "versions": []
+    },
+    {
+      "slug": "nestjs",
+      "title": "NestJS",
+      "description": "إطار عمل تقدمي لبيئة Node.js لبناء تطبيقات خادم متطورة، موثوقة وقابلة للتطوير باستخدام TypeScript.",
+      "aboutDescription": "إطار عمل NestJS هو بنية متقدمة لبناء تطبيقات السيرفر القابلة للتوسع بكفاءة باستخدام TypeScript وتقنيات OOP و FP.",
+      "icon": "https://nestjs.com/img/logo-small.svg",
+      "insights": [],
+      "interviewQuestions": [],
+      "roadmapUrl": "https://roadmap.sh/nodejs",
       "roadmap": [],
       "versions": []
     }

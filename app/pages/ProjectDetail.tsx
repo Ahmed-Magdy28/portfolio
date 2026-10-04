@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useParams, Link } from "react-router";
-import { useRouteLoaderData } from "react-router";
+import { useParams } from "next/navigation";
+import { Link } from "../components/Link";
 import { motion, AnimatePresence } from "motion/react";
 import { AdminSimpleEntityForm } from "../components/admin/AdminSimpleEntityForm";
 import { Section } from "../components/Section";
@@ -10,7 +10,7 @@ import { PageAdminEditor } from "../components/admin/PageAdminEditor";
 import { useAdminSession } from "../hooks/useAdminSession";
 import { useSiteContent } from "../hooks/useSiteContent";
 import { useTranslation } from "../i18n/useTranslation";
-import type { loader as rootLoader } from "../root";
+import { useRootData } from "../hooks/useRootData";
 import { PageSEO } from "../components/PageSEO";
 import { AdminSectionWrapper } from "../components/admin/AdminSectionWrapper";
 import {
@@ -31,7 +31,7 @@ export const ProjectDetail = () => {
   const { projects } = useSiteContent();
   const { isAdminAuthenticated } = useAdminSession();
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const rootData = useRouteLoaderData<typeof rootLoader>("root");
+  const rootData = useRootData();
   const project = projects.find((p) => p.id === id);
 
   if (!rootData) {
