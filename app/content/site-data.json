@@ -233,30 +233,37 @@
   "projects": [
     {
       "id": "management-platform",
-      "title": "WorkForce Ultimate",
+      "title": "Workforce Ultimate",
       "featured": true,
-      "description": "Enterprise Resource & Staff Management suite featuring granular Role-Based Access Control (RBAC) and complete Arabic/English bilingual (RTL/LTR) internationalization.",
+      "featuredPro": true,
+      "primaryRole": "Senior Full-Stack / Lead Architect",
+      "coreTech": "Next.js 16 & Supabase",
+      "category": "Enterprise SaaS Platform",
+      "timeline": "2026",
+      "description": "Modern, high-performance enterprise workforce, project management, and organizational collaboration platform inspired by Jira, ClickUp, and Linear. Built with Next.js 16 (Turbopack), React 19, and Supabase.",
       "techStack": [
-        "React",
+        "Next.js 16",
+        "React 19",
         "TypeScript",
+        "Supabase",
+        "PostgreSQL",
+        "Tailwind CSS v4",
+        "TanStack Query v5",
         "Redux Toolkit",
-        "TanStack Query",
-        "Tailwind CSS",
-        "React Hook Form",
-        "Zod",
-        "RBAC",
-        "i18n"
+        "PWA & Offline",
+        "Web Push API",
+        "i18n (RTL/LTR)",
+        "Zod"
       ],
       "sourceUrl": "https://github.com/Ahmed-Magdy28/workforce-ultimate",
-      "fullDescription": "WorkForce Ultimate is a modern workforce and project management platform inspired by tools like Jira and ClickUp. It is designed to help organizations efficiently manage employees, projects, tasks, schedules, and performance through a structured role-based system. The application is built with React and TypeScript, following a scalable and modular frontend architecture that separates global state, server state, and local UI state for better maintainability and performance. It implements a robust Role-Based Access Control (RBAC) system with multiple roles such as Employee, Manager, Senior Manager, Regional Manager, and HR, each with customized dashboards and permissions. The platform includes dynamic dashboards for tracking tasks, project progress, team performance, and productivity analytics. It also supports features like drag-and-drop task organization, notifications, form validation, file handling, and workflow-based approvals. Built using modern frontend best practices, it leverages Redux Toolkit for global state, TanStack React Query for server state management, React Hook Form with Zod for validation, and a clean UI system for a smooth and responsive user experience.",
-      "challenges": "Engineered an enterprise workforce suite with granular Role-Based Access Control (RBAC) and complete Arabic/English bilingual (RTL/LTR) internationalization., Implemented TanStack Query for smart client-side caching and optimistic UI updates, cutting redundant network requests by 40%.",
-      "liveUrl": "https://workforce-ultimate-blwecsu0j-ahmed-magdys-projects-b12677cc.vercel.app/",
+      "liveUrl": "https://workforce-ultimate.vercel.app/",
+      "fullDescription": "Workforce Ultimate is a modern, high-performance enterprise workforce, project management, and organizational collaboration platform inspired by Jira, ClickUp, and Linear. Built on Next.js 16 (App Router & Turbopack), React 19, TypeScript, and Supabase (PostgreSQL with RLS & Realtime), it delivers an enterprise-grade suite structured across four evolutionary phases:\n\n• Phase 1 — Foundation & Core Architecture: Sub-second page compilation with Turbopack and dynamic streaming SSR; secure Supabase authentication with session persistence; native English and Arabic bilingual localization (i18n) with dynamic RTL layout switching; and seamless dark/light mode toggling.\n\n• Phase 2 — Core MVP & Workforce Hierarchy: Granular 5-tier Role-Based Access Control (Owner, Admin, HR, Managers, and Employees); workspace invitation system with single-use/multi-use invite codes and 1-click joining; company timezone auto-detection and custom branding; comprehensive project & task pipelines (todo, in_progress, review, done); and estimated vs. actual labor time tracking with approval workflows.\n\n• Phase 2.5 — Essential Operations Hub: End-of-day daily work logs (hours, blockers, mood ratings); performance evaluations with company OKRs and employee goal cycles; in-app and email real-time event notifications; instant universal search; and interactive operations analytics.\n\n• Phase 3 — Real-Time Collaboration: Multi-tier real-time chat with public channels, private coworker channels, leadership management channels, and 1:1 direct messages; dynamic sender identities with role badges; Supabase Storage attachments and threaded comments; company audit trail logs; HR bonus/disciplinary tracking; and integration webhooks (GitHub commit sync, Gmail).\n\n• Phase 4 — Scale & Polish: Full Progressive Web App (PWA) with desktop/mobile installability, Service Worker app-shell offline caching, and Web Push notifications; multi-tier TanStack Query caching presets and offline mutation queue; asynchronous background jobs engine; and executive workforce reporting with 1-click CSV exports and printable PDF reports.",
+      "challenges": "Architected a strict 5-tier Role-Based Access Control (RBAC) with Supabase PostgreSQL Row Level Security (RLS) policies and real-time multi-channel communication across public, private, and leadership channels., Engineered a multi-tier TanStack Query caching system with a Service Worker offline queue and Web Push notifications, delivering resilient PWA offline capability and slashing redundant queries., Delivered full bidirectional (RTL/LTR) Arabic/English localization with automatic timezone detection and an executive reporting engine with 1-click CSV export and PDF printing.",
       "icon": "/uploads/f9c77da512d892f4c6836bf8bf501a00.png",
       "image": "/uploads/49579fa619e80f8f8182bab018ec61d8.png",
       "categoryIds": [
         "frontend-react"
-      ],
-      "featuredPro": true
+      ]
     },
     {
       "id": "alborg-diagnostics",
