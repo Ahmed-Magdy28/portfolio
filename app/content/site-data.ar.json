@@ -232,6 +232,39 @@
   ],
   "projects": [
     {
+      "id": "salary-management",
+      "title": "Salary Management",
+      "featured": true,
+      "featuredPro": true,
+      "primaryRole": "مهندس برمجيات Full-Stack",
+      "coreTech": "Next.js, NestJS & PostgreSQL",
+      "category": "منصة موارد بشرية وتحليلات متكاملة",
+      "timeline": "2026",
+      "description": "منصة عالية الأداء لإدارة رواتب الموظفين وتحليلات التعويضات مصممة لإدارة أكثر من 10,000 موظف عبر عدة دول باستجابة API أقل من 40 مللي ثانية، مبنية بهيكلية Turborepo + pnpm مع Next.js و NestJS و Prisma و PostgreSQL.",
+      "techStack": [
+        "Next.js (App Router)",
+        "NestJS",
+        "TypeScript",
+        "PostgreSQL 16",
+        "Prisma",
+        "Turborepo",
+        "TanStack Query",
+        "Recharts",
+        "Tailwind CSS",
+        "Zod"
+      ],
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/salary-management",
+      "liveUrl": "https://salary-management-orpin.vercel.app/",
+      "fullDescription": "Salary Management هي منصة متكاملة لإدارة رواتب الموظفين وتحليلات التعويضات لمديري الموارد البشرية، مصممة لإدارة رواتب 10,000+ موظف عبر دول مختلفة والإجابة على سؤال \"كيف ندفع للموظفين؟\" بسرعة استجابة أقل من 40 مللي ثانية.\n\n• هيكلية Monorepo (Turborepo + pnpm): مقسمة إلى apps/web (تطبيق Next.js App Router مع Tailwind CSS و TanStack Query و Recharts ومكونات بنمط shadcn)، و apps/api (خادم NestJS على Express مع REST API)، و packages/db (مخطط Prisma مع محول pg والتهجير وبذر بيانات Faker لـ 10,000 موظف في ~3 ثوانٍ)، و packages/shared (مخططات Zod وأنواع DTO والثوابت المشتركة بين الويب والـ API).\n\n• الشاشات وسير العمل الأساسية: دليل الموظفين (/employees) مع بحث وفلترة متعددة وحفظ الفلاتر في الرابط (URL) ونطاق الرواتب والترتيب والترقيم؛ استيراد جماعي من Excel و CSV (/employees/import) يدعم حتى 10,000 صف مع معاينة الصفوف الجاهزة والتي بها أخطاء وتنفيذها في معاملة واحدة؛ نماذج إضافة وتعديل موحدة؛ صفحة الإحصائيات (/insights) لحساب الحد الأدنى و P25 والوسيط والمتوسط و P75 والحد الأقصى حسب الدولة أو القسم أو المسمى الوظيفي؛ ومخطط توزيع الرواتب التكراري (/pay-spread).\n\n• القرارات الهندسية وسلامة البيانات: تخزين الرواتب كأرقام صحيحة بدون كسور بعملة الموظف المحلية مع فصل جميع التحليلات حسب العملة، وحساب المئينات والمدرجات التكرارية مباشرة داخل PostgreSQL عبر percentile_cont و width_bucket بزمن استجابة 6–40 مللي ثانية لـ 10,000 سجل.\n\n• الجودة والنشر: خط CI مؤتمت يشغّل البناء وفحص الأنواع واختبارات الوحدة واختبارات E2E معزولة لقاعدة البيانات، ومنشور على Neon (PostgreSQL) و Render (NestJS API) و Vercel (Next.js).",
+      "challenges": "تحسين استعلامات الرواتب والإحصائيات التحليلية في PostgreSQL (حساب المئينات عبر percentile_cont والمدرجات التكرارية عبر width_bucket) لتعمل خلال 6 إلى 40 مللي ثانية لـ 10,000 موظف., منع أخطاء الكسور العشرية واختلاط العملات عبر اعتماد أرقام صحيحة للرواتب بالعملة المحلية وفصل التحليلات حسب الدولة والعملة., توحيد التحقق من البيانات والأنواع بين Next.js و NestJS عبر حزمة Zod مشتركة داخل Turborepo مع دعم الاستيراد الجماعي المعاملاتي من Excel/CSV واختبارات E2E معزولة.",
+      "icon": "💰",
+      "image": "/uploads/Salary Management.png",
+      "categoryIds": [
+        "frontend-react",
+        "backend-node"
+      ]
+    },
+    {
       "id": "management-platform",
       "title": "Workforce Ultimate",
       "featured": true,

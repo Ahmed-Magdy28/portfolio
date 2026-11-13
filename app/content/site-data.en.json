@@ -232,6 +232,39 @@
   ],
   "projects": [
     {
+      "id": "salary-management",
+      "title": "Salary Management",
+      "featured": true,
+      "featuredPro": true,
+      "primaryRole": "Full-Stack Engineer",
+      "coreTech": "Next.js, NestJS & PostgreSQL",
+      "category": "Full-Stack HR & Analytics Platform",
+      "timeline": "2026",
+      "description": "High-performance HR salary management & compensation analytics platform built to manage 10,000+ employees across countries with sub-40ms API responses. Powered by a Turborepo + pnpm monorepo with Next.js, NestJS, Prisma, and PostgreSQL.",
+      "techStack": [
+        "Next.js (App Router)",
+        "NestJS",
+        "TypeScript",
+        "PostgreSQL 16",
+        "Prisma",
+        "Turborepo",
+        "TanStack Query",
+        "Recharts",
+        "Tailwind CSS",
+        "Zod"
+      ],
+      "sourceUrl": "https://github.com/Ahmed-Magdy28/salary-management",
+      "liveUrl": "https://salary-management-orpin.vercel.app/",
+      "fullDescription": "Salary Management is a full-stack HR compensation and workforce analytics platform built to manage salaries for 10,000+ employees across multiple countries and answer \"how do we pay people?\" with sub-40ms API performance.\n\n• Monorepo Architecture (Turborepo + pnpm): Organized into apps/web (Next.js App Router, Tailwind CSS, TanStack Query, Recharts, shadcn-style UI), apps/api (NestJS on Express REST API), packages/db (Prisma schema with pg driver adapter, migrations, and deterministic 10,000-row Faker seed), and packages/shared (shared Zod schemas, DTO types, and constants).\n\n• Core Screens & Workflows: URL-persisted employee directory (/employees) with search, multi-filter, salary range, sorting, and pagination; transactional Excel/CSV bulk importer (/employees/import) supporting up to 10,000 rows with ready/problem row previews; unified add/edit forms (/employees/new, /employees/:id/edit); compensation insights (/insights) computing min, P25, median, mean, P75, and max per country, department, or job title; and interactive pay spread histograms (/pay-spread).\n\n• Engineering & Data Integrity: Salaries are stored strictly as whole-number integers in each employee's local currency, with all insights grouped per currency. Percentiles and histogram bands are computed directly in PostgreSQL using percentile_cont and width_bucket, delivering 6–40ms responses at 10,000 rows.\n\n• Quality & Deployment: Automated CI pipeline running build, typecheck, unit tests, and isolated E2E API tests against a dedicated test database, deployed across Neon (PostgreSQL), Render (NestJS API), and Vercel (Next.js web).",
+      "challenges": "Scaled PostgreSQL salary queries and statistical insights (min, P25, median, mean, P75, max via percentile_cont and histograms via width_bucket) to respond in 6–40ms across 10,000+ employee records., Eliminated floating-point currency bugs and mixed-currency distortion by enforcing whole-number integer salaries in local currency and grouping all analytics strictly per country/currency., Unified validation and type safety across Next.js and NestJS using a shared Zod schema package in a Turborepo monorepo with transactional Excel/CSV bulk imports and isolated E2E database testing.",
+      "icon": "💰",
+      "image": "/uploads/Salary Management.png",
+      "categoryIds": [
+        "frontend-react",
+        "backend-node"
+      ]
+    },
+    {
       "id": "management-platform",
       "title": "Workforce Ultimate",
       "featured": true,
